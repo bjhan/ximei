@@ -1,0 +1,13 @@
+body {
+  position: relative;
+  width: 16rem;
+  margin: 0 auto;
+  background-size: cover;
+  overflow-y: scroll; }
+
+.indexcont {
+  position: relative;
+  width: 100%;
+  height: 1990px; }
+
+/*# sourceMappingURL=index.css.map */

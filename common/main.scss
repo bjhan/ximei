@@ -1,9 +1,0 @@
-@import 'px2rem.scss';
-$designWidth: 750;
-body {
-  position: relative;
-  width: px2rem(750);
-  margin: 0 auto;
-  background: #f3ecd1 url(../img/body-bg11.jpg) repeat;
-  background-size: cover;
-}

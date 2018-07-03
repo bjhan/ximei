@@ -14,8 +14,16 @@ body,html{
   position: fixed;
   top:0;
   width: 100%;
-  height: px2rem(114);
-  background-color: #000000;
+  height: px2rem(116);
+  background-color: #ffffff;
+  z-index: 999;
+}
+.headmainicon{
+  position: absolute;
+  top:px2rem(24);
+  left: px2rem(234);
+  width: px2rem(190);
+  height: px2rem(69);
 }
 .iframecont{
   position: absolute;
@@ -29,5 +37,89 @@ body,html{
   width: 100%;
   height: px2rem(395);
   margin-top: px2rem(300);
-  background-color: red;
+  background-color: black;
+}
+.headline{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: px2rem(2);
+  background-color: #A978D6;
+}
+#loginbtn{
+  position: absolute;
+  top:px2rem(52);
+  right: px2rem(260);
+  width: px2rem(75);
+  height: px2rem(35);
+  background-image: url(../img/pgindex_btn_login.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
+}
+#loginbtn:hover{
+  background-image: url(../img/pgindex_btn_login_hover.png);
+}
+#register{
+  position: absolute;
+  top:px2rem(52);
+  right: px2rem(349);
+  width: px2rem(75);
+  height: px2rem(35);
+  background-image: url(../img/pgindex_btn_register.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
+}
+#register:hover{
+  background-image: url(../img/pgindex_btn_register_hover.png);
+}
+#ximeijie{
+  right: px2rem(482);
+}
+#huodong{
+  right: px2rem(593);
+}
+#baike{
+  right: px2rem(678);
+}
+#wenda{
+  right: px2rem(763);
+}
+#gonglue{
+  right: px2rem(848);
+}
+#xiyouquan{
+  right: px2rem(933);
+}
+#shouye{
+  right: px2rem(1039);
+}
+.mainchoose{
+  position: absolute;
+  width: px2rem(96);
+  height: 100%;
+  cursor: pointer;
+  color: #808080;
+}
+.chooseline{
+  position: absolute;
+  display: none;
+  bottom: 0;
+  width: 100%;
+  height: px2rem(6);
+  background-color: #A978D6;
+}
+.maindesc{
+  position: absolute;
+  bottom: px2rem(36);
+  font-size: px2rem(18);
+
+  width: 100%;
+  text-align: center;
+}
+.mainchoose:hover{
+  color: #A978D6;
 }

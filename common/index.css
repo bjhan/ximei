@@ -12,8 +12,16 @@ body, html {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 0.95rem;
-  background-color: #000000; }
+  height: 0.9666666667rem;
+  background-color: #ffffff;
+  z-index: 999; }
+
+.headmainicon {
+  position: absolute;
+  top: 0.2rem;
+  left: 1.95rem;
+  width: 1.5833333333rem;
+  height: 0.575rem; }
 
 .iframecont {
   position: absolute;
@@ -27,6 +35,89 @@ body, html {
   width: 100%;
   height: 3.2916666667rem;
   margin-top: 2.5rem;
-  background-color: red; }
+  background-color: black; }
+
+.headline {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0.0166666667rem;
+  background-color: #A978D6; }
+
+#loginbtn {
+  position: absolute;
+  top: 0.4333333333rem;
+  right: 2.1666666667rem;
+  width: 0.625rem;
+  height: 0.2916666667rem;
+  background-image: url(../img/pgindex_btn_login.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer; }
+
+#loginbtn:hover {
+  background-image: url(../img/pgindex_btn_login_hover.png); }
+
+#register {
+  position: absolute;
+  top: 0.4333333333rem;
+  right: 2.9083333333rem;
+  width: 0.625rem;
+  height: 0.2916666667rem;
+  background-image: url(../img/pgindex_btn_register.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer; }
+
+#register:hover {
+  background-image: url(../img/pgindex_btn_register_hover.png); }
+
+#ximeijie {
+  right: 4.0166666667rem; }
+
+#huodong {
+  right: 4.9416666667rem; }
+
+#baike {
+  right: 5.65rem; }
+
+#wenda {
+  right: 6.3583333333rem; }
+
+#gonglue {
+  right: 7.0666666667rem; }
+
+#xiyouquan {
+  right: 7.775rem; }
+
+#shouye {
+  right: 8.6583333333rem; }
+
+.mainchoose {
+  position: absolute;
+  width: 0.8rem;
+  height: 100%;
+  cursor: pointer;
+  color: #808080; }
+
+.chooseline {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  width: 100%;
+  height: 0.05rem;
+  background-color: #A978D6; }
+
+.maindesc {
+  position: absolute;
+  bottom: 0.3rem;
+  font-size: 0.15rem;
+  width: 100%;
+  text-align: center; }
+
+.mainchoose:hover {
+  color: #A978D6; }
 
 /*# sourceMappingURL=index.css.map */

@@ -24,16 +24,28 @@ body, html {
   height: 0.575rem; }
 
 .iframecont {
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: 0.9666666667rem;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  border: 0; }
+
+.yingyezhizhao {
+  position: absolute;
+  bottom: 0.5833333333rem;
+  width: 100%;
+  text-align: center;
+  opacity: 0.5;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.05rem;
+  color: #9E9E9E; }
 
 .footmain {
   position: relative;
   bottom: 0;
   width: 100%;
   height: 3.2916666667rem;
+  margin-bottom: 0.8333333333rem;
   margin-top: 1.25rem;
   background-color: black; }
 
@@ -59,6 +71,9 @@ body, html {
 #loginbtn:hover {
   background-image: url(../img/pgindex_btn_login_hover.png); }
 
+#loginbtn:active {
+  background-image: url(../img/pgindex_btn_login_hover.png); }
+
 #register {
   position: absolute;
   top: 0.4333333333rem;
@@ -72,6 +87,9 @@ body, html {
   cursor: pointer; }
 
 #register:hover {
+  background-image: url(../img/pgindex_btn_register_hover.png); }
+
+#register:active {
   background-image: url(../img/pgindex_btn_register_hover.png); }
 
 #ximeijie {

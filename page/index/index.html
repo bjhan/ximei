@@ -4,12 +4,84 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
     <meta charset="UTF-8">
     <title>西梅首页</title>
+    <link rel="stylesheet" href="../../common/swiper.css">
     <link rel="stylesheet" href="../../common/index.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="../../common/hotcss.js"></script>
+    <script src="../../common/jquery-3.3.1.min.js"></script>
+    <script src="../../common/swiper.js"></script>
 </head>
 <body>
-<div class="indexcont"></div>
+<div class="indexcont">
+    <div class="bannercont">
+        <div class="swiper-container gallery-top">
+            <div class="swiper-wrapper" id="gallery-top">
+                <div class="swiper-slide" style="background-image:url(./img/1.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./img/2.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./img/3.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./img/4.png)"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
+        <div class="swiper-container gallery-thumbs">
+            <div class="swiper-wrapper" id="gallery-thumbs">
+                <div class="swiper-slide" style="background-image:url(./img/1.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./img/2.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./img/3.png)"></div>
+                <div class="swiper-slide" style="background-image:url(./img/4.png)"></div>
+            </div>
+        </div>
+        <div class="findcont">
+            <div class="shurukuangcont">
+                <img src="img/pgindex_icon_search.png" class="iconsearch">
+                <input class="searchinput" placeholder="搜索月子中心/赴美生子攻略/服务" >
+            </div>
+            <div id="searchbtn"></div>
+        </div>
+    </div>
+</div>
+<div class="videocontent">
+    <div class="videocontentfloat">
+        <div class="firstvideo">
+            <div class="bigvideo">
+                <video class="videos" src="img/video.mp4" poster="img/shipin1.png" ></video>
+                <div class="mengceng"></div>
+                <div class="videodesc">加州生活</div>
+                <div class="playbtn"></div>
+            </div>
+        </div>
+        <div class="secondvideo">
+            <div class="smallvideo">
+                <video class="videos" src="img/video.mp4" poster="img/shipin2.png" ></video>
+                <div class="mengceng"></div>
+                <div class="videodesc">加州生活</div>
+                <div class="playbtn"></div>
+            </div>
+        </div>
+        <div class="secondvideo">
+            <div class="smallvideo">
+                <video class="videos" src="img/video.mp4" poster="img/shipin2.png" ></video>
+                <div class="mengceng"></div>
+                <div class="videodesc">加州生活</div>
+                <div class="playbtn"></div>
+            </div>
+        </div>
+        <div class="secondvideo">
+            <div class="smallvideo">
+                <video class="videos" src="img/video.mp4" poster="img/shipin2.png" ></video>
+                <div class="mengceng"></div>
+                <div class="videodesc">加州生活</div>
+                <div class="playbtn"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 <div class="footmain">
     <div class="foorcont">
         <div class="aboutximei">
@@ -46,6 +118,9 @@
         <div class="linkfriend"><a href="https://www.baidu.com/">EVUS官网</a></div>
         <div class="linkfriend"><a href="https://www.baidu.com/">美国领事馆</a></div>
     </div>
+    <div class="yingyezhizhao">© 2018 Mafengwo.cn 京ICP备11015476号 京公网安备110105013401号 京ICP证11031<br/>营业执照 新出网证(京)字242号 马蜂窝客服：国内 4006-345-678海外 +86-10-5922-2799</div>
 </div>
+<script src="js/config.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

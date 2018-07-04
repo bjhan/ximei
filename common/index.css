@@ -12,8 +12,16 @@ body, html {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 0.95rem;
-  background-color: #000000; }
+  height: 0.9666666667rem;
+  background-color: #ffffff;
+  z-index: 999; }
+
+.headmainicon {
+  position: absolute;
+  top: 0.2rem;
+  left: 1.95rem;
+  width: 1.5833333333rem;
+  height: 0.575rem; }
 
 .iframecont {
   position: absolute;
@@ -26,7 +34,228 @@ body, html {
   bottom: 0;
   width: 100%;
   height: 3.2916666667rem;
-  margin-top: 2.5rem;
-  background-color: red; }
+  margin-top: 1.25rem;
+  background-color: black; }
+
+.headline {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0.0166666667rem;
+  background-color: #A978D6; }
+
+#loginbtn {
+  position: absolute;
+  top: 0.4333333333rem;
+  right: 2.1666666667rem;
+  width: 0.625rem;
+  height: 0.2916666667rem;
+  background-image: url(../img/pgindex_btn_login.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer; }
+
+#loginbtn:hover {
+  background-image: url(../img/pgindex_btn_login_hover.png); }
+
+#register {
+  position: absolute;
+  top: 0.4333333333rem;
+  right: 2.9083333333rem;
+  width: 0.625rem;
+  height: 0.2916666667rem;
+  background-image: url(../img/pgindex_btn_register.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer; }
+
+#register:hover {
+  background-image: url(../img/pgindex_btn_register_hover.png); }
+
+#ximeijie {
+  right: 4.0166666667rem; }
+
+#huodong {
+  right: 4.9416666667rem; }
+
+#baike {
+  right: 5.65rem; }
+
+#wenda {
+  right: 6.3583333333rem; }
+
+#gonglue {
+  right: 7.0666666667rem; }
+
+#xiyouquan {
+  right: 7.775rem; }
+
+#shouye {
+  right: 8.6583333333rem; }
+
+.mainchoose {
+  position: absolute;
+  width: 0.8rem;
+  height: 100%;
+  cursor: pointer;
+  color: #808080; }
+
+.chooseline {
+  position: absolute;
+  display: none;
+  bottom: 0;
+  width: 100%;
+  height: 0.05rem;
+  background-color: #A978D6; }
+
+.maindesc {
+  position: absolute;
+  bottom: 0.3rem;
+  font-size: 0.15rem;
+  width: 100%;
+  text-align: center; }
+
+.mainchoose:hover {
+  color: #A978D6; }
+
+a {
+  text-decoration: none;
+  color: #9E9E9E; }
+
+.foorcont {
+  position: absolute;
+  top: 0.5083333333rem;
+  width: 100%;
+  height: 1.25rem; }
+
+.aboutximei {
+  position: absolute;
+  top: 0;
+  left: 4.025rem;
+  width: 0.9rem;
+  height: 100%; }
+
+.aboutdesc {
+  position: relative;
+  margin-bottom: 0.0833333333rem;
+  text-align: center;
+  font-family: MicrosoftYaHeiUI;
+  color: #9E9E9E;
+  height: 0.25rem; }
+
+.aboutdescsmall {
+  position: relative;
+  margin-bottom: 0.0583333333rem;
+  text-align: center;
+  font-family: MicrosoftYaHeiUI;
+  color: #9E9E9E;
+  height: 0.1666666667rem; }
+
+.descad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+
+.aboutdesc1 {
+  font-size: 0.15rem; }
+
+.aboutdesc2 {
+  position: absolute;
+  font-size: 0.1166666667rem; }
+
+.linefootleft {
+  position: absolute;
+  top: 2.1416666667rem;
+  left: 0;
+  width: 5.8083333333rem;
+  height: 1px;
+  background-color: #939393; }
+
+.linefootright {
+  position: absolute;
+  top: 2.1416666667rem;
+  right: 0;
+  width: 5.8083333333rem;
+  height: 1px;
+  background-color: #939393; }
+
+.friendsicon {
+  position: absolute;
+  top: 0;
+  left: 5.9583333333rem;
+  width: 1.7166666667rem;
+  height: 100%; }
+
+.friends {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.15rem;
+  color: #9E9E9E;
+  text-align: center; }
+
+.parenterpic {
+  position: absolute;
+  top: 0.3083333333rem;
+  width: 100%;
+  height: 0.7rem; }
+
+.kefu {
+  position: absolute;
+  top: 0;
+  right: 3.5333333333rem;
+  width: 1.1583333333rem;
+  height: 100%; }
+
+.weibo {
+  position: absolute;
+  top: 0;
+  right: 4.8083333333rem;
+  width: 1.1583333333rem;
+  height: 100%; }
+
+.erweima {
+  position: absolute;
+  top: 0;
+  left: 0.1666666667rem;
+  width: 0.825rem;
+  height: 0.825rem;
+  background-color: #ffffff; }
+
+.erweima > img {
+  position: absolute;
+  top: 0;
+  margin-top: 0.0416666667rem;
+  margin-left: 0.0416666667rem;
+  width: 0.7416666667rem;
+  height: 0.7416666667rem; }
+
+.erweimadesc {
+  position: absolute;
+  top: 0.9rem;
+  width: 100%;
+  text-align: center;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  color: #9E9E9E; }
+
+.friendslinks {
+  position: absolute;
+  top: 2.0416666667rem;
+  left: 6.3166666667rem;
+  width: 4.6666666667rem;
+  height: 0.15rem; }
+
+.linkfriend {
+  float: left;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 2px;
+  color: #9E9E9E;
+  margin-right: 0.05rem; }
 
 /*# sourceMappingURL=index.css.map */

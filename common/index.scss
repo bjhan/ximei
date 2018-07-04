@@ -14,8 +14,16 @@ body,html{
   position: fixed;
   top:0;
   width: 100%;
-  height: px2rem(114);
-  background-color: #000000;
+  height: px2rem(116);
+  background-color: #ffffff;
+  z-index: 999;
+}
+.headmainicon{
+  position: absolute;
+  top:px2rem(24);
+  left: px2rem(234);
+  width: px2rem(190);
+  height: px2rem(69);
 }
 .iframecont{
   position: absolute;
@@ -28,6 +36,226 @@ body,html{
   bottom: 0;
   width: 100%;
   height: px2rem(395);
-  margin-top: px2rem(300);
-  background-color: red;
+  margin-top: px2rem(150);
+  background-color: black;
+}
+.headline{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: px2rem(2);
+  background-color: #A978D6;
+}
+#loginbtn{
+  position: absolute;
+  top:px2rem(52);
+  right: px2rem(260);
+  width: px2rem(75);
+  height: px2rem(35);
+  background-image: url(../img/pgindex_btn_login.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
+}
+#loginbtn:hover{
+  background-image: url(../img/pgindex_btn_login_hover.png);
+}
+#register{
+  position: absolute;
+  top:px2rem(52);
+  right: px2rem(349);
+  width: px2rem(75);
+  height: px2rem(35);
+  background-image: url(../img/pgindex_btn_register.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
+}
+#register:hover{
+  background-image: url(../img/pgindex_btn_register_hover.png);
+}
+#ximeijie{
+  right: px2rem(482);
+}
+#huodong{
+  right: px2rem(593);
+}
+#baike{
+  right: px2rem(678);
+}
+#wenda{
+  right: px2rem(763);
+}
+#gonglue{
+  right: px2rem(848);
+}
+#xiyouquan{
+  right: px2rem(933);
+}
+#shouye{
+  right: px2rem(1039);
+}
+.mainchoose{
+  position: absolute;
+  width: px2rem(96);
+  height: 100%;
+  cursor: pointer;
+  color: #808080;
+}
+.chooseline{
+  position: absolute;
+  display: none;
+  bottom: 0;
+  width: 100%;
+  height: px2rem(6);
+  background-color: #A978D6;
+}
+.maindesc{
+  position: absolute;
+  bottom: px2rem(36);
+  font-size: px2rem(18);
+
+  width: 100%;
+  text-align: center;
+}
+.mainchoose:hover{
+  color: #A978D6;
+}
+a{ text-decoration:none;color: #9E9E9E}
+
+.foorcont{
+  position: absolute;
+  top: px2rem(61);
+  width: 100%;
+  height: px2rem(150);
+}
+.aboutximei{
+  position: absolute;
+  top:0;
+  left: px2rem(483);
+  width: px2rem(108);
+  height: 100%;
+}
+.aboutdesc{
+  position: relative;
+  margin-bottom: px2rem(10);
+  text-align: center;
+  font-family:MicrosoftYaHeiUI;
+  color: #9E9E9E;
+  height: px2rem(30);
+}
+.aboutdescsmall{
+  position: relative;
+  margin-bottom: px2rem(7);
+  text-align: center;
+  font-family:MicrosoftYaHeiUI;
+  color: #9E9E9E;
+  height: px2rem(20);
+}
+.descad{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+}
+.aboutdesc1{
+  font-size: px2rem(18);
+}
+.aboutdesc2{
+  position: absolute;
+  font-size: px2rem(14);
+}
+.linefootleft{
+  position: absolute;
+  top:px2rem(257);
+  left: 0;
+  width: px2rem(697);
+  height: 1px;
+  background-color: #939393;
+}
+.linefootright{
+  position: absolute;
+  top:px2rem(257);
+  right: 0;
+  width: px2rem(697);
+  height: 1px;
+  background-color: #939393;
+}
+.friendsicon{
+  position: absolute;
+  top:0;
+  left: px2rem(715);
+  width: px2rem(206);
+  height: 100%;
+}
+.friends{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  font-family: MicrosoftYaHeiUI;
+  font-size: px2rem(18);
+  color: #9E9E9E;
+  text-align: center;
+}
+.parenterpic{
+  position: absolute;
+  top:px2rem(37);
+  width: 100%;
+  height: px2rem(84);
+}
+.kefu{
+  position: absolute;
+  top:0;
+  right: px2rem(424);
+  width: px2rem(139);
+  height: 100%;
+}
+.weibo{
+  position: absolute;
+  top:0;
+  right: px2rem(577);
+  width: px2rem(139);
+  height: 100%;
+}
+.erweima{
+  position: absolute;
+  top:0;
+  left: px2rem(20);
+  width: px2rem(99);
+  height: px2rem(99);
+  background-color: #ffffff;
+}
+.erweima>img{
+  position: absolute;
+  top:0;
+  margin-top: px2rem(5);
+  margin-left: px2rem(5);
+  width: px2rem(89);
+  height: px2rem(89);
+}
+.erweimadesc{
+  position: absolute;
+  top:px2rem(108);
+  width: 100%;
+  text-align: center;
+  font-family: MicrosoftYaHeiUI;
+  font-size: px2rem(14);
+  color: #9E9E9E;
+}
+.friendslinks{
+  position: absolute;
+  top:px2rem(245);
+  left: px2rem(758);
+  width: px2rem(560);
+  height: px2rem(18);
+}
+.linkfriend{
+  float: left;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 2px;
+  color: #9E9E9E;
+  margin-right: px2rem(6);
 }

@@ -1,0 +1,132 @@
+html, body {
+  width: 100%;
+  min-height: 9rem;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0; }
+
+.content {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+#bangdan {
+  width: 11%;
+  display: flex;
+  flex-direction: column; }
+
+#bangdan > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 3.3333333333rem; }
+
+.content #hottopic {
+  width: 51%;
+  min-height: 1.6666666667rem; }
+
+.content #wonderful {
+  width: 30%;
+  min-height: 1.6666666667rem; }
+
+#hottopic #title {
+  font-family: MicrosoftYaHeiUI-Bold;
+  font-size: 0.25rem;
+  color: #000000; }
+
+.hottitle {
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.15rem;
+  color: #000000; }
+
+.hotimg {
+  width: 1.8416666667rem;
+  height: 1.2583333333rem; }
+
+.a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.b {
+  display: flex;
+  flex-direction: column; }
+
+.bp {
+  width: 4.55rem;
+  height: 0.9166666667rem;
+  font-family: PingFangSC-Regular;
+  font-size: 0.1rem;
+  color: #000000; }
+
+.bf {
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  color: #000000; }
+
+.bf p {
+  display: inline; }
+
+.bf p:last-child {
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  color: #9B9B9B; }
+
+.bf p a {
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  color: #5562bf;
+  line-height: 0.15rem; }
+
+#arrcontent hr {
+  border: 0.0083333333rem solid #EEEEEE;
+  margin: 0.1666666667rem 0; }
+
+#arrcontent .c {
+  overflow-y: auto; }
+
+#jinyantop5 > div:first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 0.95rem; }
+
+#jinyantop5 > div:first-child img {
+  width: 0.2083333333rem;
+  height: 0.175rem; }
+
+#jinyantop5 > div:first-child p {
+  font-family: MicrosoftYaHeiUI-Bold;
+  font-size: 0.15rem;
+  color: #000000;
+  margin: 0; }
+
+#jinyantop5 > div:first-child a {
+  font-family: PingFangSC-Regular;
+  font-size: 0.1rem;
+  color: #B2B2B2; }
+
+#dianzantop5 > div:first-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 0.95rem; }
+
+#dianzantop5 > div:first-child img {
+  width: 0.2083333333rem;
+  height: 0.175rem; }
+
+#dianzantop5 > div:first-child p {
+  font-family: MicrosoftYaHeiUI-Bold;
+  font-size: 0.15rem;
+  color: #000000;
+  margin: 0; }
+
+#dianzantop5 > div:first-child a {
+  font-family: PingFangSC-Regular;
+  font-size: 0.1rem;
+  color: #B2B2B2; }
+
+/*# sourceMappingURL=xiyou.css.map */

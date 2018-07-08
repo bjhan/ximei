@@ -5,6 +5,9 @@ body {
   background-size: cover;
   overflow-y: scroll; }
 
+p {
+  margin: 0; }
+
 .indexcont {
   position: relative;
   width: 100%;
@@ -111,13 +114,54 @@ body {
   margin-top: 0.15rem;
   overflow: hidden; }
 
+.mostcont {
+  position: relative;
+  left: 3.0583333333rem;
+  width: 10.4666666667rem;
+  height: auto;
+  margin-top: 0.5666666667rem;
+  overflow: hidden; }
+
+.knowledgecont {
+  position: relative;
+  left: 3.0583333333rem;
+  width: 10.4666666667rem;
+  height: auto;
+  margin-top: 0.5666666667rem;
+  overflow: hidden; }
+
+.shopcont {
+  position: relative;
+  left: 3.0583333333rem;
+  width: 10.4666666667rem;
+  height: auto;
+  margin-top: 0.5666666667rem;
+  overflow: hidden; }
+
+.casualcont {
+  position: relative;
+  left: 3.0583333333rem;
+  width: 10.4666666667rem;
+  height: auto;
+  margin-top: 0.5666666667rem;
+  overflow: hidden; }
+
+.topicityccont {
+  position: relative;
+  left: 3.0583333333rem;
+  width: 10.4666666667rem;
+  height: auto;
+  margin-top: 0.5666666667rem;
+  overflow: hidden; }
+
 .firstvideo {
   float: left;
   top: 0;
   left: 0;
   width: 3.2916666667rem;
   height: 1.7083333333rem;
-  margin-right: 0.3583333333rem; }
+  margin-right: 0.3583333333rem;
+  cursor: pointer; }
 
 .secondvideo {
   float: left;
@@ -139,7 +183,8 @@ body {
   top: 0;
   left: 0;
   width: 1.85rem;
-  height: 1.7083333333rem; }
+  height: 1.7083333333rem;
+  cursor: pointer; }
 
 .videocontentfloat {
   position: absolute;
@@ -181,5 +226,507 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain; }
+
+.mostcontleft {
+  float: left;
+  width: 3.2916666667rem;
+  height: auto;
+  margin-right: 0.25rem; }
+
+.mostcontright {
+  float: left;
+  width: 6.3583333333rem;
+  height: auto;
+  overflow: hidden; }
+
+.newpolicy {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding-bottom: 0.0583333333rem; }
+
+.moretitle {
+  position: relative;
+  width: 100%;
+  height: 0.2333333333rem; }
+
+.bigdesctitle {
+  float: left;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.175rem;
+  color: #070707; }
+
+.moreMesg {
+  float: right;
+  bottom: 0;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  color: #070707;
+  cursor: pointer;
+  margin-top: 0.05rem; }
+
+.moredetailcont {
+  position: relative;
+  width: 100%;
+  height: 1.25rem;
+  margin-top: 0.25rem;
+  border: 0; }
+
+.moredetailpic {
+  position: relative;
+  width: 3.2916666667rem;
+  height: 1.25rem; }
+
+.newproictitle {
+  position: relative;
+  width: 100%;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.15rem;
+  color: #070707;
+  margin-top: 0.1rem; }
+
+.newproicde {
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  color: #666666;
+  line-height: 0.2166666667rem;
+  margin-top: 0.0666666667rem; }
+
+.xiangqingBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0.6166666667rem;
+  height: 0.1833333333rem;
+  background-image: url(../img/pgindex_btn_detal.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; }
+
+.xiangqingBtn:active {
+  background-image: url(../img/pgindex_btn_detal_hover.png); }
+
+.xiangqingBtn:hover {
+  background-image: url(../img/pgindex_btn_detal_hover.png); }
+
+.hottitle {
+  position: relative;
+  width: 90%;
+  margin-left: 0.0833333333rem;
+  height: 0.2rem; }
+
+.hottitle2 {
+  position: relative;
+  width: 90%;
+  height: 0.2rem; }
+
+.hotcompositioncont {
+  position: relative;
+  width: 6.3583333333rem;
+  height: 1.4666666667rem;
+  margin-top: 0.1666666667rem; }
+
+.hotpic {
+  position: absolute;
+  top: 0.1083333333rem;
+  left: 0.1rem;
+  width: 1.85rem;
+  height: 1.25rem; }
+
+.hotcompositionconttitle {
+  position: relative;
+  width: 4.0166666667rem;
+  height: 0.1916666667rem;
+  margin-top: 0.2333333333rem;
+  ffont-family: MicrosoftYaHeiUI;
+  font-size: 0.175rem;
+  color: #070707; }
+
+.hotdesccont {
+  position: absolute;
+  left: 2.1416666667rem;
+  width: 4.0166666667rem;
+  top: 0;
+  height: 100%; }
+
+.hotcompositioncontzhegnwen {
+  position: relative;
+  width: 100%;
+  height: 0.425rem;
+  ffont-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  color: #666666;
+  line-height: 0.2166666667rem;
+  margin-top: 0.1rem; }
+
+.hotusermessage {
+  position: relative;
+  width: 100%;
+  height: 0.25rem;
+  margin-top: 0.15rem; }
+
+.hotuserheadicon {
+  float: left;
+  width: 0.2166666667rem;
+  height: 0.2166666667rem; }
+
+.hotuserheadiconimg {
+  position: relative;
+  left: 0;
+  width: 0.2166666667rem;
+  height: 0.2166666667rem;
+  border-radius: 50%;
+  background-image: url(../img/head.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; }
+
+.hotusername {
+  float: left;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  margin-left: 0.0833333333rem;
+  margin-top: 0.025rem;
+  color: #A978D6; }
+
+.hotusername > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  vertical-align: middle;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center; }
+
+.hotuserhearticon {
+  float: left;
+  width: 0.2166666667rem;
+  height: 0.2166666667rem;
+  margin-left: 0.0833333333rem; }
+
+.hotuserhearticonimg {
+  position: relative;
+  left: 0;
+  width: 0.2166666667rem;
+  height: 0.2166666667rem;
+  border-radius: 50%;
+  background-image: url(../img/head.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; }
+
+.hotuserheartnum {
+  float: left;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  margin-left: 0.0833333333rem;
+  margin-top: 0.025rem;
+  color: #666666; }
+
+.hotusermsgicon {
+  float: left;
+  width: 0.2166666667rem;
+  height: 0.2166666667rem;
+  margin-left: 0.0833333333rem; }
+
+.hotusermsgiconimg {
+  position: relative;
+  left: 0;
+  width: 0.2166666667rem;
+  height: 0.2166666667rem;
+  border-radius: 50%;
+  background-image: url(../img/head.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; }
+
+.hotusertalknum {
+  float: left;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  margin-left: 0.0833333333rem;
+  margin-top: 0.025rem;
+  color: #666666; }
+
+.nestpagecont {
+  position: relative;
+  width: 6.3583333333rem;
+  height: 0.2rem;
+  margin-top: 0.0166666667rem; }
+
+.nestpagecont2 {
+  position: absolute;
+  left: 2.1416666667rem;
+  width: 4.0166666667rem;
+  top: 0;
+  height: 100%; }
+
+.totalpagenum {
+  float: left;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  color: #A1A1A1;
+  margin-right: 0.1666666667rem; }
+
+.pagenum {
+  float: left;
+  width: auto;
+  height: 100%; }
+
+.numchoose {
+  float: left;
+  width: auto;
+  height: 0.1833333333rem;
+  border-radius: 2px;
+  background-color: #A978D6;
+  margin-right: 0.0833333333rem;
+  color: #FFFFFF;
+  cursor: pointer; }
+
+.numchooseno {
+  float: left;
+  width: auto;
+  height: 0.1833333333rem;
+  border-radius: 2px;
+  margin-right: 0.0833333333rem;
+  color: #A1A1A1;
+  cursor: pointer; }
+
+.numchoosenum {
+  position: relative;
+  width: auto;
+  height: 100%;
+  text-align: center;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem; }
+
+.nestpagebtn {
+  float: left;
+  width: 0.5rem;
+  margin-left: 0.0833333333rem;
+  height: 100%;
+  background-image: url(../img/pgindexnest.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer; }
+
+.nestpagebtn:active {
+  background-image: url(../img/pgindexnestp.png); }
+
+.nestpagebtn:hover {
+  background-image: url(../img/pgindexnestp.png); }
+
+.lastpagebtn {
+  float: left;
+  width: 0.5rem;
+  margin-right: 0.1666666667rem;
+  height: 100%;
+  background-image: url(../img/pgindeshang.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer; }
+
+.lastpagebtn:active {
+  background-image: url(../img/pgindeshangp.png); }
+
+.lastpagebtn:hover {
+  background-image: url(../img/pgindeshangp.png); }
+
+.changjianproblemcont {
+  position: relative;
+  width: 100%;
+  height: 0.3333333333rem;
+  margin-top: 0.1rem;
+  border-bottom: 1px dashed #D1D1D1;
+  border-right: 0;
+  border-left: 0;
+  border-top: 0; }
+
+.ranknum {
+  position: absolute;
+  top: 0.0583333333rem;
+  left: 0;
+  width: 0.1833333333rem;
+  height: 0.1833333333rem;
+  border-radius: 50%;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  text-align: center; }
+
+.ranknumbg1 {
+  background: #A978D6; }
+
+.ranknumbg2 {
+  background: #CCAFE9; }
+
+.ranknumbg3 {
+  background: #E6AFC4; }
+
+.ranknum > div {
+  position: relative;
+  bottom: 0.0166666667rem; }
+
+.ranknum1 {
+  color: #FFFFFF; }
+
+.ranknum2 {
+  color: #666666; }
+
+.problemdesc {
+  position: absolute;
+  top: 0.0583333333rem;
+  left: 0.25rem;
+  width: 3.1666666667rem;
+  height: auto;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  color: #666666; }
+
+.uomustknowledgecont {
+  position: relative;
+  margin-left: 0.0833333333rem;
+  width: 120%;
+  height: 2.0833333333rem;
+  margin-top: 0.25rem; }
+
+.uomustknowledgecont > div {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.topichotcont {
+  position: relative;
+  margin-left: 0.0833333333rem;
+  width: 120%;
+  height: 2.0833333333rem;
+  margin-top: 0.25rem; }
+
+.topichotcont > div {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.mustknowledg {
+  float: left;
+  left: 0;
+  width: 1.85rem;
+  height: 100%;
+  margin-right: 0.3333333333rem; }
+
+.topichotmsg {
+  float: left;
+  left: 0;
+  width: 1.85rem;
+  height: 100%;
+  margin-right: 0.3333333333rem;
+  cursor: pointer; }
+
+.mustpiccont {
+  position: relative;
+  width: 100%;
+  height: 1.2583333333rem; }
+
+.mustpiccont > img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.mustpicconttage {
+  position: absolute;
+  top: 0.125rem;
+  left: 0;
+  width: 0.6083333333rem;
+  height: 0.2916666667rem;
+  opacity: 0.8;
+  background: #A978D6;
+  border-top-right-radius: 0.1666666667rem;
+  border-bottom-right-radius: 0.1666666667rem; }
+
+.mustpicconttage > div {
+  position: absolute;
+  top: 0.0416666667rem;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 0.1166666667rem;
+  color: #FFFFFF; }
+
+.mustknowledgedesc {
+  position: relative;
+  width: 100%;
+  font-family: MicrosoftYaHeiUI;
+  -webkit-text-size-adjust: none;
+  margin-top: 0.1666666667rem;
+  font-size: 0.1166666667rem;
+  color: #030303;
+  line-height: 0.2166666667rem; }
+
+.shoppic {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 0.1666666667rem; }
+
+.shopImg {
+  position: relative;
+  width: 10rem;
+  height: 1.7416666667rem; }
+
+.citycont {
+  position: relative;
+  width: 100%;
+  height: 1.2583333333rem;
+  margin-top: 0.2166666667rem;
+  cursor: pointer; }
+
+.citycont > img {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.casualpiccont {
+  position: relative;
+  width: 100%;
+  height: 2.0833333333rem;
+  margin-top: 0.25rem; }
+
+.casualpiccont > div {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.suibianbig {
+  float: left;
+  width: 3.2916666667rem;
+  height: 2.0833333333rem;
+  margin-right: 0.3333333333rem;
+  cursor: pointer; }
+
+.suibianbigpic {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.suibiansmall {
+  float: left;
+  width: 1.85rem;
+  height: 2.0833333333rem;
+  margin-right: 0.3333333333rem;
+  cursor: pointer; }
+
+.suibiansmallpic {
+  position: relative;
+  width: 100%;
+  height: 100%; }
 
 /*# sourceMappingURL=index.css.map */

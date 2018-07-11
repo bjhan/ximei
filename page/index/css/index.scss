@@ -1,8 +1,6 @@
-@import '../../../common/px2rem.scss';
-$designWidth:1920;
 body {
   position: relative;
-  width: px2rem(1920);
+  width: 100%;
   margin: 0 auto;
   background-size: cover;
   overflow-y: scroll;
@@ -18,7 +16,7 @@ p{
 .bannercont{
   position: relative;
   width: 100%;
-  height: px2rem(537);
+  height: 537px;
 }
 
 .swiper-container {
@@ -41,62 +39,62 @@ p{
 .gallery-thumbs {
   position: absolute;
   bottom: 0;
-  height: px2rem(80);
+  height: 80px;
   box-sizing: border-box;
-  padding:px2rem(10) 0;
+  padding:10px 0;
 }
 .gallery-thumbs .swiper-slide {
-  width: px2rem(110);
+  width: 110px;
   height: 100%;
   opacity: 0.4;
 }
 .gallery-thumbs .swiper-slide-active {
   opacity: 1;
-  border: px2rem(4) solid #A978D6;
+  border: 4px solid #A978D6;
 }
 .findcont{
   position: absolute;
-  top:px2rem(341);
-  left: px2rem(698);
-  width: px2rem(543);
-  height: px2rem(100);
+  top:341px;
+  left: 698px;
+  width: 543px;
+  height: 100px;
   z-index: 999;
 }
 .shurukuangcont{
   position: absolute;
-  top:px2rem(26);
-  left: px2rem(36);
-  width: px2rem(350);
-  height: px2rem(51);
+  top:26px;
+  left: 36px;
+  width: 350px;
+  height: 51px;
   border: 1px solid #E0E0E0 ;
-  border-radius: px2rem(4);
+  border-radius: 4px;
   background-color: #ffffff;
 }
 .iconsearch{
   position: absolute;
-  top:px2rem(19);
-  left: px2rem(17);
-  width: px2rem(14);
-  height: px2rem(14);
+  top:19px;
+  left: 17px;
+  width: 14px;
+  height: 14px;
 }
 .searchinput{
   position: absolute;
-  top:px2rem(15);
-  left: px2rem(41);
-  width: px2rem(255);
-  height: px2rem(18);
+  top:15px;
+  left: 41px;
+  width: 255px;
+  height: 18px;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(8);
+  font-size: 8px;
   color: #9B9B9B;
   border: 0px;
   outline:none;
 }
 #searchbtn{
   position: absolute;
-  top:px2rem(26);
-  right: px2rem(36);
-  width: px2rem(114);
-  height: px2rem(51);
+  top:26px;
+  right: 36px;
+  width: 114px;
+  height: 51px;
   background-image: url(../img/pgindex_btn-search.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -111,82 +109,82 @@ p{
 }
 .videocontent{
   position: relative;
-  left: px2rem(367);
-  width: px2rem(1186);
-  height: px2rem(205);
-  margin-top: px2rem(18);
+  left: 367px;
+  width: 1186px;
+  height: 205px;
+  margin-top: 18px;
   overflow: hidden;
 }
 .mostcont{
   position: relative;
-  left: px2rem(367);
-  width: px2rem(1256);
+  left: 367px;
+  width: 1256px;
   height: auto;
-  margin-top: px2rem(68);
+  margin-top: 68px;
   overflow: hidden;
 }
 .knowledgecont{
   position: relative;
-  left: px2rem(367);
-  width: px2rem(1256);
+  left: 367px;
+  width: 1256px;
   height: auto;
-  margin-top: px2rem(68);
+  margin-top: 68px;
   overflow: hidden;
 }
 .shopcont{
   position: relative;
-  left: px2rem(367);
-  width: px2rem(1256);
+  left: 367px;
+  width: 1256px;
   height: auto;
-  margin-top: px2rem(68);
+  margin-top: 68px;
   overflow: hidden;
 }
 .casualcont{
   position: relative;
-  left: px2rem(367);
-  width: px2rem(1256);
+  left: 367px;
+  width: 1256px;
   height: auto;
-  margin-top: px2rem(68);
+  margin-top: 68px;
   overflow: hidden;
 }
 .topicityccont{
   position: relative;
-  left: px2rem(367);
-  width: px2rem(1256);
+  left: 367px;
+  width: 1256px;
   height: auto;
-  margin-top: px2rem(68);
+  margin-top: 68px;
   overflow: hidden;
 }
 .firstvideo{
   float: left;
   top:0;
   left: 0;
-  width: px2rem(395);
-  height: px2rem(205);
-  margin-right: px2rem(43);
+  width: 395px;
+  height: 205px;
+  margin-right: 43px;
   cursor: pointer;
 }
 .secondvideo{
   float: left;
   top:0;
   left: 0;
-  width: px2rem(222);
-  height: px2rem(205);
-  margin-right: px2rem(43);
+  width: 222px;
+  height: 205px;
+  margin-right: 43px;
 }
 .bigvideo{
   position: relative;
   top:0;
   left: 0;
-  width: px2rem(395);
-  height: px2rem(205);
+  width: 395px;
+  height: 205px;
 }
 .smallvideo{
   position: relative;
   top:0;
   left: 0;
-  width: px2rem(222);
-  height: px2rem(205);
+  width: 222px;
+  height: 205px;
   cursor: pointer;
 }
 .videocontentfloat{
@@ -205,10 +203,10 @@ p{
 }
 .videodesc{
   position: absolute;
-  top:px2rem(142);
+  top:142px;
   width: 100%;
   font-family: MicrosoftYaHeiUI;
-  font-size:px2rem(5);
+  font-size:5px;
   color: #FFFFFF;
   text-align: center;
 }
@@ -222,9 +220,9 @@ p{
 }
 .playbtn{
   position: absolute;
-  top:px2rem(67);
+  top:67px;
   width: 100%;
-  height: px2rem(70);
+  height: 70px;
   background-image: url(../img/pgindex_btn_play.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -232,13 +230,13 @@ p{
 }
 .mostcontleft{
   float: left;
-  width: px2rem(395);
+  width: 395px;
   height: auto;
-  margin-right: px2rem(30);
+  margin-right: 30px;
 }
 .mostcontright{
   float: left;
-  width: px2rem(763);
+  width: 763px;
   height: auto;
   overflow: hidden;
 }
@@ -246,64 +244,64 @@ p{
   position: relative;
   width: 100%;
   height: auto;
-  padding-bottom: px2rem(7);
+  padding-bottom: 7px;
 }
 .moretitle{
   position: relative;
   width: 100%;
-  height: px2rem(28);
+  height: 28px;
 }
 .bigdesctitle{
   float: left;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(21);
+  font-size: 21px;
   color: #070707;
 }
 .moreMesg{
   float: right;
   bottom: 0;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(14);
+  font-size: 14px;
   color: #070707;
   cursor: pointer;
-  margin-top: px2rem(6);
+  margin-top: 6px;
 }
 .moredetailcont{
   position: relative;
   width: 100%;
-  height: px2rem(150);
-  margin-top: px2rem(30);
+  height: 150px;
+  margin-top: 30px;
   border: 0;
 }
 .moredetailpic{
   position: relative;
-  width:px2rem(395);
-  height: px2rem(150);
+  width:395px;
+  height: 150px;
 }
 .newproictitle{
   position: relative;
   width: 100%;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(18);
+  font-size: 18px;
   color: #070707;
-  margin-top: px2rem(12);
+  margin-top: 12px;
 }
 .newproicde{
   position: relative;
   width: 100%;
   height: auto;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(14);
+  font-size: 14px;
   color: #666666;
-  line-height: px2rem(26);
-  margin-top: px2rem(8);
+  line-height: 26px;
+  margin-top: 8px;
 }
 .xiangqingBtn{
   position: absolute;
   bottom: 0;
   right: 0;
-  width: px2rem(74);
-  height: px2rem(22);
+  width: 74px;
+  height: 22px;
   background-image: url(../img/pgindex_btn_detal.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -318,69 +316,69 @@ p{
 .hottitle{
   position: relative;
   width: 90%;
-  margin-left: px2rem(10);
-  height: px2rem(24);
+  margin-left: 10px;
+  height: 24px;
 }
 .hottitle2{
   position: relative;
   width: 90%;
-  height: px2rem(24);
+  height: 24px;
 }
 .hotcompositioncont{
   position: relative;
-  width: px2rem(763);
-  height: px2rem(176);
-  margin-top: px2rem(20);
+  width: 763px;
+  height: 176px;
+  margin-top: 20px;
 }
 .hotpic{
   position: absolute;
-  top:px2rem(13);
-  left: px2rem(12);
-  width: px2rem(222);
-  height: px2rem(150);
+  top:13px;
+  left: 12px;
+  width: 222px;
+  height: 150px;
 }
 .hotcompositionconttitle{
   position: relative;
-  width: px2rem(482);
-  height: px2rem(23);
-  margin-top: px2rem(28);
+  width: 482px;
+  height: 23px;
+  margin-top: 28px;
   ffont-family: MicrosoftYaHeiUI;
-  font-size: px2rem(21);
+  font-size: 21px;
   color: #070707;
 }
 .hotdesccont{
   position: absolute;
-  left: px2rem(257);
-  width: px2rem(482);
+  left: 257px;
+  width: 482px;
   top:0;
   height: 100%;
 }
 .hotcompositioncontzhegnwen{
   position: relative;
   width: 100%;
-  height: px2rem(51);
+  height: 51px;
   ffont-family: MicrosoftYaHeiUI;
-  font-size: px2rem(14);
+  font-size: 14px;
   color: #666666;
-  line-height:px2rem(26);
-  margin-top: px2rem(12);
+  line-height:26px;
+  margin-top: 12px;
 }
 .hotusermessage{
   position: relative;
   width: 100%;
-  height: px2rem(30);
-  margin-top: px2rem(18);
+  height: 30px;
+  margin-top: 18px;
 }
 .hotuserheadicon{
   float: left;
-  width: px2rem(26);
-  height: px2rem(26);
+  width: 26px;
+  height: 26px;
 }
 .hotuserheadiconimg{
   position: relative;
   left: 0;
-  width: px2rem(26);
-  height: px2rem(26);
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background-image: url(../img/head.png);
   background-repeat: no-repeat;
@@ -390,9 +388,9 @@ p{
 .hotusername{
   float: left;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(14);
-  margin-left: px2rem(10);
-  margin-top: px2rem(3);
+  font-size: 14px;
+  margin-left: 10px;
+  margin-top: 3px;
   color: #A978D6;
 }
 .hotusername>div{
@@ -412,15 +410,15 @@ p{
 }
 .hotuserhearticon{
   float: left;
-  width: px2rem(26);
-  height: px2rem(26);
-  margin-left: px2rem(10);
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
 }
 .hotuserhearticonimg{
   position: relative;
   left: 0;
-  width: px2rem(26);
-  height: px2rem(26);
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background-image: url(../img/head.png);
   background-repeat: no-repeat;
@@ -430,22 +428,22 @@ p{
 .hotuserheartnum{
   float: left;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(14);
-  margin-left: px2rem(10);
-  margin-top: px2rem(3);
+  font-size: 14px;
+  margin-left: 10px;
+  margin-top: 3px;
   color: #666666;
 }
 .hotusermsgicon{
   float: left;
-  width: px2rem(26);
-  height: px2rem(26);
-  margin-left: px2rem(10);
+  width: 26px;
+  height: 26px;
+  margin-left: 10px;
 }
 .hotusermsgiconimg{
   position: relative;
   left: 0;
-  width: px2rem(26);
-  height: px2rem(26);
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background-image: url(../img/head.png);
   background-repeat: no-repeat;
@@ -455,31 +453,31 @@ p{
 .hotusertalknum{
   float: left;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(14);
-  margin-left: px2rem(10);
-  margin-top: px2rem(3);
+  font-size: 14px;
+  margin-left: 10px;
+  margin-top: 3px;
   color: #666666;
 }
 .nestpagecont{
   position: relative;
-  width: px2rem(763);
-  height: px2rem(24);
-  margin-top: px2rem(2);
+  width: 763px;
+  height: 24px;
+  margin-top: 2px;
 
 }
 .nestpagecont2{
   position: absolute;
-  left: px2rem(257);
-  width: px2rem(482);
+  left: 257px;
+  width: 482px;
   top:0;
   height: 100%;
 }
 .totalpagenum{
   float: left;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(14);
+  font-size: 14px;
   color: #A1A1A1;
-  margin-right: px2rem(20);
+  margin-right: 20px;
 }
 .pagenum{
   float: left;
@@ -489,19 +487,19 @@ p{
 .numchoose{
   float: left;
   width: auto;
-  height: px2rem(22);
+  height: 22px;
   border-radius: 2px;
   background-color: #A978D6;
-  margin-right: px2rem(10);
+  margin-right: 10px;
   color: #FFFFFF;
   cursor: pointer;
 }
 .numchooseno{
   float: left;
   width: auto;
-  height: px2rem(22);
+  height: 22px;
   border-radius: 2px;
-  margin-right: px2rem(10);
+  margin-right: 10px;
   color: #A1A1A1;
   cursor: pointer;
 }
@@ -511,13 +509,13 @@ p{
   height: 100%;
   text-align: center;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(14);
+  font-size: 14px;
 
 }
 .nestpagebtn{
   float: left;
-  width: px2rem(60);
-  margin-left: px2rem(10);
+  width: 60px;
+  margin-left: 10px;
   height: 100%;
   background-image: url(../img/pgindexnest.png);
   background-repeat: no-repeat;
@@ -533,8 +531,8 @@ p{
 }
 .lastpagebtn{
   float: left;
-  width: px2rem(60);
-  margin-right: px2rem(20);
+  width: 60px;
+  margin-right: 20px;
   height: 100%;
   background-image: url(../img/pgindeshang.png);
   background-repeat: no-repeat;
@@ -551,8 +549,8 @@ p{
 .changjianproblemcont{
   position: relative;
   width: 100%;
-  height: px2rem(40);
-  margin-top: px2rem(12);
+  height: 40px;
+  margin-top: 12px;
   border-bottom: 1px dashed #D1D1D1;
   border-right: 0;
   border-left: 0;
@@ -561,14 +559,14 @@ p{
 }
 .ranknum{
   position: absolute;
-  top:px2rem(7);
+  top:7px;
   left: 0;
-  width: px2rem(22);
-  height: px2rem(22);
+  width: 22px;
+  height: 22px;
 
   border-radius: 50%;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(14);
+  font-size: 14px;
   text-align: center;
 }
 .ranknumbg1{
@@ -582,7 +580,7 @@ p{
 }
 .ranknum>div{
   position: relative;
-  bottom: px2rem(2);
+  bottom: 2px;
 }
 .ranknum1{
   color: #FFFFFF;
@@ -592,20 +590,20 @@ p{
 }
 .problemdesc{
   position: absolute;
-  top:px2rem(7);
-  left: px2rem(30);
-  width: px2rem(380);
+  top:7px;
+  left: 30px;
+  width: 380px;
   height: auto;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(14);
+  font-size: 14px;
   color: #666666;
 }
 .uomustknowledgecont{
   position: relative;
-  margin-left: px2rem(10);
+  margin-left: 10px;
   width: 120%;
-  height: px2rem(250);
-  margin-top: px2rem(30);
+  height: 250px;
+  margin-top: 30px;
 }
 .uomustknowledgecont>div{
   position: absolute;
@@ -614,10 +612,10 @@ p{
 }
 .topichotcont{
   position: relative;
-  margin-left: px2rem(10);
+  margin-left: 10px;
   width: 120%;
-  height: px2rem(250);
-  margin-top: px2rem(30);
+  height: 250px;
+  margin-top: 30px;
 }
 .topichotcont>div{
   position: absolute;
@@ -627,22 +625,22 @@ p{
 .mustknowledg{
   float: left;
   left: 0;
-  width: px2rem(222);
+  width: 222px;
   height: 100%;
-  margin-right: px2rem(40);
+  margin-right: 40px;
 }
 .topichotmsg{
   float: left;
   left: 0;
-  width: px2rem(222);
+  width: 222px;
   height: 100%;
-  margin-right: px2rem(40);
+  margin-right: 40px;
   cursor: pointer;
 }
 .mustpiccont{
   position: relative;
   width: 100%;
-  height: px2rem(151);
+  height: 151px;
 }
 .mustpiccont>img{
   position: absolute;
@@ -652,20 +650,20 @@ p{
 }
 .mustpicconttage{
   position: absolute;
-  top:px2rem(15);
+  top:15px;
   left: 0;
-  width: px2rem(73);
-  height: px2rem(35);
+  width: 73px;
+  height: 35px;
   opacity: 0.8;
   background: #A978D6;
-  border-top-right-radius:px2rem(20);
-  border-bottom-right-radius:px2rem(20);
+  border-top-right-radius:20px;
+  border-bottom-right-radius:20px;
 }
 .mustpicconttage>div{
   position: absolute;
-  top:px2rem(5);
+  top:5px;
   font-family: MicrosoftYaHeiUI;
-  font-size: px2rem(14);
+  font-size: 14px;
   color: #FFFFFF;
 }
 .mustknowledgedesc{
@@ -673,27 +671,27 @@ p{
   width: 100%;
   font-family: MicrosoftYaHeiUI;
   -webkit-text-size-adjust:none;
-  margin-top: px2rem(20);
-  font-size: px2rem(14);
+  margin-top: 20px;
+  font-size: 14px;
   color: #030303;
-  line-height: px2rem(26);
+  line-height: 26px;
 }
 .shoppic{
   position: relative;
   width: 100%;
   height: auto;
-  margin-top: px2rem(20);
+  margin-top: 20px;
 }
 .shopImg{
   position: relative;
-  width: px2rem(1200);
-  height: px2rem(209);
+  width: 1200px;
+  height: 209px;
 }
 .citycont{
   position: relative;
   width: 100%;
-  height: px2rem(151);
-  margin-top: px2rem(26);
+  height: 151px;
+  margin-top: 26px;
   cursor: pointer;
 }
 .citycont>img{
@@ -704,8 +702,8 @@ p{
 .casualpiccont{
   position: relative;
   width: 100%;
-  height: px2rem(250);
-  margin-top: px2rem(30);
+  height: 250px;
+  margin-top: 30px;
 }
 .casualpiccont>div{
   position: absolute;
@@ -714,9 +712,9 @@ p{
 }
 .suibianbig{
   float: left;
-  width: px2rem(395);
-  height: px2rem(250);
-  margin-right: px2rem(40);
+  width: 395px;
+  height: 250px;
+  margin-right: 40px;
   cursor: pointer;
 }
 .suibianbigpic{
@@ -726,13 +724,88 @@ p{
 }
 .suibiansmall{
   float: left;
-  width: px2rem(222);
-  height: px2rem(250);
-  margin-right: px2rem(40);
+  width: 222px;
+  height: 250px;
+  margin-right: 40px;
   cursor: pointer;
 }
 .suibiansmallpic{
   position: relative;
   width: 100%;
   height: 100%;
+}
+.msgcurrentcont{
+  position: absolute;
+  top:32px;
+  right: 300px;
+  width: 222px;
+  height: 300px;
+  z-index: 999;
+}
+.currentBtn{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 33px;
+  background-image: url(../img/pgindex_btn_close.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  cursor: pointer;
+}
+.currentBtn:active{
+  background-image: url(../img/pgindex_btn_close_hover.png);
+}
+.currentBtn:hover{
+  background-image: url(../img/pgindex_btn_close_hover.png);
+}
+.currentmsgcont{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 255px;
+  overflow: hidden;
+}
+.currentmsg{
+  position: relative;
+  width: 222px;
+  height: 75px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: #DFC0FB;
+  overflow: hidden;
+}
+.currenttype{
+  position: absolute;
+  top:3px;
+  width: 100%;
+  left: 12px;
+  text-align: left;
+  font-family: MicrosoftYaHeiUI-Bold;
+  font-size: 14px;
+  color: #A978D6;
+}
+.currentwriter{
+  position: absolute;
+  top:24px;
+  width: 100%;
+  left: 12px;
+  text-align: left;
+  font-family: MicrosoftYaHeiUI-Bold;
+  font-size: 14px;
+  color: #A978D6;
+}
+.currenttitle{
+  position: absolute;
+  top:48px;
+  width: 100%;
+  left: 12px;
+  text-align: left;
+  font-family: MicrosoftYaHeiUI-Bold;
+  font-size: 14px;
+  color: #A978D6;
+}
+.currentusercolor{
+  color: #4A4A4A;
 }

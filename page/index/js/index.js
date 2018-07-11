@@ -2,35 +2,81 @@
  * Created by Administrator on 2018-07-04.
  */
 (function () {
-    initswiper();
-    getBanners();
+    var bannernum=0;//banner数量
 
+    getBanners();//banner
+    // currentthing();//新鲜事
+    // getvideothing();//热点视频
+    // clickevent();
+    function clickevent() {
+        $(".firstvideo").on("click",function () {
+            $(this).find('.bigvideo').find('video').get(0).controls=true;
+            $(this).find('.bigvideo').find('video').get(0).play();
+            $(this).find('.bigvideo').find('.mengceng').hide();
+            $(this).find('.bigvideo').find('.videodesc').hide();
+            $(this).find('.bigvideo').find('.playbtn').hide();
+        });
+    }
     function getBanners() {
-        // $.ajax({
-        //     url: CFG.interfaceurl+'/homepage/banners',
-        //     type: "get",
-        //     timeout: 5000,
-        //     success: function (data) {
-        //         console.log(data);
-        //     },
-        //     error: function (data) {
-        //         //alert("请求错误");
-        //         console.log(data);
-        //     }
-        // });
-        var bannermsg = [
-            {
-                "id": 100001,
-                "imageUrl": "http://www.xxxx.com/banner1.jpg"
+        $.ajax({
+            url: CFG.interfaceurl+'/homepage/banners',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                if(data.length>0){
+                    initswiper(data);
+                }
             },
-            {
-                "id": 100002,
-                "imageUrl": "http://www.xxxx.com/banner2.jpg"
+            error: function (data) {
+                //alert("请求错误");
+                console.log(data);
             }
-        ]
+        });
     }
 
-    function initswiper() {//首页滑动
+    function currentthing() {//获取新鲜事
+        $.ajax({
+            url: CFG.interfaceurl+'/homepage/activities',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                addcurrentthing(data);
+            },
+            error: function (data) {
+                //alert("请求错误");
+                console.log(data);
+            }
+        });
+    }
+    function getvideothing() {//添加热点视频
+        $.ajax({
+            url: CFG.interfaceurl+'/homepage/videos',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                //alert("请求错误");
+                console.log(data);
+            }
+        });
+    }
+    function addcurrentthing(currentarry) {//添加新鲜事
+        for(var i=0;i<currentarry.length;i++){
+            $(".currentmsgcont").prepend('<div class="currentmsg" id="'+currentarry[i].id+'" userId="'+currentarry[i].userId+'" postId="'+currentarry[i].postId+'" activeType="'+currentarry[i].activeType+'">'+
+            '<div class="currenttype">新鲜事</div>'+
+                '<div class="currentwriter"><span class="currentusercolor">'+currentarry[i].username+'</span>发表文章</div>'+
+                '<div class="currenttitle">'+currentarry[i].postTitle+'</div>'+
+                '</div>');
+        }
+    }
+    function initswiper(bannerarry) {//首页滑动
+        bannernum = bannerarry.length;
+        for(var i=0;i<bannerarry.length;i++){
+            $("#gallery-top").append('<div class="swiper-slide" id="'+bannerarry[i].id+'" style="background-image:url('+bannerarry[i].imageUrl+')"></div>');
+            $("#gallery-thumbs").append('<div class="swiper-slide" id="'+bannerarry[i].id+'" style="background-image:url('+bannerarry[i].imageUrl+')"></div>');
+        }
         var galleryThumbs = new Swiper('.gallery-thumbs', {
             spaceBetween: 10,
             centeredSlides: true,
@@ -67,7 +113,7 @@
             onSlideChangeEnd: function (swiper1) {
             },
             onSlideChangeStart: function (swiper1) {
-                galleryThumbs.slideTo((swiper1.activeIndex - 1) % 4, 400, false);//切换到第一个slide，速度为1秒
+                galleryThumbs.slideTo((swiper1.activeIndex - 1) % (bannernum), 400, false);//切换到第一个slide，速度为1秒
             }
         });
     }

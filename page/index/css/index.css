@@ -335,6 +335,7 @@ p{
   width: 763px;
   height: 176px;
   margin-top: 20px;
+  cursor: pointer;
 }
 .hotpic{
   position: absolute;
@@ -634,6 +635,7 @@ p{
   width: 222px;
   height: 100%;
   margin-right: 40px;
+  cursor: pointer;
 }
 .topichotmsg{
   float: left;
@@ -667,7 +669,7 @@ p{
 }
 .mustpicconttage>div{
   position: absolute;
-  top:5px;
+  top:8px;
   font-family: MicrosoftYaHeiUI;
   font-size: 14px;
   color: #FFFFFF;

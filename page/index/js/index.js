@@ -2,6 +2,20 @@
  * Created by Administrator on 2018-07-04.
  */
 (function () {
+
+    var DOC = document;
+    var Base = BASE;
+    var Touch = Base.cfg.isTouch;
+    var $$ = Base.getEle;
+    var $ajax = Base.ajax;
+    var $D = Base.disEle,
+        $G = Base.getUrl;
+    $CREATESTYLE = Base.createStyle,
+        $ADPALLSTYLE = Base.adpAllStyle;
+    $text = Base.txtEle;
+    $STOPPROPAGATION = Base.stopPropagation;
+    $rmvEle = Base.rmvEle;
+    var body = DOC.body;
     var bannernum=0;//banner数量
 
     getBanners();//banner
@@ -18,17 +32,20 @@
         });
     }
     function getBanners() {
+        // jQuery.support.cors = true;
+        alert(1);
         $.ajax({
-            url: CFG.interfaceurl+'/homepage/banners',
+            url: CFG.interfaceurl+'/homepage/banners'+'?fresh=' + Math.random(),
             type: "get",
             timeout: 5000,
             success: function (data) {
+                alert(data.length);
                 if(data.length>0){
                     initswiper(data);
                 }
             },
-            error: function (data) {
-                //alert("请求错误");
+            error: function (a,b,c) {
+                alert(c);
                 console.log(data);
             }
         });

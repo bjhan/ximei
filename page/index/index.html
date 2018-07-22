@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE">
     <title>西梅首页</title>
-    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
     <link rel="stylesheet" href="../../common/swiper.css">
     <link rel="stylesheet" href="../../common/index.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/pageSwitch.min.css">
     <script src="../../common/jquery-1.8.1.min.js"></script>
     <script src="../../common/jquery.xdomainrequest.min.js"></script>
     <script src="../../common/swiper.js"></script>
     <script src="../../common/DD_roundies.js"></script>
     <script src="../../common/base.js"></script>
+    <script src="js/html5media.min.js"></script>
+    <script src="js/clock-canvas.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="js/jquery.placeholder.js"></script>
+    <script>
+       $(function(){
+           $('input[placeholder]').placeholder();
+       });
+    </script>
+    <![endif]-->
 </head>
 <body>
 <div class="indexcont">
-    <div class="bannercont">
-        <div class="swiper-container gallery-top">
-            <div class="swiper-wrapper" id="gallery-top">
-                <div class="swiper-slide">
-                    <img src="img/1.png" style="width: 100%;height: 100%;">
-                </div>
-                <div class="swiper-slide" style="background-image:url(./img/2.png)"></div>
-                <div class="swiper-slide" style="background-image:url(./img/3.png)"></div>
-                <div class="swiper-slide" style="background-image:url(./img/4.png)"></div>
-            </div>
-            <!-- Add Arrows -->
-            <div class="swiper-button-next swiper-button-white"></div>
-            <div class="swiper-button-prev swiper-button-white"></div>
-        </div>
-        <div class="swiper-container gallery-thumbs">
-            <div class="swiper-wrapper" id="gallery-thumbs">
-                <div class="swiper-slide">
-                    <img src="img/1.png" style="width: 100%;height: 100%;">
-                </div>
-                <div class="swiper-slide" style="background-image:url(./img/2.png)"></div>
-                <div class="swiper-slide" style="background-image:url(./img/3.png)"></div>
-                <div class="swiper-slide" style="background-image:url(./img/4.png)"></div>
-            </div>
-        </div>
+   <div class="bannercont" id="container">
+       <div class="sections">
+           <div class="section" id="section0" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/1.png',  sizingMethod='scale');background-image:url(./img/1.png);background-size: 100% 100%;"></div>
+           <div class="section" id="section1" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/2.png',  sizingMethod='scale');background-image:url(./img/2.png);background-size: 100% 100%;"></div>
+           <div class="section" id="section2" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/3.png',  sizingMethod='scale');background-image:url(./img/3.png);background-size: 100% 100%;"></div>
+           <div class="section" id="section3" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/4.png',  sizingMethod='scale');background-image:url(./img/2.png);background-size: 100% 100%;"></div>
+       </div>
+       <!--<div class="swiper-container gallery-top">-->
+            <!--<div class="swiper-wrapper" id="gallery-top">-->
+                <!--<div class="swiper-slide">-->
+                    <!--<img src="img/1.png" style="width: 100%;height: 100%;">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/2.png)"></div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/3.png)"></div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/4.png)"></div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; Add Arrows &ndash;&gt;-->
+            <!--<div class="swiper-button-next swiper-button-white"></div>-->
+            <!--<div class="swiper-button-prev swiper-button-white"></div>-->
+        <!--</div>-->
+        <!--<div class="swiper-container gallery-thumbs">-->
+            <!--<div class="swiper-wrapper" id="gallery-thumbs">-->
+                <!--<div class="swiper-slide">-->
+                    <!--<img src="img/1.png" style="width: 100%;height: 100%;">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/2.png)"></div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/3.png)"></div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/4.png)"></div>-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="findcont">
             <div class="shurukuangcont">
                 <img src="img/pgindex_icon_search.png" class="iconsearch">
@@ -75,11 +91,23 @@
         </div>
     </div>
 </div>
+<div class="clockcont">
+    <div class="box">
+        <canvas id="clock1" width="100" height="100"></canvas>
+    </div>
+    <div class="box">
+        <canvas id="clock2" width="100" height="100"></canvas>
+    </div>
+</div>
 <div class="videocontent">
     <div class="videocontentfloat">
         <div class="firstvideo">
             <div class="bigvideo">
-                <video class="videos" src="img/video.mp4" poster="img/shipin1.png" ></video>
+                <video class="videos" poster="img/shipin1.png" >
+                    <source src="img/video.mp4" type="video/mp4">
+                </video>
+                <embed class="videos2" id="vivi" hidden="true" controls="controls" src="http://ossptest.voicecloud.cn/auth/project/imeYKvideo/img/video/video2.mp4" allowfullscreen="false" flashvars="vcastr_file=1234.flv&LogoText=www.lanrentuku.com&IsAutoPlay=0" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%" height="100%" loop="false" autostart="false"></embed>
+                <img src="img/shipin1.png" class="videopic">
                 <div class="mengceng"></div>
                 <div class="videodesc">加州生活</div>
                 <div class="playbtn"></div>
@@ -88,6 +116,7 @@
         <div class="secondvideo">
             <div class="smallvideo">
                 <video class="videos" src="img/video.mp4" poster="img/shipin2.png" ></video>
+                <img src="img/shipin2.png" class="videopic">
                 <div class="mengceng"></div>
                 <div class="videodesc">加州生活</div>
                 <div class="playbtn"></div>
@@ -494,13 +523,12 @@
     DD_roundies.addRule('.numchooseno', '4px 4px', true);
     DD_roundies.addRule('.currentmsg', '6px 6px', true);
     DD_roundies.addRule('.mustpicconttage', '0px 6px 6px 0px', true);
-//    DD_roundies.addRule('.hotuserheadiconimg', '5px 5px', true);
-//    DD_roundies.addRule('.hotuserhearticonimg', '50% 50%', true);
-//    DD_roundies.addRule('.hotusermsgiconimg', '50% 50%', true);
-//    DD_roundies.addRule('.ranknum', '50% 50%', true);
 </script>
+<script src="js/pageSwitch.js"></script>
 <script src="js/config.js"></script>
 <script src="js/index.js"></script>
+<script type="text/javascript">
 
+</script>
 </body>
 </html>

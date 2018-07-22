@@ -1,0 +1,76 @@
+body {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    overflow-y: scroll;
+}
+p{
+    margin: 0;
+}
+.indexcont{
+    position: relative;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+.searchcont{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.searchdesc{
+    position: relative;
+    margin-top: 56px;
+    width: 100%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 24px;
+    color: #808080;
+}
+.searchh{
+    position: relative;
+    width: 100%;
+    height: 44px;
+}
+.searchtt{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 563px;
+    height: 44px;
+    margin-top: 10px;
+    border: 1px solid #979797;
+    border-radius: 6px;
+}
+.searchkuang{
+    outline: none;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #CDCCCC;
+    position: relative;
+    top:8px;
+    left: 2%;
+    width: 90%;
+    height: 25px;
+    padding-left: 5px;
+    border: 0px;
+}
+#searchbtn{
+    position: absolute;
+    top:0;
+    left: 600px;
+    width: 127px;
+    height: 100%;
+    background: #A978D6;
+    border-radius: 6px;
+}
+.anniuwenzi{
+    position: absolute;
+    width: 100%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 26px;
+    color: #FFFFFF;
+    text-align: center;
+    vertical-align:middle;
+    padding-top: 5px;
+}

@@ -10,7 +10,7 @@ p{
 }
 .indexcont{
     position: relative;
-    width: 1200px;
+    width: 62.5%;
     height: auto;
     margin: 0 auto;
 }
@@ -76,7 +76,7 @@ p{
 }
 .ximeijiecont{
     position: relative;
-    width: 1200px;
+    width: 100%;
     height: auto;
     margin: 0 auto;
 }
@@ -133,8 +133,8 @@ p{
 }
 .ximeijiedetailcont{
     float: left;
-    width: 285px;
-    height:300px;
+    width: 21%;
+    height:80%;
     margin-right: 15px;
     background: #FFFFFF;
     border: 1px solid #E1E1E1;
@@ -142,10 +142,10 @@ p{
 }
 .ximeijiedetailcontpic{
     position: relative;
-    top:10px;
-    left: 10px;
-    width: 265px;
-    height: 230px;
+    top:5%;
+    left: 5%;
+    width: 90%;
+    height: 80%;
     background-image: url(../img/ximei.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -153,9 +153,9 @@ p{
 }
 .ximeijiedetailcontpicdesc{
     position: relative;
-    margin-top: 50px;
+    margin-top: 15%;
     bottom: 17px;
-    width: 285px;
+    width: 100%;
     text-align: center;
     font-family: MicrosoftYaHeiUI;
     font-size: 18px;

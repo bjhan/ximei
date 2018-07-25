@@ -1,0 +1,109 @@
+body {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    overflow-y: scroll;
+}
+p{
+    margin: 0;
+}
+.indexcont{
+    position: relative;
+    width: 62.5%;
+    height: auto;
+    margin: 0 auto;
+}
+.subtitle{
+    position: relative;
+    width: 50%;
+    left: 0;
+    font-family: MicrosoftYaHeiUI-Bold;
+    font-size: 30px;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 30px;
+}
+.selectcont{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background: #F2F2F2;
+    opacity: 0.6;
+    /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99F2F2F2,endColorstr=#99F2F2F2);*/
+    border: 1px solid #D1D1D1;
+    margin-top: 20px;
+}
+.pricecont{
+    position: absolute;
+    left: 0;
+    top:10%;
+    width: 20%;
+    height: 80%;
+    border-right: 1px solid #E0E0E0;
+}
+.postioncont{
+    position: absolute;
+    left: 20%;
+    top:10%;
+    width: 16%;
+    height: 80%;
+    border-right: 1px solid #E0E0E0;
+}
+.postioncontselect{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.postioncontchoose{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 90%;
+    height: 40%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.choosepic{
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 21px;
+    height: 4px;
+    background-image: url("../img/asc.gif");
+    background-repeat: no-repeat;
+}
+.qian{
+    position: absolute;
+    margin-top:0px;
+    left: 44px;
+    font-size: 8px;
+    color: #999;
+}
+.qiandao{
+    position: absolute;
+    margin-top:0px;
+    left: 96px;
+    font-size: 8px;
+    color: #999;
+}
+.selecttagtitle{
+    position: absolute;
+    top:0px;
+    left: 10px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #000000;
+}
+.fasongchenggcont{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 111;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5000000,endColorstr=#E5000000);
+}

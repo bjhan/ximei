@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的圈子</title>
+    <link rel="stylesheet" href="./css/circle.css">
+    <link rel="stylesheet" href="../../common/jquery-ui-1.10.0.custom.css">
+    <script src="../../common/jquery-1.8.3.min.js"></script>
+    <script src="../../common/jquery-ui-1.11.4.min.js"></script>
+    <script src="./js/circle.js"></script>
+</head>
+<body>
+<div class="content">
+    <div id="head">
+        <div id="headimg">
+        </div>
+        <span id="cirleName">圈子名称</span>
+        <span id="cirleIntroduction">圈子介绍，圈子的介绍文案，请用一句话概括</span>
+        <span id="tag">
+            <div>标签一</div>
+            <div>标签二</div>
+        </span>
+    </div>
+    <div id="information">
+         <span>
+              <p class="active">最新话题</p>
+              <p>|</p>
+              <p>最热话题</p>
+         </span>
+        <div id="addTopic" onclick="openDialog()">
+            +发表话题
+        </div>
+        <hr/>
+        <div id="toplist">
+        </div>
+    </div>
+</div>
+<!--富文本编辑框弹窗-->
+
+<div id="fwbDialog" style="display: block">
+    <label class="dialog-title-lable"><strong>话题名称</strong></label>
+    <input type="text" id="topicTitle"/>
+    <br/>
+    <br/>
+    <script id="container" name="content" type="text/plain">
+    </script>
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+</div>
+
+</body>
+</html>

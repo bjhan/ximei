@@ -1,0 +1,46 @@
+html, body {
+  width: 95%;
+  padding: 0 0 0 30px;
+  margin: 0 0 0 0; }
+
+.content {
+  width: 55%; }
+
+.title {
+  font-family: MicrosoftYaHeiUI-Bold;
+  font-size: 30px;
+  color: #4A4A4A; }
+
+.tabdiv {
+  position: relative;
+  width: 100%; }
+
+.tabdiv p {
+  font-family: MicrosoftYaHeiUI;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 0;
+  display: table-cell; }
+
+.active {
+  color: #A978D6; }
+
+#ckqbqz,#ckqbtopic,#ckqbback {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  font-family: MicrosoftYaHeiUI;
+  font-size: 14px;
+  color: #9B9B9B; }
+
+hr {
+  border: 1px solid #CCCCCC;
+  margin: 10px 0; }
+
+
+#quanziview{
+  width: 100%;
+  min-height: 200px;
+  background-color: #4A4A4A;
+  overflow: hidden;
+}

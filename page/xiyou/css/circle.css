@@ -1,0 +1,125 @@
+
+html, body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    width: 70%;
+    min-height: 200px;
+}
+
+#head {
+    width: 100%;
+    position: relative;
+    min-height: 145px;
+}
+
+#headimg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-image: url(../img/test.jpg);
+    width: 105px;
+    height: 105px;
+    top: 40px;
+    position: absolute;
+}
+
+#cirleName {
+    font-family: MicrosoftYaHeiUI-Bold;
+    font-size: 30px;
+    color: #4A4A4A;
+    top: 50px;
+    position: absolute;
+    left: 121px;
+}
+
+#cirleIntroduction {
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #000000;
+    top: 67px;
+    position: absolute;
+    left: 255px;
+}
+
+#tag {
+    width: 200px;
+    display: flex;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #8A80D9;
+    justify-content: space-between;
+    position: absolute;
+    top: 109px;
+    left: 123px;
+}
+
+#tag div {
+    border: 1px dashed #8A80D9;
+    width: 87px;
+    height: 21px;
+    text-align: center;
+
+}
+
+#information span p {
+    display: inline;
+}
+
+#information {
+    margin-top: 50px;
+    position: relative;
+}
+
+.active {
+    color: #A978D6;
+}
+
+hr {
+    border: 1px solid #CCCCCC;
+    margin: 10px 0;
+    width: 100%;
+}
+
+#addTopic {
+    border: 1px solid #A978D6;
+    border-radius: 6px;
+    color: #A978D6;
+    height: 36px;
+    width: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    position: relative;
+    bottom: 15px;
+}
+
+#toplist {
+    width: 100%;
+    height: auto;
+}
+
+#edui1{
+    width: 100% !important;
+}
+
+.ui-dialog{
+    z-index: 5 !important;
+}
+
+.dialog-title-lable{
+    font-size: 20px;
+}
+
+#topicTitle{
+    width: 95%;
+    height: 30px;
+    font-size: 20px;
+
+}

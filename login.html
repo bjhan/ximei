@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE">
+    <title>西梅</title>
+    <link rel="stylesheet" href="common/login.css">
+    <link rel="stylesheet" href="js/jquery.idcode.css">
+    <script src="common/DD_roundies.js"></script>
+    <script src="common/base.js"></script>
+    <script src="common/jquery-1.8.1.min.js"></script>
+    <script src="common/jquery.xdomainrequest.min.js"></script>
+    <script src="js/jquery.idcode.js"></script>
+    <!--[if lte IE 9]>
+    <script src="page/index/js/jquery.placeholder.js"></script>
+    <script>
+        $(function () {
+            $('input[placeholder]').placeholder();
+        });
+    </script>
+    <![endif]-->
+</head>
+<body>
+<div class="maincont">
+    <img src="img/46.jpg" class="loginpic">
+    <div class="fasongchenggcont">
+        <div class="alertccc">
+            <div class="chenggongmao">邮件已经发送的您的邮箱</div>
+            <div class="chenggongmao2">jhifehi@baidu.com</div>
+            <div id="chenggongfasongBtn">
+                <div class="anniuwenzi">确定</div>
+            </div>
+        </div>
+    </div>
+    <div class="resetpowcont">
+        <div class="headcontregiter">
+            <img src="img/pgindex_logo.png" class="loginicon">
+            <div class="zhognjianshu"></div>
+            <div class="logintitle">设置新密码</div>
+            <div class="loginfenge"></div>
+        </div>
+        <div class="register">
+            <div class="kongbai"></div>
+            <div class="msgcont">
+                <div class="findpowkuang">
+                    <input class="logimzhanghaoinput" placeholder="您的新密码">
+                </div>
+            </div>
+        </div>
+        <div class="register">
+            <div class="kongbai"></div>
+            <div class="msgcont">
+                <div class="findpowkuang">
+                    <input class="logimzhanghaoinput" placeholder="确认密码">
+                </div>
+            </div>
+        </div>
+        <div class="kongbai"></div>
+        <div class="kongbai"></div>
+        <div class="kongbai"></div>
+        <div class="kongbai"></div>
+        <div id="resetpowBtn">
+            <div class="anniuwenzi">完成</div>
+        </div>
+        <div class="kongbai"></div>
+        <div class="kongbai"></div>
+        <div class="kongbai"></div>
+    </div>
+    <div class="findpowcont">
+        <div class="headcontregiter">
+            <img src="img/pgindex_logo.png" class="loginicon">
+            <div class="zhognjianshu"></div>
+            <div class="logintitle">找回密码</div>
+            <div class="loginfenge"></div>
+        </div>
+        <div class="register">
+            <div class="kongbai"></div>
+            <div class="msgcont">
+                <div class="findpowkuang">
+                    <input class="logimzhanghaoinput" placeholder="您的邮箱地址">
+                </div>
+            </div>
+        </div>
+        <div class="register">
+            <div class="kongbai"></div>
+            <div class="msgcont">
+                <div class="yanzhoengmaqu">
+                    <span id="idcode"></span>
+                </div>
+                <div class="yankuang">
+                    <input id="Txtidcode" class="yanzhengmakuang" placeholder="验证码">
+                </div>
+            </div>
+        </div>
+        <div class="register">
+            <div class="kongbai"></div>
+            <div class="msgcont">
+               <div class="shoujizhaohui">使用手机号找回</div>
+            </div>
+        </div>
+        <div id="findpowBtn">
+            <div class="anniuwenzi">立即找回</div>
+        </div>
+    </div>
+    <div class="registercont">
+        <div class="headcontregiter">
+            <img src="img/pgindex_logo.png" class="loginicon">
+            <div class="zhognjianshu"></div>
+            <div class="logintitle">注册</div>
+            <div class="loginfenge"></div>
+        </div>
+        <div class="register">
+            <div class="kongbai"></div>
+            <div class="msgcont">
+                <div class="leftdesc">昵称：</div>
+                <div class="inputkuang">
+                    <input class="nickname" id="nickname">
+                </div>
+            </div>
+        </div>
+        <div class="register">
+            <div class="kongbai"></div>
+            <div class="msgcont">
+                <div class="leftdesc">手机号：</div>
+                <div class="inputkuang">
+                    <input class="nickname" id="phonenum">
+                </div>
+            </div>
+        </div>
+
+        <div class="register">
+            <div class="kongbai"></div>
+            <div class="msgcont">
+                <div class="leftdesc">验证码：</div>
+                <div class="inputkuang2">
+                    <input class="nickname2" id="identcode">
+                    <div class="getcodebtn">
+                        <div id="codeyanzhegnma">获取验证码</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="register">
+            <div class="kongbai"></div>
+            <div class="msgcont">
+                <div class="leftdesc">昵称：</div>
+                <div class="inputkuang alertkuang">
+                    <input class="nickname" placeholder="密码必须包含6位字符，必须包含数字、字母区分大小写">
+                </div>
+            </div>
+        </div>
+        <div class="tiaokuancont">
+            <input type="checkbox" name="vehicle" value="Car"/><span style="color: #9B9B9B;"> 我同意并遵守《西梅妈妈商家联盟服务条款》</span>
+        </div>
+        <div class="kongbai"></div>
+        <div class="kongbai"></div>
+        <div id="regesterBtn">
+            <div class="anniuwenzi">注册</div>
+        </div>
+        <div class="kongbai"></div>
+        <div class="kongbai"></div>
+        <div id="regesteralert">昵称已被注册</div>
+        <div class="kongbai"></div>
+        <div class="kongbai"></div>
+    </div>
+    <div class="logincont">
+        <div class="headcont">
+            <img src="img/pgindex_logo.png" class="loginicon">
+            <div class="zhognjianshu"></div>
+            <div class="logintitle">登录</div>
+            <div class="loginfenge"></div>
+        </div>
+        <div class="loginmsgcont">
+            <div class="msgshuru">
+                <div class="logimzhanghao">
+                    <input class="logimzhanghaoinput" placeholder="手机号/邮箱地址/昵称">
+                </div>
+                <div class="logimzhanghao2">
+                    <input class="logimzhanghaoinput" placeholder="密码">
+                </div>
+                <div class="remormima">
+                    <input type="checkbox" name="vehicle" value="Car"/> 记住密码
+                </div>
+                <div id="loginbtn" class="loginbtn">
+                    <div class="anniuwenzi">登录</div>
+                </div>
+                <div class="forgetpow">忘记密码</div>
+                <div class="loginfenge"></div>
+            </div>
+            <div class="disanfangcont">
+                <div class="disanss">第三方登录</div>
+                <div class="iconcont">
+                    <div class="sanfangcont">
+                        <div class="iconkuang">
+                            <img src="img/pglogin_icon_wechat.png" class="sanfangicon">
+                        </div>
+                        <div class="disanfangming">微信</div>
+                    </div>
+                    <div class="sanfangcont">
+                        <div class="iconkuang">
+                            <img src="img/pglogin_icon_qq.png" class="sanfangicon">
+                        </div>
+                        <div class="disanfangming">QQ</div>
+                    </div>
+                    <div class="sanfangcont">
+                        <div class="iconkuang">
+                            <img src="img/pglogin_icon_microblog.png" class="sanfangicon">
+                        </div>
+                        <div class="disanfangming">新浪微博</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottomicon">没有账号？<a href="#" style="color: #A978D4;;">马上注册</a></div>
+</div>
+<script type="text/javascript">
+    DD_roundies.addRule('.alertccc', '-4px -4px -4px -4px', true);
+    DD_roundies.addRule('.logincont', '-4px -4px -4px -4px', true);
+    DD_roundies.addRule('.registercont', '-4px -4px -4px -4px', true);
+    DD_roundies.addRule('.logimzhanghao', '-4px -4px -4px -4px', true);
+    DD_roundies.addRule('.iconkuang', '-20px -20px -20px -20px', true);
+    DD_roundies.addRule('.bottomicon', '-60px -60px -60px -60px', true);
+    DD_roundies.addRule('.inputkuang', '-6px -6px -6px -6px', true);
+    DD_roundies.addRule('.inputkuang2', '-6px -6px -6px -6px', true);
+    DD_roundies.addRule('.getcodebtn', '-6px -6px -6px -6px', true);
+    DD_roundies.addRule('.findpowkuang', '-6px -6px -6px -6px', true);
+    DD_roundies.addRule('.yankuang', '-6px -6px -6px -6px', true);
+    DD_roundies.addRule('.yanzhoengmaqu', '-6px -6px -6px -6px', true);
+    DD_roundies.addRule('.loginbtn', '-6px -6px -6px -6px', true);
+</script>
+<script src="js/login.js"></script>
+</body>
+</html>

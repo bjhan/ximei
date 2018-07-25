@@ -1,15 +1,483 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE">
     <title>西梅首页</title>
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <link rel="stylesheet" href="../../common/swiper.css">
     <link rel="stylesheet" href="../../common/index.css">
     <link rel="stylesheet" href="css/index.css">
-    <script src="../../common/hotcss.js"></script>
+    <link rel="stylesheet" href="css/pageSwitch.min.css">
+    <script src="../../common/jquery-1.8.1.min.js"></script>
+    <script src="../../common/jquery.xdomainrequest.min.js"></script>
+    <script src="../../common/swiper.js"></script>
+    <script src="../../common/DD_roundies.js"></script>
+    <script src="../../common/base.js"></script>
+    <script src="js/html5media.min.js"></script>
+    <script src="js/clock-canvas.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="js/jquery.placeholder.js"></script>
+    <script>
+       $(function(){
+           $('input[placeholder]').placeholder();
+       });
+    </script>
+    <![endif]-->
 </head>
 <body>
-<div class="indexcont"></div>
+<div class="indexcont">
+   <div class="bannercont" id="container">
+       <div class="sections">
+           <div class="section" id="section0" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/1.png',  sizingMethod='scale');background-image:url(./img/1.png);background-size: 100% 100%;"></div>
+           <div class="section" id="section1" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/2.png',  sizingMethod='scale');background-image:url(./img/2.png);background-size: 100% 100%;"></div>
+           <div class="section" id="section2" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/3.png',  sizingMethod='scale');background-image:url(./img/3.png);background-size: 100% 100%;"></div>
+           <div class="section" id="section3" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/4.png',  sizingMethod='scale');background-image:url(./img/2.png);background-size: 100% 100%;"></div>
+       </div>
+       <!--<div class="swiper-container gallery-top">-->
+            <!--<div class="swiper-wrapper" id="gallery-top">-->
+                <!--<div class="swiper-slide">-->
+                    <!--<img src="img/1.png" style="width: 100%;height: 100%;">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/2.png)"></div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/3.png)"></div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/4.png)"></div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; Add Arrows &ndash;&gt;-->
+            <!--<div class="swiper-button-next swiper-button-white"></div>-->
+            <!--<div class="swiper-button-prev swiper-button-white"></div>-->
+        <!--</div>-->
+        <!--<div class="swiper-container gallery-thumbs">-->
+            <!--<div class="swiper-wrapper" id="gallery-thumbs">-->
+                <!--<div class="swiper-slide">-->
+                    <!--<img src="img/1.png" style="width: 100%;height: 100%;">-->
+                <!--</div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/2.png)"></div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/3.png)"></div>-->
+                <!--<div class="swiper-slide" style="background-image:url(./img/4.png)"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="findcont">
+            <div class="shurukuangcont">
+                <img src="img/pgindex_icon_search.png" class="iconsearch">
+                <input class="searchinput" placeholder="搜索月子中心/赴美生子攻略/服务" >
+            </div>
+            <div id="searchbtn"></div>
+        </div>
+        <div class="msgcurrentcont">
+            <div class="currentmsgcont">
+                <div class="currentmsg">
+                    <div class="currenttype">新鲜事</div>
+                    <div class="currentwriter"><span class="currentusercolor">城北小黄人</span>发表文章</div>
+                    <div class="currenttitle">美国孩子费用详解</div>
+                </div>
+                <div class="currentmsg">
+                    <div class="currenttype">新鲜事</div>
+                    <div class="currentwriter"><span class="currentusercolor">城北小黄人</span>发表文章</div>
+                    <div class="currenttitle">美国孩子费用详解</div>
+                </div>
+                <div class="currentmsg">
+                    <div class="currenttype">新鲜事</div>
+                    <div class="currentwriter"><span class="currentusercolor">城北小黄人</span>发表文章</div>
+                    <div class="currenttitle">美国孩子费用详解</div>
+                </div>
+                <div class="currentmsg">
+                    <div class="currenttype">新鲜事</div>
+                    <div class="currentwriter"><span class="currentusercolor">城北小黄人</span>发表文章</div>
+                    <div class="currenttitle">美国孩子费用详解</div>
+                </div>
+            </div>
+            <div class="currentBtn"></div>
+        </div>
+    </div>
+</div>
+<div class="clockcont">
+    <div class="box">
+        <canvas id="clock1" width="100" height="100"></canvas>
+    </div>
+    <div class="box">
+        <canvas id="clock2" width="100" height="100"></canvas>
+    </div>
+</div>
+<div class="videocontent">
+    <div class="videocontentfloat">
+        <div class="firstvideo">
+            <div class="bigvideo">
+                <video class="videos" poster="img/shipin1.png" >
+                    <source src="img/video.mp4" type="video/mp4">
+                </video>
+                <embed class="videos2" id="vivi" hidden="true" controls="controls" src="http://ossptest.voicecloud.cn/auth/project/imeYKvideo/img/video/video2.mp4" allowfullscreen="false" flashvars="vcastr_file=1234.flv&LogoText=www.lanrentuku.com&IsAutoPlay=0" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%" height="100%" loop="false" autostart="false"></embed>
+                <img src="img/shipin1.png" class="videopic">
+                <div class="mengceng"></div>
+                <div class="videodesc">加州生活</div>
+                <div class="playbtn"></div>
+            </div>
+        </div>
+        <div class="secondvideo">
+            <div class="smallvideo">
+                <video class="videos" src="img/video.mp4" poster="img/shipin2.png" ></video>
+                <img src="img/shipin2.png" class="videopic">
+                <div class="mengceng"></div>
+                <div class="videodesc">加州生活</div>
+                <div class="playbtn"></div>
+            </div>
+        </div>
+        <div class="secondvideo">
+            <div class="smallvideo">
+                <video class="videos" src="img/video.mp4" poster="img/shipin2.png" ></video>
+                <div class="mengceng"></div>
+                <div class="videodesc">加州生活</div>
+                <div class="playbtn"></div>
+            </div>
+        </div>
+        <div class="secondvideo">
+            <div class="smallvideo">
+                <video class="videos" src="img/video.mp4" poster="img/shipin2.png" ></video>
+                <div class="mengceng"></div>
+                <div class="videodesc">加州生活</div>
+                <div class="playbtn"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mostcont">
+    <div class="mostcontleft">
+        <div class="moretitle">
+            <div class="bigdesctitle">最新政策</div>
+            <div class="moreMesg">更多<span style="color: #A978D6;">+</span></div>
+        </div>
+        <div class="newpolicy">
+            <div class="moredetailcont">
+                <img src="img/22.png" class="moredetailpic">
+            </div>
+            <div class="moredetaildesc">
+                <p class="newproictitle">美签被撤销之后——evus一步错步步惊心</p>
+                <p class="newproicde">这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，</p>
+            </div>
+            <div class="xiangqingBtn"></div>
+        </div>
+        <div class="newpolicy">
+            <div class="moredetailcont">
+                <img src="img/22.png" class="moredetailpic">
+            </div>
+            <div class="moredetaildesc">
+                <p class="newproictitle">美签被撤销之后——evus一步错步步惊心</p>
+                <p class="newproicde">这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，这里是正文，</p>
+            </div>
+            <div class="xiangqingBtn"></div>
+        </div>
+    </div>
+    <div class="mostcontright">
+        <div class="moretitle">
+            <div class="hottitle">
+                <div class="bigdesctitle">热点文章</div>
+            </div>
+        </div>
+        <div class="hotcompositioncont">
+            <img class="hotpic" src="img/33.png">
+            <div class="hotdesccont">
+                <div class="hotcompositionconttitle">美国医疗环境的优势</div>
+                <div class="hotcompositioncontzhegnwen">这里是这给我呢，这里是这给我呢，这里是这给我呢，这里是这给我呢，这里是这给我呢，这里是这给我呢，</div>
+                <div class="hotusermessage">
+                    <div class="hotuserheadicon">
+                        <div class="hotuserheadiconimg"></div>
+                    </div>
+                    <div class="hotusername">nihdiahdhei</div>
+                    <div class="hotuserhearticon">
+                        <div class="hotuserhearticonimg"></div>
+                    </div>
+                    <div class="hotuserheartnum">123123</div>
+                    <div class="hotusermsgicon">
+                        <div class="hotusermsgiconimg"></div>
+                    </div>
+                    <div class="hotusertalknum">123123</div>
+                </div>
+            </div>
+        </div>
+        <div class="hotcompositioncont">
+            <img class="hotpic" src="img/33.png">
+            <div class="hotdesccont">
+                <div class="hotcompositionconttitle">美国医疗环境的优势</div>
+                <div class="hotcompositioncontzhegnwen">这里是这给我呢，这里是这给我呢，这里是这给我呢，这里是这给我呢，这里是这给我呢，这里是这给我呢，</div>
+                <div class="hotusermessage">
+                    <div class="hotuserheadicon">
+                        <div class="hotuserheadiconimg"></div>
+                    </div>
+                    <div class="hotusername">nihdiahdhei</div>
+                    <div class="hotuserhearticon">
+                        <div class="hotuserhearticonimg"></div>
+                    </div>
+                    <div class="hotuserheartnum">123123</div>
+                    <div class="hotusermsgicon">
+                        <div class="hotusermsgiconimg"></div>
+                    </div>
+                    <div class="hotusertalknum">123123</div>
+                </div>
+            </div>
+        </div>
+        <div class="hotcompositioncont">
+            <img class="hotpic" src="img/33.png">
+            <div class="hotdesccont">
+                <div class="hotcompositionconttitle">美国医疗环境的优势</div>
+                <div class="hotcompositioncontzhegnwen">这里是这给我呢，这里是这给我呢，这里是这给我呢，这里是这给我呢，这里是这给我呢，这里是这给我呢，</div>
+                <div class="hotusermessage">
+                    <div class="hotuserheadicon">
+                        <div class="hotuserheadiconimg"></div>
+                    </div>
+                    <div class="hotusername">nihdiahdhei</div>
+                    <div class="hotuserhearticon">
+                        <div class="hotuserhearticonimg"></div>
+                    </div>
+                    <div class="hotuserheartnum">123123</div>
+                    <div class="hotusermsgicon">
+                        <div class="hotusermsgiconimg"></div>
+                    </div>
+                    <div class="hotusertalknum">123123</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nestpagecont">
+            <div class="nestpagecont2">
+                <div class="totalpagenum">共122页</div>
+                <div class="lastpagebtn"></div>
+                <!--<div class="totaltalknum">122条评论</div>-->
+                <div class="pagenumcont">
+                    <div class="numchoose">
+                        <div class="numchoosenum">101</div>
+                    </div>
+                    <div class="numchooseno">
+                        <div class="numchoosenum">101</div>
+                    </div>
+                    <div class="numchooseno">
+                        <div class="numchoosenum">101</div>
+                    </div>
+                    <div class="numchooseno">
+                        <div class="numchoosenum">101</div>
+                    </div>
+                </div>
+                <div class="nestpagebtn"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="knowledgecont">
+    <div class="mostcontleft">
+        <div class="moretitle">
+            <div class="bigdesctitle">常见问题</div>
+            <div class="moreMesg">更多<span style="color: #A978D6;">+</span></div>
+        </div>
+        <div class="changjianproblemcont">
+            <div class="ranknum ranknumbg1"><div class="ranknum1">1</div></div>
+            <div class="problemdesc">美国宝宝在中国长大后，未来怎么会美国呢？</div>
+        </div>
+        <div class="changjianproblemcont">
+            <div class="ranknum ranknumbg2"><div class="ranknum1">2</div></div>
+            <div class="problemdesc">美国宝宝在中国长大后，未来怎么会美国呢？</div>
+        </div>
+        <div class="changjianproblemcont">
+            <div class="ranknum ranknumbg3"><div class="ranknum1">3</div></div>
+            <div class="problemdesc">美国宝宝在中国长大后，未来怎么会美国呢？</div>
+        </div>
+        <div class="changjianproblemcont">
+            <div class="ranknum"><div class="ranknum2">4</div></div>
+            <div class="problemdesc">美国宝宝在中国长大后，未来怎么会美国呢？</div>
+        </div>
+        <div class="changjianproblemcont">
+            <div class="ranknum"><div class="ranknum2">5</div></div>
+            <div class="problemdesc">美国宝宝在中国长大后，未来怎么会美国呢？</div>
+        </div>
+        <div class="changjianproblemcont">
+            <div class="ranknum"><div class="ranknum2">6</div></div>
+            <div class="problemdesc">美国宝宝在中国长大后，未来怎么会美国呢？</div>
+        </div>
+        <div class="changjianproblemcont">
+            <div class="ranknum"><div class="ranknum2">7</div></div>
+            <div class="problemdesc">美国宝宝在中国长大后，未来怎么会美国呢？</div>
+        </div>
+        <div class="changjianproblemcont">
+            <div class="ranknum"><div class="ranknum2">8</div></div>
+            <div class="problemdesc">美国宝宝在中国长大后，未来怎么会美国呢？</div>
+        </div>
+        <div class="changjianproblemcont">
+            <div class="ranknum"><div class="ranknum2">9</div></div>
+            <div class="problemdesc">美国宝宝在中国长大后，未来怎么会美国呢？</div>
+        </div>
+        <div class="changjianproblemcont">
+            <div class="ranknum"><div class="ranknum2">10</div></div>
+            <div class="problemdesc">美国宝宝在中国长大后，未来怎么会美国呢？</div>
+        </div>
+    </div>
+    <div class="mostcontright">
+        <div class="moretitle">
+            <div class="hottitle">
+                <div class="bigdesctitle">必备知识</div>
+            </div>
+        </div>
+        <div class="uomustknowledgecont">
+            <div>
+                <div class="mustknowledg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+                <div class="mustknowledg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+                <div class="mustknowledg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+            </div>
+        </div>
+        <div class="uomustknowledgecont">
+            <div>
+                <div class="mustknowledg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+                <div class="mustknowledg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+                <div class="mustknowledg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="shopcont">
+    <div class="moretitle">
+        <div class="hottitle2">
+            <div class="bigdesctitle">必备知识</div>
+        </div>
+    </div>
+    <div class="shoppic">
+        <img src="img/shop.png" class="shopImg">
+    </div>
+</div>
+<div class="topicityccont">
+    <div class="mostcontleft">
+        <div class="moretitle">
+            <div class="bigdesctitle">城市风情</div>
+            <div class="moreMesg">更多<span style="color: #A978D6;">+</span></div>
+        </div>
+        <div class="citycont">
+            <img src="img/city.png" class="citypic">
+        </div>
+        <div class="citycont">
+            <img src="img/city.png" class="citypic">
+        </div>
+        <div class="citycont">
+            <img src="img/city.png" class="citypic">
+        </div>
+    </div>
+    <div class="mostcontright">
+        <div class="moretitle">
+            <div class="hottitle">
+                <div class="bigdesctitle">热门话题</div>
+            </div>
+        </div>
+        <div class="topichotcont">
+            <div>
+                <div class="topichotmsg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+                <div class="topichotmsg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+                <div class="topichotmsg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+            </div>
+        </div>
+        <div class="topichotcont">
+            <div>
+                <div class="topichotmsg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+                <div class="topichotmsg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+                <div class="topichotmsg">
+                    <div class="mustpiccont">
+                        <img src="img/33.png">
+                        <div class="mustpicconttage"><div>宝宝证件</div></div>
+                    </div>
+                    <div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="casualcont">
+    <div class="moretitle">
+        <div class="hottitle2">
+            <div class="bigdesctitle">随便看看</div>
+        </div>
+    </div>
+    <div class="casualpiccont">
+        <div>
+            <div class="suibianbig">
+                <img src="img/suibian1.png" class="suibianbigpic">
+            </div>
+            <div class="suibiansmall">
+                <img src="img/suibian2.png" class="suibiansmallpic">
+            </div>
+            <div class="suibiansmall">
+                <img src="img/suibian2.png" class="suibiansmallpic">
+            </div>
+            <div class="suibiansmall">
+                <img src="img/suibian2.png" class="suibiansmallpic">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
 <div class="footmain">
     <div class="foorcont">
         <div class="aboutximei">
@@ -40,12 +508,27 @@
     <div class="linefootleft"></div>
     <div class="linefootright"></div>
     <div class="friendslinks">
-        <div class="linkfriend">友情链接：</div>
-        <div class="linkfriend"><a href="https://www.baidu.com/">中信银行</a></div>
-        <div class="linkfriend"><a href="https://www.baidu.com/">宝宝树</a></div>
-        <div class="linkfriend"><a href="https://www.baidu.com/">EVUS官网</a></div>
-        <div class="linkfriend"><a href="https://www.baidu.com/">美国领事馆</a></div>
+        <span class="linkfriend">友情链接：</span>
+        <span class="linkfriend"><a href="https://www.baidu.com/">中信银行</a></span>
+        <span class="linkfriend"><a href="https://www.baidu.com/">宝宝树</a></span>
+        <span class="linkfriend"><a href="https://www.baidu.com/">EVUS官网</a></span>
+        <span class="linkfriend"><a href="https://www.baidu.com/">美国领事馆</a></span>
     </div>
+    <div class="yingyezhizhao">© 2018 Mafengwo.cn 京ICP备11015476号 京公网安备110105013401号 京ICP证11031<br/>营业执照 新出网证(京)字242号 马蜂窝客服：国内 4006-345-678海外 +86-10-5922-2799</div>
 </div>
+
+<script type="text/javascript">
+    DD_roundies.addRule('.shurukuangcont', '4px 4px', true);
+    DD_roundies.addRule('.numchoose', '4px 4px', true);
+    DD_roundies.addRule('.numchooseno', '4px 4px', true);
+    DD_roundies.addRule('.currentmsg', '6px 6px', true);
+    DD_roundies.addRule('.mustpicconttage', '0px 6px 6px 0px', true);
+</script>
+<script src="js/pageSwitch.js"></script>
+<script src="js/config.js"></script>
+<script src="js/index.js"></script>
+<script type="text/javascript">
+
+</script>
 </body>
 </html>

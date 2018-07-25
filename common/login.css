@@ -1,0 +1,496 @@
+body {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    /*overflow: hidden; */
+}
+
+body, html {
+    height: 100%;
+}
+.maincont{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+.loginpic{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+.logincont{
+    position: relative;
+    width: 500px;
+    min-height: 350px;
+    height: auto;
+    margin: auto;
+    margin-top: 40px;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.50);
+    border-radius: 6px;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#DCDCDC', Direction=55, Strength=3);
+}
+.registercont{
+    position: relative;
+    width: 554px;
+    min-height: 350px;
+    height: auto;
+    margin: auto;
+    margin-top: 40px;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.50);
+    border-radius: 6px;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#DCDCDC', Direction=55, Strength=3);
+}
+.findpowcont,.resetpowcont{
+    position: relative;
+    width: 554px;
+    min-height: 350px;
+    height: auto;
+    margin: auto;
+    margin-top: 40px;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.50);
+    border-radius: 6px;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#DCDCDC', Direction=55, Strength=3);
+}
+.bottomicon{
+    position: relative;
+    width: 195px;
+    min-height: 26px;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    opacity: 0.9;
+    background: #000000;
+    border-radius: 60px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #C5C5C5;
+    text-align: center;
+    padding-top: 10px;
+}
+.loginfenge{
+    position: absolute;
+    bottom: 0;
+    width: 427px;
+    left: 38px;
+    height: 1px;
+    border-bottom: 1px dashed #979797;
+}
+.headcont{
+    position: relative;
+    width: 100%;
+    height: 94px;
+}
+.headcontregiter{
+    position: relative;
+    width: 500px;
+    left: 27px;
+    height: 94px;
+}
+.loginicon{
+    position: absolute;
+    top:28px;
+    left: 69px;
+    width: 141px;
+    height: 46px;
+}
+.logintitle{
+    position: absolute;
+    top:36px;
+    left: 295px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.zhognjianshu{
+    position: absolute;
+    top:16px;
+    left: 50%;
+    width: 2px;
+    height: 60px;
+    background-color: #979797;
+}
+.loginmsgcont{
+    position: relative;
+    /*display: none;*/
+    width: 100%;
+    height: 415px;
+}
+.register{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.kongbai{
+    position: relative;
+    width: 100%;
+    height: 10px;
+}
+#regesteralert{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #D0021B;
+}
+.msgcont{
+    position: relative;
+    width: 100%;
+    height: 43px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.leftdesc{
+    position: absolute;
+    top:10px;
+    left: 80px;
+    text-align: left;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #BABABA;
+}
+.inputkuang{
+    position: absolute;
+    top:0;
+    left: 149px;
+    width: 310px;
+    height: 15px;
+    border: 1px solid #979797;
+    border-radius: 6px;
+    padding:12px;
+}
+.alertkuang{
+    border: 1px solid #D0021B;
+    color: #D0021B;
+}
+.inputkuang2{
+    position: absolute;
+    top:0;
+    left: 149px;
+    width: 203px;
+    height: 15px;
+
+    border: 1px solid #979797;
+    border-radius: 6px;
+    padding:12px;
+}
+.nickname{
+    position: absolute;
+    top:10px;
+    left: 0px;
+    width: 310px;
+    height: 15px;
+    padding-left: 5px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #BABABA;
+    outline: none;
+    border: 0px;
+}
+.nickname2{
+    position: absolute;
+    top:10px;
+    left: 0px;
+    width: 200px;
+    height: 15px;
+    padding-left: 5px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #BABABA;
+    outline: none;
+    border: 0px;
+}
+.getcodebtn{
+    position: absolute;
+    top:0;
+    left: 240px;
+    width: 99px;
+    height: 43px;
+    background: #BFBFBF;
+    border-radius: 6px;
+}
+#codeyanzhegnma{
+    position: absolute;
+    top:12px;
+    width: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.mamatiaokuan{
+    margin-top: -16px;
+    margin-left: 25px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+#regesterBtn{
+    position: relative;
+    background: #A978D6;
+    border-radius: 6px;
+    width: 324px;
+    height: 43px;
+    left: 115px;
+}
+#findpowBtn{
+    position: relative;
+    background: #A978D6;
+    border-radius: 6px;
+    width: 324px;
+    height: 43px;
+    left: 115px;
+    cursor: pointer;
+
+}
+#resetpowBtn{
+    position: relative;
+    background: #A978D6;
+    border-radius: 6px;
+    width: 324px;
+    height: 43px;
+    left: 115px;
+    cursor: pointer;
+}
+#chenggongfasongBtn{
+    position: absolute;
+    top:230px;
+    background: #A978D6;
+    border-radius: 6px;
+    width: 100px;
+    height: 45px;
+    left: 125px;
+    cursor: pointer;
+}
+.fasongchenggcont{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 111;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5000000,endColorstr=#E5000000);
+}
+.alertccc{
+    position: relative;
+    top:129px;
+    width: 385px;
+    height: 386px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+.chenggongmao{
+    position: absolute;
+    top:137px;
+    width: 100%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #808080;
+    text-align: center;
+}
+.chenggongmao2{
+    position: absolute;
+    top:160px;
+    width: 100%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #A978D6;
+    text-align: center;
+}
+.anniuwenzi{
+    position: absolute;
+    top:12px;
+    width: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI-Bold;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.tiaokuancont{
+    position: relative;
+    width: 400px;
+    left: 150px;
+    height: 30px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+.msgshuru{
+    position: relative;
+    width: 100%;
+    height: 288px;
+}
+.logimzhanghao{
+    position: absolute;
+    top:30px;
+    left: 88px;
+    width: 324px;
+    height: 43px;
+    border: 1px solid #979797;
+    border-radius: 6px;
+}
+.findpowkuang{
+    position: absolute;
+    top:0px;
+    left: 80px;
+    width: 393px;
+    height: 43px;
+    border: 1px solid #979797;
+    border-radius: 6px;
+}
+.yankuang{
+    position: absolute;
+    top:0px;
+    left: 229px;
+    width: 244px;
+    height: 43px;
+    border: 1px solid #979797;
+    border-radius: 6px;
+}
+.yanzhoengmaqu{
+    position: absolute;
+    top:0px;
+    left: 80px;
+    width: 142px;
+    height: 43px;
+    background: #D8D8D8;
+    border-radius: 6px;
+}
+.shoujizhaohui{
+    position: absolute;
+    right: 81px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #A978D6;
+    cursor: pointer;
+}
+.yanzhengmakuang{
+    position: relative;
+    top:8px;
+    left: 0px;
+    width: 210px;
+    height: 25px;
+    padding-left: 5px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #BABABA;
+    outline: none;
+    border: 0px;
+}
+.logimzhanghao2{
+    position: absolute;
+    top:88px;
+    left: 88px;
+    width: 324px;
+    height: 43px;
+    border: 1px solid #979797;
+    border-radius: 6px;
+}
+.remormima{
+    position: absolute;
+    top:150px;
+    left: 88px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+#loginbtn{
+    position: absolute;
+    top:180px;
+    left: 70px;
+    width: 324px;
+    height: 43px;
+    background-color: #A978D6;
+    border-radius: 6px;
+    /*background-image: url(../img/loginbtn.png);*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center;*/
+    /*background-size: contain;*/
+    cursor: pointer;
+}
+/*#loginbtn:hover{*/
+    /*background-image: url(../img/loginbtnhover.png);*/
+/*}*/
+/*#loginbtn:active{*/
+    /*background-image: url(../img/loginbtnhover.png);*/
+/*}*/
+.forgetpow{
+    position: absolute;
+    top:237px;
+    right: 70px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+    cursor: pointer;
+}
+.logimzhanghaoinput{
+    position: absolute;
+    top:25%;
+    left: 3%;
+    width: 90%;
+    height: 60%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+    border: 0px;
+    outline:none;
+}
+.disanfangcont{
+    position: relative;
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+}
+.disanss{
+    position: absolute;
+    width: 100%;
+    top:10px;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+    letter-spacing: 2px;
+}
+.iconcont{
+    position: absolute;
+    top:40px;
+    width: 430px;
+    left: 108px;
+    height: 50px;
+}
+.sanfangcont{
+    float: left;
+    width: 74px;
+    height: 100%;
+    margin-right: 30px;
+}
+.iconkuang{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #D6D6D6;
+    margin: auto;
+}
+.sanfangicon{
+    position: relative;
+    left: 10%;
+    top:15%;
+    width: 32px;
+    height: auto;
+}
+.disanfangming{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+}

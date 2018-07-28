@@ -21,5 +21,33 @@ $(function(){
 
     });
 
+    $(".postioncontchoose").click(function(){
+        if($(this).next().css('display')==="none"){
+            document.getElementById("citycont").style.display="block";
+        }else {
+            document.getElementById("citycont").style.display="none";
+        }
+    });
+    $(".housecontchoose").click(function(){
+        if($(this).next().css('display')==="none"){
+            document.getElementById("housecont").style.display="block";
+        }else {
+            document.getElementById("housecont").style.display="none";
+        }
+    });
+    $(".sheshicontchoose").click(function(){
+        if($(this).next().css('display')==="none"){
+            document.getElementById("sheshicont").style.display="block";
+        }else {
+            document.getElementById("sheshicont").style.display="none";
+        }
+    });
+    $(".servicecontchoose").click(function(){
+        if($(this).next().css('display')==="none"){
+            document.getElementById("servercont").style.display="block";
+        }else {
+            document.getElementById("servercont").style.display="none";
+        }
+    });
 
 });

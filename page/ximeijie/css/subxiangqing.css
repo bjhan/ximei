@@ -13,6 +13,13 @@ p{
     width: 62.5%;
     height: auto;
     margin: 0 auto;
+    z-index: 111;
+}
+.indexcont2{
+    position: relative;
+    width: 62.5%;
+    height: auto;
+    margin: 0 auto;
 }
 .subtitle{
     position: relative;
@@ -29,7 +36,7 @@ p{
     width: 100%;
     height: 70px;
     background: #F2F2F2;
-    opacity: 0.6;
+    /*opacity: 0.6;*/
     /*filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99F2F2F2,endColorstr=#99F2F2F2);*/
     border: 1px solid #D1D1D1;
     margin-top: 20px;
@@ -45,6 +52,30 @@ p{
 .postioncont{
     position: absolute;
     left: 20%;
+    top:10%;
+    width: 16%;
+    height: 80%;
+    border-right: 1px solid #E0E0E0;
+}
+.housecont{
+    position: absolute;
+    left: 36%;
+    top:10%;
+    width: 16%;
+    height: 80%;
+    border-right: 1px solid #E0E0E0;
+}
+.sheshicont{
+    position: absolute;
+    left: 52%;
+    top:10%;
+    width: 16%;
+    height: 80%;
+    border-right: 1px solid #E0E0E0;
+}
+.servercont{
+    position: absolute;
+    left: 68%;
     top:10%;
     width: 16%;
     height: 80%;
@@ -67,6 +98,171 @@ p{
     letter-spacing: 1px;
     cursor: pointer;
 }
+.sheshicontchoose{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 90%;
+    height: 40%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.servicecontchoose{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 90%;
+    height: 40%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.housecontchoose{
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 90%;
+    height: 40%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.citycont{
+    position: relative;
+    display: block;
+    top: 120%;
+    width: 100%;
+    height: auto;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+}
+
+
+.serverscont{
+    position: absolute;
+    display: block;
+    top: 120%;
+    left: -430%;
+    width: 630%;
+    height: auto;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    z-index: 111;
+}
+
+
+.choosefuxuan{
+    margin-top: 8px;
+}
+.city1{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px dashed #979797;;
+}
+.server1{
+    float: left;
+    width: 20%;
+    /*margin-right: 2%;*/
+    height: 30px;
+    border-bottom: 1px dashed #979797;;
+}
+.bottomcont{
+    position: relative;
+    width: 100%;
+    height: 30px;
+}
+.bottomcont2{
+   float: left;
+    width: 100%;
+    margin-top: 20px;
+    height: 30px;
+}
+.closebtn{
+    position: absolute;
+    left: 5%;
+    width: 40%;
+    top:0%;
+    height: 80%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #888888;
+    margin-top: 2px;
+    border: 1px solid #979797;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.closebtn2{
+    position: absolute;
+    left: 30%;
+    width: 10%;
+    top:0%;
+    height: 80%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #888888;
+    margin-top: 2px;
+    border: 1px solid #979797;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.bottomcont22{
+    position: relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.surebtn{
+    position: absolute;
+    right: 5%;
+    width: 40%;
+    top:0%;
+    height: 80%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 2px;
+    background: #A978D6;
+    border: 1px solid #A978D6;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.surebtn2{
+    position: absolute;
+    right: 30%;
+    width: 10%;
+    top:0%;
+    height: 80%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 2px;
+    background: #A978D6;
+    border: 1px solid #A978D6;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#citycont,#sheshicont,#housecont,#servercont{
+    display: none;
+}
+
+.chooseanniuwenzi{
+    margin-top: 3px;
+}
 .choosepic{
     position: absolute;
     bottom: 10px;
@@ -76,6 +272,7 @@ p{
     background-image: url("../img/asc.gif");
     background-repeat: no-repeat;
 }
+
 .qian{
     position: absolute;
     margin-top:0px;
@@ -106,4 +303,239 @@ p{
     background-color: rgba(0,0,0,0.9);
     z-index: 111;
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5000000,endColorstr=#E5000000);
+}
+.choosertiaojian{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    height: 30px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+.zonghepaixu{
+    float: left;
+    width: auto;
+    height: 100%;
+    margin-right: 20px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    cursor: pointer;
+}
+.zonghepaixu2{
+    float: left;
+    width: 50px;
+    height: 100%;
+    margin-right: 20px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    background: url(../img/sort_both.png) no-repeat scroll right center transparent;
+    cursor: pointer;
+}
+.linezi{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #A978D6;
+    cursor: pointer;
+}
+.zise{
+    color: #A978D6;
+}
+.xuanzeweniz{
+    margin-top: 5px;
+}
+.msgdetailcont{
+    position: relative;
+    width: 62.5%;
+    min-height: 600px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.msgdetailm{
+    float: left;
+    width: 48%;
+    height: 180px;
+    margin: 7px;
+    border: 1px solid #E1E1E1;
+    cursor: pointer;
+}
+.clear{
+    clear: both;
+    position: relative;
+    width: 100%;
+    top:80px;
+    height: 25px;
+}
+.msgdetailpic{
+    float: left;
+    margin-top:10px;
+    margin-left: 10px;
+    width: 41%;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.msgdetailmtitlecont{
+    float: left;
+    margin-top:10px;
+    left: 2%;
+    width: 55%;
+    height: 90%;
+}
+.msgdetailmtitle{
+    position: relative;
+    top:20px;
+    left: 10px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #000000;
+}
+.msgdetailmtitle2{
+    position: relative;
+    top:23px;
+    left: 10px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #BBBBBB;
+}
+.msgdetailmtitle3{
+    position: relative;
+    top:23px;
+    left: 10px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #BBBBBB;
+}
+.msgdetailmtitle4{
+    position: relative;
+    top:26px;
+    left: 10px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+.msgdetailmtitle5{
+    position: relative;
+    top:56px;
+    left: 10px;
+    font-family: MicrosoftYaHeiUI;
+    width: 100%;
+    height: 14px;
+}
+.anxing{
+    float: left;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/anxing.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.zixing{
+    float: left;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/zixing.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.gongduoshaoye{
+    position: relative;
+    margin: 0 auto;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #A1A1A1;
+}
+.nestpagecont{
+    position: relative;
+    width: 763px;
+    height: 24px;
+    margin-top: 2px;
+
+}
+.nestpagecont2{
+    position: absolute;
+    left: 257px;
+    width: 482px;
+    top:0;
+    height: 100%;
+}
+.totalpagenum{
+    float: left;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #A1A1A1;
+    margin-right: 20px;
+}
+.pagenum{
+    float: left;
+    width: auto;
+    height: 100%;
+}
+.numchoose{
+    float: left;
+    width: auto;
+    height: 22px;
+    border-radius: 2px;
+    background-color: #A978D6;
+    margin-right: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.numchooseno{
+    float: left;
+    width: auto;
+    height: 22px;
+    border-radius: 2px;
+    margin-right: 10px;
+    color: #A1A1A1;
+    cursor: pointer;
+}
+.numchoosenum{
+    position: relative;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+
+}
+.nestpagebtn{
+    float: left;
+    width: 60px;
+    margin-left: 10px;
+    height: 100%;
+    background-image: url(../img/pgindexnest.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+}
+.nestpagebtn:active{
+    background-image: url(../img/pgindexnestp.png);
+}
+.nestpagebtn:hover{
+    background-image: url(../img/pgindexnestp.png);
+}
+.lastpagebtn{
+    float: left;
+    width: 60px;
+    margin-right: 20px;
+    height: 100%;
+    background-image: url(../img/pgindeshang.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+}
+.lastpagebtn:active{
+    background-image: url(../img/pgindeshangp.png);
+}
+.lastpagebtn:hover{
+    background-image: url(../img/pgindeshangp.png);
 }

@@ -627,6 +627,7 @@ p{
 }
 .ranknum>div{
   position: relative;
+  margin-top: 3px;
   bottom: 2px;
 }
 .ranknum1{

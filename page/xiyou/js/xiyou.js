@@ -74,7 +74,6 @@ var gettopvotes = function () {
         type: "GET",
         url: baseUrl + "/xyq/topvotes",
         success: function (msg) {
-            alert(msg);
             $.each(msg, function (i, n) {
                 $("#rmtpContent").append(topvote.format(n.title, n.ballot, n.createTime.substring(5, 10)))
             })

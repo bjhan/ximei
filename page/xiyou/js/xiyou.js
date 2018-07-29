@@ -14,6 +14,7 @@ $(function () {
     gettopvotes();
     gettoplikecounts();
     initPageNation();
+    getposts();
 
 })
 
@@ -73,11 +74,23 @@ var gettopvotes = function () {
         type: "GET",
         url: baseUrl + "/xyq/topvotes",
         success: function (msg) {
-            console.log(msg);
+            alert(msg);
             $.each(msg, function (i, n) {
                 $("#rmtpContent").append(topvote.format(n.title, n.ballot, n.createTime.substring(5, 10)))
             })
 
+        }
+    });
+}
+
+
+//热门话题
+var getposts = function () {
+    $.ajax({
+        type: "GET",
+        url: baseUrl + "/xyq/posts?pageNo=0&pageSize=30",
+        success: function (msg) {
+            console.log(msg);
         }
     });
 }

@@ -1,0 +1,1083 @@
+.addrdetaildesc{
+    position: relative;
+    top:30px;
+    width: 100%;
+    text-align: left;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+.addrdetaildesc2{
+    position: relative;
+    top:10px;
+    width: 100%;
+    text-align: left;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #9B9B9B;
+}
+.subtitless{
+    position: relative;
+    width: 50%;
+    left: 0;
+    top:10px;
+    font-family: MicrosoftYaHeiUI-Bold;
+    font-size: 30px;
+    color: #000000;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-size: cover;
+    overflow-y: scroll;
+}
+p{
+    margin: 0;
+}
+
+.bannercont{
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.yuezixiangqingcont{
+    position: relative;
+    width: 100%;
+    height: 35px;
+    margin-top: 15px;
+}
+.pinglunanniuwenzi{
+    width: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.pinglunanniu{
+    float: left;
+    width: 125px;
+    height: 100%;
+    border: 1px solid #979797;
+    border-radius: 6px;
+    color: #9B9B9B;
+    margin-right: 20px;
+}
+.pinglunanniu:active{
+    color: #FFFFFF;
+    background-color: #A978D6;
+}
+.pinglunanniu:hover{
+    color: #FFFFFF;
+    background-color: #A978D6;
+}
+.xiangqingmapcont{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.xiangqingmap{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 65%;
+    height: 300px;
+}
+.xiangqingmapname{
+    position: absolute;
+    top:20px;
+    left: 69%;
+    width: 30%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #000000;
+    text-align: left;
+}
+.xiangqingmapaddr{
+    position: absolute;
+    top:50px;
+    left: 69%;
+    width: 30%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #828282;
+    text-align: left;
+}
+.servertitlecont{
+    position: relative;
+    margin-top: 70px;
+    width: 100%;
+    height: 47px;
+    border-bottom: 1px solid #A978D6;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+.gallery-top {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.gallery-thumbs {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    box-sizing: border-box;
+    padding:10px 0;
+}
+.gallery-thumbs .swiper-slide {
+    width: 110px;
+    height: 100%;
+    opacity: 0.4;
+}
+.gallery-thumbs .swiper-slide-active {
+    opacity: 1;
+    border: 4px solid #A978D6;
+}
+.findcont{
+    position: absolute;
+    top:171px;
+    left: 26.35%;
+    width: 543px;
+    height: 100px;
+    z-index: 999;
+}
+.shurukuangcont{
+    position: absolute;
+    top:26px;
+    left: 36px;
+    width: 350px;
+    height: 51px;
+    /*border: 1px solid #E0E0E0 ;*/
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+.iconsearch{
+    position: absolute;
+    top:19px;
+    left: 17px;
+    width: 14px;
+    height: 14px;
+}
+.servertag{
+    float: left;
+    width: 129px;
+    height: 47px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #9B9B9B;
+}
+.servertag:active{
+    background-color: #A978D6;
+    color: #ffffff;
+}
+.servertag:hover{
+    background-color: #A978D6;
+    color: #ffffff;
+}
+.servertagwenzi{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+    bottom: 0;
+}
+.searchinput{
+    position: absolute;
+    top:15px;
+    left: 41px;
+    width: 255px;
+    height: 18px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+    border: 0px;
+    outline:none;
+}
+.taocancont{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.taocan{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.taocanbiaoti{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #979797;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #000000;
+}
+.taocanwenzi{
+    margin-left: 12%;
+    float: left;
+    width: 10%;
+    text-align: left;
+    margin-top: 10px;
+}
+.taocanzhishu{
+    margin-left: 28%;
+    float: left;
+    width: 10%;
+    text-align: left;
+    margin-top: 10px;
+}
+.taocanjiagemingc{
+    margin-left: 11%;
+    float: left;
+    width: 10%;
+    text-align: left;
+    margin-top: 10px;
+}
+.taocanbao{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.taocanjuticont{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    opacity: 0.5;
+    border-bottom: 1px solid #979797;
+}
+.taocannum{
+    float: left;
+    width: 10%;
+    margin-top:20px;
+    text-align: left;
+    font-family: MicrosoftYaHeiUI-Bold;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+.taocanmingchegn{
+    float: left;
+    width: 40%;
+    margin-top:20px;
+    text-align: left;
+    font-family: MicrosoftYaHeiUI-Bold;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+.taocanxingxingcont{
+    float: left;
+    width: 20%;
+    margin-top:20px;
+}
+.taocanjiage{
+    float: left;
+    width: 10%;
+    margin-top:20px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #A978D6;
+}
+.taocanchakanxiangqing{
+    float: left;
+    width: 15%;
+    margin-top:20px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #A978D6;
+    cursor: pointer;
+    text-align: center;
+}
+.taocanyonghupingluncont{
+    position: relative;
+    width: 100%;
+    height: auto;
+ }
+.taocanyonghucont{
+    width: 100%;
+    height: 50px;
+    margin-top: 70px;
+    border-bottom:1px solid #D7D7D7;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 24px;
+    color: #000000;
+}
+.taocanpingluncont{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    height: auto;
+    border-bottom: 1px dashed #C7C7C7;
+}
+.taocanyonghupinglunneirong{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #444444;
+}
+.taocanyonghupinglunneirong2{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #A1A1A1;
+}
+.taocanpinglunshijian{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #A1A1A1;
+ }
+.huifuanniu{
+    position: absolute;
+    bottom: 26px;
+    right: 0;
+    text-align: right;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #A978D6;
+}
+.taocanyonghupinglunneironghuifu{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #9999A7;
+}
+.taocanyonghutouxiag{
+    float: left;
+    width: 60px;
+    height: auto;
+}
+.taocanyonghupinglunneitong{
+    float: left;
+    width: 90%;
+    height: auto;
+}
+.taocanyonghulouceng{
+    position: absolute;
+    top:0;
+    right: 0;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #444444;
+}
+.taocanyonghutouxiagpic{
+    position: relative;
+    top:0;
+    left: 0;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.taocanyonghumingchengcont{
+    position: relative;
+    width: 100%;
+    height: 20px;
+}
+.fenyeqi{
+    clear: both;
+    position: relative;
+    width: 100%;
+    top:80px;
+    height: 25px;
+    z-index: 111;
+}
+.shuodianshenem{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.pinglunkuang{
+    position: relative;
+    top:100px;
+    width: 100%;
+    height: 104px;
+    background: rgba(244,244,244,0.50);
+    border: 1px solid #DDDDDD;
+    border-radius: 6px;
+    resize:none;
+}
+.shuruwenzishu{
+    position: relative;
+    width: 30px;
+    margin-top: 70px;
+    left: 95%;
+    bottom: 0;
+    right: 0;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #BCBCBF;
+}
+.fabiaopinglunkuang{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.fabiaopinglunbtn{
+    position: absolute;
+    margin-top: 30px;
+    right: 0;
+    width: 150px;
+    height: 46px;
+    background-color: #A978D6;
+}
+.fabiaopinglunbtnwenzi{
+    width: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+.taocanyonghumingzi{
+    font-family: MicrosoftYaHeiUI-Bold;
+    font-size: 14px;
+    color: #A978D6;
+}
+.taocanyonghujibie{
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #DE75C4;
+    padding-right: 10px;
+}
+.videocontent{
+    position: relative;
+    /*left: 367px;*/
+    width: 1186px;
+    height: 205px;
+    padding-left: 30px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 18px;
+}
+.mostcont{
+    position: relative;
+    width: 1186px;
+    height: auto;
+    margin: auto;
+    margin-top: 68px;
+    overflow: hidden;
+}
+.knowledgecont{
+    position: relative;
+    /*left: 367px;*/
+    width: 1186px;
+    height: auto;
+    margin: auto;
+    margin-top: 68px;
+    overflow: hidden;
+}
+.shopcont{
+    position: relative;
+    /*left: 367px;*/
+    width: 1186px;
+    height: auto;
+    margin: auto;
+    margin-top: 68px;
+    overflow: hidden;
+}
+.casualcont{
+    position: relative;
+    /*left: 367px;*/
+    width: 1186px;
+    height: auto;
+    margin: auto;
+    margin-top: 68px;
+    overflow: hidden;
+}
+.topicityccont{
+    position: relative;
+    /*left: 367px;*/
+    width: 1186px;
+    height: auto;
+    margin: auto;
+    margin-top: 68px;
+    overflow: hidden;
+}
+.firstvideo{
+    float: left;
+    top:0;
+    left: 0;
+    width: 33.3%;
+    height: 100%;
+    margin-right: 23px;
+    cursor: pointer;
+}
+.secondvideo{
+    float: left;
+    top:0;
+    left: 0;
+    width: 18.718%;
+    height: 100%;
+    margin-right: 23px;
+}
+.bigvideo{
+    position: relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.smallvideo{
+    position: relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.videocontentfloat{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.videos{
+    position: absolute;
+    display: none;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 111;
+}
+.videos2{
+    position: absolute;
+    /*display: none;*/
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.videodesc{
+    position: absolute;
+    top:142px;
+    width: 100%;
+    font-family: MicrosoftYaHeiUI;
+    font-size:5px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.mengceng{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.videopic{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.clockcont{
+    position: absolute;
+    top:400px;
+    right: 10px;
+    width: 103px;
+    height: 493px;
+    z-index: 1111;
+}
+
+.mostcontleft{
+    float: left;
+    width: 395px;
+    height: auto;
+    margin-right: 15px;
+}
+.mostcontright{
+    float: left;
+    width: 703px;
+    height: auto;
+    overflow: hidden;
+}
+.newpolicy{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 7px;
+}
+.moretitle{
+    position: relative;
+    width: 100%;
+    height: 28px;
+}
+.bigdesctitle{
+    float: left;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 21px;
+    color: #070707;
+}
+.moreMesg{
+    float: right;
+    bottom: 0;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #070707;
+    cursor: pointer;
+    margin-top: 6px;
+}
+.moredetailcont{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    margin-top: 30px;
+    border: 0;
+}
+.moredetailpic{
+    position: relative;
+    width:395px;
+    height: 150px;
+}
+.newproictitle{
+    position: relative;
+    width: 100%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #070707;
+    margin-top: 12px;
+}
+.newproicde{
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #666666;
+    line-height: 26px;
+    margin-top: 8px;
+}
+
+.hottitle{
+    position: relative;
+    width: 90%;
+    margin-left: 10px;
+    height: 24px;
+}
+.hottitle2{
+    position: relative;
+    width: 90%;
+    height: 24px;
+}
+.hotcompositioncont{
+    position: relative;
+    width: 763px;
+    height: 176px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.hotpic{
+    position: absolute;
+    top:13px;
+    left: 12px;
+    width: 222px;
+    height: 150px;
+}
+.sections,.section {
+    height:100%;
+}
+#container,.sections {
+    position: relative;
+}
+.section {
+    background-color: #000;
+    background-size: cover;
+    background-position: 50% 50%;
+    text-align: center;
+    color: white;
+}
+.hotcompositionconttitle{
+    position: relative;
+    width: 482px;
+    height: 23px;
+    margin-top: 28px;
+    ffont-family: MicrosoftYaHeiUI;
+    font-size: 21px;
+    color: #070707;
+}
+.hotdesccont{
+    position: absolute;
+    left: 257px;
+    width: 482px;
+    top:0;
+    height: 100%;
+}
+.hotcompositioncontzhegnwen{
+    position: relative;
+    width: 100%;
+    height: 51px;
+    ffont-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #666666;
+    line-height:26px;
+    margin-top: 12px;
+}
+.hotusermessage{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin-top: 18px;
+}
+.hotuserheadicon{
+    float: left;
+    width: 26px;
+    height: 26px;
+}
+
+.hotuserheartnum{
+    float: left;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 3px;
+    color: #666666;
+}
+.hotusermsgicon{
+    float: left;
+    width: 26px;
+    height: 26px;
+    margin-left: 10px;
+}
+
+.hotusertalknum{
+    float: left;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-top: 3px;
+    color: #666666;
+}
+.nestpagecont{
+    position: relative;
+    width: 763px;
+    height: 24px;
+    margin-top: 2px;
+
+}
+.nestpagecont2{
+    position: absolute;
+    left: 257px;
+    width: 482px;
+    top:0;
+    height: 100%;
+}
+.totalpagenum{
+    float: left;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #A1A1A1;
+    margin-right: 20px;
+}
+.pagenum{
+    float: left;
+    width: auto;
+    height: 100%;
+}
+.numchoose{
+    float: left;
+    width: auto;
+    height: 22px;
+    border-radius: 2px;
+    background-color: #A978D6;
+    margin-right: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.numchooseno{
+    float: left;
+    width: auto;
+    height: 22px;
+    border-radius: 2px;
+    margin-right: 10px;
+    color: #A1A1A1;
+    cursor: pointer;
+}
+.numchoosenum{
+    position: relative;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+
+}
+.nestpagebtn{
+    float: left;
+    width: 60px;
+    margin-left: 10px;
+    height: 100%;
+    background-image: url(../img/pgindexnest.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+}
+.nestpagebtn:active{
+    background-image: url(../img/pgindexnestp.png);
+}
+.nestpagebtn:hover{
+    background-image: url(../img/pgindexnestp.png);
+}
+.lastpagebtn{
+    float: left;
+    width: 60px;
+    margin-right: 20px;
+    height: 100%;
+    background-image: url(../img/pgindeshang.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    cursor: pointer;
+}
+.lastpagebtn:active{
+    background-image: url(../img/pgindeshangp.png);
+}
+.lastpagebtn:hover{
+    background-image: url(../img/pgindeshangp.png);
+}
+.changjianproblemcont{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-top: 12px;
+    border-bottom: 1px dashed #D1D1D1;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+
+}
+.ranknum{
+    position: absolute;
+    top:7px;
+    left: 0;
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    text-align: center;
+}
+.ranknumbg1{
+    background: #A978D6;
+}
+.ranknumbg2{
+    background: #CCAFE9;
+}
+.ranknumbg3{
+    background: #E6AFC4;
+}
+.ranknum>div{
+    position: relative;
+    margin-top: 3px;
+    bottom: 2px;
+}
+.ranknum1{
+    color: #FFFFFF;
+}
+.ranknum2{
+    color: #666666;
+}
+.problemdesc{
+    position: absolute;
+    top:7px;
+    left: 30px;
+    width: 380px;
+    height: auto;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #666666;
+}
+.uomustknowledgecont{
+    position: relative;
+    margin-left: 10px;
+    width: 120%;
+    height: 250px;
+    margin-top: 30px;
+}
+.uomustknowledgecont>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.topichotcont{
+    position: relative;
+    margin-left: 10px;
+    width: 120%;
+    height: 250px;
+    margin-top: 30px;
+}
+.topichotcont>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.mustknowledg{
+    float: left;
+    left: 0;
+    width: 222px;
+    height: 100%;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.topichotmsg{
+    float: left;
+    left: 0;
+    width: 222px;
+    height: 100%;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.mustpiccont{
+    position: relative;
+    width: 100%;
+    height: 151px;
+}
+.mustpiccont>img{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+}
+.mustpicconttage{
+    position: absolute;
+    top:15px;
+    left: 0;
+    width: 73px;
+    height: 35px;
+    opacity: 0.8;
+    background: #A978D6;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+}
+.mustpicconttage>div{
+    position: absolute;
+    top:8px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.pinglun{
+    position: relative;
+    width: 100%;
+    height: 20px;
+    margin-top: 60px;
+}
+.yuezixiangqingxing{
+    float: left;
+    width: auto;
+    height: 100%;
+    margin-right: 60px;
+}
+.pinglunshu{
+    float: left;
+    width: auto;
+    height: 100%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #000000;
+    text-align: left;
+}
+.mustknowledgedesc{
+    position: relative;
+    width: 100%;
+    font-family: MicrosoftYaHeiUI;
+    -webkit-text-size-adjust:none;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #030303;
+    line-height: 26px;
+}
+.shoppic{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.shopImg{
+    position: relative;
+    width: 1200px;
+    height: 209px;
+}
+.citycont{
+    position: relative;
+    width: 100%;
+    height: 151px;
+    margin-top: 26px;
+    cursor: pointer;
+}
+.citycont>img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.casualpiccont{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-top: 30px;
+}
+.casualpiccont>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.suibianbig{
+    float: left;
+    width: 395px;
+    height: 250px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+.suibianbigpic{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.suibiansmall{
+    float: left;
+    width: 222px;
+    height: 250px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+.suibiansmallpic{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

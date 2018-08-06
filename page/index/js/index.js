@@ -89,15 +89,10 @@
             timeout: 5000,
             success: function (data) {
                 if(data.length>0){
-                    // initswiper(data);
+                    console.log(data);
+                    initswiper(data);
 
-                    $("#container").PageSwitch({
-                        direction:'horizontal',
-                        easing:'ease-in',
-                        duration:1000,
-                        autoPlay:true,
-                        loop:'false'
-                    });
+
                 }
             },
             error: function (a,b,c) {
@@ -134,11 +129,18 @@
             return -1;//不是ie浏览器
         }
     }
+    dianjishijian();
+    function dianjishijian() {
+        $(".currentBtn").click(function () {
+            $(".msgcurrentcont").hide();
+        });
+    }
+    currentthing();
     function currentthing() {//获取新鲜事
         $.ajax({
             url: CFG.interfaceurl+'/homepage/activities',
             type: "get",
-            timeout: 5000,
+            timeout: 10000,
             success: function (data) {
                 addcurrentthing(data);
             },
@@ -174,47 +176,15 @@
     function initswiper(bannerarry) {//首页滑动
         bannernum = bannerarry.length;
         for(var i=0;i<bannerarry.length;i++){
-            $("#gallery-top").append('<div class="swiper-slide" id="'+bannerarry[i].id+'" style="background-image:url('+bannerarry[i].imageUrl+')"></div>');
-            $("#gallery-thumbs").append('<div class="swiper-slide" id="'+bannerarry[i].id+'" style="background-image:url('+bannerarry[i].imageUrl+')"></div>');
+            $("#sections").append("<div class=\"section\" id=\"section"+bannerarry[i].id+"\" style=\"filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+bannerarry[i].imageUrl+"',sizingMethod='scale');background-image:url("+bannerarry[i].imageUrl+");background-repeat: no-repeat;background-size: 100% 100%;\"></div>")
         }
-        var galleryThumbs = new Swiper('.gallery-thumbs', {
-            spaceBetween: 10,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            touchRatio: 0.2,
-            speed: 100,
-            slideToClickedSlide: true,
-            onInit: function (swiper1) {
-                swiper1.slideTo(0, 0, false);//切换到第一个slide，速度为1秒
-            },
-            onSlideChangeEnd: function (swiper1) {
-                galleryTop.slideTo(swiper1.activeIndex + 1, 0, false);
-            },
-            onSlideChangeStart: function (swiper1) {
 
-            }
-        });
-        var galleryTop = new Swiper('.gallery-top', {
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
-            speed: 400,
-            loop: true,
-            observer: true,
-            observeParents: true,
-            autoplayDisableOnInteraction: false,
-            autoplay: 8000,
-            spaceBetween: 10,
-            onInit: function (swiper1) {
-                swiper1.stopAutoplay();
-                swiper1.startAutoplay();
-            },
-            onSlideChangeEnd: function (swiper1) {
-            },
-            onSlideChangeStart: function (swiper1) {
-                galleryThumbs.slideTo((swiper1.activeIndex - 1) % (bannernum), 400, false);//切换到第一个slide，速度为1秒
-            }
+        $("#container").PageSwitch({
+            direction:'horizontal',
+            easing:'ease-in',
+            duration:1000,
+            autoPlay:true,
+            loop:'false'
         });
     }
 

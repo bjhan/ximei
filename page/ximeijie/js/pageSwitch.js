@@ -103,7 +103,7 @@
 				for (var i=0;i<me.pagesCount;i++) {
 					var tt = ($(beijingarry[i]).css('backgroundImage')).length;
                     var src = $(beijingarry[i]).css('backgroundImage').substring(5,tt-2)
-                    pageHtml += "<li><img style='width:100%;height:100%;' src='"+src+"'></li>";
+                    pageHtml += "<li><img style='margin: 0 auto;width:auto;height:100%;' src='"+src+"'></li>";
 					// pageHtml += "<li></li>";
 				}
 				pageHtml += "</ul>";

@@ -30,13 +30,13 @@ $(function () {
         var winPos = $(window).scrollTop();
         if (winPos >= valTop){
             var width = $(window).width();
-            var left = width * 0.01;
+            var left = $(".content").offset().left;
             $(".content-question-detail").css("width",width);
             $(".content-question-detail").css("position","fixed");
             $(".content-question-detail").css("top","-222px");
             $(".content-question-detail").css("left","0");
             $(".content-question-detail").css("background","#FBFBFB");
-            $(".content-question-bottom").css("margin-left","75px");
+            $(".top-title").css("margin-left",left);
             $(".top-title").css("display","block");
             $(".content-question-concern").css("margin-left","60px");
             $(".content-question-answer").css("margin-left","20px");

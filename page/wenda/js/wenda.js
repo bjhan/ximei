@@ -5,14 +5,15 @@ $(function () {
         var winPos = $(window).scrollTop();
         if (winPos >= valTop){
             var width = $(window).width()+1;
-            var left = width * 0.01;
+            var left = $(".content-column").offset().left;
             $(".to-top").css("width",width);
             $(".to-top").css("position","fixed");
             $(".to-top").css("top","0");
             $(".to-top").css("left","0");
             $(".to-top").css("margin-top","0");
             $(".to-top").css("background","#FBFBFB");
-            // $(".content-top").css("margin-left",left);
+            $(".content-top-top").css("margin-left",left);
+            $(".content-top-bottom").css("margin-left",left);
             $(".content").css("margin-top","283px");
 
         }else {
@@ -67,7 +68,9 @@ $(function () {
 
     // 点击提问
     $(".askquestions").click(function () {
+        var left = $(".content-column").offset().left;
         $(".content-question-inner").css("display", "block");
+        $(".content-question-inner").css("left", left);
         $(".content-question-outer").css("display", "block");
     });
 

@@ -2,73 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>问答</title>
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/wenda.css">
+    <link href="kindeditor-4.1.10/themes/default/default.css" rel="stylesheet" />
     <script src="js/jquery.min.2.1.4.js"></script>
-    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <style>
-
-    </style>
-
-    <script>
-        // 滚动监听
-        $(window).scroll(function(){
-            // var winPos = $(window).scrollTop();
-            // var valTop = $(".content-top").offset().top;
-            // if (winPos >= valTop){
-            //     $(".to-top").css("width","1920px");
-            //     $(".to-top").css("position","fixed");
-            //     $(".to-top").css("top","0");
-            //     $(".to-top").css("left","0");
-            //     $(".to-top").css("margin-top","0");
-            //     $(".content-top").css("margin-left","283px");
-            //     $(".content").css("margin-top","283px");
-            //
-            //
-            // }else {
-            //     $(".to-top").css("width","1200px");
-            //     $(".to-top").css("position","static");
-            //     $(".to-top").css("top","0");
-            //     $(".to-top").css("left","0");
-            //     $(".to-top").css("margin-top","66");
-            //     $(".content-top").css("margin-left","68px");
-            //     $(".content").css("margin-top","31px");
-            // }
-
-        });
-        $(function () {
-            $("#hot").css("background", "#A978D6");
-            $("#hot a").css("color", "#fff");
-
-            // 切换提问栏目
-            $(".content-column-title").click(function () {
-                var id = this.id;
-                $(".content-column-title").css("background", "");
-                $(".content-column-title a").css("color", "#000");
-                $(this).css("background", "#A978D6");
-                $("#" + id + " a").css("color", "#fff");
-            });
-
-            // 点击提问
-            $(".askquestions").click(function () {
-                $(".content-question-inner").css("display", "block");
-                $(".content-question-outer").css("display", "block");
-            });
-
-            // 取消提问
-            $(".content-question-cancel").click(function () {
-                $(".content-question-inner").css("display", "none");
-                $(".content-question-outer").css("display", "none");
-            });
-
-            // 搜索
-            $(".content-top-search").click(function () {
-                $(".content-question-show").css("display", "none");
-                $(".content-question-search").css("display", "block");
-            })
-        })
-    </script>
+    <!--<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+    <script src="js/wenda.js"></script>
+    <script src="kindeditor-4.1.10/kindeditor-min.js"></script>
+    <script src="kindeditor-4.1.10/lang/zh_CN.js"></script>
 </head>
 <body>
     <!--中间内容-->
@@ -83,7 +25,7 @@
                 <div class="content-top-qa pointer">回答</div>
             </div>
             <div class="content-top-bottom">
-                <input type="text" class="content-top-input" name="search" id="search">
+                <input type="text" class="content-top-input">
                 <div class="content-top-search pointer">搜索</div>
             </div>
         </div>
@@ -91,11 +33,15 @@
     <div class="content">
         <!-- 提问 -->
         <div class="content-question-inner">
-            <div class="content-question-written">写下你的问题</div>
-            <input class="content-question-title" type="text" placeholder="写下你的问题标题">
-            <div class="content-question-answer"></div>
-            <div class="content-question-submit pointer">提交答案</div>
-            <div class="content-question-cancel pointer">取消</div>
+            <form>
+                <div class="content-question-written">写下你的问题</div>
+                <input class="content-question-title" type="text" placeholder="写下你的问题标题">
+                <div class="content-question-answer">
+                    <textarea id="mul_input" name="content" style="width:1091px;height:313px;visibility:hidden;display: block;resize: none;"><span style="color: #9B9B9B;">写回答……</span></textarea>
+                </div>
+                <div class="content-question-submit pointer">提交答案</div>
+                <div class="content-question-cancel pointer">取消</div>
+            </form>
         </div>
         <div id="fade" class="content-question-outer"></div>
 
@@ -134,8 +80,10 @@
                         <div class="content-hot-replyimg"><img src="img/reply.png"></div>
                         <div class="content-hot-reply">共<span>xxxx</span>条回复</div>
                         <!--收藏-->
-                        <div class="content-hot-collectionimg"><img src="img/uncollection.png"></div>
-                        <div class="content-hot-collection pointer">收藏</div>
+                        <div class="pointer collect" style="float: left;">
+                            <div class="content-hot-collectionimg"><img src="img/uncollection.png"></div>
+                            <div class="content-hot-collection">收藏</div>
+                        </div>
                     </div>
                 </div>
 
@@ -172,75 +120,13 @@
 
             </div>
 
-            <!--问答2-->
-            <div class="content-hot">
-                <!--题目-->
-                <div class="content-hot-title">
-                    热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题
-                </div>
-                <!--用户信息-->
-                <div class="content-hot-info">
-                    <div class="content-hot-img"><img src="img/img_1.png"></div>
-                    <div class="content-hot-username">Mary McCormick</div>
-                    <div class="content-hot-level">Lv1</div>
-                </div>
-                <!--回答-->
-                <div class="content-hot-answer">
-                    <span>这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，</span>
-                    <!--点赞-->
-                    <div class="content-hot-praise pointer">
-                        <div class="content-hot-praiseimg"><img src="img/zan.png"></div>
-                        <div class="content-hot-praisenum">356</div>
-                    </div>
-                    <div class="content-hot-about">
-                        <!--回复-->
-                        <div class="content-hot-replyimg"><img src="img/reply.png"></div>
-                        <div class="content-hot-reply">共<span>xxxx</span>条回复</div>
-                        <!--收藏-->
-                        <div class="content-hot-collectionimg"><img src="img/uncollection.png"></div>
-                        <div class="content-hot-collection pointer">收藏</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!--问答2-->
-            <div class="content-hot">
-                <!--题目-->
-                <div class="content-hot-title">
-                    热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题
-                </div>
-                <!--用户信息-->
-                <div class="content-hot-info">
-                    <div class="content-hot-img"><img src="img/img_1.png"></div>
-                    <div class="content-hot-username">Mary McCormick</div>
-                    <div class="content-hot-level">Lv1</div>
-                </div>
-                <!--回答-->
-                <div class="content-hot-answer">
-                    <span>这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，</span>
-                    <!--点赞-->
-                    <div class="content-hot-praise pointer">
-                        <div class="content-hot-praiseimg"><img src="img/zan.png"></div>
-                        <div class="content-hot-praisenum">356</div>
-                    </div>
-                    <div class="content-hot-about">
-                        <!--回复-->
-                        <div class="content-hot-replyimg"><img src="img/reply.png"></div>
-                        <div class="content-hot-reply">共<span>xxxx</span>条回复</div>
-                        <!--收藏-->
-                        <div class="content-hot-collectionimg"><img src="img/uncollection.png"></div>
-                        <div class="content-hot-collection pointer">收藏</div>
-                    </div>
-                </div>
-
-            </div>
             <div class="content-bottom-more pointer">查看更多</div>
         </div>
 
         <!--搜索结果-->
         <div class="content-question-search">
             <!--问题排列-->
+            <!--问题1-->
             <div class="content-search-list content-search-listfirst">
                 <div>
                     <div class="content-list-point"></div>
@@ -253,6 +139,7 @@
                 </div>
             </div>
 
+            <!--问题2-->
             <div class="content-search-list">
                 <div>
                     <div class="content-list-point"></div>
@@ -265,53 +152,6 @@
                 </div>
             </div>
 
-            <div class="content-search-list">
-                <div>
-                    <div class="content-list-point"></div>
-                    <div class="content-list-title">这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？</div>
-                </div>
-                <div class="content-list-bottom">
-                    <div class="content-list-focus"><span class="content-list-focusnum">15</span>个关注</div>
-                    <div class="content-list-answer"><span class="content-list-answernum">13</span>个回答</div>
-                    <div class="content-list-time">2018-06-05</div>
-                </div>
-            </div>
-
-            <div class="content-search-list">
-                <div>
-                    <div class="content-list-point"></div>
-                    <div class="content-list-title">这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？</div>
-                </div>
-                <div class="content-list-bottom">
-                    <div class="content-list-focus"><span class="content-list-focusnum">15</span>个关注</div>
-                    <div class="content-list-answer"><span class="content-list-answernum">13</span>个回答</div>
-                    <div class="content-list-time">2018-06-05</div>
-                </div>
-            </div>
-
-            <div class="content-search-list">
-                <div>
-                    <div class="content-list-point"></div>
-                    <div class="content-list-title">这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？</div>
-                </div>
-                <div class="content-list-bottom">
-                    <div class="content-list-focus"><span class="content-list-focusnum">15</span>个关注</div>
-                    <div class="content-list-answer"><span class="content-list-answernum">13</span>个回答</div>
-                    <div class="content-list-time">2018-06-05</div>
-                </div>
-            </div>
-
-            <div class="content-search-list">
-                <div>
-                    <div class="content-list-point"></div>
-                    <div class="content-list-title">这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？</div>
-                </div>
-                <div class="content-list-bottom">
-                    <div class="content-list-focus"><span class="content-list-focusnum">15</span>个关注</div>
-                    <div class="content-list-answer"><span class="content-list-answernum">13</span>个回答</div>
-                    <div class="content-list-time">2018-06-05</div>
-                </div>
-            </div>
             <div class="content-bottom-more pointer">查看更多</div>
         </div>
 

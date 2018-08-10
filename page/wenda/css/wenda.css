@@ -3,6 +3,11 @@ a:active {}
 a:visited {text-decoration:none;}
 a:hover {text-decoration:none;}
 
+#content-list a:link {color: #4A4A4A}
+#content-list a:active {color: #4A4A4A}
+#content-list a:visited {color: #4A4A4A}
+#content-list a:hover {color: #4A4A4A}
+
 .pointer {
     cursor: pointer;
 }
@@ -29,8 +34,7 @@ a:hover {text-decoration:none;}
 }
 
 .content-top {
-    width: 1200px;
-    margin: auto;
+    width: 100%;
     /*margin-top: 66px;*/
     /*margin-left: 283px;*/
 }
@@ -178,9 +182,10 @@ a:hover {text-decoration:none;}
 }
 
 .content-hot-info {
-    width: 1130px;
+    /*width: 1130px;*/
     margin-left: 35px;
     height: 26px;
+    display: table;
 }
 
 .content-hot-answer {
@@ -451,4 +456,32 @@ a:hover {text-decoration:none;}
 
 .content-list-focusnum {
     color: #A978D6;
+}
+
+.div-no-question {
+    width: 1200px;
+    text-align: center;
+    font-size: 18px;
+    color: #9B9B9B;
+    height: 23px;
+    margin: auto;
+    margin-top: 171px;
+}
+
+.div-no-question span {
+    color: #A978D6;
+}
+
+#question {
+    position: relative;
+}
+
+.red-point {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: red;
+    position: absolute;
+    top: 12px;
+    left: 15px;
 }

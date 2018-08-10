@@ -194,6 +194,7 @@
     margin-top: 50px;
     border: 1px dashed #979797;
     border-radius: 6px;
+    display: table;
 }
 .content-answer-one {
     margin-top: 30px;
@@ -292,6 +293,7 @@
     margin-top: 20px;
     font-size: 14px;
     color: #4A4A4A;
+    display: table;
 }
 
 .content-answer-bottom {
@@ -359,7 +361,7 @@
 .content-change {
     margin-left: 49px;
     height: 18px;
-    display: none;
+    /*display: none;*/
 }
 
 .content-change-img {
@@ -387,4 +389,98 @@
     line-height: 30px;
     margin-top: 36px;
     float: left;
+}
+
+
+.content-question-inner {
+    width: 1200px;
+    height: 1078px;
+    background: #FFFFFF;
+    /*border: 1px solid #979797;*/
+    border-radius: 6px;
+    display: none;
+    position: absolute;
+    top: 270px;
+    left: 352px;
+    z-index:1032;
+    overflow: auto;
+}
+
+.content-question-written {
+    height: 48px;
+    font-family: MicrosoftYaHeiUI-Bold;
+    font-size: 48px;
+    color: #4A4A4A;
+    text-align: center;
+    line-height: 48px;
+    margin-top: 74px;
+}
+
+.question-title {
+    width: 1091px;
+    height: 109px;
+    margin-top: 65px;
+    margin-left: 45px;
+    margin-bottom: 40px;
+    border: 1px solid #979797;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 24px;
+    color: #4A4A4A;
+    padding-left: 29px;
+}
+
+.question-answer {
+    width: 1091px;
+    height: 416px;
+    border: 1px solid #979797;
+    margin-left: 45px;
+    overflow: hidden;
+}
+
+.content-question-submit {
+    width: 150px;
+    height: 52px;
+    background: #A978D6;
+    border-radius: 6px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    float: right;
+    margin-right: 64px;
+    line-height: 52px;
+    margin-top: 16px;
+}
+
+.content-question-cancel {
+    width: 150px;
+    height: 52px;
+    border: 1px solid #979797;
+    border-radius: 6px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #888888;
+    text-align: center;
+    float: right;
+    margin-right: 77px;
+    line-height: 52px;
+    margin-top: 16px;
+}
+
+.content-question-outer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#000;
+    z-index:1031;
+    -moz-opacity: 0.8;
+    opacity: 0.5;
+    filter: alpha(opacity=80);
+}
+
+#change-answer {
+    margin-right: 87px;
 }

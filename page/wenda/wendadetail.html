@@ -24,7 +24,7 @@
                     <div class="content-info-img"><img src="img/img_1.png"></div>
                     <div class="content-info-name">Mary McCormick</div>
                     <div class="content-info-level">Lv1</div>
-                    <div class="content-change">
+                    <div class="content-change pointer" id="change-question">
                         <div class="content-change-img"><img src="img/xiugai.png"></div>
                         <div class="content-change-text">修改</div>
                     </div>
@@ -40,6 +40,18 @@
                 <div class="content-question-answer pointer writte" id="writte"><img src="img/xiehuida.png"></div>
             </div>
         </div>
+
+        <!-- 提问 -->
+        <div class="content-question-inner">
+            <div class="content-question-written">写下你的问题</div>
+            <input class="question-title" type="text" placeholder="写下你的问题标题" name="title">
+            <div class="question-answer">
+                <textarea id="mul_input1" name="content1" style="width:1091px;height:313px;visibility:hidden;display: block;resize: none;"><span style="color: #9B9B9B;">写回答……</span></textarea>
+            </div>
+            <div class="content-question-submit pointer">提交答案</div>
+            <div class="content-question-cancel pointer">取消</div>
+        </div>
+        <div id="fade" class="content-question-outer"></div>
 
         <!--写回答-->
         <div class="content-write">
@@ -62,7 +74,7 @@
         <!--没有人回答-->
         <div class="content-no-answer">暂时还没有人回答，开始<span class="writte pointer">写第一个回答</span></div>
         <!--共多少条回复-->
-        <div class="content-reply-num">共<span id="reply-num">1</span>条回复</div>
+        <div class="content-reply-num">共<span id="reply-num">2</span>条回复</div>
 
         <!--回答-->
         <div class="content-list">
@@ -80,7 +92,12 @@
                 </div>
                 <div class="content-answer-hr"></div>
                 <!--回答内容-->
-                <div class="content-answer-text">这里是回复So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death. Therefore, I saw that here was a sort of interregnum in Providence; for its even-handed equity never could have so gross an injustice. And yet still further pondering—while I jerked him now and then from between the whale and ship, which would threaten to jam him—still further pondering</div>
+                <div class="content-answer-text">
+                    这里是回复So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death. Therefore, I saw that here was a sort of interregnum in Providence; for its even-handed equity never could have so gross an injustice. And yet still further pondering—while I jerked him now and then from between the whale and ship, which would threaten to jam him—still further pondering
+                    这里是回复So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death. Therefore, I saw that here was a sort of interregnum in Providence; for its even-handed equity never could have so gross an injustice. And yet still further pondering—while I jerked him now and then from between the whale and ship, which would threaten to jam him—still further pondering
+                    这里是回复So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death. Therefore, I saw that here was a sort of interregnum in Providence; for its even-handed equity never could have so gross an injustice. And yet still further pondering—while I jerked him now and then from between the whale and ship, which would threaten to jam him—still further pondering
+                    这里是回复So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death. Therefore, I saw that here was a sort of interregnum in Providence; for its even-handed equity never could have so gross an injustice. And yet still further pondering—while I jerked him now and then from between the whale and ship, which would threaten to jam him—still further pondering
+                </div>
                 <!--回答相关信息-->
                 <div class="content-answer-bottom">
                     <div class="content-answer-collect pointer">
@@ -88,60 +105,13 @@
                         <div class="content-collect-text">收藏</div>
                     </div>
                     <div class="content-answer-share"><span>125</span>分享</div>
+                    <div class="content-change pointer" id="change-answer">
+                        <div class="content-change-text">修改</div>
+                        <div class="content-change-img"><img src="img/xiugai.png"></div>
+                    </div>
                     <div class="content-answer-time">发布于2018-06-05  12:30</div>
                 </div>
             </div>
-
-            <div class="content-answer">
-                <!--回答的头部信息-->
-                <div class="content-answer-top">
-                    <div class="content-answer-img"><img src="img/img_1.png"></div>
-                    <div class="content-answer-name">Mary McCormick</div>
-                    <div class="content-answer-level">Lv1</div>
-                    <div class="content-answer-praise">
-                        <div class="content-praise-img"><img src="img/zan.png"></div>
-                        <div class="content-praise-num">356</div>
-                    </div>
-                </div>
-                <div class="content-answer-hr"></div>
-                <!--回答内容-->
-                <div class="content-answer-text">这里是回复So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death. Therefore, I saw that here was a sort of interregnum in Providence; for its even-handed equity never could have so gross an injustice. And yet still further pondering—while I jerked him now and then from between the whale and ship, which would threaten to jam him—still further pondering</div>
-                <!--回答相关信息-->
-                <div class="content-answer-bottom">
-                    <div class="content-answer-collect">
-                        <div class="content-collect-img"><img src="img/meishoucang.png"></div>
-                        <div class="content-collect-text">收藏</div>
-                    </div>
-                    <div class="content-answer-share"><span>125</span>分享</div>
-                    <div class="content-answer-time">发布于2018-06-05  12:30</div>
-                </div>
-            </div>
-
-            <div class="content-answer">
-                <!--回答的头部信息-->
-                <div class="content-answer-top">
-                    <div class="content-answer-img"><img src="img/img_1.png"></div>
-                    <div class="content-answer-name">Mary McCormick</div>
-                    <div class="content-answer-level">Lv1</div>
-                    <div class="content-answer-praise">
-                        <div class="content-praise-img"><img src="img/zan.png"></div>
-                        <div class="content-praise-num">356</div>
-                    </div>
-                </div>
-                <div class="content-answer-hr"></div>
-                <!--回答内容-->
-                <div class="content-answer-text">这里是回复So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death. Therefore, I saw that here was a sort of interregnum in Providence; for its even-handed equity never could have so gross an injustice. And yet still further pondering—while I jerked him now and then from between the whale and ship, which would threaten to jam him—still further pondering</div>
-                <!--回答相关信息-->
-                <div class="content-answer-bottom">
-                    <div class="content-answer-collect">
-                        <div class="content-collect-img"><img src="img/meishoucang.png"></div>
-                        <div class="content-collect-text">收藏</div>
-                    </div>
-                    <div class="content-answer-share"><span>125</span>分享</div>
-                    <div class="content-answer-time">发布于2018-06-05  12:30</div>
-                </div>
-            </div>
-
 
         </div>
     </div>

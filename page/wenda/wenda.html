@@ -9,6 +9,7 @@
     <script src="js/jquery.min.2.1.4.js"></script>
     <!--<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
     <script src="js/wenda.js"></script>
+    <script src="js/clamp.js"></script>
     <script src="kindeditor-4.1.10/kindeditor-min.js"></script>
     <script src="kindeditor-4.1.10/lang/zh_CN.js"></script>
 </head>
@@ -33,94 +34,104 @@
     <div class="content">
         <!-- 提问 -->
         <div class="content-question-inner">
-            <form>
                 <div class="content-question-written">写下你的问题</div>
-                <input class="content-question-title" type="text" placeholder="写下你的问题标题">
+                <input class="content-question-title" type="text" placeholder="写下你的问题标题" name="title">
                 <div class="content-question-answer">
                     <textarea id="mul_input" name="content" style="width:1091px;height:313px;visibility:hidden;display: block;resize: none;"><span style="color: #9B9B9B;">写回答……</span></textarea>
                 </div>
                 <div class="content-question-submit pointer">提交答案</div>
                 <div class="content-question-cancel pointer">取消</div>
-            </form>
         </div>
         <div id="fade" class="content-question-outer"></div>
 
         <div class="content-question-show">
             <!--分类-->
             <div class="content-column">
-                <div class="content-column-title pointer" id="hot"><a>热门问题</a></div>
-                <div class="content-column-title pointer" id="new"><a>最新问题</a></div>
-                <div class="content-column-title pointer" id="question"><a>我的提问</a></div>
-                <div class="content-column-title pointer" id="answer"><a>我的回答</a></div>
+                <div class="content-column-title pointer" id="hot" num="0"><a>热门问题</a></div>
+                <div class="content-column-title pointer" id="new" num="1"><a>最新问题</a></div>
+                <div class="content-column-title pointer" id="question" num="2"><a>我的提问</a><div class="red-point"></div></div>
+                <div class="content-column-title pointer" id="answer" num="3"><a>我的回答</a></div>
             </div>
             <div class="content-column-hr"></div>
 
-            <!--问答1-->
-            <div class="content-hot content-hot-first">
-                <!--题目-->
-                <div class="content-hot-title">
-                    热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题
-                </div>
-                <!--用户信息-->
-                <div class="content-hot-info">
-                    <div class="content-hot-img"><img src="img/img_1.png"></div>
-                    <div class="content-hot-username">Mary McCormick</div>
-                    <div class="content-hot-level">Lv1</div>
-                </div>
-                <!--回答-->
-                <div class="content-hot-answer">
-                    <span>这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，</span>
-                    <!--点赞-->
-                    <div class="content-hot-praise pointer">
-                        <div class="content-hot-praiseimg"><img src="img/zan.png"></div>
-                        <div class="content-hot-praisenum">356</div>
+            <div id="content-list">
+                <!--问答1-->
+                <div class="content-hot content-hot-first">
+                    <!--题目-->
+                    <div class="content-hot-title"><a href="wendadetail.html?id=1">
+                        <p class="p-title">
+                            adsfafasdf asdf dsa fsdf sdar热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题
+                            热门问题热门问题热门问题热门问aaa题热门问题热门问题热门问题热门问题热门问题热门问题热门g 问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题
+                        </p>
+                    </a>
                     </div>
-                    <div class="content-hot-about">
-                        <!--回复-->
-                        <div class="content-hot-replyimg"><img src="img/reply.png"></div>
-                        <div class="content-hot-reply">共<span>xxxx</span>条回复</div>
-                        <!--收藏-->
-                        <div class="pointer collect" style="float: left;">
-                            <div class="content-hot-collectionimg"><img src="img/uncollection.png"></div>
-                            <div class="content-hot-collection">收藏</div>
+                    <!--用户信息-->
+                    <div class="content-hot-info pointer">
+                        <div class="content-hot-img"><img src="img/img_1.png"></div>
+                        <div class="content-hot-username">Mary McCormick</div>
+                        <div class="content-hot-level">Lv1</div>
+                    </div>
+                    <!--回答-->
+                    <div class="content-hot-answer">
+                        <p class="p-answer">
+                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
+                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
+                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
+                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
+                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
+                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
+                        </p>
+                        <!--点赞-->
+                        <div class="content-hot-praise pointer">
+                            <div class="content-hot-praiseimg"><img src="img/zan.png"></div>
+                            <div class="content-hot-praisenum">356</div>
+                        </div>
+                        <div class="content-hot-about">
+                            <!--回复-->
+                            <div class="content-hot-replyimg"><img src="img/reply.png"></div>
+                            <div class="content-hot-reply">共<span>xxxx</span>条回复</div>
+                            <!--收藏-->
+                            <div class="pointer collect" style="float: left;">
+                                <div class="content-hot-collectionimg"><img src="img/uncollection.png"></div>
+                                <div class="content-hot-collection">收藏</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
-            <!--问答2-->
-            <div class="content-hot">
-                <!--题目-->
-                <div class="content-hot-title">
-                    热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题
-                </div>
-                <!--用户信息-->
-                <div class="content-hot-info">
-                    <div class="content-hot-img"><img src="img/img_1.png"></div>
-                    <div class="content-hot-username">Mary McCormick</div>
-                    <div class="content-hot-level">Lv1</div>
-                </div>
-                <!--回答-->
-                <div class="content-hot-answer">
-                    <span>这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，</span>
-                    <!--点赞-->
-                    <div class="content-hot-praise pointer">
-                        <div class="content-hot-praiseimg"><img src="img/zan.png"></div>
-                        <div class="content-hot-praisenum">356</div>
+                <!--问答2-->
+                <div class="content-hot">
+                    <!--题目-->
+                    <div class="content-hot-title">
+                        热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题
                     </div>
-                    <div class="content-hot-about">
-                        <!--回复-->
-                        <div class="content-hot-replyimg"><img src="img/reply.png"></div>
-                        <div class="content-hot-reply">共<span>xxxx</span>条回复</div>
-                        <!--收藏-->
-                        <div class="content-hot-collectionimg"><img src="img/uncollection.png"></div>
-                        <div class="content-hot-collection pointer">收藏</div>
+                    <!--用户信息-->
+                    <div class="content-hot-info">
+                        <div class="content-hot-img"><img src="img/img_1.png"></div>
+                        <div class="content-hot-username">Mary McCormick</div>
+                        <div class="content-hot-level">Lv1</div>
                     </div>
+                    <!--回答-->
+                    <div class="content-hot-answer">
+                        <span>这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，</span>
+                        <!--点赞-->
+                        <div class="content-hot-praise pointer">
+                            <div class="content-hot-praiseimg"><img src="img/zan.png"></div>
+                            <div class="content-hot-praisenum">356</div>
+                        </div>
+                        <div class="content-hot-about">
+                            <!--回复-->
+                            <div class="content-hot-replyimg"><img src="img/reply.png"></div>
+                            <div class="content-hot-reply">共<span>xxxx</span>条回复</div>
+                            <!--收藏-->
+                            <div class="content-hot-collectionimg"><img src="img/uncollection.png"></div>
+                            <div class="content-hot-collection pointer">收藏</div>
+                        </div>
+                    </div>
+
                 </div>
 
+                <div class="content-bottom-more pointer">查看更多</div>
             </div>
-
-            <div class="content-bottom-more pointer">查看更多</div>
         </div>
 
         <!--搜索结果-->

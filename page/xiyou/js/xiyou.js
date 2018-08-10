@@ -1,15 +1,6 @@
-var ss = '<div class="c"> <p class="hottitle">来啊，这里是标题这里是标题，来啊，这里是标题这里是标题</p> <div class="a"> <img class="hotimg" src="./img/test.jpg" height="405" width="640"/> <div class="b"> <p class="bp">看到组员@金盆洗手的帖子，特来参加一波。家里还有存货，稍后回到家整理贴上来，换算成人民币计算在内。 时间：2018/5/3—2018/6/2备注：存货只计算花了钱的。亲人赠送、调料油烟酱醋等除...</p> <div class="bf"><p>来自<a>jackwolf</a>圈子</p>&nbsp;&nbsp;&nbsp; <p>2018-06-28</p></div> </div> </div> <hr/> </div>'
+
 var baseUrl = "http://47.98.119.215:80/web/api/v1/";
 $(function () {
-    $("#arrcontent").append(ss);
-    $("#arrcontent").append(ss);
-    $("#arrcontent").append(ss);
-    $("#arrcontent").append(ss);
-    $("#arrcontent").append(ss);
-    $("#arrcontent").append(ss);
-    $("#arrcontent").append(ss);
-    $("#arrcontent").append(ss);
-    $("#arrcontent").append(ss);
     gettoplevels();
     gettopvotes();
     gettoplikecounts();
@@ -43,13 +34,16 @@ var initPageNation = function () {
 }
 
 
+var row = ' <span class="row-span"><span class="row_id">{0}</span><img src="{1}"><span class="row_name">{2}</span><span class="row_lv">Lv{3}</span></span>'
 //巾过榜接口 按经验值
 var gettoplevels = function () {
     $.ajax({
         type: "GET",
         url: baseUrl + "/xyq/toplevels",
         success: function (msg) {
-            console.log(msg);
+            $.each(msg, function (i, n) {
+                $("#toplevels").append(row.format(n.id, n.icon, n.username,n.level))
+            })
         }
     });
 }
@@ -60,7 +54,10 @@ var gettoplikecounts = function () {
         type: "GET",
         url: baseUrl + "/xyq/toplikecounts",
         success: function (msg) {
-            console.log(msg);
+            console.log(msg)
+            $.each(msg, function (i, n) {
+                $("#likecount").append(row.format(n.id, n.icon, n.username,n.likecount))
+            })
         }
     });
 }
@@ -85,11 +82,22 @@ var gettopvotes = function () {
 
 //热门话题
 var getposts = function () {
+    var ss = '<div class="c"> <p class="hottitle">{0}</p> <div class="a"> <img class="hotimg" src="{1}" height="405" width="640"/> <div class="b"> <p class="bp">{2}</p> <div class="bf"><p>来自<a>{3}</a>圈子</p>&nbsp;&nbsp;&nbsp; <p>{4}</p></div> </div> </div> <hr/> </div>'
     $.ajax({
         type: "GET",
         url: baseUrl + "/xyq/posts?pageNo=0&pageSize=30",
         success: function (msg) {
-            console.log(msg);
+            console.log(msg.posts);
+            $.each(msg.posts,function (i,n) {
+                title = n.title;
+                abstract = $.trim(n.abstract);
+                createTime = n.createTime.substring(0,10);
+                icon = n.icon;
+                forumname = n.forumname;
+                $("#arrcontent").append(ss.format(title,icon,abstract,forumname,createTime));
+            })
+
+
         }
     });
 }

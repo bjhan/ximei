@@ -1,0 +1,75 @@
+html, body {
+    width: 100%;
+    min-height: 720px;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#title {
+    width: 100%;
+    min-height: 50px;
+    font-family: MicrosoftYaHeiUI-Bold;
+    font-size: 36px;
+    color: #000000;
+    padding-top: 50px;
+}
+
+#born_paper_view {
+    width: 100%;
+}
+
+#born_paper_view p {
+    font-family: MicrosoftYaHeiUI;
+    font-size: 24px;
+    color: #000000;
+}
+#born_paper_view span{
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #000000;
+}
+.qa{
+    margin-top: 20px;
+    width: 100%;
+    border-bottom:  1px solid #979797;;
+    padding-bottom: 5px;
+    line-height: 30px;
+}
+
+#qa_content{
+    min-height: 100px;
+}
+
+
+.qa_title span{
+    font-family: MicrosoftYaHeiUI;
+    font-size: 24px;
+    color: #000000;
+}
+.qa_title a{
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #A978D6;
+    float: right;
+}
+
+.strategy_item{
+    width: 100%;
+    height: 211px;
+    position: relative;
+    background-color: #9E9E9E;
+}
+
+.showMore{
+    width: 100%;
+    text-align: center;
+    height: 85px;
+    line-height: 85px;
+    background-color:#F4F4F4;
+    font-size: 18px;
+    color: #A978D6;
+    cursor: pointer;
+}

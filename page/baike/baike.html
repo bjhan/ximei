@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE">
+    <meta charset="UTF-8">
+    <title>百科</title>
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <link rel="stylesheet" href="../../common/swiper.css">
+    <link rel="stylesheet" href="../../common/index.css">
+    <link rel="stylesheet" href="css/baike.css">
+    <link rel="stylesheet" href="css/pageSwitch.min.css">
+    <script src="../../common/jquery-1.8.1.min.js"></script>
+    <script src="../../common/jquery.xdomainrequest.min.js"></script>
+    <script src="../../common/swiper.js"></script>
+    <script src="../../common/DD_roundies.js"></script>
+    <script src="../../common/base.js"></script>
+    <script src="js/html5media.min.js"></script>
+    <!--[if lte IE 9]>
+    <script src="js/jquery.placeholder.js"></script>
+    <script>
+        $(function () {
+            $('input[placeholder]').placeholder();
+        });
+    </script>
+    <![endif]-->
+</head>
+<body>
+<div class="content">
+    <div class="title"><b>热门百科</b></div>
+    <div class="showtype">
+        <span>赴美生子</span>
+        <span>|</span>
+        <span>签证/入关</span>
+        <span>|</span>
+        <span>美国就医/保险</span>
+        <span>|</span>
+        <span>美宝回国</span>
+        <span>|</span>
+        <span>美国生活</span>
+    </div>
+    <div style="width: 100%">
+        <div id="fmsz" class="showtype_item" style="display: none">
+            <table>
+                <tr>
+                    <td>赴美常识</td>
+                </tr>
+                <tr>
+                    <td>赴美生子流程 / 赴美生子的好处 / 赴美生子的坏处 / 赴美生子的费用</td>
+                </tr>
+                <tr>
+                    <td>赴美生子的条件</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>美宝证件</td>
+                </tr>
+                <tr>
+                    <td>美国护照 / 美国公民出生纸 / 出生纸三级认证（领事认证 州务卿认证 使馆认证）</td>
+                </tr>
+                <tr>
+                    <td>赴美生子的条件 / 中国旅行政 / 美国社会安全卡 / 中国旅行证的使用与更换</td>
+                </tr>
+                <tr>
+                    <td>父母亲不在场公证美国护照的使用与更换</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="qzrg" class="showtype_item" style="display: none">
+            <table>
+                <tr>
+                    <td>美国签证</td>
+                </tr>
+                <tr>
+                    <td>赴美签证流程 / B-1|B-2商务旅游签证 / B-1|B-2签证延期 / DS-160表格</td>
+                </tr>
+                <tr>
+                    <td>护照申请表DS-11 / 诚实签证 / EVUS登记 / 面签 / 签证有效期</td>
+                </tr>
+                <tr>
+                    <td>签证所需材料 / 留学签证 / 美国签证预约 /美国签证代传递 / 美国签证照片要求</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>美国入关</td>
+                </tr>
+                <tr>
+                    <td>美国海关 / 入关停留期 / 超过32周登机 / 限制入境 / 孕妇入美国海关</td>
+                </tr>
+                <tr>
+                    <td>EVUS签证更新电子系统 / 二次入境 / 赴美生子入境 / -94入境卡</td>
+                </tr>
+                <tr>
+                    <td>孕妇过安检</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="mgjy" class="showtype_item" style="display: none">
+            <table>
+                <tr>
+                    <td>赴美保险</td>
+                </tr>
+                <tr>
+                    <td>IMG国际医疗保险 / MSH国际医疗保险 / 美国旅行保险</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>美国分娩</td>
+                </tr>
+                <tr>
+                    <td>无痛分娩 / 美国破腹产 / 美国顺产</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>美国产检</td>
+                </tr>
+                <tr>
+                    <td>产检项目 / B超 / 胎心监护 / 胎儿发育标准</td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td>美国疫苗</td>
+                </tr>
+                <tr>
+                    <td>美国新生儿疫苗接种时间 / 加州入学打疫苗 / 中美不同疫苗注意事项 / 疫苗黄卡SAYC</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>试管婴儿</td>
+                </tr>
+
+            </table>
+            <table>
+                <tr>
+                    <td>美国代孕</td>
+                </tr>
+
+            </table>
+        </div>
+
+        <div id="mghg" class="showtype_item">
+            <table>
+                <tr>
+                    <td>证件办理</td>
+                </tr>
+                <tr>
+                    <td>回国上户口 / 中国出入境通行证 / 用美国疫苗黄卡回国打疫苗</td>
+                </tr>
+                <tr>
+                    <td>中国旅行证更换 / 美宝证件更换 / 美宝办居住证</td>
+                </tr>
+
+            </table>
+            <table>
+                <tr>
+                    <td>美宝生活</td>
+                </tr>
+                <tr>
+                    <td>用美国疫苗黄卡回国打疫苗 / 美宝出入中国 / 美宝疫苗接种</td>
+                </tr>
+                <tr>
+                    <td>美宝定机票 / 二次入境 / 赴美生子入境 / -94入境卡</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+    <div class="places">
+        <span class="places-title">赴美生子的目的地</span>
+        <span class="hot-text">-- 热门城市 --</span>
+        <hr style="border: 1px solid #000000"/>
+        <div class="places-items">
+            <p>芝加哥 Chicago</p>
+            <p>尔湾 Irvine</p>
+            <p>旧金山 San Francsco</p>
+            <p>西雅图 Seattle</p>
+            <p>塞班岛 Saipan</p>
+            <p>圣迭戈 San Diego</p>
+        </div>
+        <div class="places-items">
+            <p>亚特兰大 Atlanta</p>
+            <p>纽约 New York</p>
+            <p>新泽西 State of New Jersey</p>
+            <p>丹佛 Denver</p>
+            <p>洛杉矶 Los Angeles</p>
+        </div>
+    </div>
+
+
+    <div class="knowledge">
+        <span class="knowledge-title places-title">赴美生子知识</span>
+        <span class="lable">按字母排序</span>
+        <table id="baikeTable" style="width: 100%;text-align: left">
+            <tr>
+                <td>
+                    <b>C</b>
+                </td>
+                <td style="width: 500px">
+                    出生纸
+                </td>
+                <td style="width: 500px">
+                    美国移民条件
+                </td>
+                <td style="width: 30px">
+                </td>
+                <td style="width: 100px">
+                    美宝福利
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td style="width: 500px">
+                    产钳助产
+                </td>
+                <td style="width: 500px">
+                    美国文化
+                </td>
+                <td style="width: 30px">
+                </td>
+                <td style="width: 100px">
+                    美国福利政策
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td style="width: 500px">
+                    诚实签
+                </td>
+                <td style="width: 500px">
+                    美国教育
+                </td>
+                <td style="width: 30px">
+                </td>
+                <td style="width: 100px">
+                    美国大学
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b>D</b>
+                </td>
+                <td style="width: 500px">
+                    当地体检
+                </td>
+                <td style="width: 500px">
+                    美宝换证
+                </td>
+                <td style="width: 30px">
+                </td>
+                <td style="width: 100px">
+                    麻醉师
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    DIY赴美生子
+                </td>
+                <td style="width: 500px">
+                    免费教育
+                </td>
+                <td style="width: 30px">
+                </td>
+                <td style="width: 100px">
+                    美国入关
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b>E</b>
+                </td>
+                <td style="width: 500px">
+                    二次入境
+                </td>
+                <td style="width: 500px">
+                    美国宪法
+                </td>
+                <td style="width: 30px">
+                </td>
+                <td style="width: 100px">
+                    美宝证件
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    EVUS登记
+                </td>
+                <td style="width: 500px">
+                    美国签证代传递
+                </td>
+                <td style="width: 30px">
+                </td>
+                <td style="width: 100px">
+                    美国签证
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b>F</b>
+                </td>
+                <td style="width: 500px">
+                    赴美中介生子
+                </td>
+                <td style="width: 500px">
+                    美国学区房
+                </td>
+                <td style="width: 30px">
+                </td>
+                <td style="width: 100px">
+                    美国分娩
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    国际保险
+                </td>
+                <td style="width: 500px">
+                    美国疫苗
+                </td>
+                <td style="width: 30px">
+                    <b>N</b>
+                </td>
+                <td style="width: 100px">
+                    纽约生子
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    赴美面签
+                </td>
+                <td style="width: 500px">
+                    美国代孕
+                </td>
+                <td style="width: 30px">
+                    <b>P</b>
+                </td>
+                <td style="width: 100px">
+                    刨妇产
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    分娩delivery
+                </td>
+                <td style="width: 500px">
+                    美国月子中心
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    亲子游
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    赴美生子医保
+                </td>
+                <td style="width: 500px">
+                    美国待产民宿
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    脐带
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    赴加拿大生子
+                </td>
+                <td style="width: 500px">
+                    美国医院
+                </td>
+                <td style="width: 30px">
+                    <b>R</b>
+                </td>
+                <td style="width: 100px">
+                    入关停留期
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    赴美诚实入关
+                </td>
+                <td style="width: 500px">
+                    美国签证类型
+                </td>
+                <td style="width: 30px">
+                    <b>S</b>
+                </td>
+                <td style="width: 100px">
+                    生育辅助
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    赴美生子费用
+                </td>
+                <td style="width: 500px">
+                    美国签证材料
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    试管婴儿
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    赴美生子
+                </td>
+                <td style="width: 500px">
+                    美国公民
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    顺产
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    国籍冲突
+                </td>
+                <td style="width: 500px">
+                    美国落地公民权
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    试管婴儿
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    国际驾照
+                </td>
+                <td style="width: 500px">
+                    美国海关遣返
+                </td>
+                <td style="width: 30px">
+                    <b>T</b>
+                </td>
+                <td style="width: 100px">
+                    胎盘前置
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    购物
+                </td>
+                <td style="width: 500px">
+                    美国居留期
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    通讯
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b>H</b>
+                </td>
+                <td style="width: 500px">
+                    护照有效期
+                </td>
+                <td style="width: 500px">
+                    美国福利
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    胎儿心音
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    怀孕周期表
+                </td>
+                <td style="width: 500px">
+                    美国月嫂
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    停留期延期
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    海外生活
+                </td>
+                <td style="width: 500px">
+                    美国读书
+                </td>
+                <td style="width: 30px">
+                    <b>W</b>
+                </td>
+                <td style="width: 100px">
+                    无痛分娩
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    海外房产
+                </td>
+                <td style="width: 500px">
+                    美国报税
+                </td>
+                <td style="width: 30px">
+                    <b>X</b>
+                </td>
+                <td style="width: 100px">
+                    夏令营
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    海外生子
+                </td>
+                <td style="width: 500px">
+                    美宝中国上户口
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    西雅图入关
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b>I</b>
+                </td>
+                <td style="width: 500px">
+                    IMG国际医疗险
+                </td>
+                <td style="width: 500px">
+                    美国政策法规
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    学生F1签字
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    I-94入境卡
+                </td>
+                <td style="width: 500px">
+                    美国产检
+                </td>
+                <td style="width: 30px">
+                    <b>Y</b>
+                </td>
+                <td style="width: 100px">
+                    孕育
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>J</b>
+                </td>
+                <td style="width: 500px">
+                    景点
+                </td>
+                <td style="width: 500px">
+                    美国医生
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    婴儿机票
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    加州孕产中心
+                </td>
+                <td style="width: 500px">
+                    美国绿卡
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    移民
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    交通
+                </td>
+                <td style="width: 500px">
+                    美国依亲移民
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    游学
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b>K</b>
+                </td>
+                <td style="width: 500px">
+                    课外
+                </td>
+                <td style="width: 500px">
+                    美国海关小黑屋
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    永拒黑名单
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b>L</b>
+                </td>
+                <td style="width: 500px">
+                    落地国籍
+                </td>
+                <td style="width: 500px">
+                    美国国内上学
+                </td>
+                <td style="width: 30px">
+                    <b>Z</b>
+                </td>
+                <td style="width: 100px">
+                    中国入境通行证
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    留学
+                </td>
+                <td style="width: 500px">
+                    美国社会安全号
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    州务卿认证
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    旅游签
+                </td>
+                <td style="width: 500px">
+                    美国高中
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    中国户口
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <b>M</b>
+                </td>
+                <td style="width: 500px">
+                    美国海关
+                </td>
+                <td style="width: 500px">
+                    美国签证申请
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 100px">
+                    中国护照
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b></b>
+                </td>
+                <td style="width: 500px">
+                    美食
+                </td>
+                <td style="width: 500px">
+                    美国护照
+                </td>
+                <td style="width: 30px">
+                    <b></b>
+                </td>
+                <td style="width: 150px">
+                    中国旅行证
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+
+</div>
+
+
+</body>
+<script src="js/baike.js"></script>
+</html>

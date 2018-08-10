@@ -1,15 +1,17 @@
 html, body {
-  width: 95%;
-  padding: 0 0 0 30px;
+  width: 100%;
+  padding: 0 0 0 0px;
   margin: 0 0 0 0; }
 
 .content {
-  width: 55%; }
+  width: 1200px;
+  padding: 0 0 0 30px;
+}
 
 .title {
   font-family: MicrosoftYaHeiUI-Bold;
   font-size: 30px;
-  color: #4A4A4A; }
+  color: #4A4A4A;}
 
 .tabdiv {
   position: relative;

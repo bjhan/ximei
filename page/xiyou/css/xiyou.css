@@ -82,6 +82,9 @@ html, body {
     color: #5562bf;
     line-height: 18px;
 }
+#arrcontent{
+    min-height: 1000px;
+}
 
 #arrcontent hr {
     border: 1px solid #EEEEEE;
@@ -142,8 +145,11 @@ html, body {
     width: 100%;
 }
 
-#rmtp > div:first-child img{
+#rmtp > div:first-child *{
     float: left;
+}
+#bangdan hr{
+    width: 100%;
 }
 #rmtp > div:first-child img {
     width: 25px;
@@ -277,6 +283,38 @@ hr {
 .ximei-left-row{
     width: 100%;
     height: 39px;
+}
+
+.row-span{
+    width: 100%;
+    position: relative;
+    font-size: 12px;
+    margin-top: 10px !important;
+}
+.row-span img{
+    height: 48px;
+    width: 48px;
+    border-radius: 30px;
+    position: relative;
+    left: 18px;
+}
+
+.row_id{
+    position: relative;left: 7px;
+    color: #C3C3C3;
+}
+
+.row_name{
+    position: relative;
+    left: 28px;
+    bottom: 8px;
+    color: #000000;
+}
+
+.row_lv{
+    position: relative;
+    top: 15px;
+    color: #DE75C4;
 }
 
 /*# sourceMappingURL=xiyou.css.map */

@@ -1,0 +1,118 @@
+html, body {
+    width: 100%;
+    min-height: 720px;
+    overflow-y: inherit;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    margin-top: 30px;
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+    width: 100%;
+}
+
+.showtype {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.showtype span {
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #4A4A4A;
+    margin: 0 12px;
+}
+
+.showtype_item {
+    text-align: center;
+}
+
+.showtype_item table {
+    width: 45%;
+    display: inline-block;
+}
+
+.showtype_item table tr td {
+    border-bottom: 1px solid #979797;
+    text-align: left;
+    padding: 18px 0;
+    height: 21px;
+    font-size: 14px;
+}
+
+.showtype_item table tr:first-child td {
+    font-weight: 600;
+    border-bottom: 2px solid #000000;
+    font-size: 18px;
+}
+
+.places {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.places-title{
+
+    font-family: MicrosoftYaHeiUI-Bold;
+    font-size: 30px;
+    color: #000000;
+    font-weight: 600;
+    display: block;
+}
+
+.hot-text{
+    display: block;
+    font-size: 18px;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.places-items p{
+    display: inline-block;
+    width: 185px;
+    font-size: 14px;
+    color: #000000;
+    cursor: pointer;
+}
+.places-items p:hover{
+    color: #A978D6;
+}
+
+
+.places-items{
+    text-align: left;
+    border-bottom:  1px dashed #979797;
+}
+
+.knowledge {
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.knowledge-title{
+
+}
+
+.knowledge .lable{
+    font-size: 14px;
+    color: #9B9B9B;
+}
+
+#baikeTable tr td{
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+#baikeTable tr td:hover{
+    color: #A978D6;
+}
+

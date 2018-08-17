@@ -1,0 +1,64 @@
+html, body {
+    width: 100%;
+    min-height: 720px;
+    overflow-y: inherit;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#links {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #9B9B9B;
+    cursor: pointer;
+}
+
+#links span:hover {
+    color: #A978D6;
+}
+
+#stateChName {
+    margin-top: 15px;
+    font-size: 30px;
+    color: #000000;
+}
+
+#stateName {
+    font-size: 12px;
+    color: #979797;
+    display: block;
+}
+
+.city-items {
+    width: 100%;
+
+}
+
+.item .city-features-img {
+    width: 361px;
+    height: 197px;
+}
+
+.Business_circle_name {
+    opacity: 0.5;
+    color: #F5A623;
+    float: left;
+}
+
+.item > p {
+    margin: 5px 0;
+}
+
+.baike-descrption {
+    font-size: 14px;
+    color: #4A4A4A;
+}
+
+.item {
+    display: inline-block;
+    width: 30%;
+    margin: 50px 10px 70px 10px;
+}

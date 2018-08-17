@@ -1,0 +1,113 @@
+html, body {
+    width: 100%;
+    min-height: 720px;
+    overflow-y: inherit;
+}
+
+.content {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#links {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #9B9B9B;
+    cursor: pointer;
+}
+
+#links span:hover {
+    color: #A978D6;
+}
+
+#cityChName {
+    margin-top: 15px;
+    font-size: 30px;
+    color: #000000;
+}
+
+#cityName {
+    font-size: 12px;
+    color: #979797;
+    display: block;
+}
+
+.city-features {
+    width: 30%;
+    border-right: 1px dashed #979797;
+    min-height: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.city-features > span {
+    font-size: 36px;
+    color: #000000;
+    display: block;
+    text-align: center;
+}
+
+.city-features:last-child {
+    border-right: 0;
+}
+
+.city-features .city-features-img {
+    width: 361px;
+    height: 197px;
+}
+
+.Business_circle_name {
+    opacity: 0.5;
+    color: #F5A623;
+    float: left;
+}
+
+.item > p {
+    margin: 5px 0;
+}
+
+.baike-descrption {
+    font-size: 14px;
+    color: #4A4A4A;
+}
+
+.item {
+    margin-bottom: 70px;
+}
+
+.confinement-center {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.confinement-center .confinement-title {
+    font-size: 30px;
+    color: #000000;
+}
+
+.dingwei {
+    width: 13px;
+    height: 14px;
+
+}
+
+.city-features-img {
+    width: 380px;
+    height: 263px;
+}
+
+.confinement-item {
+    display: inline-block;
+    margin: 0 7px;
+    padding-bottom: 80px;
+}
+
+.confinement-item p{
+    margin-bottom: 5px;
+}
+.confinement-item > span > * {
+    display: inline-block;
+    font-size: 12px;
+    color: #BBBBBB;
+    vertical-align: top;
+}

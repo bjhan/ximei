@@ -55,8 +55,8 @@
     iebanben = IEVersion();
     getBanners();//banner
     // currentthing();//新鲜事
-    // getvideothing();//热点视频
-    clickevent();
+    getvideothing();//热点视频
+
     function clickevent() {
 
 
@@ -78,6 +78,27 @@
             $(this).find('.bigvideo').find('.mengceng').hide();
             $(this).find('.bigvideo').find('.videodesc').hide();
             $(this).find('.bigvideo').find('.playbtn').hide();
+            // document.getElementById("vivi").play();
+        });
+        $(".secondvideo").on("click",function () {
+            if(iebanben<9 && iebanben!== -1){
+                $(this).find('.smallvideo').find("embed").show();
+                $(this).find('.smallvideo').find("video").hide();
+                $(this).find('.smallvideo').find("img").hide();
+                var num = $(this).attr('num');
+                document.embeds('vivi'+num).play();
+                document.embeds('vivi'+num).hidden="false";
+            }else {
+                $(this).find('.smallvideo').find("embed").hide();
+                $(this).find('.smallvideo').find("video").show();
+                $(this).find('.smallvideo').find("img").hide();
+                $(this).find('.smallvideo').find("video").get(0).play();
+            }
+            // $(this).find('.bigvideo').find('audio').get(0).controls=true;
+            // $(this).find('.bigvideo').find('audio').get(0).play();
+            $(this).find('.smallvideo').find('.mengceng').hide();
+            $(this).find('.smallvideo').find('.videodesc').hide();
+            $(this).find('.smallvideo').find('.playbtn').hide();
             // document.getElementById("vivi").play();
         });
     }
@@ -157,12 +178,52 @@
             timeout: 5000,
             success: function (data) {
                 console.log(data);
+                for(var i=0;i<data.length;i++){
+                    if(i==0){
+                        addvideo1(data[i]);
+                    }else {
+                        addvideo2(data[i],i);
+                    }
+                    clickevent();
+                }
             },
             error: function (data) {
                 //alert("请求错误");
                 console.log(data);
             }
         });
+    }
+    function addvideo1(jsonvideo) {//添加视频
+        var strvideo = ' <div class="firstvideo">'
+            +'<div class="bigvideo">'
+            +'<video class="videos" poster="'+jsonvideo.imageUrl+'" >'
+            +'<source src="'+jsonvideo.videoUrl+'" type="video/mp4">'
+            +'</video>'
+            +'<embed class="videos2" id="vivi" hidden="true" controls="controls" src="'+jsonvideo.videoUrl+'" allowfullscreen="false" flashvars="vcastr_file=1234.flv&LogoText=www.lanrentuku.com&IsAutoPlay=0" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%" height="100%" loop="false" autostart="false"></embed>'
+            +'<img src="'+jsonvideo.imageUrl+'" class="videopic">'
+            +'<div class="mengceng"></div>'
+            +'<div class="videodesc">'+jsonvideo.tag+'</div>'
+            +'<div class="playbtn"></div>'
+            +'</div>'
+            +'</div>';
+
+        $(".videocontentfloat").append(strvideo);
+    }
+    function addvideo2(jsonvideo,i) {//添加视频
+        var strvideo = ' <div class="secondvideo" num="'+i+'">'
+            +'<div class="smallvideo">'
+            +'<video class="videos" poster="'+jsonvideo.imageUrl+'" >'
+            +'<source src="'+jsonvideo.videoUrl+'" type="video/mp4">'
+            +'</video>'
+            +'<embed class="videos2" id="vivi'+i+'" hidden="true" controls="controls" src="'+jsonvideo.videoUrl+'" allowfullscreen="false" flashvars="vcastr_file=1234.flv&LogoText=www.lanrentuku.com&IsAutoPlay=0" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="100%" height="100%" loop="false" autostart="false"></embed>'
+            +'<img src="'+jsonvideo.imageUrl+'" class="videopic">'
+            +'<div class="mengceng"></div>'
+            +'<div class="videodesc">'+jsonvideo.tag+'</div>'
+            +'<div class="playbtn"></div>'
+            +'</div>'
+            +'</div>';
+
+        $(".videocontentfloat").append(strvideo);
     }
     function addcurrentthing(currentarry) {//添加新鲜事
         for(var i=0;i<currentarry.length;i++){

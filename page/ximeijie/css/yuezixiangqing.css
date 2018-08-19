@@ -67,14 +67,22 @@ p{
     border-radius: 6px;
     color: #9B9B9B;
     margin-right: 20px;
+    cursor: pointer;
 }
 .pinglunanniu:active{
     color: #FFFFFF;
-    background-color: #A978D6;
+    /*background: #A978D6;*/
 }
 .pinglunanniu:hover{
     color: #FFFFFF;
-    background-color: #A978D6;
+    /*background: #A978D6;*/
+}
+.pinglunannius{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 125px;
+    height: 100%;
 }
 .xiangqingmapcont{
     position: relative;
@@ -1080,4 +1088,337 @@ p{
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.lianxifangshicont{
+    position: relative;
+    display: none;
+    width: 385px;
+    height: 362px;
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    border-radius: 6px;
+    margin: 0 auto;
+    z-index: 111;
+    margin-top: 30px;
+}
+.guanbilianxi{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    width: 13px;
+    height: 13px;
+}
+.guanbilianxi2{
+    position: absolute;
+    top:20px;
+    right: 20px;
+    width: 13px;
+    height: 13px;
+}
+.dianhuatubiao{
+    position: absolute;
+    top:79px;
+    left: 63px;
+    width: 13px;
+    height: 13px;
+}
+.weixinhao{
+    position: absolute;
+    top:149px;
+    left: 63px;
+    width: 15px;
+    height: 15px;
+}
+.qqhao{
+    position: absolute;
+    top:219px;
+    left: 63px;
+    width: 15px;
+    height: 15px;
+}
+.dianhuahaoma{
+    position: absolute;
+    top:72px;
+    left: 83px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #808080;
+}
+.weixinhaoma{
+    position: absolute;
+    top:142px;
+    left: 83px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #808080;
+}
+.qqhaoma{
+    position: absolute;
+    top:212px;
+    left: 83px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #808080;
+}
+.dianhuanum{
+    font-family: MicrosoftYaHeiUI;
+    font-size: 24px;
+    color: #000000;
+    line-height: 23px;
+}
+.xian1{
+    position: absolute;
+    top:110px;
+    left: 40px;
+    width: 314px;
+    opacity: 0.5;
+    border: 1px dashed #979797;
+}
+.xian2{
+    position: absolute;
+    top:180px;
+    left: 40px;
+    width: 314px;
+    opacity: 0.5;
+    border: 1px dashed #979797;
+}
+.xian3{
+    position: absolute;
+    top:250px;
+    left: 40px;
+    width: 314px;
+    opacity: 0.5;
+    border: 1px dashed #979797;
+}
+.wozhidaole{
+    position: absolute;
+    top:300px;
+    left: 142px;
+    width: 100px;
+    height: 35px;
+    background: #A978D6;
+    border-radius: 6px;
+}
+.wozhidaolewenzi{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+.pinglunzhongxincont{
+    position: relative;
+    display: none;
+    width: 742px;
+    height: 687px;
+    background: #FFFFFF;
+    border: 1px solid #D6D6D6;
+    border-radius: 6px;
+    margin: 0 auto;
+    z-index: 111;
+    margin-top: 30px;
+}
+.pinglunzhongxinname{
+    position: absolute;
+    top:46px;
+    left: 52px;
+}
+.pinglunzhongxinmingcheng{
+    font-family: MicrosoftYaHeiUI;
+    font-size: 24px;
+    color: #808080;
+}
+.pinglunzhongxinbitian{
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #D6D6D6;
+}
+.pinglunzhongxinline{
+    position: absolute;
+    top:94px;
+    left: 50px;
+    width: 642px;
+    border: 1px solid #979797;
+}
+.pinglunzhongxinxingcont{
+    position: absolute;
+    top:137px;
+    left: 50px;
+    width: 642px;
+    height: 37px;
+}
+.zongtipingjiazi{
+    position: absolute;
+    top:5px;
+    left: 0;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #4A4A4A;
+}
+.pinglunzhongxinxing{
+    position: absolute;
+    top:0;
+    left: 70px;
+    width: 400px;
+    height: 100%;
+}
+.pinglunzhongxinxingxing1{
+    border: 1px solid #D6D6D6;
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-image: url(../img/zixing.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.pinglunzhongxinxingxing2{
+    border: 1px solid #D6D6D6;
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+    float: left;
+    background-image: url(../img/anxing.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.zongtipingjiazi2{
+    position: absolute;
+    top:5px;
+    left: 250px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #D6D6D6;
+}
+.pingjiawenzi{
+    position: absolute;
+    top:181px;
+    left: 50px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #4A4A4A;
+}
+.shangchuantupian{
+    position: absolute;
+    top:501px;
+    left: 50px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #4A4A4A;
+}
+.pingjiacont{
+    position: absolute;
+    top:181px;
+    left: 120px;
+    width: 562px;
+    height: 271px;
+    border: 1px solid #D6D6D6;
+    border-radius: 6px;
+}
+.pinglunqu{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    resize:none
+}
+.pinglunqunum{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #D6D6D6;
+}
+.article {
+    float: left;
+    margin-right: 20px;
+    padding: 0px;
+    min-height: 100px;
+}
+.item {
+    width: 58px;
+    height: 58px;
+    float: left;
+    position: relative;
+    margin: 0px;
+}
+.addImg {
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+.preview,.preBlock{
+    position: absolute;
+    display: block;
+    width: 58px;
+    height: 58px;
+    left: 0;
+    top: 0;
+}
+.delete {
+    width: 20px;
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    cursor: pointer;
+    display: none;
+}
+.preBlock img {
+    display: block;
+    width: 58px;
+    height: 58px;
+}
+.upload_input{
+    display: block;
+    width: 0;
+    height: 0;
+    -webkit-opacity: 0.0;
+    /* Netscape and Older than Firefox 0.9 */
+    -moz-opacity: 0.0;
+    /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+    -khtml-opacity: 0.0;
+    /* IE9 + etc...modern browsers */
+    opacity: .0;
+    /* IE 4-9 */
+    filter:alpha(opacity=0);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /*IE4-IE9*/
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+.piccont{
+    position: absolute;
+    top:480px;
+    left: 120px;
+    width: 600px;
+    height: 100px;
+}
+.tijiaopinglunzhongxin{
+    position: absolute;
+    bottom: 20px;
+    left: 321px;
+    width: 100px;
+    height: 35px;
+    background: #A978D6;
+    border-radius: 6px;
 }

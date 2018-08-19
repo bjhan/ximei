@@ -57,9 +57,66 @@
         <div class="pinglunshu">XXX条评论</div>
     </div>
     <div class="yuezixiangqingcont">
-        <div class="pinglunanniu"><div class="pinglunanniuwenzi">联系</div></div>
-        <div class="pinglunanniu"><div class="pinglunanniuwenzi">评论</div></div>
-        <div class="pinglunanniu"><div class="pinglunanniuwenzi">收藏</div></div>
+        <div class="pinglunanniu" id="lianxifangshi">
+            <div class="pinglunanniuwenzi">联系</div>
+            <div class="lianxifangshicont" id="lianxi">
+                <img src="img/guanbi.png" class="guanbilianxi">
+                <img src="img/dianhua.png" class="dianhuatubiao">
+                <div class="dianhuahaoma">电话号码：<span class="dianhuanum">17374857354</span></div>
+                <div class="xian1"></div>
+                <img src="img/weixinhao.png" class="weixinhao">
+                <div class="weixinhaoma">微信号码：<span class="dianhuanum">17374857354</span></div>
+                <div class="xian2"></div>
+                <img src="img/qqhao.png" class="qqhao">
+                <div class="qqhaoma">QQ号码：<span class="dianhuanum">17374857354</span></div>
+                <div class="xian3"></div>
+                <div class="wozhidaole">
+                    <div class="wozhidaolewenzi">我知道了</div>
+                </div>
+            </div>
+        </div>
+        <div class="pinglunanniu" id="pinglunzhongxin">
+            <div class="pinglunanniuwenzi">评论</div>
+            <div class="pinglunzhongxincont">
+                <img src="img/guanbi.png" class="guanbilianxi2">
+                <div class="pinglunzhongxinname"><span class="pinglunzhongxinmingcheng">XXX月子中心</span>  <span class="pinglunzhongxinbitian">*为必填项</span></div>
+                <div class="pinglunzhongxinline"></div>
+                <div class="pinglunzhongxinxingcont">
+                    <div class="zongtipingjiazi">总体评价</div>
+                    <div class="pinglunzhongxinxing">
+                        <div class="pinglunzhongxinxingxing1"></div>
+                        <div class="pinglunzhongxinxingxing1"></div>
+                        <div class="pinglunzhongxinxingxing1"></div>
+                        <div class="pinglunzhongxinxingxing2"></div>
+                        <div class="pinglunzhongxinxingxing2"></div>
+                    </div>
+                    <div class="zongtipingjiazi2">*点击星星打分</div>
+                </div>
+                <div class="pingjiawenzi">评价</div>
+                <div class="pingjiacont">
+
+                    <textarea class="pinglunqu"></textarea>
+                    <div class="pinglunqunum">1000</div>
+                </div>
+                <div class="shangchuantupian">上传图片</div>
+                <div class="piccont">
+                    <div class="article">
+                        <div class="item">
+                            <img class="addImg" src="img/addImg.png" />
+                            <input name="url" type="file" class="upload_input" />
+                            <div class="preBlock">
+                                <img class="preview" src="img/addImg.png" id="preview" alt="" name="pic" width="190" height="190" />
+                            </div>
+                            <img class="delete" src="img/delete.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="tijiaopinglunzhongxin">
+                    <div class="wozhidaolewenzi">提交点评</div>
+                </div>
+            </div>
+        </div>
+        <div class="pinglunanniu" id="shoucang"><div class="pinglunanniuwenzi">收藏</div></div>
     </div>
     <div class="xiangqingmapcont">
         <div class="xiangqingmap" id="xiangqingmap"></div>
@@ -175,9 +232,7 @@
                         </div>
                     </div>
                     <div class="shuodianshenem">
-                        <textarea class="pinglunkuang"  placeholder="说点什么...">
-
-                        </textarea>
+                        <textarea class="pinglunkuang"  placeholder="说点什么..."></textarea>
                         <div class="shuruwenzishu">2000</div>
                     </div>
                     <div class="fabiaopinglunkuang">
@@ -190,7 +245,7 @@
         </div>
     </div>
 
-    <div class="lianxifangshicont"></div>
+
 
 
 </div>
@@ -210,6 +265,12 @@
     DD_roundies.addRule('.citycont', '6px 6px 6px 6px', true);
     DD_roundies.addRule('.pinglunanniu', '6px 6px 6px 6px', true);
     DD_roundies.addRule('.pinglunkuang', '6px 6px 6px 6px', true);
+
+    DD_roundies.addRule('.lianxifangshicont', '6px 6px 6px 6px', true);
+    DD_roundies.addRule('.pinglunannius', '6px 6px 6px 6px', true);
+    DD_roundies.addRule('.pinglunzhognxincont', '6px 6px 6px 6px', true);
+    DD_roundies.addRule('.pingjiacont', '6px 6px 6px 6px', true);
+    DD_roundies.addRule('.tijiaopinglunzhongxin', '6px 6px 6px 6px', true);
 </script>
 <script src="js/pageSwitch.js"></script>
 <script src="js/config.js"></script>

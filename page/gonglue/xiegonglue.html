@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE">
+    <title>西梅首页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
+    <link rel="stylesheet" href="../../common/swiper.css">
+    <link rel="stylesheet" href="../../common/index.css">
+    <link rel="stylesheet" href="css/subxiangqing.css">
+    <link rel="stylesheet" href="css/yuezixiangqing.css">
+    <link rel="stylesheet" href="css/gongluexiangqing.css">
+    <link rel="stylesheet" href="css/xiegonglue.css">
+    <link rel="stylesheet" href="css/pageSwitch.min.css">
+    <link rel="stylesheet" href="css/wendadetail.css">
+    <link href="kindeditor-4.1.10/themes/default/default.css" rel="stylesheet"/>
+
+    <script src="../../common/jquery-1.8.1.min.js"></script>
+    <script src="../../common/jquery.xdomainrequest.min.js"></script>
+    <script src="../../common/swiper.js"></script>
+    <script src="../../common/DD_roundies.js"></script>
+    <script src="../../common/base.js"></script>
+    <script src="js/html5media.min.js"></script>
+    <script src="js/clock-canvas.min.js"></script>
+    <script src="kindeditor-4.1.10/kindeditor-min.js"></script>
+    <script src="kindeditor-4.1.10/lang/zh_CN.js"></script>
+    <!--[if lte IE 9]>
+    <script src="js/jquery.placeholder.js"></script>
+    <script>
+        $(function () {
+            $('input[placeholder]').placeholder();
+        });
+    </script>
+    <![endif]-->
+</head>
+<body>
+<div class="mostcont2">
+    <div class="btnncont">
+        <div class="xiegongluezi">
+            <div class="xiegongluezidesc">新攻略</div>
+        </div>
+        <div class="fabiaoanniu">
+            <div class="fabiaowenzi">发表在攻略中</div>
+        </div>
+        <div class="fabiaoanniusimi">
+            <div class="fabiaowenzi" style="color: #888888;">设置为私密文章</div>
+        </div>
+    </div>
+</div>
+<!--评论区-->
+<div class="mostcont3">
+    <div class="bianjiqu">
+        <div class="caogaotitle">
+            <input type="text" class="caogaotitleinput" placeholder="请输入标题">
+        </div>
+        <form>
+            <textarea id="mul_input" name="content" style="width:100%;height:613px;visibility:hidden;display: block;resize: none;"><span style="color: #9B9B9B;">写攻略……</span></textarea>
+
+            </textarea>
+        </form>
+        <div class="baocun" title="保存"></div>
+        <div class="fabu" title="发布"></div>
+
+        <div class="xieyicont">
+            <input type="checkbox" class="xieyikuang" id="xieyikuang">
+            <div class="gongyuexieyiwenzi">我已阅读并同意《西梅妈妈攻略协议》</div>
+        </div>
+    </div>
+    <div class="caogaocont">
+        <div class="caogaoxiangtou">
+            <div class="caogaogeshu">草稿箱（<span>5</span>）</div>
+            <div class="caogaoxinjian">新建草稿箱+</div>
+        </div>
+        <div class="caogaojuti">
+            <div class="caogaoditail">
+                <div class="caogaoname">未命名草稿</div>
+                <div class="caogaoshijian">2018-03-03  12:00</div>
+                <div class="jixuxie">
+                    <div class="jixuxiewenzi">继续写</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footmain" id="foot">
+    <!--<div class="foorcont">-->
+    <!--<div class="aboutximei">-->
+    <!--<div class="aboutdesc"><span class="aboutdesc1 descad">关于西梅妈妈</span></div>-->
+    <!--<div class="aboutdescsmall"><span class="aboutdesc2 descad"><a href="https://www.baidu.com/">关于我们</a></span></div>-->
+    <!--<div class="aboutdescsmall"><span class="aboutdesc2 descad"><a href="https://www.baidu.com/">企业文化</a></span></div>-->
+    <!--<div class="aboutdescsmall"><span class="aboutdesc2 descad"><a href="https://www.baidu.com/">网站地图</a></span></div>-->
+    <!--<div class="aboutdescsmall"><span class="aboutdesc2 descad"><a href="https://www.baidu.com/">商务联系</a></span></div>-->
+    <!--<div class="aboutdescsmall"><span class="aboutdesc2 descad"><a href="https://www.baidu.com/">意见反馈</a></span></div>-->
+    <!--</div>-->
+    <!--<div class="friendsicon">-->
+    <!--<div class="friends">合作伙伴</div>-->
+    <!--<img src="../../img/partner.png" class="parenterpic">-->
+    <!--</div>-->
+    <!--<div class="kefu">-->
+    <!--<div class="erweima">-->
+    <!--<img src="../../img/kefu.png">-->
+    <!--</div>-->
+    <!--<div class="erweimadesc">扫码关注客户</div>-->
+    <!--</div>-->
+    <!--<div class="weibo">-->
+    <!--<div class="erweima">-->
+    <!--<img src="../../img/weibo.png">-->
+    <!--</div>-->
+    <!--<div class="erweimadesc">扫码关注官方微博</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="linefootleft"></div>-->
+    <!--<div class="linefootright"></div>-->
+    <!--<div class="friendslinks">-->
+    <!--<span class="linkfriend">友情链接：</span>-->
+    <!--<span class="linkfriend"><a href="https://www.baidu.com/">中信银行</a></span>-->
+    <!--<span class="linkfriend"><a href="https://www.baidu.com/">宝宝树</a></span>-->
+    <!--<span class="linkfriend"><a href="https://www.baidu.com/">EVUS官网</a></span>-->
+    <!--<span class="linkfriend"><a href="https://www.baidu.com/">美国领事馆</a></span>-->
+    <!--</div>-->
+    <!--<div class="yingyezhizhao">© 2018 Mafengwo.cn 京ICP备11015476号 京公网安备110105013401号 京ICP证11031<br/>营业执照 新出网证(京)字242号 马蜂窝客服：国内 4006-345-678海外 +86-10-5922-2799</div>-->
+</div>
+
+<script type="text/javascript">
+    DD_roundies.addRule('.shurukuangcont', '4px 4px', true);
+    DD_roundies.addRule('.numchoose', '4px 4px', true);
+    DD_roundies.addRule('.fabiaopinglunbtndetail', '4px 4px', true);
+    DD_roundies.addRule('.numchooseno', '4px 4px', true);
+    DD_roundies.addRule('.currentmsg', '6px 6px', true);
+    DD_roundies.addRule('.jixuxie', '12px 12px', true);
+    DD_roundies.addRule('.fabiaoanniu', '6px 6px', true);
+    DD_roundies.addRule('.fabiaoanniusimi', '6px 6px', true);
+    DD_roundies.addRule('.fabiaopinglunbtn', '6px 6px', true);
+    DD_roundies.addRule('.mustpicconttage', '0px 6px 6px 0px', true);
+    DD_roundies.addRule('.huifupinglunkuang', '0px 6px 6px 0px', true);
+</script>
+<script src="js/pageSwitch.js"></script>
+<script src="js/config.js"></script>
+<script src="js/xiegonglue.js"></script>
+<script src="../../js/loadfoot.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

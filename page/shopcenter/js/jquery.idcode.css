@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* track base Css */
+
+#ehong-code-input{
+	width:42px;
+	letter-spacing:2px;
+	margin:0px 8px 0px 0px;
+}
+.ehong-idcode-val{
+	position:relative;
+	padding:1px 4px 1px 4px;
+	top:6px;
+	margin-top: 16px;
+	margin-left: 13px;
+	*top:-3px;
+	letter-spacing:4px;
+	display:inline;
+	cursor:pointer;
+	font-size:30px;
+	font-family:"Courier New", Courier, monospace;
+	text-decoration:none;
+	font-weight:bold;
+	width: 100%;
+	height: 100%;
+}
+.ehong-idcode-val0{
+	/*border:solid 1px #A4CDED;	*/
+	background-color:#D8D8D8;
+}
+
+.ehong-idcode-val1{
+	/*border:solid 1px #A4CDED;	*/
+	background-color:#D8D8D8;
+}
+.ehong-idcode-val2{
+	/*border:solid 1px #6C9;	*/
+	background-color:#D8D8D8;
+}
+.ehong-idcode-val3{
+	/*border:solid 1px #6C9;	*/
+	background-color:#D8D8D8;
+}
+.ehong-idcode-val4{
+	/*border:solid 1px #6C9;	*/
+	/*background-color:#F1DEFF;*/
+}
+.ehong-idcode-val5{
+	/*border:solid 1px #6C9;	*/
+	background-color:#D8D8D8;
+	width: 100%;
+	height: 100%;
+}
+.ehong-code-val-tip{
+	width: 0;
+	height: 0;
+	/*font-size:12px;*/
+	/*color:#1098EC;*/
+	/*top:0px;*/
+	/**top:-3px;	*/
+	/*position:relative;	*/
+	/*margin:0px 0px 0px 4px;*/
+	/*cursor:pointer;	*/
+}

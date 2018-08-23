@@ -1,0 +1,181 @@
+.mostcont3{
+    position: relative;
+    width: 62.5%;
+    height: auto;
+    margin: auto;
+    margin-top: 18px;
+    overflow: hidden;
+}
+.btnncont{
+    position: relative;
+    width: 100%;
+    height: 52px;
+}
+.xiegongluezi{
+    float: left;
+    width: auto;
+    height: 100%;
+}
+.xiegongluezidesc{
+    position: relative;
+    width: auto;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 30px;
+    color: #000000;
+}
+.fabiaoanniu{
+    float: left;
+    width: 200px;
+    height: 100%;
+    background: #A978D6;
+    border-radius: 6px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.fabiaoanniusimi{
+    float: left;
+    width: 200px;
+    height: 100%;
+    border: 1px solid #979797;
+    border-radius: 6px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+.fabiaowenzi{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    margin-top: 12px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.bianjiqu{
+    float: left;
+    width: 71.5%;
+    height: auto;
+}
+.caogaotitle{
+    position: relative;
+    width: 100%;
+    height: 85px;
+    border: 1px solid #979797;
+    margin-bottom: 10px;
+}
+.baocun{
+    position: absolute;
+    top:109px;
+    right: 33.5%;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/baocun.png);
+    cursor: pointer;
+}
+.fabu{
+    position: absolute;
+    top:109px;
+    right: 28.5%;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/fabu.png);
+    cursor: pointer;
+}
+.caogaotitleinput{
+    position: relative;
+    margin-top:25px;
+    left: 2%;
+    width: 96%;
+    height: 30px;
+    font-size: 30px;
+    outline: none;
+    border: 0;
+}
+.caogaocont{
+    float: left;
+    margin-left: 10px;
+    width: 27%;
+    height: auto;
+    padding-bottom: 20px;
+    border: 1px solid #CCCCCC;
+}
+.caogaoxiangtou{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #F1F1F1;
+}
+.caogaogeshu{
+    position: absolute;
+    left: 2%;
+    bottom: 15px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #000000;
+}
+.caogaoxinjian{
+    position: absolute;
+    right: 2%;
+    bottom: 15px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #A978D6;
+}
+.caogaojuti{
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+.caogaoditail{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px dashed #D6D6D6;
+    cursor: pointer;
+}
+.caogaoname{
+    position: absolute;
+    top:20px;
+    left: 5px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #9B9B9B;
+}
+.caogaoshijian{
+    position: absolute;
+    top:45px;
+    left: 5px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #D6D6D6;
+}
+.jixuxie{
+    position: absolute;
+    right: 10px;
+    top:30px;
+    width: 58px;
+    height: 20px;
+    border: 1px solid #D6D6D6;
+    border-radius: 13px;
+}
+.jixuxiewenzi{
+    width: 100%;
+    padding-top: 2px;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #D6D6D6;
+}
+.xieyicont{
+    position: relative;
+    width: 100%;
+    height: 25px;
+    margin-top: 10px;
+}
+.gongyuexieyiwenzi{
+    position: absolute;
+    top:0;
+    left: 20px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #888888;
+}

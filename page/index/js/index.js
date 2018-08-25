@@ -107,7 +107,7 @@
     function getBanners() {
         // jQuery.support.cors = true;
         $.ajax({
-            url: CFG.interfaceurl + '/homepage/banners' + '?fresh=' + Math.random(),
+            url: CFG.interfaceurl + '/homepage/banners',
             type: "get",
             timeout: 5000,
             success: function (data) {
@@ -116,7 +116,6 @@
                 }
             },
             error: function (a, b, c) {
-                alert(c);
             }
         });
     }
@@ -403,7 +402,62 @@
             + '<div class="mustknowledgedesc">去美国生孩子海关入境流程全攻略，赴美生子妈妈必看</div>'
             + '</div>';
     }
+    chegnshifengqing();
+    function chegnshifengqing() {//添加城市风情
+        $.ajax({
+            url: CFG.interfaceurl + '/homepage/customs',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
 
+                for (var i = 0; i < data.length; i++) {
+                    addfengqing(data[i]);
+                }
+            },
+            error: function (data) {
+                //alert("请求错误");
+            }
+        });
+    }
+    function addfengqing(data) {
+        var str ='      <div class="citycont" id="'+data.id+'">'
+            +'<img src="'+data.imageUrl+'" class="citypic">'
+            +'</div>';
+        $("#chegnshifengqingkkongbai").before(str);
+    }
+    suibiankankan();
+    function suibiankankan() {//随便看看
+        $.ajax({
+            url: CFG.interfaceurl + '/homepage/frees',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+
+                for (var i = 0; i < data.length; i++) {
+                    if(i==0){
+                        addsuibian2(data[i]);
+                    }else {
+                        addsuibian(data[i]);
+                    }
+                }
+            },
+            error: function (data) {
+                //alert("请求错误");
+            }
+        });
+    }
+    function addsuibian2(data) {
+        var str ='   <div class="suibianbig" id="'+data.id+'">'
+            +'<img src="'+data.imageUrl+'" class="suibiansmallpic">'
+            +'</div>';
+        $("#suibiankankan").before(str);
+    }
+    function addsuibian(data) {
+        var str ='   <div class="suibiansmall" id="'+data.id+'">'
+            +'<img src="'+data.imageUrl+'" class="suibiansmallpic">'
+            +'</div>';
+        $("#suibiankankan").before(str);
+    }
     //定义百度统计按钮点击次数的函数
     function Baidu(category, evnet) {
         !evnet && (evnet = '点击');

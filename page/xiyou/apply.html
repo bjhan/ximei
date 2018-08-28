@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<title>喜友圈</title>
+	<link rel="stylesheet" href="./css/apply.css" />
+	<script src="../../common/jquery-1.8.1.min.js"></script>
+	<script src="../../common/jquery.xdomainrequest.min.js"></script>
+	<script src="./js/apply.js"></script>
+</head>
+
+<body>
+	<div class="content">
+		<div id="introduce">
+			<p>申请喜友圈</p>
+			<p>宝爸宝妈们，如果想就某类话题与他人交流，可创建一个喜友圈，其他人可以在你创建的圈子里就这类话题进行讨论哦～ 注意：西梅妈妈不欢迎进行激进话题、意识形态方面的讨论，并保留解散这类主题小组的权利！
+			</p>
+			<div id="applyShowBtn">申请圈子</div>
+		</div>
+
+		<div id="apply" style="display: none;">
+			<p class="title">申请创建喜友圈</p>
+			<div>
+				<label>圈子名称：</label>
+				<input id="circleName" type="text" />
+				<label class="endtext">最多15个汉字</label>
+			</div>
+
+			<div>
+				<label class="v-top">圈子介绍：</label>
+				<textarea id="circleintroduce"></textarea>
+				<label class="endtext v-top">最多100个汉字，在圈子页面展示的时候，多出字用……表示</label>
+			</div>
+
+			<div>
+				<label class="v-top">圈子标签：</label>
+				<div style="display: inline-block">
+					<input class="tag " type="text"></input>
+					<input class="tag " type="text"></input>
+					<br/>
+					<input class="tag " type="text"></input>
+					<input class="tag " type="text"></input>
+				</div>
+				<label class="endtext">选填圈子标签，方便更多用户搜到你的圈子，每个方框限制在8字内</label>
+			</div>
+
+			<div>
+				<input type="checkbox" id="checkSumber" />
+				<span style="font-size: 14px;color: #4A4A4A;"> 我已认真阅读并同意《社区指导原则》和《免责声明》</span>
+			</div>
+
+			<div>
+				<div id="applycircle">申请圈子</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

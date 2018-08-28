@@ -1,320 +1,373 @@
-html, body {
-    width: 1200px;
-    min-height: 1080px;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
+html,
+body {
+	width: 1200px;
+	min-height: 1080px;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
 }
 
 .content {
-    width: 100%;
+	width: 100%;
 }
 
-.content >div{
-    float: left;
-    margin-right: 50px;
+.content>div {
+	float: left;
+	margin-right: 50px;
 }
+
 #bangdan {
-    width: 15%;
-    padding-top: 114px;
+	width: 15%;
+	padding-top: 114px;
 }
 
-#bangdan > div {
-    width: 100%;
-    height: 400px;
+#bangdan>div {
+	width: 100%;
+	height: 400px;
 }
 
 .content #hottopic {
-    width: 51%;
-    min-height: 200px;
+	width: 51%;
+	min-height: 200px;
 }
 
 .content #wonderful {
-    width: 20%;
-    min-height: 200px;
+	width: 20%;
+	min-height: 200px;
 }
 
 #hottopic #title {
-    font-family: MicrosoftYaHeiUI-Bold;
-    font-size: 30px;
-    color: #000000;
-    margin: 40px 0;
+	font-family: MicrosoftYaHeiUI-Bold;
+	font-size: 30px;
+	color: #000000;
+	margin: 40px 0;
 }
 
 .hottitle {
-    font-family: MicrosoftYaHeiUI;
-    font-size: 18px;
-    color: #000000;
+	font-family: MicrosoftYaHeiUI;
+	font-size: 18px;
+	color: #000000;
 }
 
 .hotimg {
-    width: 221px;
-    height: 151px;
-    float: left;
+	width: 221px;
+	height: 151px;
+	float: left;
 }
 
 
 .bp {
-    height: 110px;
-    font-family: PingFangSC-Regular;
-    font-size: 12px;
-    color: #000000;
+	height: 110px;
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #000000;
 }
 
 .bf {
-    font-family: MicrosoftYaHeiUI;
-    font-size: 14px;
-    color: #000000;
+	font-family: MicrosoftYaHeiUI;
+	font-size: 14px;
+	color: #000000;
+	position: relative;
+	top: 12px;
+	left: 10px;
+	width: 90%;
 }
 
 .bf p {
-    display: inline;
+	display: inline;
 }
 
 .bf p:last-child {
-    font-family: MicrosoftYaHeiUI;
-    font-size: 14px;
-    color: #9B9B9B;
+	font-family: MicrosoftYaHeiUI;
+	font-size: 14px;
+	color: #9B9B9B;
 }
 
 .bf p a {
-    font-family: MicrosoftYaHeiUI;
-    font-size: 14px;
-    color: #5562bf;
-    line-height: 18px;
+	font-family: MicrosoftYaHeiUI;
+	font-size: 14px;
+	color: #5562bf;
+	line-height: 18px;
 }
-#arrcontent{
-    min-height: 1000px;
+
+#arrcontent {
+	min-height: 1000px;
 }
 
 #arrcontent hr {
-    border: 1px solid #EEEEEE;
-    margin: 20px 0;
+	border: 1px solid #EEEEEE;
+	margin: 20px 0;
 }
 
 #arrcontent .c {
-    overflow-y: auto;
+	overflow-y: auto;
 }
 
-#jinyantop5 > div >* {
-    float: left;
-    margin: 0 5px;
+#jinyantop5>div>* {
+	float: left;
+	margin: 0 5px;
 }
 
-#jinyantop5 > div:first-child img {
-    width: 25px;
-    height: 21px;
+#jinyantop5>div:first-child img {
+	width: 25px;
+	height: 21px;
 }
 
-#jinyantop5 > div:first-child p {
-    font-family: MicrosoftYaHeiUI-Bold;
-    font-size: 18px;
-    color: #000000;
-    margin: 0;
+#jinyantop5>div:first-child p {
+	font-family: MicrosoftYaHeiUI-Bold;
+	font-size: 18px;
+	color: #000000;
+	margin: 0;
 }
 
-#jinyantop5 > div:first-child a {
-    font-family: PingFangSC-Regular;
-    font-size: 12px;
-    color: #B2B2B2;
+#jinyantop5>div:first-child a {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #B2B2B2;
 }
 
-#dianzantop5 > div >*{
-    float: left;
-    margin: 0 5px;
+#dianzantop5>div>* {
+	float: left;
+	margin: 0 5px;
 }
 
-#dianzantop5 > div:first-child img {
-    width: 25px;
-    height: 21px;
+#dianzantop5>div:first-child img {
+	width: 25px;
+	height: 21px;
 }
 
-#dianzantop5 > div:first-child p {
-    font-family: MicrosoftYaHeiUI-Bold;
-    font-size: 18px;
-    color: #000000;
-    margin: 0;
+#dianzantop5>div:first-child p {
+	font-family: MicrosoftYaHeiUI-Bold;
+	font-size: 18px;
+	color: #000000;
+	margin: 0;
 }
 
-#dianzantop5 > div:first-child a {
-    font-family: PingFangSC-Regular;
-    font-size: 12px;
-    color: #B2B2B2;
+#dianzantop5>div:first-child a {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #B2B2B2;
 }
 
-#rmtp > div:first-child {
-    width: 100%;
+#rmtp>div:first-child {
+	width: 100%;
 }
 
-#rmtp > div:first-child *{
-    float: left;
-}
-#bangdan hr{
-    width: 100%;
-}
-#rmtp > div:first-child img {
-    width: 25px;
-    height: 21px;
+#rmtp>div:first-child * {
+	float: left;
 }
 
-#rmtp > div:first-child p {
-    font-family: MicrosoftYaHeiUI-Bold;
-    font-size: 18px;
-    color: #000000;
-    margin: 0;
+#bangdan hr {
+	width: 100%;
+}
+
+#rmtp>div:first-child img {
+	width: 25px;
+	height: 21px;
+}
+
+#rmtp>div:first-child p {
+	font-family: MicrosoftYaHeiUI-Bold;
+	font-size: 18px;
+	color: #000000;
+	margin: 0;
 }
 
 #wonderful {
-    position: relative;
+	position: relative;
 }
 
 #myhead {
-    width: 80px;
-    height: 80px;
-    position: absolute;
-    top: 121px;
-    border-radius: 40px;
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	top: 121px;
+	border-radius: 40px;
 }
 
 #wonderful #myquanzi {
-    position: absolute;
-    font-family: MicrosoftYaHeiUI;
-    font-size: 20px;
-    color: #000000;
-    top: 90px;
-    left: 100px;
+	position: absolute;
+	font-family: MicrosoftYaHeiUI;
+	font-size: 20px;
+	color: #000000;
+	top: 114px;
+	left: 100px;
+	cursor: pointer;
 }
 
 .huati {
-    position: absolute;
-    top: 157px;
-    left: 103px;
+	position: absolute;
+	top: 157px;
+	left: 103px;
 }
 
 .huati div {
-    font-family: MicrosoftYaHeiUI;
-    font-size: 14px;
-    color: #000000;
+	font-family: MicrosoftYaHeiUI;
+	font-size: 14px;
+	color: #000000;
 }
 
 .huati div p {
-    margin: 0;
+	margin: 0;
 }
 
 .changququanzi p {
-    font-family: MicrosoftYaHeiUI;
-    font-size: 14px;
-    color: #000000;
+	font-family: MicrosoftYaHeiUI;
+	font-size: 14px;
+	color: #000000;
 }
 
 hr {
-    border: 1px solid #EEEEEE;
-    margin: 0;
+	border: 1px solid #EEEEEE;
+	margin: 0;
 }
 
 .changququanzi {
-    position: absolute;
-    top: 336px;
-    width: 100%;
+	position: absolute;
+	top: 336px;
+	width: 100%;
 }
 
 
 
 #chuangjianquanzibtn {
-    border: 1px solid #A978D6;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    width: 148px;
-    height: 42px;
-    color: #A978D6;
-    font-size: 14px;
-    position: absolute;
-    top: 232px;
-    left: 100px;
+	border: 1px solid #A978D6;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	width: 148px;
+	height: 42px;
+	color: #A978D6;
+	font-size: 14px;
+	position: absolute;
+	top: 232px;
+	left: 100px;
 }
 
-#chuangjianquanzibtn b{
-    position: relative;
-    top: 10px;
-    left: 33px;
+#chuangjianquanzibtn b {
+	position: relative;
+	top: 10px;
+	left: 33px;
 }
 
 .jiangcaiquanzi p {
-    font-family: MicrosoftYaHeiUI;
-    font-size: 14px;
-    color: #000000;
+	font-family: MicrosoftYaHeiUI;
+	font-size: 14px;
+	color: #000000;
 }
 
 .jiangcaiquanzi {
-    position: absolute;
-    top: 518px;
-    width: 100%;
+	position: absolute;
+	top: 518px;
+	width: 100%;
 }
 
 .ximei-left-row {
-    position: relative;
+	position: relative;
 }
 
 .toupiao-img {
-    position: absolute;
-    left: 2px;
-    width: 17px;
-    height: 14px;
-
+	position: absolute;
+	left: 2px;
+	width: 17px;
+	height: 14px;
 }
 
 .toupiao-bt {
-    font-family: PingFangSC-Regular;
-    font-size: 14px;
-    color: #000000;
-    position: relative;
-    left: 31px;
-    bottom: 12px;
+	font-family: PingFangSC-Regular;
+	font-size: 14px;
+	color: #000000;
+	position: relative;
+	left: 31px;
+	bottom: 12px;
 }
 
-.toupiao-number{
-    font-family: PingFangSC-Regular;
-    font-size: 12px;
-    color: #9B9B9B;
-    position: relative;
-    left: 31px;
-    bottom: 27px;
+.toupiao-number {
+	font-family: PingFangSC-Regular;
+	font-size: 12px;
+	color: #9B9B9B;
+	position: relative;
+	left: 31px;
+	bottom: 27px;
 }
 
-.ximei-left-row{
-    width: 100%;
-    height: 39px;
+.ximei-left-row {
+	width: 100%;
+	height: 39px;
 }
 
-.row-span{
-    width: 100%;
-    position: relative;
-    font-size: 12px;
-    margin-top: 10px !important;
-}
-.row-span img{
-    height: 48px;
-    width: 48px;
-    border-radius: 30px;
-    position: relative;
-    left: 18px;
+.row-span {
+	width: 100%;
+	position: relative;
+	font-size: 12px;
+	margin-top: 10px !important;
 }
 
-.row_id{
-    position: relative;left: 7px;
-    color: #C3C3C3;
+.row-span img {
+	height: 48px;
+	width: 48px;
+	border-radius: 30px;
+	position: relative;
+	left: 18px;
 }
 
-.row_name{
-    position: relative;
-    left: 28px;
-    bottom: 8px;
-    color: #000000;
+.row_id {
+	position: relative;
+	left: 7px;
+	color: #C3C3C3;
 }
 
-.row_lv{
-    position: relative;
-    top: 15px;
-    color: #DE75C4;
+.row_name {
+	position: relative;
+	left: 28px;
+	bottom: 8px;
+	color: #000000;
 }
 
+.row_lv {
+	position: relative;
+	top: 15px;
+	color: #DE75C4;
+}
+
+#wonderful hr {
+	margin: 10px 0;
+}
+
+.jincai-item {
+	position: relative;
+	border-bottom: 1px solid #E5E5E5;
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+}
+
+.jincai-item>span {
+	font-size: 14px;
+	color: #000000;
+	position: absolute;
+}
+
+.jincai-item .join-circle {
+	top: 31px;
+	left: 173px;
+	color: #A978D6;
+	cursor: pointer;
+}
+
+
+.jincai-item .circle-title {
+	top: 0;
+	left: 60px;
+}
+
+
+.jincai-item .circle-members {
+	top: 31px;
+	left: 60px;
+}
+
+#quanziview>div {
+	width: 40px;
+	height: 40px;
+	margin: 1px 1px;
+	display: inline-block;
+}
 /*# sourceMappingURL=xiyou.css.map */

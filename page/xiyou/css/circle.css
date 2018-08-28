@@ -1,124 +1,141 @@
-
-html, body {
-    width: 100%;
-    padding: 0;
-    margin: 0;
+html,
+body {
+	width: 100%;
+	padding: 0;
+	margin: 0;
 }
 
 .content {
-    width: 1200px;
-    min-height: 200px;
-    margin: 0 auto;
+	width: 1200px;
+	min-height: 200px;
+	margin: 0 auto;
 }
 
 #head {
-    width: 100%;
-    position: relative;
-    min-height: 145px;
+	width: 100%;
+	position: relative;
+	min-height: 145px;
 }
 
 #headimg {
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 100% 100%;
-    background-image: url(../img/test.jpg);
-    width: 105px;
-    height: 105px;
-    top: 40px;
-    position: absolute;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	background-image: url(../img/test.jpg);
+	width: 105px;
+	height: 105px;
+	top: 40px;
+	position: absolute;
 }
 
 #cirleName {
-    font-family: MicrosoftYaHeiUI-Bold;
-    font-size: 30px;
-    color: #4A4A4A;
-    top: 50px;
-    position: absolute;
-    left: 121px;
+	font-family: MicrosoftYaHeiUI-Bold;
+	font-size: 30px;
+	color: #4A4A4A;
+	top: 50px;
+	position: absolute;
+	left: 121px;
 }
 
 #cirleIntroduction {
-    font-family: MicrosoftYaHeiUI;
-    font-size: 14px;
-    color: #000000;
-    top: 67px;
-    position: absolute;
-    left: 255px;
+	font-family: MicrosoftYaHeiUI;
+	font-size: 14px;
+	color: #000000;
+	top: 67px;
+	position: absolute;
+	left: 255px;
 }
 
 #tag {
-    width: 200px;
-    font-family: MicrosoftYaHeiUI;
-    font-size: 14px;
-    color: #8A80D9;
-    position: absolute;
-    top: 109px;
-    left: 123px;
+	width: 100%;
+	font-size: 14px;
+	color: #8A80D9;
+	position: absolute;
+	top: 109px;
+	left: 123px;
 }
 
 #tag div {
-    border: 1px dashed #8A80D9;
-    width: 87px;
-    height: 21px;
-    text-align: center;
-    float: left;
-    margin-right: 10px;
-    line-height: 21px;
-
+	border: 1px dashed #8A80D9;
+	width: 87px;
+	height: 21px;
+	text-align: center;
+	float: left;
+	margin-right: 10px;
+	line-height: 21px;
 }
 
 #information span p {
-    display: inline;
+	display: inline;
 }
 
 #information {
-    margin-top: 50px;
-    position: relative;
+	margin-top: 50px;
+	position: relative;
 }
 
 .active {
-    color: #A978D6;
+	color: #A978D6;
 }
 
 hr {
-    border: 1px solid #CCCCCC;
-    margin: 10px 0;
-    width: 100%;
+	border: 1px solid #CCCCCC;
+	margin: 10px 0;
+	width: 100%;
 }
 
 #addTopic {
-    border: 1px solid #A978D6;
-    border-radius: 6px;
-    color: #A978D6;
-    height: 36px;
-    width: 118px;
-    text-align: center;
-    line-height: 36px;
-    float: right;
-    position: relative;
-    bottom: 15px;
+	border: 1px solid #A978D6;
+	border-radius: 6px;
+	color: #A978D6;
+	height: 36px;
+	width: 118px;
+	text-align: center;
+	line-height: 36px;
+	float: right;
+	position: relative;
+	bottom: 15px;
+	cursor: pointer;
 }
 
 #toplist {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 
-#edui1{
-    width: 100% !important;
+#edui1 {
+	width: 100% !important;
 }
 
-.ui-dialog{
-    z-index: 5 !important;
+.ui-dialog {
+	z-index: 5 !important;
 }
 
-.dialog-title-lable{
-    font-size: 20px;
+.dialog-title-lable {
+	font-size: 20px;
 }
 
-#topicTitle{
-    width: 95%;
-    height: 30px;
-    font-size: 20px;
+#topicTitle {
+	width: 95%;
+	height: 30px;
+	font-size: 20px;
+}
 
+#toplist>table {
+	width: 100%;
+}
+
+#toplist>table>  tbody>tr >td:first-child {
+	width: 50%;
+	cursor: pointer;
+}
+
+#toplist > table > tbody> tr > td:last-child {
+	width: 20%;
+	text-align: right;
+}
+
+
+#information span p:last-child,#information span p:first-child{
+	cursor: pointer;
 }

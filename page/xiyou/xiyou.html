@@ -1,84 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=8"/>
-    <title>喜友圈</title>
-    <link rel="stylesheet" href="./css/xiyou.css"/>
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
-    <script src="../../common/jquery-1.8.1.min.js"></script>
-    <script src="../../common/jquery.xdomainrequest.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-    <script src="../../common/bootstrap-paginator.js"></script>
-    <script src="./js/xiyou.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<title>喜友圈</title>
+	<link rel="stylesheet" href="./css/xiyou.css" />
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+	<script src="../../common/jquery-1.8.1.min.js"></script>
+	<script src="../../common/jquery.xdomainrequest.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+	<script src="../../common/bootstrap-paginator.js"></script>
+	<script src="./js/xiyou.js"></script>
 
 </head>
+
 <body>
-<div class="content">
-    <div id="bangdan">
-        <div id="jinyantop5">
-            <div><img src="./img/jinguo.png"/>
-                <p><b>巾帼榜</b></p> <a>经验值TOP5</a></div>
-            <div id="toplevels" >
+	<div class="content">
+		<div id="bangdan">
+			<div id="jinyantop5">
+				<div>
+					<img src="./img/jinguo.png" />
+					<p>
+						<b>巾帼榜</b>
+					</p>
+					<a>经验值TOP5</a>
+				</div>
+				<div id="toplevels">
 
-            </div>
-        </div>
-        <div id="dianzantop5">
-            <div><img src="./img/jinguo.png"/>
-                <p><b>巾帼榜</b></p> <a>点赞数TOP5</a></div>
-            <hr/>
-            <div id="likecount">
-
-
-            </div>
-        </div>
-        <div id="rmtp">
-            <div><img src="./img/jinguo.png"/>
-                <p><b>热门投票</b></p></div>
-            <hr/>
-            <div id="rmtpContent">
-
-            </div>
-        </div>
-    </div>
-    <div id="hottopic">
-        <p id="title"><b>圈子——热门话题</b></p>
-        <div id="arrcontent">
-        </div>
-        <div id="example"></div>
-    </div>
-    <div id="wonderful">
-        <div class="singin">
-            <img id="myhead" src="./img/test.jpg"/>
-            <p id="myquanzi">我的圈子主页</p>
-            <div class="huati">
-                <div><p>发起话题</p><a></a></div>
-                <div><p>回应话题</p><a></a></div>
-            </div>
-        </div>
-        <div class="changququanzi">
-            <p>常去圈子</p>
-            <hr/>
-            <div id="quanziview">
-            </div>
-        </div>
-
-        <div id="chuangjianquanzibtn">
-            <b>申请创建圈子</b>
-        </div>
+				</div>
+			</div>
+			<div id="dianzantop5">
+				<div>
+					<img src="./img/jinguo.png" />
+					<p>
+						<b>巾帼榜</b>
+					</p>
+					<a>点赞数TOP5</a>
+				</div>
+				<hr/>
+				<div id="likecount">
 
 
-        <div class="jiangcaiquanzi">
-            <p>精彩圈子</p>
-            <hr/>
-            <div id="jingcaiview">
-            </div>
-        </div>
-    </div>
+				</div>
+			</div>
+			<div id="rmtp">
+				<div>
+					<img src="./img/jinguo.png" />
+					<p>
+						<b>热门投票</b>
+					</p>
+				</div>
+				<hr/>
+				<div id="rmtpContent">
+
+				</div>
+			</div>
+		</div>
+		<div id="hottopic">
+			<p id="title">
+				<b>圈子——热门话题</b>
+			</p>
+			<div id="arrcontent">
+			</div>
+			<div id="example" style="display: none"></div>
+		</div>
+		<div id="wonderful">
+			<div class="singin">
+				<img id="myhead" src="./img/test.jpg" />
+				<p id="myquanzi" onclick="javascript:location.href='./myxiyou.html'">我的圈子主页</p>
+				<div class="huati">
+					<div>
+						<p>发起话题(
+							<span id="postCount"></span>)</p>
+						<a></a>
+					</div>
+					<div>
+						<p>回应话题(
+							<span id="replyCount"></span>)</p>
+						<a></a>
+					</div>
+				</div>
+			</div>
+			<div class="changququanzi">
+				<p>常去圈子</p>
+				<hr/>
+				<div id="quanziview">
+
+				</div>
+			</div>
+
+			<div id="chuangjianquanzibtn" style="cursor: pointer">
+				<b>申请创建圈子</b>
+			</div>
 
 
-</div>
+			<div class="jiangcaiquanzi">
+				<p>精彩圈子推荐</p>
+				<hr/>
+				<div id="jingcaiview">
+				</div>
+			</div>
+		</div>
 
+
+	</div>
+
+
+	<div style="display: none;">
+		<div id="1">
+			<div class="jincai-item">
+				<div class="jincai-img" style="width: 48px;height: 48px;background: url('{0}') no-repeat;background-size: 100% 100%;"></div>
+				<span class="circle-title">{1}</span>
+				<span class="circle-members">{2}</span>
+				<span class="join-circle" onclick="joinCircle({3})">+加入圈子</span>
+			</div>
+		</div>
+		<div id="2">
+			<div style="background: url('{0}') no-repeat;background-size: 100% 100%;" onclick="showCircle({1})">
+			</div>
+		</div>
+	</div>
 
 </body>
+
 </html>

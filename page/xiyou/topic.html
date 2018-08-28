@@ -1,47 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>话题</title>
-    <link rel="stylesheet" href="./css/topic.css">
-    <script src="../../common/jquery-1.8.3.min.js"></script>
-    <script src="./js/topic.js"></script>
+	<meta charset="UTF-8">
+	<title>话题</title>
+	<link rel="stylesheet" href="./css/topic.css">
+	<script src="../../common/jquery-1.8.1.min.js"></script>
+	<script src="./js/topic.js"></script>
 </head>
+
 <body>
 
-<div class="content">
-    <div style="width: 65%;background-color: red;height: 200px">
-        <div id="topicTitle">关于赴美生子，你想知道的都在这里了！</div>
-        <div style="display: flex;justify-content: center;flex-direction:row;margin-top: 10px;align-items: center"
-             id="titlefoot">
-            <div><img src="./img/pgstrategy_details_icon_view.png" class="view-img"><span class="imgValue">205</span>
-            </div>
-            <div><img src="./img/pgindex_hotartiles_icon_like.png" style="width: 18px;height: 13px"
-                      class="view-img"><span class="imgValue">205</span></div>
-        </div>
-        <div id="description">
+	<div class="content">
+		<div class="left-cotent">
+			<div id="topicTitle">关于赴美生子，你想知道的都在这里了！</div>
+			<div id="titlefoot">
+				<div>
+					<img id="headimg" src="img/test.jpg" class="view-img redio-img">
+					<span id="headName" class="imgValue">Amaya Abshire</span>
+				</div>
+				<div>
+					<span class="imgValue">2018-04-25</span>
+				</div>
+				<div class="operate">
+					<img src="./img/pgstrategy_details_icon_view.png" class="view-img">
+					<span class="imgValue">205</span>
+				</div>
+				<div class="operate">
+					<img src="./img/pgindex_hotartiles_icon_like.png" style="width: 18px;height: 13px" class="view-img">
+					<span class="imgValue">205</span>
+				</div>
+			</div>
+			<div id="description">
 
 
-        </div>
+			</div>
 
-    </div>
-    <div style="width: 30%;height: 200px;position: relative">
-        <div class="singin">
-            <img id="myhead" src="./img/test.jpg"/>
-            <span id="userName">Dustin Holloway</span>
-            <span id="userRange">Lv12</span>
-        </div>
-        <div class="changququanzi">
-            <p>常去圈子</p>
-            <hr/>
-            <div id="quanziview">
-            </div>
-        </div>
+			<div class="pinglun-view">
+				<p style="font-size: 24px;color: #000000;">全部评论(128)</p>
+				<hr style="border: 1px solid #D7D7D7;" />
+				<div id="pinglun-items" style="width: 100%;">
+					
+				</div>
+			</div>
+			<div class="pinglun-input-view">
+				<textarea rows="3" cols="20" wrap="logical" maxlength="2000" placeholder="请输入...">
+				</textarea>
+				<button>发表评论</button>
+			</div>
+		</div>
+		<div style="width: 30%;height: 200px;position: relative">
+			<div class="singin">
+				<img id="myhead" src="./img/test.jpg" />
+				<span id="userName">Dustin Holloway</span>
+				<span id="userRange">Lv12</span>
+			</div>
+			<div class="changququanzi">
+				<p>常去圈子</p>
+				<hr/>
+				<div id="quanziview">
+				</div>
+			</div>
+		</div>
+	</div>
 
-    </div>
-
-</div>
-
-
+	<div style="display: none;">
+		<div id="1">
+			<div class="pinglun-item">
+				<div class="pinglun-headimg-view">
+					<img src="{0}" />
+				</div>
+				<div class="pinglun-pingluntext-view">
+					<div>
+						<span class="username">{1}</span>
+						<span class="lv">Lv{2}</span>
+					</div>
+					<div>
+						<p> {3}</p>
+					</div>
+					<div>
+						<!-- <p>回复xxxx：这里是评论</p> -->
+						{4}
+					</div>
+					<div class="time-view">
+						<span>{5}</span>
+						<a>回复</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="2">
+			<div style="background: url('{0}') no-repeat;background-size: 100% 100%;" onclick="showCircle({1})">
+			</div>
+		</div>
+	</div>
+	
 </body>
+
 </html>

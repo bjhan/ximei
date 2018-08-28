@@ -1,76 +1,196 @@
-html, body {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
+html,
+body {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
 }
 
 .content {
-    width: 70%;
-    min-height: 200px;
-    display: flex;
-    justify-content: space-between;
+	width: 1200px;
+	min-height: 200px;
+}
+
+.content>div {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.left-cotent {
+	width: 65%;
 }
 
 #topicTitle {
-    font-family: MicrosoftYaHeiUI-Bold;
-    font-size: 36px;
-    color: #000000;
-    text-align: center;
-    margin-top: 40px;
+	font-size: 36px;
+	color: #000000;
+	text-align: center;
+	margin-top: 40px;
+	width: 100%;
 }
 
 .view-img {
-    width: 23px;
-    height: 13px;
+	width: 23px;
+	height: 13px;
 }
 
 .imgValue {
-    margin-left: 10px;
-    font-family: MicrosoftYaHeiUI;
-    font-size: 12px;
-    color: #424242;
+	margin-left: 5px;
+	font-family: MicrosoftYaHeiUI;
+	font-size: 12px;
+	color: #424242;
+}
+
+#titlefoot {
+	text-align: center;
 }
 
 #titlefoot div {
-    display: flex;
-    align-items: center;
-    margin: 0 10px;
+	display: inline-block;
+	min-width: 80px;
+}
+
+#titlefoot div>* {
+	vertical-align: middle;
+	cursor: pointer;
 }
 
 #description {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 }
 
 #myhead {
-    width: 80px;
-    height: 80px;
-    border-radius: 40px;
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
 }
 
-.singin{
-    position: absolute;
-    top: 69px;
+.singin {
+	position: absolute;
+	top: 69px;
 }
 
-#userName{
-    font-family: MicrosoftYaHeiUI;
-    font-size: 18px;
-    color: #000000;
-    position: relative;
-    bottom: 53px;
+#userName {
+	font-family: MicrosoftYaHeiUI;
+	font-size: 18px;
+	color: #000000;
+	position: relative;
+	bottom: 53px;
 }
 
-#userRange{
-    position: relative;
-    right: 140px;
-    bottom: 19px;
+#userRange {
+	position: relative;
+	right: 140px;
+	bottom: 19px;
 }
 
-.changququanzi{
-    position: absolute;
-    top: 190px;
-    width: 100%;
+.changququanzi {
+	position: absolute;
+	top: 190px;
+	width: 100%;
+}
+
+.redio-img {
+	border-radius: 18px;
+	height: 22px;
+}
+
+#description {
+	min-height: 500px;
+	margin-top: 20x;
+}
+
+.operate:hover .imgValue {
+	color: #A978D6;
+}
+
+.pinglun-item {
+	width: 100%;
+	min-height: 200px;
+	border-bottom: 1px dashed #C7C7C7;
+	;
+}
+
+.pinglun-item>div {
+	display: inline-block;
+}
+
+.pinglun-item .pinglun-headimg-view {
+	width: 14%;
+	height: 100%;
+	line-height: 200px;
+	float: left;
+}
+
+.pinglun-item .pinglun-headimg-view img {
+	height: 49px;
+	width: 49px;
+	border-radius: 40px;
+}
+
+.pinglun-item .pinglun-pingluntext-view {
+	width: 84%;
+	height: 100%;
+}
+
+.pinglun-item .pinglun-pingluntext-view .username {
+	font-size: 14px;
+	color: #A978D6;
+}
+
+.pinglun-item .pinglun-pingluntext-view .lv {
+	font-size: 12px;
+	color: #DE75C4;
+}
+
+.pinglun-item .pinglun-pingluntext-view {
+	padding-top: 28px;
+}
+
+
+.time-view span {
+	font-size: 12px;
+	color: #A1A1A1;
+}
+
+.time-view a {
+	font-size: 14px;
+	color: #A978D6;
+	float: right;
+	cursor: pointer;
+}
+
+.pinglun-input-view {
+	width: 100%;
+	margin-top: 100px;
+}
+
+.pinglun-input-view textarea {
+	background: rgba(244, 244, 244, 0.50);
+	border: 1px solid #DDDDDD;
+	border-radius: 6px;
+	width: 100%;
+	min-height: 104px;
+}
+
+.pinglun-input-view button {
+	font-size: 18px;
+	color: #FFFFFF;
+	background: #A978D6;
+	border-radius: 4px;
+	float: right;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	border: none;
+	width: 150px;
+	height: 45px;
+}
+
+
+#quanziview>div {
+	width: 40px;
+	height: 40px;
+	margin: 1px 1px;
+	display: inline-block;
 }

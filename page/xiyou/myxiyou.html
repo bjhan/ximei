@@ -1,39 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>我的喜友圈</title>
-    <link rel="stylesheet" href="./css/myxiyou.css">
-    <script src="../../common/jquery-1.8.3.min.js"></script>
-    <script src="./js/myxiyou.js"></script>
-</head>
-<body>
-<div class="content">
-    <p class="title"><b>我的喜友圈</b></p>
-    <div class="tabdiv" style="display: block">
-        <p class="active" id="jrqz">加入的圈子</p>
-        <p>&nbsp;|&nbsp;</p>
-        <p id="glqz">管理的圈子</p>
-        <p id="ckqbqz">查看全部></p>
-    </div>
-    <hr/>
-    <div id="quanziview">
 
-    </div>
-    <br/>
-    <div class="tabdiv" style="display: block">
-        <p id="mytopic">发起的话题</p>
-        <p id="ckqbtopic">查看全部></p>
-    </div>
-    <hr/>
-    <br/>
-    <div class="tabdiv" style="display: block">
-        <p id="mycallbacktopic">回复的话题</p>
-        <p id="ckqbback">查看全部></p>
-    </div>
-    <hr/>
-</div>
+<head>
+	<meta charset="UTF-8">
+	<title>我的喜友圈</title>
+	<link rel="stylesheet" href="./css/myxiyou.css">
+	<script src="../../common/jquery-1.8.1.min.js"></script>
+</head>
+
+<body>
+	<div class="content">
+		<p class="title">
+			<b>我的喜友圈</b>
+		</p>
+		<div class="tabdiv" style="display: block">
+			<p class="active" onclick="showType(0,this)">加入的圈子</p>
+			<p>&nbsp;|&nbsp;</p>
+			<p id="glqz" onclick="showType(1,this)">管理的圈子</p>
+			<p id="ckqbqz">查看全部></p>
+		</div>
+		<hr/>
+		<div id="quanziview">
+			<div class="quanzi-view-item">
+				<img src="../../img/46.jpg" />
+				<span class="name">圈子名称</span>
+				<span class="count">52378成员</span>
+			</div>
+			<div class="quanzi-view-item">
+				<img src="../../img/46.jpg" />
+				<span class="name">圈子名称</span>
+				<span class="count">52378成员</span>
+			</div>
+			<div class="quanzi-view-item">
+				<img src="../../img/46.jpg" />
+				<span class="name">圈子名称</span>
+				<span class="count">52378成员</span>
+			</div>
+			<div class="quanzi-view-item">
+				<img src="../../img/46.jpg" />
+				<span class="name">圈子名称</span>
+				<span class="count">52378成员</span>
+			</div>
+			<div class="quanzi-view-item">
+				<img src="../../img/46.jpg" />
+				<span class="name">圈子名称</span>
+				<span class="count">52378成员</span>
+			</div>
+		</div>
+		<br/>
+		<div class="tabdiv" style="display: block">
+			<p id="mytopic">发起的话题</p>
+			<p id="ckqbtopic">查看全部></p>
+		</div>
+		<hr/>
+		<div id="mytopiclist">
+			<table>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<div class="tabdiv" style="display: block">
+			<p id="mycallbacktopic">回复的话题</p>
+			<p id="ckqbback">查看全部></p>
+		</div>
+		<hr/>
+		<div id="mycallbacktopiclist">
+			<table>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div style="display: none;">
+		<div id="1">
+			<div class="quanzi-view-item">
+				<img src="{0}" />
+				<span class="name circle-title" onclick="navgetto({3})">{1}</span>
+				<span class="count">{2}成员</span>
+			</div>
+		</div>
+
+	</div>
 
 
 </body>
+<script type="text/javascript" src="js/myxiyou.js"></script>
+
 </html>

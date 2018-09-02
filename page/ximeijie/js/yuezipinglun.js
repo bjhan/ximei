@@ -181,13 +181,13 @@
             e.preventDefault();
         });
     }
-    $("#container").PageSwitch({
-        direction:'horizontal',
-        easing:'ease-in',
-        duration:1000,
-        autoPlay:true,
-        loop:'false'
-    });
+    // $("#container").PageSwitch({
+    //     direction:'horizontal',
+    //     easing:'ease-in',
+    //     duration:1000,
+    //     autoPlay:true,
+    //     loop:'false'
+    // });
     mapfun();
     function mapfun() {
         // 百度地图API功能
@@ -196,6 +196,136 @@
 
         map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
     }
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]); return null; //返回参数值
+    }
+    jiazaixianshi();
+    function jiazaixianshi() {
+        var id=getUrlParam('id');
+        $.ajax({
+            url: CFG.interfaceurl + '/yzzx/detail?id='+id,
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                $("#titlename").html(data.name);
+                $("#dadename").html(data.name);
+                $(".pinglunzhongxinmingcheng").html(data.name);
+                $("#yignwenming").html(data.engName);
+                $(".xiangqingmapaddr").html(data.address);
+                $(".taocanyonghushuliang").html(data.replyCount);
+
+                initswiper(data.images);
+                for(var j=0;j<(data.replies.items).length;j++){
+                    tianjiapinglun(data.replies.items[j],j+1);
+                }
+                var shangmianxing='';
+                for(var i=1;i<=5;i++){
+                    if(i<=data.star){
+                        shangmianxing = shangmianxing+'<div class="zixing"></div>';
+                    }else {
+                        shangmianxing = shangmianxing+'<div class="anxing"></div>';
+                    }
+                }
+                $("#shangmianxing").append(shangmianxing);
+                $("#pinglunshu").html(data.replyCount);
+                $("#weixinnum").html(data.wechat);
+                $("#dianhuanum").html(data.phone);
+                $("#qqnum").html(data.qq);
+
+                var taocan;
+            },
+            error: function (data) {
+                //alert("请求错误");
+            }
+        });
+    }
+    function tianjiapinglun(data,i) {//添加评论
+        var str='<div class="taocanpingluncont">'
+            +'<div class="taocanyonghutouxiag">'
+            +'<div class="taocanyonghutouxiagpic" style="background-image: url('+data.userIcon+');"></div>'
+            +'</div>'
+            +'<div class="taocanyonghupinglunneitong">'
+            +'<div class="taocanyonghumingchengcont">'
+            +'<span class="taocanyonghumingzi">'+data.userName+'</span>&nbsp;&nbsp;&nbsp;'
+    +'<span class="taocanyonghujibie">LV'+data.userLevel+'</span>'
+            +'<div class="taocanyonghulouceng">'+i+'F</div>'
+        +'</div>'
+        +'<div class="taocanyonghupinglunneirong">'+data.content+'</div>'
+        +'<div class="taocanpinglunshijian">'+data.createTime+'</div>'
+        +'<div class="huifuanniu">回复</div>'
+            +'</div>'
+            +'<div class="clear"></div>'
+            +'</div>';
+        $("#pinglunkongbai").before(str);
+    }
+    function taocantianjia(data) {//套餐添加
+        var tao='<div class="taocanbao">'
+            +'<div class="taocanjuticont">'
+            +'<div class="taocannum">'+data.serviceName+'</div>'
+            +'<div class="taocanmingchegn">'+data.spService+'</div>'
+            +'<div class="taocanxingxingcont">'
+            +'<div class="zixing"></div>'
+            +'<div class="zixing"></div>'
+            +'<div class="anxing"></div>'
+            +'<div class="anxing"></div>'
+            +'<div class="anxing"></div>'
+            +'</div>'
+            +'<div class="taocanjiage">￥'+data.discount+'</div>'
+            +'<div class="taocanchakanxiangqing">查看详情</div>'
+            +'</div>'
+            +'</div>';
+    }
+    function initswiper(bannerarry) {//首页滑动
+        bannernum = bannerarry.length;
+        for (var i = 0; i < bannerarry.length; i++) {
+            $("#sectionss").append("<div class=\"section\" id=\"section" + bannerarry[i].id + "\" style=\"filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + bannerarry[i].imageUrl + "',sizingMethod='scale');background-image:url(" + bannerarry[i].imageUrl + ");background-repeat: no-repeat;background-size: 100% 100%;\"></div>")
+        }
+
+        $("#container").PageSwitch({
+            direction: 'horizontal',
+            easing: 'ease-in',
+            duration: 1000,
+            autoPlay: true,
+            loop: 'false'
+        });
+    }
+    dianjixingping();
+    function dianjixingping() {
+        $(".pinglunzhongxinxingxing2").click(function () {
+            var index = $(".pinglunzhongxinxing div").index(this);
+            index = index+1;
+            var xing='';
+            for(var i=1;i<=5;i++){
+                if(i<=index){
+                    xing = xing +'<div class="pinglunzhongxinxingxing1"></div>';
+                }else {
+                    xing = xing +'<div class="pinglunzhongxinxingxing2"></div>';
+                }
+            }
+            $(".pinglunzhongxinxing").empty();
+            $(".pinglunzhongxinxing").append(xing);
+            dianjixingping();
+        });
+        $(".pinglunzhongxinxingxing1").click(function () {
+            var index = $(".pinglunzhongxinxing div").index(this);
+            index = index+1;
+            var xing='';
+            for(var i=1;i<=5;i++){
+                if(i<=index){
+                    xing = xing +'<div class="pinglunzhongxinxingxing1"></div>';
+                }else {
+                    xing = xing +'<div class="pinglunzhongxinxingxing2"></div>';
+                }
+            }
+            $(".pinglunzhongxinxing").empty();
+            $(".pinglunzhongxinxing").append(xing);
+            dianjixingping();
+        });
+    }
+
     //定义百度统计按钮点击次数的函数
     function Baidu(category, evnet) {
         !evnet && (evnet = '点击');

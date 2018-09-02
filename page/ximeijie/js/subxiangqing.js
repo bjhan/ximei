@@ -205,7 +205,6 @@ $(function () {
 
     });
     function chaxuntiaojian(price,chengshi,fangzi,zhusu,fuwu,num) {
-        console.log(CFG.interfaceurl + '/xmj/YZZX/query?price='+price+'&location='+chengshi+'&type='+fangzi+'&facility='+zhusu+'&service='+fuwu+'&sortBy=price&pageNo='+num+'&pageSize=10&order=desc');
         $.ajax({
             url: CFG.interfaceurl + '/xmj/YZZX/query?price='+price+'&location='+chengshi+'&type='+fangzi+'&facility='+zhusu+'&service='+fuwu+'&sortBy=price&pageNo='+num+'&pageSize=10&order=desc',
             type: "get",

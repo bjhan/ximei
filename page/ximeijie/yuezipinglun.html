@@ -13,12 +13,16 @@
     <link rel="stylesheet" href="css/pageSwitch.min.css">
     <link rel="stylesheet" href="css/jquery.range.css">
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=OjKH92TpmrzKLrbrzQGKE8joGQFPuR7x"></script>
-
+    <script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-4.4.4.min.js"></script>
     <script src="../../common/jquery-1.8.1.min.js"></script>
     <script src="../../common/jquery.xdomainrequest.min.js"></script>
     <script src="../../common/swiper.js"></script>
     <script src="../../common/DD_roundies.js"></script>
     <script src="../../common/base.js"></script>
+    <!--<script src="../../js/oss-upload/oss-client.js"></script>-->
+    <!--<script src="../../js/oss-upload/entry-file-upload.js"></script>-->
+    <!--<script src="../../js/oss-upload/multi-part-upload.js"></script>-->
+    <!--<script src="../../js/oss-upload/index.js"></script>-->
     <script src="js/html5media.min.js"></script>
     <script src="js/jquery.range.js"></script>
     <script src="js/subxiangqing.js"></script>
@@ -34,27 +38,27 @@
 </head>
 <body>
 <div class="indexcont">
-    <div class="addrdetaildesc">西梅街--月子中心--5771--安婴宝之家</div>
-    <div class="subtitless">西梅街-医院医生</div>
-    <div class="addrdetaildesc2">西梅街--月子中心--5771--安婴宝之家</div>
+    <div class="addrdetaildesc">西梅街--月子中心--<span id="titlename"></span></div>
+    <div class="subtitless">西梅街-<span id="dadename"></span></div>
+    <div class="addrdetaildesc2" id="yignwenming"></div>
 
     <div class="bannercont" id="container">
-        <div class="sections">
-            <div class="section" id="section0" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/anxing.png',  sizingMethod='scale');background-image:url(./img/anxing.png);background-size: contain;background-repeat: no-repeat;"></div>
-            <div class="section" id="section1" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/jigou,png',  sizingMethod='scale');background-image:url(./img/jigou.png);background-size: contain;background-repeat: no-repeat;"></div>
-            <div class="section" id="section2" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/kefu.png',  sizingMethod='scale');background-image:url(./img/kefu.png);background-size: contain;background-repeat: no-repeat;"></div>
-            <div class="section" id="section3" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/meishoucang.png',  sizingMethod='scale');background-image:url(./img/meishoucang.png);background-size: contain;background-repeat: no-repeat;"></div>
+        <div class="sections" id="sectionss">
+            <!--<div class="section" id="section0" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/anxing.png',  sizingMethod='scale');background-image:url(./img/anxing.png);background-size: contain;background-repeat: no-repeat;"></div>-->
+            <!--<div class="section" id="section1" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/jigou,png',  sizingMethod='scale');background-image:url(./img/jigou.png);background-size: contain;background-repeat: no-repeat;"></div>-->
+            <!--<div class="section" id="section2" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/kefu.png',  sizingMethod='scale');background-image:url(./img/kefu.png);background-size: contain;background-repeat: no-repeat;"></div>-->
+            <!--<div class="section" id="section3" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/meishoucang.png',  sizingMethod='scale');background-image:url(./img/meishoucang.png);background-size: contain;background-repeat: no-repeat;"></div>-->
         </div>
     </div>
     <div class="pinglun">
-        <div class="yuezixiangqingxing">
-            <div class="zixing"></div>
-            <div class="zixing"></div>
-            <div class="anxing"></div>
-            <div class="anxing"></div>
-            <div class="anxing"></div>
+        <div class="yuezixiangqingxing" id="shangmianxing">
+            <!--<div class="zixing"></div>-->
+            <!--<div class="zixing"></div>-->
+            <!--<div class="anxing"></div>-->
+            <!--<div class="anxing"></div>-->
+            <!--<div class="anxing"></div>-->
         </div>
-        <div class="pinglunshu">XXX条评论</div>
+        <div class="pinglunshu"><span id="pinglunshu"></span>条评论</div>
     </div>
     <div class="yuezixiangqingcont">
         <div class="pinglunanniu" id="lianxifangshi">
@@ -62,13 +66,13 @@
             <div class="lianxifangshicont" id="lianxi">
                 <img src="img/guanbi.png" class="guanbilianxi">
                 <img src="img/dianhua.png" class="dianhuatubiao">
-                <div class="dianhuahaoma">电话号码：<span class="dianhuanum">17374857354</span></div>
+                <div class="dianhuahaoma">电话号码：<span class="dianhuanum" id="dianhuanum"></span></div>
                 <div class="xian1"></div>
                 <img src="img/weixinhao.png" class="weixinhao">
-                <div class="weixinhaoma">微信号码：<span class="dianhuanum">17374857354</span></div>
+                <div class="weixinhaoma">微信号码：<span class="dianhuanum" id="weixinnum"></span></div>
                 <div class="xian2"></div>
                 <img src="img/qqhao.png" class="qqhao">
-                <div class="qqhaoma">QQ号码：<span class="dianhuanum">17374857354</span></div>
+                <div class="qqhaoma">QQ号码：<span class="dianhuanum" id="qqnum"></span></div>
                 <div class="xian3"></div>
                 <div class="wozhidaole">
                     <div class="wozhidaolewenzi">我知道了</div>
@@ -79,14 +83,14 @@
             <div class="pinglunanniuwenzi">评论</div>
             <div class="pinglunzhongxincont">
                 <img src="img/guanbi.png" class="guanbilianxi2">
-                <div class="pinglunzhongxinname"><span class="pinglunzhongxinmingcheng">XXX月子中心</span>  <span class="pinglunzhongxinbitian">*为必填项</span></div>
+                <div class="pinglunzhongxinname"><span class="pinglunzhongxinmingcheng"></span>  <span class="pinglunzhongxinbitian">*为必填项</span></div>
                 <div class="pinglunzhongxinline"></div>
                 <div class="pinglunzhongxinxingcont">
                     <div class="zongtipingjiazi">总体评价</div>
                     <div class="pinglunzhongxinxing">
-                        <div class="pinglunzhongxinxingxing1"></div>
-                        <div class="pinglunzhongxinxingxing1"></div>
-                        <div class="pinglunzhongxinxingxing1"></div>
+                        <div class="pinglunzhongxinxingxing2"></div>
+                        <div class="pinglunzhongxinxingxing2"></div>
+                        <div class="pinglunzhongxinxingxing2"></div>
                         <div class="pinglunzhongxinxingxing2"></div>
                         <div class="pinglunzhongxinxingxing2"></div>
                     </div>
@@ -127,12 +131,12 @@
         <div class="servertag">
             <div class="servertagwenzi">套餐介绍</div>
         </div>
-        <div class="servertag">
-            <div class="servertagwenzi">产期安排</div>
-        </div>
-        <div class="servertag">
-            <div class="servertagwenzi">住宿介绍</div>
-        </div>
+        <!--<div class="servertag">-->
+            <!--<div class="servertagwenzi">产期安排</div>-->
+        <!--</div>-->
+        <!--<div class="servertag">-->
+            <!--<div class="servertagwenzi">住宿介绍</div>-->
+        <!--</div>-->
     </div>
     <div class="taocan">
         <div class="taocancont">
@@ -171,42 +175,24 @@
                     <div class="taocanchakanxiangqing">查看详情</div>
                 </div>
                 <div class="taocanyonghupingluncont">
-                    <div class="taocanyonghucont">用户评论(<span class="taocanyonghushuliang">128</span>)</div>
-                    <div class="taocanpingluncont">
-                        <div class="taocanyonghutouxiag">
-                            <div class="taocanyonghutouxiagpic" style="background-image: url(img/taocantouxiang.png);"></div>
-                        </div>
-                        <div class="taocanyonghupinglunneitong">
-                            <div class="taocanyonghumingchengcont">
-                                <span class="taocanyonghumingzi">nihaoefd</span>&nbsp;&nbsp;&nbsp;
-                                <span class="taocanyonghujibie">LV1</span>
-                                <div class="taocanyonghulouceng">1F</div>
-                            </div>
-                            <div class="taocanyonghupinglunneirong">这里是评论文字这里是评论文字这里是评论文字，这里是评论文字这里是评论文字这里是评论文字这里是评论文字这里是评论文字这里评论文字这里是评论文字这里是评论文字这里是评论文字</div>
-                            <div class="taocanpinglunshijian">2018-8-88  123343</div>
-                            <div class="huifuanniu">回复</div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="taocanpingluncont">
-                        <div class="taocanyonghutouxiag">
-                            <div class="taocanyonghutouxiagpic" style="background-image: url(img/taocantouxiang.png);"></div>
-                        </div>
-                        <div class="taocanyonghupinglunneitong">
-                            <div class="taocanyonghumingchengcont">
-                                <span class="taocanyonghumingzi">nihaoefd</span>&nbsp;&nbsp;&nbsp;
-                                <span class="taocanyonghujibie">LV1</span>
-                                <div class="taocanyonghulouceng">1F</div>
-                            </div>
-                            <div class="taocanyonghupinglunneironghuifu">引用<span class="pinglun1f">wodfgll</span>发表于<span class="pinglun1ftime">30294-123 944</span>的回复：</div>
-                            <div class="taocanyonghupinglunneirong2">这里是评论文字这里是评论文字这里是评论文字，这里是评论文字这里是评论文字这里是评论文字这里是评论文字这里是评论文字这里评论文字这里是评论文字这里是评论文字这里是评论文字</div>
-
-                            <div class="taocanyonghupinglunneirong"><span class="taocanyishenghuifuname">XXX</span>回复：<span class="hjuifuneirong">进的机会给爱的嘿嘿额蝶花</span></div>
-                            <div class="taocanpinglunshijian">2018-8-88  123343</div>
-                            <div class="huifuanniu">回复</div>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
+                    <div class="taocanyonghucont">用户评论(<span class="taocanyonghushuliang"></span>)</div>
+                    <!--<div class="taocanpingluncont">-->
+                        <!--<div class="taocanyonghutouxiag">-->
+                            <!--<div class="taocanyonghutouxiagpic" style="background-image: url(img/taocantouxiang.png);"></div>-->
+                        <!--</div>-->
+                        <!--<div class="taocanyonghupinglunneitong">-->
+                            <!--<div class="taocanyonghumingchengcont">-->
+                                <!--<span class="taocanyonghumingzi">nihaoefd</span>&nbsp;&nbsp;&nbsp;-->
+                                <!--<span class="taocanyonghujibie">LV1</span>-->
+                                <!--<div class="taocanyonghulouceng">1F</div>-->
+                            <!--</div>-->
+                            <!--<div class="taocanyonghupinglunneirong">这里是评论文字这里是评论文字这里是评论文字，这里是评论文字这里是评论文字这里是评论文字这里是评论文字这里是评论文字这里评论文字这里是评论文字这里是评论文字这里是评论文字</div>-->
+                            <!--<div class="taocanpinglunshijian">2018-8-88  123343</div>-->
+                            <!--<div class="huifuanniu">回复</div>-->
+                        <!--</div>-->
+                        <!--<div class="clear"></div>-->
+                    <!--</div>-->
+                    <div id="pinglunkongbai" style="width: 0;height: 0"></div>
                     <div class="fenyeqi">
                         <div class="nestpagecont">
                             <div class="nestpagecont2">

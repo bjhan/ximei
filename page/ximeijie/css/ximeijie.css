@@ -80,6 +80,40 @@ p{
     height: auto;
     margin: 0 auto;
 }
+.searchneirong{
+    position: relative;
+    display: none;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.chazhaokongbai{
+    clear: both;
+}
+.msgdetailm2{
+    float: left;
+    width: 70%;
+    height: 180px;
+    margin: 7px;
+    /*border: 1px solid #E1E1E1;*/
+    cursor: pointer;
+}
+.dearch{
+    position: relative;
+    top:36px;
+    left: 10px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 24px;
+    color: #A978D6;
+}
+.msgdetailmtitlecont2{
+    float: left;
+    margin-top:10px;
+    left: 2%;
+    width: 75%;
+    height: 90%;
+}
 .ximeijiecontdeschead{
     position: relative;
     top:0;
@@ -108,7 +142,8 @@ p{
 }
 .chegnshixuanze{
     float: right;
-    margin-left: 20px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 .chengshicontt{
     float: right;
@@ -116,7 +151,13 @@ p{
 }
 .chengshimingcheng{
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.chengshimingcheng2{
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
 }
 .linechegnshi{
     position: relative;
@@ -128,13 +169,16 @@ p{
 .ximeijiemaincont{
     position: relative;
     width: 110%;
-    height: 300px;
+    height: auto;
     margin-top: 20px;
+}
+.clear{
+    clear: both;
 }
 .ximeijiedetailcont{
     float: left;
     width: 21%;
-    height:80%;
+    height:240px;
     margin-right: 15px;
     background: #FFFFFF;
     border: 1px solid #E1E1E1;

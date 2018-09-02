@@ -1,0 +1,137 @@
+.yueziguanlihead{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    border-bottom:1px solid #979797;
+    margin-top: 20px;
+}
+.quanbu{
+    float: left;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #4A4A4A;
+    margin-right: 30px;
+    cursor: pointer;
+    height: 100%;
+}
+.fabubtn{
+    float: right;
+    background: #A978D6;
+    border-radius: 6px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #FFFFFF;
+    padding: 3px;
+    padding-left: 8px;
+    padding-right: 8px;
+    cursor: pointer;
+}
+.activityguan{
+    color: #A978D6;
+    border-bottom:2px solid #A978D6;
+}
+.yuezizhognxincont{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.yuezizhognxincontdetail{
+    position: relative;
+    width: 100%;
+    height: 135px;
+    margin-top: 15px;
+    border-bottom: 1px solid #BBBBBB;
+}
+
+.yuezizhognxinpic{
+    position: absolute;
+    left: 0;
+    width: 129px;
+    height: 113px;
+}
+.yueziguanlidesccont{
+    position: absolute;
+    top:0;
+    left: 145px;
+    width: 500px;
+    height: 100%;
+}
+.yuezimingcheng{
+    position: relative;
+    width: 100%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #000000;
+}
+.yuezimingchengmiaoshu{
+    position: relative;
+    width: 100%;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #BBBBBB;
+    margin-top: 3px;
+}
+.yueziicon{
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    background-image: url("../img/weizi.png");
+}
+.yuezigouxuankuang{
+    position: absolute;
+    top:0;
+    right: 0;
+    height: 100%;
+}
+.yuezizhognixnxuan{
+    position: absolute;
+    top:50px;
+    right: 0;
+}
+.yuezibtncont{
+    position: relative;
+    width: 100%;
+    height: auto;
+
+}
+.guanlibtncont{
+    position: relative;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.guanlibtn{
+    position: relative;
+    width: 128px;
+    height: 37px;
+    background: #A978D6;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+.guanlibtn2{
+    position: absolute;
+    display: none;
+    width: 128px;
+    height: 37px;
+    background: #A978D6;
+    border-radius: 6px;
+}
+.guanlibtn3{
+    position: absolute;
+    display: none;
+    right: 0;
+    width: 128px;
+    height: 37px;
+    border: 1px solid #8A80D9;
+    border-radius: 6px;
+}
+.guanlibtnwenzi{
+    width: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 16px;
+    padding-top: 7px;
+}

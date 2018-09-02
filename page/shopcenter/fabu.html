@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+    <meta charset="UTF-8">
+    <title>西梅</title>
+    <link rel="stylesheet" href="common/index.css">
+    <link rel="stylesheet" href="css/fabu.css">
+    <script src="common/jquery-1.8.1.min.js"></script>
+    <script src="common/jquery.xdomainrequest.min.js"></script>
+    <script src="common/swiper.js"></script>
+    <script src="common/DD_roundies.js"></script>
+    <script src="common/base.js"></script>
+    <!--[if lte IE 9]>
+    <script src="../index/js/jquery.placeholder.js"></script>
+    <script>
+        $(function(){
+            $('input[placeholder]').placeholder();
+        });
+    </script>
+    <![endif]-->
+</head>
+<body>
+<div class="headmain">
+    <div class="headshulogo">
+        <img class="headmainicon" src="img/pgindex_logo.png">
+        <div class="headshuxian"></div>
+        <div class="headtiteee">
+            <div class="headtiteee1">西梅妈妈</div>
+            <div class="headtiteee2">商家联盟</div>
+        </div>
+    </div>
+    <div class="headline"></div>
+</div>
+<div class="maincont">
+    <div class="menufont">
+        <div class="shouye">
+            <img src="img/shouye.png" class="shouyetu">
+            <div class="maioshu">首页</div>
+            <div class="shouyeline"></div>
+        </div>
+        <div class="shouye">
+            <img src="img/fabu.png" class="shouyetu">
+            <div class="maioshu">发布信息管理</div>
+        </div>
+        <div class="shouye">
+            <div class="maioshu">月子中心管理</div>
+        </div>
+        <div class="shouye">
+            <div class="maioshu" style="color: #A978D6;">月子中心发布</div>
+        </div>
+        <div class="shouye">
+            <div class="maioshu">攻略管理</div>
+        </div>
+        <div class="shouye">
+            <div class="maioshu">发布管理</div>
+            <div class="shouyeline"></div>
+        </div>
+        <div class="shouye">
+            <img src="img/sheqy.png" class="shouyetu">
+            <div class="maioshu">社区互动</div>
+        </div>
+        <div class="shouye">
+            <div class="maioshu">评论管理</div>
+        </div>
+        <div class="shouye">
+            <div class="maioshu">互动消息</div>
+            <div class="shouyeline"></div>
+        </div>
+        <div class="shouye">
+            <img src="img/shezhi.png" class="shouyetu">
+            <div class="maioshu">账号设置</div>
+        </div>
+        <div class="shouye">
+            <div class="maioshu">账号审核</div>
+        </div>
+    </div>
+    <div class="subpagecont">
+
+        <div class="shouyegongao">编辑月子中心/待产民居</div>
+        <div class="shouyehuodongcont">
+           <div class="jibenxinxicont">
+               <div class="jibendesc">基本信息</div>
+               <div class="xinxicont">
+                   <div class="xinxiname">*城市：</div>
+                   <div class="shurukuangcont">
+                       <input type="text" class="shrukuang">
+                   </div>
+               </div>
+               <div class="xinxicont">
+                   <div class="xinxiname">*中文名称：</div>
+                   <div class="shurukuangcont">
+                       <input type="text" class="shrukuang" placeholder="不超过30字符" maxlength="30">
+                   </div>
+               </div>
+               <div class="xinxicont">
+                   <div class="xinxiname">*英文名称：</div>
+                   <div class="shurukuangcont">
+                       <input type="text" class="shrukuang" placeholder="不超过50字符" maxlength="30">
+                   </div>
+               </div>
+               <div class="xinxicont2">
+                   <div class="xinxiname">*简介：</div>
+                   <div class="shurukuangcont">
+                       <textarea type="text" class="shrukuang" placeholder="简单描述月子中心的特色，90字以内" maxlength="90"  style="resize:none"></textarea>
+                   </div>
+               </div>
+               <div class="kongxian"></div>
+           </div>
+            <div class="jibenxinxicont">
+                <div class="jibendesc">具体位置</div>
+
+                <div class="xinxicont2">
+                    <div class="xinxiname">*地址：</div>
+                    <div class="shurukuangcont">
+                        <textarea type="text" class="shrukuang"  style="resize:none"></textarea>
+                    </div>
+                </div>
+                <div class="kongxian"></div>
+            </div>
+            <div class="jibenxinxicont">
+                <div class="jibendesc">联系方式</div>
+
+                <div class="xinxicont">
+                    <div class="xinxiname">电话：</div>
+                    <div class="shurukuangcont">
+                        <input type="text" class="shrukuang" placeholder="" maxlength="30">
+                    </div>
+                    <div class="jiahao"></div>
+                </div>
+                <div class="xinxicont">
+                    <div class="xinxiname">微信：</div>
+                    <div class="shurukuangcont">
+                        <input type="text" class="shrukuang" placeholder="" maxlength="30">
+                    </div>
+                    <div class="jiahao"></div>
+                </div>
+                <div class="xinxicont">
+                    <div class="xinxiname">QQ：</div>
+                    <div class="shurukuangcont">
+                        <input type="text" class="shrukuang">
+                    </div>
+                    <div class="jiahao"></div>
+                </div>
+                <div class="kongxian"></div>
+            </div>
+            <div class="jibenxinxicont">
+                <div class="jibendesc">服务项目</div>
+                <div class="xiangmudesc">添加服务项目可以在用户筛选价格时显示在搜索结果中</div>
+
+                <div class="xiangmutianjia">
+                    <div class="xinxicont">
+                        <div class="xinxiname">项目名称：</div>
+                        <div class="shurukuangcont">
+                            <input type="text" class="shrukuang" placeholder="" maxlength="30">
+                        </div>
+                    </div>
+                    <div class="xinxicont">
+                        <div class="xinxiname">价格：</div>
+                        <div class="shurukuangcont2">
+                            <input type="text" class="shrukuang2" placeholder="￥正常销售价格" maxlength="30">
+                        </div>
+                        <div class="shurukuangcont3">
+                            <input type="text" class="shrukuang2" placeholder="￥最低优惠价格" maxlength="30">
+                        </div>
+                    </div>
+                    <div class="xinxicont2">
+                        <div class="xinxiname">专属服务：</div>
+                        <div class="shurukuangcont">
+                            <textarea type="text" class="shrukuang" style="resize:none" placeholder="描述本服务产品的专属服务，其它通用服务请在下方的“通用服务”中填写"></textarea>
+                        </div>
+                    </div>
+                    <div class="jiahaobig"></div>
+                </div>
+
+                <div class="kongxian"></div>
+            </div>
+            <div class="jibenxinxicont">
+                <div class="jibendesc">通用服务</div>
+                <div class="xiangmudesc">描述月子中心、待产民宿提供的通用服务，如周边环境 / 交通状况 / 设备配套 / 服务产品标准 / 服务细则 / 膳食服务 / 妈妈服务 / 宝宝服务 / 温馨提示 / 免费服务 / 付费服务……等</div>
+
+                <div class="xiangmutianjia">
+                    <div class="xinxicont2">
+                        <div class="xinxiname">专属服务：</div>
+                        <div class="shurukuangcont">
+                            <textarea type="text" class="shrukuang" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="kongxian"></div>
+            </div>
+        </div>
+    </div>
+    <div class="clearkong"></div>
+</div>
+<div class="footmain" id="foot"></div>
+
+<script type="text/javascript">
+    DD_roundies.addRule('.shurukuangcont', '4px 4px', true);
+    DD_roundies.addRule('.biankuangbiaoqian', '4px 4px', true);
+    DD_roundies.addRule('.numchooseno', '4px 4px', true);
+    DD_roundies.addRule('.tongjishujucont', '6px 6px', true);
+    DD_roundies.addRule('.mustpicconttage', '0px 6px 6px 0px', true);
+</script>
+
+<!--<iframe src="page/index/index.html" class="iframecont" id="iframecont"></iframe>-->
+<script src="../../js/loadfoot.js"></script>
+</body>
+</html>

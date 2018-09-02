@@ -36,28 +36,41 @@
             <div class="selecttagtitle">价格</div>
             <div class="qian">￥</div>
             <div class="qiandao">——</div>
-            <input class="range-slider" type="hidden" value="100000,600000" />
+            <input class="range-slider" type="hidden" value="2000,800000" />
         </div>
         <div class="postioncont">
             <div class="selecttagtitle">位置</div>
             <div class="choosepic"></div>
-            <div class="postioncontchoose">不限</div>
+            <div class="postioncontchoose" id="chengshiduoshao">不限</div>
             <div class="citycont" id="citycont">
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="city1" value="city1"/>城市1
+                    <input class="choosefuxuan" type="checkbox" name="city1" value="洛杉矶"/>洛杉矶
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="city1" value="city2"/>城市2
+                    <input class="choosefuxuan" type="checkbox" name="city1" value="旧金山"/>旧金山
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="city1" value="city3"/>城市3
+                    <input class="choosefuxuan" type="checkbox" name="city1" value="西雅图"/>西雅图
                 </div>
+                <div class="city1">
+                    <input class="choosefuxuan" type="checkbox" name="city1" value="休斯顿"/>休斯顿
+                </div>
+                <div class="city1">
+                    <input class="choosefuxuan" type="checkbox" name="city1" value="纽约"/>纽约
+                </div>
+                <div class="city1">
+                    <input class="choosefuxuan" type="checkbox" name="city1" value="芝加哥"/>芝加哥
+                </div>
+                <div class="city1">
+                    <input class="choosefuxuan" type="checkbox" name="city1" value="塞班"/>塞班
+                </div>
+
                 <div class="bottomcont">
-                    <div class="closebtn">
+                    <div class="closebtn" id="chengshiquxiao">
                         <div class="chooseanniuwenzi">取消</div>
                     </div>
                     <div class="surebtn">
-                        <div class="chooseanniuwenzi">确定</div>
+                        <div class="chooseanniuwenzi bbg">确定</div>
                     </div>
                 </div>
             </div>
@@ -65,68 +78,65 @@
         <div class="housecont">
             <div class="selecttagtitle">住宿类型</div>
             <div class="choosepic"></div>
-            <div class="housecontchoose">不限</div>
+            <div class="housecontchoose" id="housecontchooseduoshao">不限</div>
             <div class="citycont" id="housecont">
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="house1" value="house1"/>海景房
+                    <input class="choosefuxuan" type="checkbox" name="house1" value="海景房"/>海景房
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="house2" value="house2"/>别墅
+                    <input class="choosefuxuan" type="checkbox" name="house2" value="别墅"/>别墅
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="house3" value="house3"/>度假区
+                    <input class="choosefuxuan" type="checkbox" name="house3" value="度假区"/>度假区
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="house4" value="house4"/>社区行
+                    <input class="choosefuxuan" type="checkbox" name="house4" value="社区行"/>社区行
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="house5" value="house5"/>商业中心
+                    <input class="choosefuxuan" type="checkbox" name="house5" value="商业中心"/>商业中心
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="house6" value="house6"/>酒店式
+                    <input class="choosefuxuan" type="checkbox" name="house6" value="酒店式"/>酒店式
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="house7" value="house7"/>公寓Loft
+                    <input class="choosefuxuan" type="checkbox" name="house7" value="公寓Loft"/>公寓Loft
                 </div>
                 <div class="bottomcont">
-                    <div class="closebtn">
+                    <div class="closebtn" id="jiudianquxiao">
                         <div class="chooseanniuwenzi">取消</div>
                     </div>
                     <div class="surebtn">
-                        <div class="chooseanniuwenzi">确定</div>
+                        <div class="chooseanniuwenzi bbg">确定</div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="sheshicont">
-            <div class="selecttagtitle">位置</div>
+            <div class="selecttagtitle">硬件设施</div>
             <div class="choosepic"></div>
-            <div class="sheshicontchoose">不限</div>
+            <div class="sheshicontchoose" id="sheshicontduoshao">不限</div>
             <div class="citycont" id="sheshicont">
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi1" value="sheshi1"/>免费WiFi
+                    <input class="choosefuxuan" type="checkbox" name="sheshi1" value="免费WiFi"/>免费WiFi
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi2" value="sheshi2"/>有线宽带
+                    <input class="choosefuxuan" type="checkbox" name="sheshi2" value="有线宽带"/>有线宽带
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi3" value="sheshi3"/>空调
+                    <input class="choosefuxuan" type="checkbox" name="sheshi3" value="空调"/>空调
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi4" value="sheshi4"/>洗衣机
+                    <input class="choosefuxuan" type="checkbox" name="sheshi4" value="洗衣机"/>洗衣机
                 </div>
                 <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi5" value="sheshi5"/>烘干机
-                </div>
-                <div class="city1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi6" value="sheshi6"/>城市3
+                    <input class="choosefuxuan" type="checkbox" name="sheshi5" value="烘干机"/>烘干机
                 </div>
                 <div class="bottomcont">
-                    <div class="closebtn">
+                    <div class="closebtn" id="sheshiquxiao">
                         <div class="chooseanniuwenzi">取消</div>
                     </div>
                     <div class="surebtn">
-                        <div class="chooseanniuwenzi">确定</div>
+                        <div class="chooseanniuwenzi bbg">确定</div>
                     </div>
                 </div>
             </div>
@@ -134,51 +144,51 @@
         <div class="servercont">
             <div class="selecttagtitle">服务</div>
             <div class="choosepic"></div>
-            <div class="servicecontchoose">不限</div>
+            <div class="servicecontchoose" id="servercontduoshao">不限</div>
             <div class="serverscont" id="servercont">
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi1" value="sheshi1"/>接机送机
+                    <input class="choosefuxuan" type="checkbox" name="sheshi1" value="接机送机"/>接机送机
                 </div>
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi2" value="sheshi2"/>协助办理住院手续
+                    <input class="choosefuxuan" type="checkbox" name="sheshi2" value="协助办理住院手续"/>协助办理住院手续
                 </div>
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi3" value="sheshi3"/>传真机
+                    <input class="choosefuxuan" type="checkbox" name="sheshi3" value="传真机"/>传真机
                 </div>
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi4" value="sheshi4"/>宝宝合影
+                    <input class="choosefuxuan" type="checkbox" name="sheshi4" value="宝宝合影"/>宝宝合影
                 </div>
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi5" value="sheshi5"/>食物采购
+                    <input class="choosefuxuan" type="checkbox" name="sheshi5" value="食物采购"/>食物采购
                 </div>
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi6" value="sheshi6"/>住院资源
+                    <input class="choosefuxuan" type="checkbox" name="sheshi6" value="住院资源"/>住院资源
                 </div>
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi1" value="sheshi1"/>接机送机
+                    <input class="choosefuxuan" type="checkbox" name="sheshi1" value="接机送机"/>接机送机
                 </div>
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi2" value="sheshi2"/>协助办理住院手续
+                    <input class="choosefuxuan" type="checkbox" name="sheshi2" value="协助办理住院手续"/>协助办理住院手续
                 </div>
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi3" value="sheshi3"/>传真机
+                    <input class="choosefuxuan" type="checkbox" name="sheshi3" value="传真机"/>传真机
                 </div>
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi4" value="sheshi4"/>宝宝合影
+                    <input class="choosefuxuan" type="checkbox" name="sheshi4" value="宝宝合影"/>宝宝合影
                 </div>
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi5" value="sheshi5"/>食物采购
+                    <input class="choosefuxuan" type="checkbox" name="sheshi5" value="食物采购"/>食物采购
                 </div>
                 <div class="server1">
-                    <input class="choosefuxuan" type="checkbox" name="sheshi6" value="sheshi6"/>住院资源
+                    <input class="choosefuxuan" type="checkbox" name="sheshi6" value="住院资源"/>住院资源
                 </div>
                 <div class="bottomcont2">
                     <div class="bottomcont22">
-                        <div class="closebtn2">
+                        <div class="closebtn2" id="fuwuquxiao">
                             <div class="chooseanniuwenzi">取消</div>
                         </div>
                         <div class="surebtn2">
-                            <div class="chooseanniuwenzi">确定</div>
+                            <div class="chooseanniuwenzi bbg">确定</div>
                         </div>
                     </div>
 
@@ -195,45 +205,29 @@
         <div class="linezi"></div>
     </div>
 </div>
-<div class="msgdetailcont">
-    <div class="msgdetailm">
-        <div class="msgdetailpic" style="background-image: url(img/ximei.png);"></div>
-        <div class="msgdetailmtitlecont">
-            <div class="msgdetailmtitle"><span>安婴宝之家</span><div class="shoucang"></div> </div>
-            <div class="msgdetailmtitle2">安婴宝之家</div>
-            <div class="msgdetailmtitle3"><div class="weizhiicon"></div><span class="zuobiao">安婴宝之家</span></div>
-            <div class="msgdetailmtitle4">安婴宝之家</div>
-            <div class="msgdetailmtitle5">
-                <div class="zixing"></div>
-                <div class="anxing"></div>
-                <div class="anxing"></div>
-                <div class="anxing"></div>
-                <div class="anxing"></div>
-            </div>
-        </div>
+<div class="msgdetailcont" id="xianshiqu">
+    <!--<div class="msgdetailm">-->
+        <!--<div class="msgdetailpic" style="background-image: url(img/ximei.png);"></div>-->
+        <!--<div class="msgdetailmtitlecont">-->
+            <!--<div class="msgdetailmtitle"><span>安婴宝之家</span><div class="shoucang"></div> </div>-->
+            <!--<div class="msgdetailmtitle2">安婴宝之家</div>-->
+            <!--<div class="msgdetailmtitle3"><div class="weizhiicon"></div><span class="zuobiao">安婴宝之家</span></div>-->
+            <!--<div class="msgdetailmtitle4">安婴宝之家</div>-->
+            <!--<div class="msgdetailmtitle5">-->
+                <!--<div class="zixing"></div>-->
+                <!--<div class="anxing"></div>-->
+                <!--<div class="anxing"></div>-->
+                <!--<div class="anxing"></div>-->
+                <!--<div class="anxing"></div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
-    </div>
-    <div class="msgdetailm">
-        <div class="msgdetailpic" style="background-image: url(img/ximei.png);"></div>
-        <div class="msgdetailmtitlecont">
-            <div class="msgdetailmtitle"><span>安婴宝之家</span><div class="meishoucang"></div> </div>
-            <div class="msgdetailmtitle2">安婴宝之家</div>
-            <div class="msgdetailmtitle3"><div class="weizhiicon"></div><span class="zuobiao">安婴宝之家</span></div>
-            <div class="msgdetailmtitle4">安婴宝之家</div>
-            <div class="msgdetailmtitle5">
-                <div class="zixing"></div>
-                <div class="anxing"></div>
-                <div class="anxing"></div>
-                <div class="anxing"></div>
-                <div class="anxing"></div>
-            </div>
-        </div>
-    </div>
-    <div class="msgdetailm"></div>
+    <div id="yuezikongbai" style="width: 0;height: 0;"></div>
     <div class="clear">
         <div class="nestpagecont">
             <div class="nestpagecont2">
-                <div class="totalpagenum">共122页</div>
+                <div class="totalpagenum">共<span id="pagenumtotal"></span>页</div>
                 <div class="lastpagebtn"></div>
                 <!--<div class="totaltalknum">122条评论</div>-->
                 <div class="pagenumcont">

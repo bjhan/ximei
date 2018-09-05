@@ -360,6 +360,21 @@ p{
     margin: 0 auto;
     margin-top: 30px;
 }
+.youneirong{
+    position: relative;
+    display: none;
+    width: 62.5%;
+    min-height: 700px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.meiyou{
+    width: 100%;
+    text-align: center;
+    color: #73859f;
+    font-size: 40px;
+}
 .msgdetailm{
     float: left;
     width: 48%;
@@ -520,6 +535,16 @@ p{
     width: auto;
     height: 100%;
 }
+
+.numchooseno{
+    float: left;
+    width: auto;
+    height: 22px;
+    border-radius: 2px;
+    margin-right: 10px;
+    color: #A1A1A1;
+    cursor: pointer;
+}
 .numchoose{
     float: left;
     width: auto;
@@ -530,15 +555,6 @@ p{
     color: #FFFFFF;
     cursor: pointer;
 }
-.numchooseno{
-    float: left;
-    width: auto;
-    height: 22px;
-    border-radius: 2px;
-    margin-right: 10px;
-    color: #A1A1A1;
-    cursor: pointer;
-}
 .numchoosenum{
     position: relative;
     width: auto;
@@ -546,7 +562,8 @@ p{
     text-align: center;
     font-family: MicrosoftYaHeiUI;
     font-size: 14px;
-
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .nestpagebtn{
     float: left;

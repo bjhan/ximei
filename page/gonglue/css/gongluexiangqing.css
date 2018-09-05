@@ -934,6 +934,7 @@ p{
 }
 .shanchutixing{
     position: fixed;
+    display: none;
     top:100px;
     width: 100%;
     height: 300px;

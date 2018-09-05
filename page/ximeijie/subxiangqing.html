@@ -199,11 +199,14 @@
 </div>
 <div class="indexcont2">
     <div class="choosertiaojian">
-        <div class="zonghepaixu"><div class="zise xuanzeweniz">综合排序</div></div>
-        <div class="zonghepaixu2"><div class="xuanzeweniz">评分</div></div>
-        <div class="zonghepaixu2"><div class="xuanzeweniz">价格</div></div>
+        <div class="zonghepaixu zise" id="zonghepaixu" dianji="1"><div class="xuanzeweniz">综合排序</div></div>
+        <div class="zonghepaixu2" id="pingfensort" sort="0" dianji="0"><div class="xuanzeweniz">评分</div></div>
+        <div class="zonghepaixu2" id="jiagesort" sort="0" dianji="0"><div class="xuanzeweniz">价格</div></div>
         <div class="linezi"></div>
     </div>
+</div>
+<div class="youneirong">
+    <div class="meiyou">没有查询到符合相关条件的结果</div>
 </div>
 <div class="msgdetailcont" id="xianshiqu">
     <!--<div class="msgdetailm">-->
@@ -230,7 +233,7 @@
                 <div class="totalpagenum">共<span id="pagenumtotal"></span>页</div>
                 <div class="lastpagebtn"></div>
                 <!--<div class="totaltalknum">122条评论</div>-->
-                <div class="pagenumcont">
+                <div class="pagenumcont" id="fenyecont">
                     <div class="numchoose">
                         <div class="numchoosenum">101</div>
                     </div>

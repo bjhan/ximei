@@ -22,13 +22,16 @@
 }
 
 .pages.horizontal {
-    left: 440px;
-    /*left: 50%;*/
-    /*transform: translateX(-50%);*/
-    width: 500px;
+    position: relative;
+    min-width:500px;
     height: 100px;
     bottom: 5px;
     behavior: url(../../../common/ie-css3.htc);
+    margin: 0 auto;
+    margin-top: -100px;
+}
+.clearr{
+    clear: both;
 }
 
 .pages.horizontal li {

@@ -581,7 +581,8 @@ p{
   text-align: center;
   font-family: MicrosoftYaHeiUI;
   font-size: 14px;
-
+  padding-left: 5px;
+  padding-right: 5px;
 }
 .nestpagebtn{
   float: left;

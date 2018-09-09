@@ -36,7 +36,7 @@
             type: "get",
             timeout: 5000,
             success: function (data) {
-
+                $(".ximeijiemaincont .yuezi").remove();
                 for (var i = 0; i < data.length; i++) {
 
                     addyuezi(data[i]);
@@ -48,17 +48,221 @@
             }
         });
     }
-    function yuezichengshichaxun() {
+
+    $("#searchbtn").click(function () {
+        var value = $(".searchkuang").val();
+        if(value.length>0){
+            $(".ximeijiecont").hide();
+            $(".searchneirong").show();
+            $(".searchneirong2").hide();
+            $(".searchneirong3").hide();
+            $(".searchtab").show();
+            $(".searchwen").css("color","#9B9B9B");
+            $(".searchtabyue").css("color","#A978D6");
+            chaxunyishengshuzi(value,0);
+            chaxunyiyuanshuzi(value,0);
+            chaxunyuezishuzi(value,0);
+            chaxunyuezi(value,0);
+        }else {
+            $(".ximeijiecont").show();
+            $(".searchneirong").hide();
+            $(".searchneirong2").hide();
+            $(".searchneirong3").hide();
+            $(".searchtab").hide();
+            yuezizhognxin();
+            yueshegnzhognxin();
+            yiyuanzhognxin();
+            muyingzhognxin();
+            banzhengzhongxin();
+        }
+    });
+    $(".searchtabyue").click(function () {
+        var value = $(".searchkuang").val();
+        if(value.length>0){
+            $(".ximeijiecont").hide();
+            $(".searchneirong").show();
+            $(".searchneirong2").hide();
+            $(".searchneirong3").hide();
+            $(".searchtab").show();
+            $(".searchwen").css("color","#9B9B9B");
+            $(this).css("color","#A978D6");
+            chaxunyuezi(value,0);
+        }else {
+            $(".ximeijiecont").show();
+            $(".searchneirong").hide();
+            $(".searchneirong2").hide();
+            $(".searchneirong3").hide();
+            $(".searchtab").hide();
+            yuezizhognxin();
+            yueshegnzhognxin();
+            yiyuanzhognxin();
+            muyingzhognxin();
+            banzhengzhongxin();
+        }
+    });
+    $(".searchtabyiyuan").click(function () {
+        var value = $(".searchkuang").val();
+        if(value.length>0){
+            $(".ximeijiecont").hide();
+            $(".searchneirong2").show();
+            $(".searchneirong").hide();
+            $(".searchneirong3").hide();
+            $(".searchtab").show();
+            $(".searchwen").css("color","#9B9B9B");
+            $(this).css("color","#A978D6");
+            chaxunyiyuan(value,0);
+        }else {
+            $(".ximeijiecont").show();
+            $(".searchneirong").hide();
+            $(".searchneirong2").hide();
+            $(".searchneirong3").hide();
+            $(".searchtab").hide();
+            yuezizhognxin();
+            yueshegnzhognxin();
+            yiyuanzhognxin();
+            muyingzhognxin();
+            banzhengzhongxin();
+        }
+    });
+    $(".searchtabyisheng").click(function () {
+        var value = $(".searchkuang").val();
+        if(value.length>0){
+            $(".ximeijiecont").hide();
+            $(".searchneirong3").show();
+            $(".searchneirong").hide();
+            $(".searchneirong1").hide();
+            $(".searchtab").show();
+            chaxunyisheng(value,0);
+
+            $(".searchwen").css("color","#9B9B9B");
+            $(this).css("color","#A978D6");
+        }else {
+            $(".ximeijiecont").show();
+            $(".searchneirong").hide();
+            $(".searchneirong2").hide();
+            $(".searchneirong3").hide();
+            $(".searchtab").hide();
+            yuezizhognxin();
+            yueshegnzhognxin();
+            yiyuanzhognxin();
+            muyingzhognxin();
+            banzhengzhongxin();
+        }
+    });
+    $("#yueziquanbu").click(function () {
+        var pathname = window.location.href;
+        var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);;
+        window.open(path+'subxiangqing.html');
+    });
+    $("#yiyuanquanbu").click(function () {
+        var pathname = window.location.href;
+        var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);;
+        window.open(path+'yiyuanxiangqing.html');
+    });
+    function chaxunyuezi(chaxuntiaojian,pagenum) {
         $.ajax({
-            url: CFG.interfaceurl + '/xmj/homepage/yzzx/defaultlist',
+            url: CFG.interfaceurl + '/xmj/homepage/yzzx/list?name='+chaxuntiaojian+'&pageNo='+pagenum+'&pageSize=1000',
             type: "get",
             timeout: 5000,
             success: function (data) {
+                $(".searchneirong .msgdetailm2").remove();
+                $("#chaxunyuezishuliang").html(data.totalCount);
 
-                for (var i = 0; i < data.length; i++) {
-
-                    addyuezi(data[i]);
-
+                for (var i = 0; i < data.items.length; i++) {
+                    addyuezi2(data.items[i]);
+                }
+            },
+            error: function (data) {
+                //alert("请求错误");
+            }
+        });
+    }
+    function chaxunyuezishuzi(chaxuntiaojian,pagenum) {
+        $.ajax({
+            url: CFG.interfaceurl + '/xmj/homepage/yzzx/list?name='+chaxuntiaojian+'&pageNo='+pagenum+'&pageSize=10',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                $("#chaxunyuezishuliang").html(data.totalCount);
+            },
+            error: function (data) {
+                //alert("请求错误");
+            }
+        });
+    }
+    function chaxunyiyuanshuzi(chaxuntiaojian,pagenum) {
+        $.ajax({
+            url: CFG.interfaceurl + '/xmj/homepage/yy/list?name='+chaxuntiaojian+'&pageNo='+pagenum+'&pageSize=10',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                $("#chaxunyiyuanshuliang").html(data.totalCount);
+            },
+            error: function (data) {
+                //alert("请求错误");
+            }
+        });
+    }
+    function chaxunyishengshuzi(chaxuntiaojian,pagenum) {
+        $.ajax({
+            url: CFG.interfaceurl + '/xmj/homepage/ys/list?name='+chaxuntiaojian+'&pageNo='+pagenum+'&pageSize=10',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                $("#chaxunyishengshuliang").html(data.totalCount);
+            },
+            error: function (data) {
+                //alert("请求错误");
+            }
+        });
+    }
+    function chaxunyiyuan(chaxuntiaojian,pagenum) {
+        $.ajax({
+            url: CFG.interfaceurl + '/xmj/homepage/yy/list?name='+chaxuntiaojian+'&pageNo='+pagenum+'&pageSize=1000',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                $(".searchneirong2 .msgdetailm2").remove();
+                $("#chaxunyiyuanshuliang").html(data.totalCount);
+                for (var i = 0; i < data.items.length; i++) {
+                    addyiyuan2(data.items[i]);
+                }
+            },
+            error: function (data) {
+                //alert("请求错误");
+            }
+        });
+    }
+    function chaxunyisheng(chaxuntiaojian,pagenum) {
+        $.ajax({
+            url: CFG.interfaceurl + '/xmj/homepage/ys/list?name='+chaxuntiaojian+'&pageNo='+pagenum+'&pageSize=1000',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                $(".searchneirong3 .msgdetailm2").remove();
+                $("#chaxunyishengshuliang").html(data.totalCount);
+                for (var i = 0; i < data.items.length; i++) {
+                    addyiyuan3(data.items[i]);
+                }
+            },
+            error: function (data) {
+                //alert("请求错误");
+            }
+        });
+    }
+    $(".chengshimingcheng").click(function () {
+        $(".chengshimingcheng").css("color","A978D6");
+        yuezichengshichaxun($(this).html());
+    });
+    function yuezichengshichaxun(chengshi) {
+        $.ajax({
+            url: CFG.interfaceurl + '/xmj/homepage/yzzx/list?city='+chengshi+'&pageNo=0&pageSize=4',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                $(".ximeijiemaincont .yuezi").remove();
+                for (var i = 0; i < data.items.length; i++) {
+                    addyuezi(data.items[i]);
                 }
             },
             error: function (data) {
@@ -67,11 +271,70 @@
         });
     }
     function addyuezi(data) {
-        var str =' <div class="ximeijiedetailcont" id="'+data.id+'" tt="yuezi">'
+        var str =' <div class="ximeijiedetailcont yuezi" tailid="'+data.id+'" tt="yuezi">'
             +'<div class="ximeijiedetailcontpic" style="background-image: url('+data.imageUrl+')"></div>'
             +'<div class="ximeijiedetailcontpicdesc">'+data.name+'</div>'
             +'</div>';
         $("#yueziclear").before(str);
+    }
+    function xingxingfun(num) {
+        var xingxing = '';
+        for (var i = 1; i <= 5; i++) {
+            if (i <=num) {
+                xingxing = xingxing + '<div class="zixing"></div>'
+            } else {
+                xingxing = xingxing + '<div class="anxing"></div>'
+            }
+        }
+        return xingxing;
+    }
+    function addyuezi2(data) {
+        var xing = xingxingfun(data.star);
+        var str ='<div class="msgdetailm2 yuezi" tailid="'+data.id+'" tt="yuezi">'
+            +'<div class="msgdetailpic" style="background-image: url('+data.imageUrl+');"></div>'
+            +'<div class="msgdetailmtitlecont">'
+            +'<div class="msgdetailmtitle"><span>'+data.name+'</span><div class="shoucang"></div> </div>'
+            +'<div class="msgdetailmtitle2"></div>'
+            +'<div class="msgdetailmtitle3"><div class="weizhiicon"></div><span class="zuobiao">'+data.address+'</span></div>'
+            +'<div class="msgdetailmtitle4">套餐最低价格：￥'+data.minPrice+'</div>'
+            +'<div class="msgdetailmtitle5">'
+            +xing
+            +'</div>'
+            +'</div>'
+            +'</div>';
+        $(".chazhaokongbai1").before(str);
+    }
+    function addyiyuan2(data) {
+        var xing = xingxingfun(data.star);
+        var str ='<div class="msgdetailm2 yiyuan" tailid="'+data.id+'" tt="yiyuan">'
+            +'<div class="msgdetailpic" style="background-image: url('+data.imageUrl+');"></div>'
+            +'<div class="msgdetailmtitlecont">'
+            +'<div class="msgdetailmtitle"><span>'+data.name+'</span><div class="shoucang"></div> </div>'
+            +'<div class="msgdetailmtitle2"></div>'
+            +'<div class="msgdetailmtitle3"><div class="weizhiicon"></div><span class="zuobiao">'+data.address+'</span></div>'
+            +'<div class="msgdetailmtitle4">套餐最低价格：￥'+data.minPrice+'</div>'
+            +'<div class="msgdetailmtitle5">'
+            +xing
+            +'</div>'
+            +'</div>'
+            +'</div>';
+        $(".chazhaokongbai2").before(str);
+    }
+    function addyiyuan3(data) {
+        var xing = xingxingfun(data.star);
+        var str ='<div class="msgdetailm2 yisheng" tailid="'+data.id+'" tt="yisheng">'
+            +'<div class="msgdetailpic" style="background-image: url('+data.imageUrl+');"></div>'
+            +'<div class="msgdetailmtitlecont">'
+            +'<div class="msgdetailmtitle"><span>'+data.name+'</span><div class="shoucang"></div> </div>'
+            +'<div class="msgdetailmtitle2"></div>'
+            +'<div class="msgdetailmtitle3"><div class="weizhiicon"></div><span class="zuobiao">'+data.address+'</span></div>'
+            +'<div class="msgdetailmtitle4">套餐最低价格：￥'+data.minPrice+'</div>'
+            +'<div class="msgdetailmtitle5">'
+            +xing
+            +'</div>'
+            +'</div>'
+            +'</div>';
+        $(".chazhaokongbai3").before(str);
     }
     yueshegnzhognxin();
     function yueshegnzhognxin() {//医生
@@ -80,7 +343,7 @@
             type: "get",
             timeout: 5000,
             success: function (data) {
-
+                $(".ximeijiemaincont .yisheng").remove();
                 for (var i = 0; i < data.length; i++) {
 
                     addyisheng(data[i]);
@@ -93,7 +356,7 @@
         });
     }
     function addyisheng(data) {
-        var str =' <div class="ximeijiedetailcont" id="'+data.id+'" tt="yisheng">'
+        var str =' <div class="ximeijiedetailcont yisheng" tailid="'+data.id+'" tt="yisheng">'
             +'<div class="ximeijiedetailcontpic" style="background-image: url('+data.imageUrl+')"></div>'
             +'<div class="ximeijiedetailcontpicdesc">'+data.name+'</div>'
             +'</div>';
@@ -106,7 +369,7 @@
             type: "get",
             timeout: 5000,
             success: function (data) {
-
+                $(".ximeijiemaincont .yiyuan").remove();
                 for (var i = 0; i < data.length; i++) {
 
                     addyiyiyuan(data[i]);
@@ -119,7 +382,7 @@
         });
     }
     function addyiyiyuan(data) {
-        var str =' <div class="ximeijiedetailcont" id="'+data.id+'" tt="yisheng">'
+        var str =' <div class="ximeijiedetailcont yiyuan" tailid="'+data.id+'" tt="yisheng">'
             +'<div class="ximeijiedetailcontpic" style="background-image: url('+data.imageUrl+')"></div>'
             +'<div class="ximeijiedetailcontpicdesc">'+data.name+'</div>'
             +'</div>';
@@ -132,7 +395,7 @@
             type: "get",
             timeout: 5000,
             success: function (data) {
-
+                $(".ximeijiemaincont .muying").remove();
                 for (var i = 0; i < data.length; i++) {
 
                     addmuying(data[i]);
@@ -145,7 +408,7 @@
         });
     }
     function addmuying(data) {
-        var str =' <div class="ximeijiedetailcont" id="'+data.id+'" tt="muying">'
+        var str =' <div class="ximeijiedetailcont muying" tailid="'+data.id+'" tt="muying">'
             +'<div class="ximeijiedetailcontpic" style="background-image: url('+data.imageUrl+')"></div>'
             +'<div class="ximeijiedetailcontpicdesc">'+data.name+'</div>'
             +'</div>';
@@ -158,7 +421,7 @@
             type: "get",
             timeout: 5000,
             success: function (data) {
-
+                $(".ximeijiemaincont .banzheng").remove();
                 for (var i = 0; i < data.length; i++) {
                     addbanzheng(data[i]);
                 }
@@ -169,7 +432,7 @@
         });
     }
     function addbanzheng(data) {
-        var str ='<div class="ximeijiedetailcont" id="'+data.id+'">'
+        var str ='<div class="ximeijiedetailcont banzheng" tailid="'+data.id+'">'
             +'<div class="ximeijiedetailcontpic" style="background-image: url('+data.imageUrl+')"></div>'
             +'<div class="ximeijiedetailcontpicdesc">'+data.name+'</div>';
             +'</div>';

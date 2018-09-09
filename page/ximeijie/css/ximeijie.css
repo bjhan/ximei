@@ -63,6 +63,22 @@ p{
     height: 100%;
     background: #A978D6;
     border-radius: 6px;
+    cursor: pointer;
+}
+.searchtab{
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+}
+.searchwen{
+    float: left;
+    margin-right: 40px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 18px;
+    color: #9B9B9B;
+    cursor: pointer;
 }
 .anniuwenzi{
     position: absolute;
@@ -88,7 +104,23 @@ p{
     margin: 0 auto;
     margin-top: 30px;
 }
-.chazhaokongbai{
+.searchneirong2{
+    position: relative;
+    display: none;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.searchneirong3{
+    position: relative;
+    display: none;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.chazhaokongbai,.chazhaokongbai1,.chazhaokongbai2,.chazhaokongbai3{
     clear: both;
 }
 .msgdetailm2{

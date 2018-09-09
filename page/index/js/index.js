@@ -339,6 +339,7 @@
     function fenye(nowNum,total,pagesize) {
         nowNum =parseInt(nowNum);
         $("#fenyecont").empty();
+        total=Math.ceil(total/pagesize);
         if(total<pagesize){
             pagesize=total;
         }

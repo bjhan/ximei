@@ -808,16 +808,7 @@ p{
     width: auto;
     height: 100%;
 }
-.numchoose{
-    float: left;
-    width: auto;
-    height: 22px;
-    border-radius: 2px;
-    background-color: #A978D6;
-    margin-right: 10px;
-    color: #FFFFFF;
-    cursor: pointer;
-}
+
 .numchooseno{
     float: left;
     width: auto;
@@ -835,6 +826,25 @@ p{
     font-family: MicrosoftYaHeiUI;
     font-size: 14px;
 
+}
+.zonghepaixu3{
+    float: left;
+    width: 50px;
+    height: 100%;
+    margin-right: 20px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    cursor: pointer;
+}
+.numchoose{
+    float: left;
+    width: auto;
+    height: 22px;
+    border-radius: 2px;
+    background-color: #A978D6;
+    margin-right: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
 }
 .nestpagebtn{
     float: left;
@@ -1038,7 +1048,7 @@ p{
     position: relative;
     width: 100%;
     height: 151px;
-    margin-top: 26px;
+    margin-top: 0px;
     cursor: pointer;
 }
 .citycont>img{

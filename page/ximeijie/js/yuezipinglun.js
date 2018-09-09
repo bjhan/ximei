@@ -222,7 +222,9 @@
                 $("#yignwenming").html(data.engName);
                 $(".xiangqingmapaddr").html(data.address);
                 $(".taocanyonghushuliang").html(data.replyCount);
-
+                for (var j = 0; j < (data.services).length; j++) {
+                    taocantianjia(data.services[j], j + 1);
+                }
                 initswiper(data.images);
                 // for (var j = 0; j < (data.replies.items).length; j++) {
                 //     tianjiapinglun(data.replies.items[j], j + 1);
@@ -270,7 +272,7 @@
             + ' <div class="huifupinglunduv">'
             + '<textarea class="huifupinglunkuang"></textarea>'
             + '<div class="fabiaopinglunbtndetail">'
-            + '<div class="fabiaopinglunbtnwenzidetail" id="'+data.id+'">发表评论</div>'
+            + '<div class="fabiaopinglunbtnwenzidetail" id="' + data.id + '">发表评论</div>'
             + '</div>'
             + '</div>'
             + '</div>'
@@ -278,11 +280,12 @@
             + '</div>';
         $("#pinglunkongbai").before(str);
     }
-    jiazaipinglun(0,10);
-    function jiazaipinglun(pagenum,pageSize) {
+
+    jiazaipinglun(0, 10);
+    function jiazaipinglun(pagenum, pageSize) {
         var id = getUrlParam('id');
         $.ajax({
-            url: CFG.interfaceurl + '/yzzx/replies?yzzxid='+ id+'&pageNo='+pagenum+'&pageSize='+pageSize ,
+            url: CFG.interfaceurl + '/yzzx/replies?yzzxid=' + id + '&pageNo=' + pagenum + '&pageSize=' + pageSize,
             type: "get",
             timeout: 5000,
             success: function (data) {
@@ -305,22 +308,37 @@
         });
     }
 
-    function taocantianjia(data) {//套餐添加
+    // function jiazaitaocan(pagenum, pageSize) {
+    //     var id = getUrlParam('id');
+    //     $.ajax({
+    //         url: CFG.interfaceurl + '/yzzx/replies?yzzxid=' + id + '&pageNo=' + pagenum + '&pageSize=' + pageSize,
+    //         type: "get",
+    //         timeout: 5000,
+    //         success: function (data) {
+    //
+    //             for (var j = 0; j < (data.services).length; j++) {
+    //                 taocantianjia(data.services[j], j + 1);
+    //             }
+    //
+    //         },
+    //         error: function (data) {
+    //             //alert("请求错误");
+    //         }
+    //     });
+    // }
+
+    function taocantianjia(data,num) {//套餐添加
         var tao = '<div class="taocanbao">'
             + '<div class="taocanjuticont">'
-            + '<div class="taocannum">' + data.serviceName + '</div>'
-            + '<div class="taocanmingchegn">' + data.spService + '</div>'
-            + '<div class="taocanxingxingcont">'
-            + '<div class="zixing"></div>'
-            + '<div class="zixing"></div>'
-            + '<div class="anxing"></div>'
-            + '<div class="anxing"></div>'
-            + '<div class="anxing"></div>'
-            + '</div>'
-            + '<div class="taocanjiage">￥' + data.discount + '</div>'
+            + '<div class="taocannum">套餐'+num+'</div>'
+            + '<div class="taocanmingchegn">'+data.serviceName+'</div>'
+            + '<div class="taocanxingxingcont">'+data.spService+'</div>'
+            + '<div class="taocanjiage" style="color: #4A4A4A;font-weight: bold;">￥'+data.discount+'</div>'
+            + '<div class="taocanjiage">￥'+data.fullPrice+'</div>'
             + '<div class="taocanchakanxiangqing">查看详情</div>'
             + '</div>'
             + '</div>';
+        $("#taocankongbai").before(tao);
     }
 
 

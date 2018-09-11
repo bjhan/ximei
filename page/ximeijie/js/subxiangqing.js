@@ -122,6 +122,7 @@ $(function () {
         return pagestr;
     }
     function fenye(nowNum,total,pagesize) {
+        nowNum = nowNum/pagesize;
         nowNum =parseInt(nowNum);
         total=Math.ceil(total/pagesize);
         $("#fenyecont").empty();
@@ -198,7 +199,7 @@ $(function () {
         var pingfensort = $("#pingfensort").attr("dianji");
         var jiagesort = $("#jiagesort").attr("dianji");
         if(zonghepaixu == '1'){
-            chaxuntiaojian(price,chengshi,fangzi,zhusu,fuwu,pagenum);
+            chaxuntiaojian(price,chengshi,fangzi,zhusu,fuwu,pagenum*10);
         }
         if(pingfensort == '1'){
             if($("#pingfensort").attr("sort") == '0'){

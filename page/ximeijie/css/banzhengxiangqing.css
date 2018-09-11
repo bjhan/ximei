@@ -1087,8 +1087,17 @@ p{
     height: auto;
     font-family: MicrosoftYaHeiUI;
     font-size: 24px;
-    margin-top: 30px;
+    margin-top: 20px;
     color: #000000;
+}
+.lianxifangshi{
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 12px;
+    color: #A978D6;
+    margin-top: 10px;
 }
 .banzhengfafangcont{
     position: relative;
@@ -1096,6 +1105,6 @@ p{
     height: auto;
     min-height: 200px;
     margin-top: 20px;
-    border: 1px solid #D6D6D6;
-    border-radius: 6px;
+    /*border: 1px solid #D6D6D6;*/
+    /*border-radius: 6px;*/
 }

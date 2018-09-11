@@ -324,19 +324,20 @@
         $(".lastpagebtn").click(function () {
             var num = $(".numchoose").find("div").html();
             if(num>1){
-                tianjiaredianwenzhang(num-2, 3);
+                tianjiaredianwenzhang((num-2)*3, 3);
             }
 
         });
         $(".nestpagebtn").click(function () {
             var num = $(".numchoose").find("div").html();
             if(num<total){
-                tianjiaredianwenzhang(num, 3);
+                tianjiaredianwenzhang(num*3, 3);
             }
 
         });
     }
     function fenye(nowNum,total,pagesize) {
+        nowNum = nowNum/pagesize;
         nowNum =parseInt(nowNum);
         $("#fenyecont").empty();
         total=Math.ceil(total/pagesize);
@@ -352,7 +353,7 @@
         }
         $(".numchooseno").click(function () {
             var num = $(this).find("div").html();
-            tianjiaredianwenzhang(num-1, 3);
+            tianjiaredianwenzhang((num-1)*3, 3);
         })
     }
     function zhengchangnum(num) {

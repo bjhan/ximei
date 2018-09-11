@@ -122,6 +122,7 @@ $(function () {
         return pagestr;
     }
     function fenye(nowNum,total,pagesize) {
+        nowNum = nowNum/pagesize;
         nowNum =parseInt(nowNum);
         total=Math.ceil(total/pagesize);
         $("#fenyecont").empty();
@@ -188,10 +189,10 @@ $(function () {
         var zonghepaixu = $("#zonghepaixu").attr("dianji");
         var pingfensort = $("#pingfensort").attr("dianji");
         if(zonghepaixu == '1'){
-            chaxuntiaojian(price,chengshi,fangzi,zhusu,fuwu,pagenum);
+            chaxuntiaojian(price,chengshi,fangzi,zhusu,fuwu,pagenum*12);
         }
         if(pingfensort == '1'){
-            chaxuntiaojian(price,chengshi,fangzi,zhusu,fuwu,pagenum,1,0);
+            chaxuntiaojian(price,chengshi,fangzi,zhusu,fuwu,pagenum*12,1,0);
         }
 
     }

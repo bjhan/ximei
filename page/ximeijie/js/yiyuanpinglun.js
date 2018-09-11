@@ -416,14 +416,14 @@
         $(".lastpagebtn").click(function () {
             var num = $(".numchoose").find("div").html();
             if(num>1){
-                jiazaipinglun(num-2,5);
+                jiazaipinglun((num-2)*5,5);
             }
 
         });
         $(".nestpagebtn").click(function () {
             var num = $(".numchoose").find("div").html();
             if(num<total){
-                jiazaipinglun(num,5);
+                jiazaipinglun(num*5,5);
             }
 
         });
@@ -441,6 +441,7 @@
         return pagestr;
     }
     function fenye(nowNum,total,pagesize) {
+        nowNum = nowNum/pagesize;
         nowNum =parseInt(nowNum);
         total=Math.ceil(total/pagesize);
         $("#fenye").html(total);
@@ -455,7 +456,7 @@
         }
         $(".numchooseno").click(function () {
             var num = $(this).find("div").html();
-            jiazaipinglun(num-1,5);
+            jiazaipinglun((num-1)*5,5);
         })
     }
 

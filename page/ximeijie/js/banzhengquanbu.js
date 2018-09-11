@@ -56,7 +56,7 @@
                 $(".taocanyonghushuliang").html(data.replyCount);
 
                 for (var j = 0; j < (data.items).length; j++) {
-                    tianjiashangpin(data.items[j], j + 1);
+                    tianjiashangpin(data.items[j]);
                 }
                 dianji();
             },
@@ -72,20 +72,21 @@
 
         $(".bibu").click(function () {
 
-                jiazaixianshi(++jiazaiyeshu,10);
+                jiazaixianshi((++jiazaiyeshu)*10,10);
 
         });
     }
     function dianji() {
         $(".shangpindetailcont").click(function () {
-            window.open(path+'banzhengxiangqing.html?id='+$(this).attr("detailid"));
+                var pathname = window.location.href;
+                var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);
+            window.location.href = path+'banzhengxiangqing.html?id='+$(this).attr("detailid");
         });
     }
     function tianjiashangpin(data) {
         var str = ' <div class="shangpindetailcont" detailid="' + data.id + '">'
             + '<img src="' + data.imageUrl + '" class="shangpindetailcontpic">'
             + '<div class="shaopname">' + data.name + '</div>'
-            + '<div class="shaopprice">￥' + data.price + '</div>'
             + '</div>';
         $(".bibu").before(str);
     }

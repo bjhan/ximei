@@ -120,13 +120,13 @@
             var dianji2 = $(".fenlei2").attr("dianji");
             var dianji3 = $(".fenlei3").attr("dianji");
             if(dianji1 === '1'){
-                jiazaixianshi('分类1',++jiazaiyeshu,10);
+                jiazaixianshi('分类1',(++jiazaiyeshu)*10,10);
             }
             if(dianji2 === '1'){
-                jiazaixianshi('分类2',++jiazaiyeshu,10);
+                jiazaixianshi('分类2',(++jiazaiyeshu)*10,10);
             }
             if(dianji3 === '1'){
-                jiazaixianshi('分类3',++jiazaiyeshu,10);
+                jiazaixianshi('分类3',(++jiazaiyeshu)*10,10);
             }
         });
     }

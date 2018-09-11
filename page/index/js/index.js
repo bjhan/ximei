@@ -307,8 +307,8 @@
                     }
                 }
 
-                $("#redianwenzhangshu").html(data.totalCount);
-                fenye(pageNo,data.totalCount,5);
+                $("#redianwenzhangshu").html(Math.ceil(data.totalCount/pageSize));
+                fenye(pageNo,data.totalCount,pageSize);
                 $("#redianwenzhang .hotcompositioncont").remove();
                 for (var i = 0; i < (data.posts).length; i++) {
                     addredianwenzhang(data.posts[i]);
@@ -343,7 +343,7 @@
         if(total<pagesize){
             pagesize=total;
         }
-        for(var i=0;i<pagesize;i++){
+        for(var i=0;i<total;i++){
             if(nowNum === i){
                 $("#fenyecont").append(zhengchangnum2(i+1));
             }else {

@@ -27,6 +27,39 @@
         safariVersion = ua.match(/msie ([\d.]+)/)[1];
     }
 
+    function mapff(didian) {
+        var map = null;
+        initialize();
+        function initialize() {
+
+            var geocoder = new google.maps.Geocoder();
+
+            //地址正向解析
+            geocoder.geocode({
+//                'address': 'Liberty Island, 10004 New York Harbor'
+                'address': didian
+            }, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var myOptions = {
+                        zoom: 12,
+                        center: results[0].geometry.location,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    };
+
+                    map = new google.maps.Map(document.getElementById("xiangqingmap"), myOptions);
+
+                    //定义标示
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location,
+                        title: '',
+                        draggable: true
+                    });
+                    marker.setMap(map);
+                }
+            });
+        }
+    }
     $(".addImg").click(function (e) {
         clickImg(this)
     });
@@ -48,11 +81,63 @@
         deleteImg(this);
     });
 
+    var client = new OSS.Wrapper({
+        region: 'oss-cn-beijing',
+        accessKeyId: 'LTAIz37oF3Eu7rCn',
+        accessKeySecret: 'a0cyHQLrUIZUu4XYp0Az9OcWZlhnxA',
+        bucket: 'ximeiimg'
+    });
+    //获取oss文件列表
+    client.list({
+        'max-keys': 10
+    }).then(function (result) {
+
+    }).catch(function (err) {
+
+    });
+    var tupiandizhijihe='';
+    //用于生成uuid
+    function S4() {
+        return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+    }
+    function guid() {
+        return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
+    }
+    var uuid = "cms"+guid();
+    $("#file").change(function(){
+        console.log("change");
+        client.multipartUpload(uuid, this.files[0]).then(function (result) {
+            if(tupiandizhijihe == ''){
+                tupiandizhijihe = tupiandizhijihe + result.name;
+            }else {
+                tupiandizhijihe = tupiandizhijihe + '@' + result.name;
+
+            }
+        }).catch(function (err) {
+        });
+    });
+    $(".tijiaopinglunzhongxin").click(function () {
+        var lenth = $('.pinglunzhongxinxing').children('.pinglunzhongxinxingxing1').length;
+        var content = $(".pinglunqu").val();
+        var id = getUrlParam('id');
+        submit(lenth,content,id,tupiandizhijihe);
+        tupiandizhijihe='';
+        $(".pinglunqu").val('');
+        $(".pinglunzhongxincont").hide();
+    });
     function addpicfun() {
         $(".addImg").click(function (e) {
             clickImg(this)
         });
         $(".upload_input").change(function (e) {
+
+            // client.multipartUpload(uuid, this.files[0]).then(function (result) {
+            //     console.log(result);
+            // }).catch(function (err) {
+            //     console.log(err);
+            // });
+
+
             change(this);
             $(".piccont").append(' <div class="article">' +
                 '<div class="item">' +
@@ -191,14 +276,6 @@
     //     autoPlay:true,
     //     loop:'false'
     // });
-    mapfun();
-    function mapfun() {
-        // 百度地图API功能
-        var map = new BMap.Map("xiangqingmap");    // 创建Map实例
-        map.centerAndZoom(new BMap.Point(36.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
-
-        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-    }
 
     //获取url中的参数
     function getUrlParam(name) {
@@ -221,6 +298,7 @@
                 $(".pinglunzhongxinmingcheng").html(data.name);
                 $("#yignwenming").html(data.engName);
                 $(".xiangqingmapaddr").html(data.address);
+                mapff(data.address);
                 $(".taocanyonghushuliang").html(data.replyCount);
                 for (var j = 0; j < (data.services).length; j++) {
                     taocantianjia(data.services[j], j + 1);
@@ -268,11 +346,12 @@
             + '<div class="taocanyonghulouceng">' + i + 'F</div>'
             + '</div>'
             + '<div class="taocanyonghupinglunneirong">' + data.content + '</div>'
-            + '<div class="taocanpinglunshijian"><span>' + data.createTime + '</span><div class="huifuanniu">回复</div></div>'
+            // + '<div class="taocanpinglunshijian"><span>' + data.createTime + '</span><div class="huifuanniu">回复</div></div>'
+            + '<div class="taocanpinglunshijian"><span>' + data.createTime + '</span></div>'
             + ' <div class="huifupinglunduv">'
             + '<textarea class="huifupinglunkuang"></textarea>'
-            + '<div class="fabiaopinglunbtndetail">'
-            + '<div class="fabiaopinglunbtnwenzidetail" id="' + data.id + '">发表评论</div>'
+            + '<div class="fabiaopinglunbtndetail" subid="' + data.id + '">'
+            + '<div class="fabiaopinglunbtnwenzidetail">发表评论</div>'
             + '</div>'
             + '</div>'
             + '</div>'
@@ -281,7 +360,7 @@
         $("#pinglunkongbai").before(str);
     }
 
-    jiazaipinglun(0, 10);
+    jiazaipinglun(0, 5);
     function jiazaipinglun(pagenum, pageSize) {
         var id = getUrlParam('id');
         $.ajax({
@@ -289,11 +368,24 @@
             type: "get",
             timeout: 5000,
             success: function (data) {
-
-                for (var j = 0; j < (data.replies).length; j++) {
-                    tianjiapinglun(data.replies[j], j + 1);
+                $(".taocanyonghupingluncont .taocanpingluncont").remove();
+                console.log(data.totalCount);
+                shangxiayefun(Math.ceil(data.totalCount/pageSize));
+                if (data.totalCount >= 4) {
+                    $("#fenye1").show();
+                    $("#fenye2").show();
+                    $("#fenye3").show();
+                    $("#fenye4").show();
+                } else {
+                    for (var j = 0; j < data.totalCount; j++) {
+                        $("#fenye" + (j + 1)).show();
+                    }
                 }
-
+                fenye(pagenum,data.totalCount,pageSize);
+                for (var j = 0; j < (data.replies).length; j++) {
+                    tianjiapinglun(data.replies[j], (pageSize*pagenum)+j + 1);
+                }
+                tianjiauifu();//评论函数
                 $(".huifuanniu").click(function () {//回复
                     if ($(this).parent().next().css('display') == 'none') {
                         $(this).parent().next().show();
@@ -326,6 +418,55 @@
     //         }
     //     });
     // }
+
+
+    function shangxiayefun(total) {
+        $(".lastpagebtn").click(function () {
+            var num = $(".numchoose").find("div").html();
+            if(num>1){
+                jiazaipinglun(num-2,5);
+            }
+
+        });
+        $(".nestpagebtn").click(function () {
+            var num = $(".numchoose").find("div").html();
+            if(num<total){
+                jiazaipinglun(num,5);
+            }
+
+        });
+    }
+    function zhengchangnum(num) {
+        var pagestr =' <div class="numchooseno">'
+            +'<div class="numchoosenum">'+num+'</div>'
+            +'</div>';
+        return pagestr;
+    }
+    function zhengchangnum2(num) {
+        var pagestr =' <div class="numchooseno numchoose">'
+            +'<div class="numchoosenum">'+num+'</div>'
+            +'</div>';
+        return pagestr;
+    }
+    function fenye(nowNum,total,pagesize) {
+        nowNum =parseInt(nowNum);
+        total=Math.ceil(total/pagesize);
+        $("#fenye").html(total);
+        $("#fenyecont").empty();
+
+        for(var i=0;i<total;i++){
+            if(nowNum === i){
+                $("#fenyecont").append(zhengchangnum2(i+1));
+            }else {
+                $("#fenyecont").append(zhengchangnum(i+1));
+            }
+        }
+        $(".numchooseno").click(function () {
+            var num = $(this).find("div").html();
+            jiazaipinglun(num-1,5);
+        })
+    }
+
 
     function taocantianjia(data,num) {//套餐添加
         var tao = '<div class="taocanbao">'
@@ -391,22 +532,37 @@
         });
     }
 
-    function submit() {
+    function tianjiauifu() {
+        $(".fabiaopinglunbtndetail").click(function () {
+            var id= $(this).attr("subid");
+            var content = $(this).prev().val();
+            submit(5,content,id,'');
+        });
+
+        $(".fabiaopinglunbtn").click(function () {
+            var id = getUrlParam('id');
+            var content = $("#zibuping").val();
+            submit(5,content,id,'');
+        });
+    }
+
+    function submit(star,content,id,imageUrls) {
 
         $.ajax({
             type: "POST",
             contentType: "application/x-www-form-urlencoded; charset=utf-8",
-            url: CFG.interfaceurl + "/yzzx/reply?yzzxId=10001",
+            url: CFG.interfaceurl + "/yzzx/reply?yzzxId="+id,
             data: {
-                star: 3,
-                content: "2134",
-                imageUrls: "https://ximeiimg.oss-cn-beijing.aliyuncs.com/all/xxyzzx.jpg@https://ximeiimg.oss-cn-beijing.aliyuncs.com/all/xxyzzx.jpg"
+                star: star,
+                content: content,
+                imageUrls: imageUrls
             },
             success: function (msg) {
-                console.log(msg);
+                $(".huifupinglunduv").hide();
+                $("#zibuping").val('');
+                jiazaipinglun(0, 5);
             },
             error: function (data) {
-                console.log(data);
             }
         });
     }

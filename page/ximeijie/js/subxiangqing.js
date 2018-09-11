@@ -128,7 +128,7 @@ $(function () {
         if(total<pagesize){
             pagesize=total;
         }
-        for(var i=0;i<pagesize;i++){
+        for(var i=0;i<total;i++){
             if(nowNum === i){
                 $("#fenyecont").append(zhengchangnum2(i+1));
             }else {
@@ -344,7 +344,7 @@ $(function () {
         }
 
         $.ajax({
-                url: CFG.interfaceurl + '/xmj/YZZX/query?price='+price+'&location='+chengshi+'&type='+fangzi+'&facility='+zhusu+'&service='+fuwu+'&sortBy='+sortBy+'&pageNo='+num+'&pageSize=12&order='+desc,
+                url: CFG.interfaceurl + '/xmj/YZZX/query?price='+price+'&location='+chengshi+'&type='+fangzi+'&facility='+zhusu+'&service='+fuwu+'&sortBy='+sortBy+'&pageNo='+num+'&pageSize=10&order='+desc,
             type: "get",
             timeout: 5000,
             success: function (data) {
@@ -362,7 +362,7 @@ $(function () {
                         $("#fenye" + (j + 1)).show();
                     }
                 }
-                fenye(num,data.totalCount,5);
+                fenye(num,data.totalCount,12);
                 $("#xianshiqu").find('.msgdetailm').remove();
                 if((data.items).length>0){
                     $(".youneirong").hide();
@@ -619,7 +619,7 @@ $(function () {
         $(".msgdetailm").click(function () {
             var pathname = window.location.href;
             var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);;
-            window.open(path+'yuezipinglun.html?id='+$(this).attr("detailid"));
+            window.location.href = path+'yuezipinglun.html?id='+$(this).attr("detailid");
         });
     }
     function addyuezi(data) {

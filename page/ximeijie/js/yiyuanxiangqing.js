@@ -355,7 +355,7 @@ $(function () {
                         $(".youneirong").hide();
                         $(".nestpagecont").show();
                         for (var i = 0; i < (data.items).length; i++) {
-                            addyuezi(data.items[i]);
+                            addyuezi2(data.items[i]);
                         }
                         tiaozhuanxiangqing();
                     }else {
@@ -504,10 +504,21 @@ var fuwu='';
     }
 
     function tiaozhuanxiangqing() {
-        $(".msgdetailm").click(function () {
+        // $(".msgdetailm").click(function () {
+        //     var pathname = window.location.href;
+        //     var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);;
+        //     window.open(path+'yuezipinglun.html?id='+$(this).attr("detailid"));
+        // });
+        $(".yishengtiaozhuan").click(function () {
+            var pathname = window.location.href;
+            var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);
+            window.location.href = path+'yishengpinglun.html?id='+$(this).attr("detailid");
+            // window.open(path+'yishengpinglun.html?id='+$(this).attr("detailid"));
+        });
+        $(".yiyuantiaozhuan").click(function () {
             var pathname = window.location.href;
             var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);;
-            window.open(path+'yuezipinglun.html?id='+$(this).attr("detailid"));
+            window.location.href = path+'yiyuanpinglun.html?id='+$(this).attr("detailid");
         });
     }
     function addyuezi(data) {
@@ -519,7 +530,7 @@ var fuwu='';
                 xingxing = xingxing + '<div class="anxing"></div>'
             }
         }
-        var str = '<div class="msgdetailm" detailid="' + data.id + '">'
+        var str = '<div class="msgdetailm yiyuantiaozhuan" detailid="' + data.id + '">'
             + '<div class="msgdetailpic" style="background-image: url(' + data.imageUrl + ');"></div>'
             + '<div class="msgdetailmtitlecont">'
             + '<div class="msgdetailmtitle"><span>' + data.name + '</span><div class="meishoucang"></div> </div>'
@@ -531,5 +542,25 @@ var fuwu='';
             + '</div>';
         $("#yuezikongbai").before(str);
     }
-
+    function addyuezi2(data) {
+        var xingxing = '';
+        for (var i = 1; i <= 5; i++) {
+            if (i <= data.star) {
+                xingxing = xingxing + '<div class="zixing"></div>'
+            } else {
+                xingxing = xingxing + '<div class="anxing"></div>'
+            }
+        }
+        var str = '<div class="msgdetailm yishengtiaozhuan" detailid="' + data.id + '">'
+            + '<div class="msgdetailpic" style="background-image: url(' + data.imageUrl + ');"></div>'
+            + '<div class="msgdetailmtitlecont">'
+            + '<div class="msgdetailmtitle"><span>' + data.name + '</span><div class="meishoucang"></div> </div>'
+            + '<div class="msgdetailmtitle3"><div class="weizhiicon"></div><span class="zuobiao">' + data.address + '</span></div>'
+            + '<div class="msgdetailmtitle4">套餐最低价格：' + data.minPrice + '</div>'
+            + '<div class="msgdetailmtitle5">' + xingxing
+            + '</div>'
+            + '</div>'
+            + '</div>';
+        $("#yuezikongbai").before(str);
+    }
 });

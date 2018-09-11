@@ -235,39 +235,6 @@
     //     loop:'false'
     // });
 
-    function mapff(didian) {
-        var map = null;
-        initialize();
-        function initialize() {
-
-            var geocoder = new google.maps.Geocoder();
-
-            //地址正向解析
-            geocoder.geocode({
-//                'address': 'Liberty Island, 10004 New York Harbor'
-                'address': didian
-            }, function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    var myOptions = {
-                        zoom: 12,
-                        center: results[0].geometry.location,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    };
-
-                    map = new google.maps.Map(document.getElementById("xiangqingmap"), myOptions);
-
-                    //定义标示
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: results[0].geometry.location,
-                        title: 'location',
-                        draggable: true
-                    });
-                    marker.setMap(map);
-                }
-            });
-        }
-    }
 
     //获取url中的参数
     function getUrlParam(name) {
@@ -281,16 +248,14 @@
     function jiazaixianshi() {
         var id = getUrlParam('id');
         $.ajax({
-            url: CFG.interfaceurl + '/yy/detail?id=' + id,
+            url: CFG.interfaceurl + '/ys/detail?id=' + id,
             type: "get",
             timeout: 5000,
             success: function (data) {
                 $("#titlename").html(data.name);
                 $("#dadename").html(data.name);
                 $(".pinglunzhongxinmingcheng").html(data.name);
-                $("#yignwenming").html(data.engName);
-                $(".xiangqingmapaddr").html(data.address);
-                mapff(data.address);
+                $(".yishengjieshaocont").html(data.abstract);
                 $(".taocanyonghushuliang").html(data.replyCount);
                 for (var j = 0; j < (data.services).length; j++) {
                     taocantianjia(data.services[j], j + 1);
@@ -338,8 +303,7 @@
             + '<div class="taocanyonghulouceng">' + i + 'F</div>'
             + '</div>'
             + '<div class="taocanyonghupinglunneirong">' + data.content + '</div>'
-            + '<div class="taocanpinglunshijian"><span>' + data.createTime + '</span></div>'
-            // + '<div class="taocanpinglunshijian"><span>' + data.createTime + '</span><div class="huifuanniu">回复</div></div>'
+            + '<div class="taocanpinglunshijian"><span>' + data.createTime + '</span><div class="huifuanniu">回复</div></div>'
             + ' <div class="huifupinglunduv">'
             + '<textarea class="huifupinglunkuang"></textarea>'
             + '<div class="fabiaopinglunbtndetail" subid="' + data.id + '">'
@@ -356,7 +320,7 @@
     function jiazaipinglun(pagenum, pageSize) {
         var id = getUrlParam('id');
         $.ajax({
-            url: CFG.interfaceurl + '/yy/replies?yyid=' + id + '&pageNo=' + pagenum + '&pageSize=' + pageSize,
+            url: CFG.interfaceurl + '/ys/replies?ysid=' + id + '&pageNo=' + pagenum + '&pageSize=' + pageSize,
             type: "get",
             timeout: 5000,
             success: function (data) {
@@ -543,7 +507,7 @@
         $.ajax({
             type: "POST",
             contentType: "application/x-www-form-urlencoded; charset=utf-8",
-            url: CFG.interfaceurl + "/yy/reply?ysId="+id,
+            url: CFG.interfaceurl + "/ys/reply?ysId="+id,
             data: {
                 star: star,
                 content: content,

@@ -462,6 +462,7 @@ p{
     width: 150px;
     height: 46px;
     background-color: #A978D6;
+    cursor: pointer;
 }
 .fabiaopinglunbtnwenzi{
     width: 100%;
@@ -820,16 +821,7 @@ p{
     width: auto;
     height: 100%;
 }
-.numchoose{
-    float: left;
-    width: auto;
-    height: 22px;
-    border-radius: 2px;
-    background-color: #A978D6;
-    margin-right: 10px;
-    color: #FFFFFF;
-    cursor: pointer;
-}
+
 .numchooseno{
     float: left;
     width: auto;
@@ -847,6 +839,16 @@ p{
     font-family: MicrosoftYaHeiUI;
     font-size: 14px;
 
+}
+.numchoose{
+    float: left;
+    width: auto;
+    height: 22px;
+    border-radius: 2px;
+    background-color: #A978D6;
+    margin-right: 10px;
+    color: #FFFFFF;
+    cursor: pointer;
 }
 .nestpagebtn{
     float: left;
@@ -1433,7 +1435,6 @@ p{
     height: auto;
 }
 .fabiaopinglunbtndetail{
-
     position: relative;
     margin-top: 30px;
     left: 85%;
@@ -1441,6 +1442,7 @@ p{
     height: 36px;
     background-color: #A978D6;
     border-radius: 4px;
+    cursor: pointer;
 }
 .fabiaopinglunbtnwenzidetail{
     width: 100%;

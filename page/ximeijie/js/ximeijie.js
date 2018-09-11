@@ -38,10 +38,9 @@
             success: function (data) {
                 $(".ximeijiemaincont .yuezi").remove();
                 for (var i = 0; i < data.length; i++) {
-
                     addyuezi(data[i]);
-
                 }
+                dianjitiaozhuanhanshu();
             },
             error: function (data) {
                 //alert("请求错误");
@@ -152,12 +151,18 @@
     $("#yueziquanbu").click(function () {
         var pathname = window.location.href;
         var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);;
-        window.open(path+'subxiangqing.html');
+        // window.open(path+'subxiangqing.html');
+        window.location.href =path+'subxiangqing.html';
     });
     $("#yiyuanquanbu").click(function () {
         var pathname = window.location.href;
         var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);;
-        window.open(path+'yiyuanxiangqing.html');
+        window.location.href = path+'yiyuanxiangqing.html';
+    });
+    $("#muyingquanbu").click(function () {
+        var pathname = window.location.href;
+        var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);;
+        window.location.href = path+'muyingxiangqing.html';
     });
     function chaxunyuezi(chaxuntiaojian,pagenum) {
         $.ajax({
@@ -171,6 +176,7 @@
                 for (var i = 0; i < data.items.length; i++) {
                     addyuezi2(data.items[i]);
                 }
+                dianjitiaozhuanhanshu();
             },
             error: function (data) {
                 //alert("请求错误");
@@ -227,6 +233,7 @@
                 for (var i = 0; i < data.items.length; i++) {
                     addyiyuan2(data.items[i]);
                 }
+                dianjitiaozhuanhanshu();
             },
             error: function (data) {
                 //alert("请求错误");
@@ -244,6 +251,7 @@
                 for (var i = 0; i < data.items.length; i++) {
                     addyiyuan3(data.items[i]);
                 }
+                dianjitiaozhuanhanshu();
             },
             error: function (data) {
                 //alert("请求错误");
@@ -264,6 +272,7 @@
                 for (var i = 0; i < data.items.length; i++) {
                     addyuezi(data.items[i]);
                 }
+                dianjitiaozhuanhanshu();
             },
             error: function (data) {
                 //alert("请求错误");
@@ -345,10 +354,9 @@
             success: function (data) {
                 $(".ximeijiemaincont .yisheng").remove();
                 for (var i = 0; i < data.length; i++) {
-
                     addyisheng(data[i]);
-
                 }
+                dianjitiaozhuanhanshu();
             },
             error: function (data) {
                 //alert("请求错误");
@@ -371,10 +379,9 @@
             success: function (data) {
                 $(".ximeijiemaincont .yiyuan").remove();
                 for (var i = 0; i < data.length; i++) {
-
                     addyiyiyuan(data[i]);
-
                 }
+                dianjitiaozhuanhanshu();
             },
             error: function (data) {
                 //alert("请求错误");
@@ -382,7 +389,7 @@
         });
     }
     function addyiyiyuan(data) {
-        var str =' <div class="ximeijiedetailcont yiyuan" tailid="'+data.id+'" tt="yisheng">'
+        var str =' <div class="ximeijiedetailcont yiyuan" tailid="'+data.id+'" tt="yiyuan">'
             +'<div class="ximeijiedetailcontpic" style="background-image: url('+data.imageUrl+')"></div>'
             +'<div class="ximeijiedetailcontpicdesc">'+data.name+'</div>'
             +'</div>';
@@ -397,10 +404,9 @@
             success: function (data) {
                 $(".ximeijiemaincont .muying").remove();
                 for (var i = 0; i < data.length; i++) {
-
                     addmuying(data[i]);
-
                 }
+                dianjitiaozhuanhanshu();
             },
             error: function (data) {
                 //alert("请求错误");
@@ -408,7 +414,7 @@
         });
     }
     function addmuying(data) {
-        var str =' <div class="ximeijiedetailcont muying" tailid="'+data.id+'" tt="muying">'
+        var str =' <div class="ximeijiedetailcont muying" tailid="'+data.id+'" tt="muying" tiaourl="'+data.buyLink+'">'
             +'<div class="ximeijiedetailcontpic" style="background-image: url('+data.imageUrl+')"></div>'
             +'<div class="ximeijiedetailcontpicdesc">'+data.name+'</div>'
             +'</div>';
@@ -425,6 +431,7 @@
                 for (var i = 0; i < data.length; i++) {
                     addbanzheng(data[i]);
                 }
+                dianjitiaozhuanhanshu();
             },
             error: function (data) {
                 //alert("请求错误");
@@ -437,6 +444,28 @@
             +'<div class="ximeijiedetailcontpicdesc">'+data.name+'</div>';
             +'</div>';
         $("#jigouname").before(str);
+    }
+    
+    function dianjitiaozhuanhanshu() {
+        var pathname = window.location.href;
+        var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);
+        $(".ximeijiedetailcont").click(function () {
+            var tt = $(this).attr("tt");
+            var tiaoid = $(this).attr("tailid");
+            if(tt === 'yisheng'){
+                window.location.href = path+'yishengpinglun.html?id='+tiaoid;
+            }
+            if(tt === 'yiyuan'){
+                window.location.href = path+'yiyuanpinglun.html?id='+tiaoid;
+            }
+            if(tt === 'yuezi'){
+                window.location.href = path+'yuezipinglun.html?id='+tiaoid;
+            }
+            if(tt === 'muying'){
+                // window.location.href = path+'yuezipinglun.html?id='+tiaoid;
+                window.location.href = path+'muyingxiangqing.html';
+            }
+        });
     }
     //定义百度统计按钮点击次数的函数
     function Baidu(category, evnet) {

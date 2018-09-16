@@ -5,7 +5,9 @@
 	<meta charset="UTF-8">
 	<title>话题</title>
 	<link rel="stylesheet" href="./css/topic.css">
+	<link rel="stylesheet" href="../../common/jquery-ui-1.10.0.custom.css">
 	<script src="../../common/jquery-1.8.1.min.js"></script>
+	<script src="../../common/jquery-ui-1.11.4.min.js"></script>
 	<script src="./js/topic.js"></script>
 </head>
 
@@ -20,7 +22,7 @@
 					<span id="headName" class="imgValue">Amaya Abshire</span>
 				</div>
 				<div>
-					<span class="imgValue">2018-04-25</span>
+					<span id="topictime" class="imgValue">2018-04-25</span>
 				</div>
 				<div class="operate">
 					<img src="./img/pgstrategy_details_icon_view.png" class="view-img">
@@ -28,7 +30,7 @@
 				</div>
 				<div class="operate">
 					<img src="./img/pgindex_hotartiles_icon_like.png" style="width: 18px;height: 13px" class="view-img">
-					<span class="imgValue">205</span>
+					<span id="priaseCount" class="imgValue">205</span>
 				</div>
 			</div>
 			<div id="description">
@@ -44,9 +46,9 @@
 				</div>
 			</div>
 			<div class="pinglun-input-view">
-				<textarea rows="3" cols="20" wrap="logical" maxlength="2000" placeholder="请输入...">
+				<textarea rows="3" cols="20" wrap="logical" maxlength="2000" placeholder="请输入..." id="replyinput">
 				</textarea>
-				<button>发表评论</button>
+				<button onclick="createsubreply()">发表评论</button>
 			</div>
 		</div>
 		<div style="width: 30%;height: 200px;position: relative">
@@ -84,7 +86,7 @@
 					</div>
 					<div class="time-view">
 						<span>{5}</span>
-						<a>回复</a>
+						<a onclick="clickReply({6})">回复</a>
 					</div>
 				</div>
 			</div>
@@ -96,6 +98,13 @@
 		</div>
 	</div>
 	
+	
+	
+	<div id="reply-view">
+		<textarea id="replyreplyCount"  maxlength="2000" placeholder="请输入..." ></textarea>
+		
+		<input type="hidden"  id="replyid"/>
+	</div>
 </body>
 
 </html>

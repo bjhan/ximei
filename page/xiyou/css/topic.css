@@ -80,9 +80,9 @@ body {
 }
 
 #userRange {
-	position: relative;
-	right: 140px;
-	bottom: 19px;
+	position: absolute;
+	top: 50px;
+	left: 86px;
 }
 
 .changququanzi {
@@ -98,7 +98,7 @@ body {
 
 #description {
 	min-height: 500px;
-	margin-top: 20x;
+	margin-top: 20px;
 }
 
 .operate:hover .imgValue {
@@ -193,4 +193,10 @@ body {
 	height: 40px;
 	margin: 1px 1px;
 	display: inline-block;
+}
+
+#reply-view textarea{
+	margin: 0 auto;
+	width: 95%;
+	height: 90%;
 }

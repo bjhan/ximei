@@ -94,11 +94,13 @@
 .shaopname{
     position: relative;
     width: 100%;
-    left: 2%;
-    text-align: left;
+    left: 0%;
+    text-align: center;
     font-family: MicrosoftYaHeiUI;
     font-size: 14px;
     color: #000000;
+    height: 30px;
+    margin-top: 10px;
 }
 .shaopprice{
     position: relative;

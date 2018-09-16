@@ -26,61 +26,6 @@
     if (isIE) {
         safariVersion = ua.match(/msie ([\d.]+)/)[1];
     }
-
-    function mapff(didian) {
-        var map = null;
-        initialize();
-        function initialize() {
-
-            var geocoder = new google.maps.Geocoder();
-
-            //地址正向解析
-            geocoder.geocode({
-//                'address': 'Liberty Island, 10004 New York Harbor'
-                'address': didian
-            }, function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    var myOptions = {
-                        zoom: 12,
-                        center: results[0].geometry.location,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP,
-                    };
-
-                    map = new google.maps.Map(document.getElementById("xiangqingmap"), myOptions);
-
-                    //定义标示
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: results[0].geometry.location,
-                        title: '',
-                        draggable: true
-                    });
-                    marker.setMap(map);
-                }
-            });
-        }
-    }
-    $(".addImg").click(function (e) {
-        clickImg(this)
-    });
-    $(".upload_input").change(function (e) {
-        change(this);
-        $(".piccont").append(' <div class="article">' +
-            '<div class="item">' +
-            '<img class="addImg" src="img/addImg.png" />' +
-            '<input name="url" type="file" class="upload_input" />' +
-            '<div class="preBlock">' +
-            '<img class="preview" id="preview" alt="" name="pic" width="190" height="190" />' +
-            '</div>' +
-            '<img class="delete" src="img/delete.png" />' +
-            '</div>' +
-            '</div>');
-        addpicfun();
-    });
-    $(".delete").click(function (e) {
-        deleteImg(this);
-    });
-
     var client = new OSS.Wrapper({
         region: 'oss-cn-beijing',
         accessKeyId: 'LTAIz37oF3Eu7rCn',
@@ -125,19 +70,32 @@
         $(".pinglunqu").val('');
         $(".pinglunzhongxincont").hide();
     });
+    $(".addImg").click(function (e) {
+        clickImg(this)
+    });
+    $(".upload_input").change(function (e) {
+        change(this);
+        $(".piccont").append(' <div class="article">' +
+            '<div class="item">' +
+            '<img class="addImg" src="img/addImg.png" />' +
+            '<input name="url" type="file" class="upload_input" />' +
+            '<div class="preBlock">' +
+            '<img class="preview" id="preview" alt="" name="pic" width="190" height="190" />' +
+            '</div>' +
+            '<img class="delete" src="img/delete.png" />' +
+            '</div>' +
+            '</div>');
+        addpicfun();
+    });
+    $(".delete").click(function (e) {
+        deleteImg(this);
+    });
+
     function addpicfun() {
         $(".addImg").click(function (e) {
             clickImg(this)
         });
         $(".upload_input").change(function (e) {
-
-            // client.multipartUpload(uuid, this.files[0]).then(function (result) {
-            //     console.log(result);
-            // }).catch(function (err) {
-            //     console.log(err);
-            // });
-
-
             change(this);
             $(".piccont").append(' <div class="article">' +
                 '<div class="item">' +
@@ -277,6 +235,7 @@
     //     loop:'false'
     // });
 
+
     //获取url中的参数
     function getUrlParam(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
@@ -289,16 +248,14 @@
     function jiazaixianshi() {
         var id = getUrlParam('id');
         $.ajax({
-            url: CFG.interfaceurl + '/yzzx/detail?id=' + id,
+            url: CFG.interfaceurl + '/ys/detail?id=' + id,
             type: "get",
             timeout: 5000,
             success: function (data) {
                 $("#titlename").html(data.name);
                 $("#dadename").html(data.name);
                 $(".pinglunzhongxinmingcheng").html(data.name);
-                $("#yignwenming").html(data.engName);
-                $(".xiangqingmapaddr").html(data.address);
-                mapff(data.address);
+                $(".yishengjieshaocont").html(data.abstract);
                 $(".taocanyonghushuliang").html(data.replyCount);
                 for (var j = 0; j < (data.services).length; j++) {
                     taocantianjia(data.services[j], j + 1);
@@ -346,8 +303,7 @@
             + '<div class="taocanyonghulouceng">' + i + 'F</div>'
             + '</div>'
             + '<div class="taocanyonghupinglunneirong">' + data.content + '</div>'
-            // + '<div class="taocanpinglunshijian"><span>' + data.createTime + '</span><div class="huifuanniu">回复</div></div>'
-            + '<div class="taocanpinglunshijian"><span>' + data.createTime + '</span></div>'
+            + '<div class="taocanpinglunshijian"><span>' + data.createTime + '</span><div class="huifuanniu">回复</div></div>'
             + ' <div class="huifupinglunduv">'
             + '<textarea class="huifupinglunkuang"></textarea>'
             + '<div class="fabiaopinglunbtndetail" subid="' + data.id + '">'
@@ -364,7 +320,7 @@
     function jiazaipinglun(pagenum, pageSize) {
         var id = getUrlParam('id');
         $.ajax({
-            url: CFG.interfaceurl + '/yzzx/replies?yzzxid=' + id + '&pageNo=' + pagenum + '&pageSize=' + pageSize,
+            url: CFG.interfaceurl + '/ys/replies?ysid=' + id + '&pageNo=' + pagenum + '&pageSize=' + pageSize,
             type: "get",
             timeout: 5000,
             success: function (data) {
@@ -552,7 +508,7 @@
         $.ajax({
             type: "POST",
             contentType: "application/x-www-form-urlencoded; charset=utf-8",
-            url: CFG.interfaceurl + "/yzzx/reply?yzzxId="+id,
+            url: CFG.interfaceurl + "/ys/reply?ysId="+id,
             data: {
                 star: star,
                 content: content,

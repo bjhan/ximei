@@ -238,9 +238,11 @@
 
     function initswiper(bannerarry) {//首页滑动
         bannernum = bannerarry.length;
+
         for (var i = 0; i < bannerarry.length; i++) {
             $("#sections").append("<div class=\"section\" id=\"section" + bannerarry[i].id + "\" style=\"filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + bannerarry[i].imageUrl + "',sizingMethod='scale');background-image:url(" + bannerarry[i].imageUrl + ");background-repeat: no-repeat;background-size: 100% 100%;\"></div>")
         }
+
 
         $("#container").PageSwitch({
             direction: 'horizontal',
@@ -249,6 +251,7 @@
             autoPlay: true,
             loop: 'false'
         });
+        $(".pages").width(bannernum*120);
     }
 
     getzhengcething();
@@ -282,14 +285,17 @@
         $("#zhengce").append(str);
     }
 
+
     tianjiaredianwenzhang(0, 3);
     function tianjiaredianwenzhang(pageNo, pageSize) {//添加热点文章
+
         $.ajax({
             url: CFG.interfaceurl + '/homepage/posts?pageNo=' + pageNo + '&pageSize=' + pageSize,
             type: "get",
             timeout: 5000,
             success: function (data) {
                 nowpageNo = pageNo;
+                shangxiayefun(data.totalCount);
                 if (data.totalCount >= 4) {
                     $("#fenye1").show();
                     $("#fenye2").show();
@@ -301,7 +307,9 @@
                     }
                 }
 
-                $("#redianwenzhangshu").html(data.totalCount);
+                $("#redianwenzhangshu").html(Math.ceil(data.totalCount/pageSize));
+                fenye(pageNo,data.totalCount,pageSize);
+                $("#redianwenzhang .hotcompositioncont").remove();
                 for (var i = 0; i < (data.posts).length; i++) {
                     addredianwenzhang(data.posts[i]);
                 }
@@ -312,6 +320,54 @@
         });
     }
 
+    function shangxiayefun(total) {
+        $(".lastpagebtn").click(function () {
+            var num = $(".numchoose").find("div").html();
+            if(num>1){
+                tianjiaredianwenzhang((num-2)*3, 3);
+            }
+
+        });
+        $(".nestpagebtn").click(function () {
+            var num = $(".numchoose").find("div").html();
+            if(num<total){
+                tianjiaredianwenzhang(num*3, 3);
+            }
+
+        });
+    }
+    function fenye(nowNum,total,pagesize) {
+        nowNum = nowNum/pagesize;
+        nowNum =parseInt(nowNum);
+        $("#fenyecont").empty();
+        total=Math.ceil(total/pagesize);
+        if(total<pagesize){
+            pagesize=total;
+        }
+        for(var i=0;i<total;i++){
+            if(nowNum === i){
+                $("#fenyecont").append(zhengchangnum2(i+1));
+            }else {
+                $("#fenyecont").append(zhengchangnum(i+1));
+            }
+        }
+        $(".numchooseno").click(function () {
+            var num = $(this).find("div").html();
+            tianjiaredianwenzhang((num-1)*3, 3);
+        })
+    }
+    function zhengchangnum(num) {
+        var pagestr =' <div class="numchooseno">'
+            +'<div class="numchoosenum">'+num+'</div>'
+        +'</div>';
+        return pagestr;
+    }
+    function zhengchangnum2(num) {
+        var pagestr =' <div class="numchooseno numchoose">'
+            +'<div class="numchoosenum">'+num+'</div>'
+        +'</div>';
+        return pagestr;
+    }
     function addredianwenzhang(data) {
         var str = '<div class="hotcompositioncont">'
             + '<img class="hotpic" src="' + data.imageUrl + '">'

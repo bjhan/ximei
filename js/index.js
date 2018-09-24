@@ -18,6 +18,7 @@
         $("#xiyouquan").click(function () {
             $(".chooseline").hide();
             $(this).find("chooseline").show();
+            $("#iframecont").attr("src","page/xiyou/xiyou.html");
         });
         $("#gonglue").click(function () {
             $(".chooseline").hide();

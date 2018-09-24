@@ -1,8 +1,6 @@
 html,
 body {
 	width: 100%;
-	display: flex;
-	justify-content: center;
 	padding: 0;
 	margin: 0;
 }
@@ -10,6 +8,7 @@ body {
 .content {
 	width: 1200px;
 	min-height: 200px;
+
 }
 
 #introduce>p:first-child,
@@ -88,4 +87,72 @@ body {
 #applycircle {
 	position: relative;
 	left: 74px;
+}
+
+
+
+.article {
+	float: left;
+	margin-right: 20px;
+	padding: 0px;
+	min-height: 100px;
+}
+.item {
+	width: 58px;
+	height: 58px;
+	float: left;
+	position: relative;
+	margin: 0px;
+}
+.addImg {
+	width: 58px;
+	height: 58px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	cursor: pointer;
+}
+.preview,.preBlock{
+	position: absolute;
+	display: block;
+	width: 58px;
+	height: 58px;
+	left: 0;
+	top: 0;
+}
+.delete {
+	width: 20px;
+	position: absolute;
+	right: -10px;
+	top: -5px;
+	cursor: pointer;
+	display: none;
+}
+.preBlock img {
+	display: block;
+	width: 58px;
+	height: 58px;
+}
+.upload_input{
+	display: block;
+	width: 0;
+	height: 0;
+	-webkit-opacity: 0.0;
+	/* Netscape and Older than Firefox 0.9 */
+	-moz-opacity: 0.0;
+	/* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+	-khtml-opacity: 0.0;
+	/* IE9 + etc...modern browsers */
+	opacity: .0;
+	/* IE 4-9 */
+	filter:alpha(opacity=0);
+	/*This works in IE 8 & 9 too*/
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	/*IE4-IE9*/
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+.piccont{
+	display: inline-block;
+	height: 100px;
 }

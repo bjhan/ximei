@@ -1,0 +1,66 @@
+html,
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    width: 1200px;
+    min-height: 200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 30px;
+    color: #4A4A4A;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.shuomin p {
+    font-size: 14px;
+    color: #4A4A4A;
+}
+
+.quanziuser-row > div > img {
+    width: 105px;
+    height: 105px;
+}
+
+.quanziuser-row > div {
+    display: inline-block;
+    position: relative;
+    margin-right: 50px;
+}
+
+.quanziuser-row > label {
+    display: block;
+    margin: 10px 0;
+    color: #4A4A4A;
+}
+
+.quanziuser-row {
+    margin-top: 50px;
+
+}
+
+.quanziuser-row > div > p {
+    margin: 0px 34px;
+}
+
+.quanziuser-row > div > .firstspan {
+    position: absolute;
+    left: 114px;
+    top: 0px;
+    font-size: 14px;
+    color: #A978D6;
+}
+
+.quanziuser-row > div > .secondspan {
+    position: absolute;
+    left: 114px;
+    top: 30px;
+    font-size: 14px;
+    color: #9B9B9B;
+}

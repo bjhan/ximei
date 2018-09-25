@@ -144,6 +144,7 @@ var submit = function () {
             url: baseUrl + "/xyq/forum/request",
             data: obj,
             success: function (msg) {
+				console.log(msg);
                 location.href = "./circle.html?id=" + msg.id
             },
             error: function (data) {

@@ -429,7 +429,7 @@ a:hover {text-decoration:none;}
 }
 
 .content-list-bottom div {
-    width: 78px;
+    /*width: 78px;*/
     height: 18px;
     font-family: MicrosoftYaHeiUI;
     font-size: 14px;
@@ -439,7 +439,6 @@ a:hover {text-decoration:none;}
     margin-left: 100px;
     margin-top: 23px;
 }
-
 .content-list-time {
 }
 

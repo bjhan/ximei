@@ -203,7 +203,7 @@ $(function () {
                 $("#content-list").append(outer);
             }
         }
-        clamp();
+        // clamp();
     }
 
     // 热门问题

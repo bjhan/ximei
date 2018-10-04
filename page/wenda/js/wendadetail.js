@@ -370,8 +370,6 @@ $(function () {
         if (words.length < 10 || $('#mul_input').val() == text){
             Toast("回答不得少于10个字！",1000);
             return;
-        }else {
-            Toast("回答成功，积分+10！",1000);
         }
 
         var content = $('#mul_input').val();
@@ -412,6 +410,9 @@ $(function () {
                         '</div>';
                     outer.append(inner);
                     $(".content-answer-one").before(outer);
+                    Toast("回答成功，积分+10！",1000);
+                }else {
+                    Toast(data.message, 1000);
                 }
             },
             error: function () {

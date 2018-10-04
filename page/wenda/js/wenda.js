@@ -1,8 +1,12 @@
 $(function () {
-    showHotQuestion();
+
+
+
+    var num = 0;
+    showHotQuestion(0, 6);
 
     // 行数限制插件
-    clamp();
+
     function clamp() {
         var titles = document.getElementsByClassName("p-title");
         var answers = document.getElementsByClassName("p-answer");
@@ -85,134 +89,207 @@ $(function () {
         $("#" + id + " a").css("color", "#fff");
 
         // 切换内容
-        var num = $(this).attr("num");
+        num = $(this).attr("num");
         // 热门问题
         if (num == 0){
-            showHotQuestion();
-            clamp();
+            showHotQuestion(0,6);
         }else if (num == 1){
         // 最新问题
-            showNewQuestion();
-            clamp();
+            showNewQuestion(0,6);
         }else if (num == 2){
         // 我的提问
+            $(".red-point").addClass("hidden");
             showMyQuestion();
-            clamp();
         }else if (num == 3){
         // 我的回答
             showMyAnswer();
-            clamp();
         }
 
     });
 
     // 展示热门问题或最新问题
-    function showQuestionKuai() {
-        var outerone = $('<div class="content-hot content-hot-first"></div>');
-        var outer = $('<div class="content-hot"></div>');
-        var inner = '<!--题目-->'+
-            '<div class="content-hot-title pointer"><a href="wendadetail.html?id=1">'+
-            '<p class="p-title pointer">'+
-            'adsfafasdf asdf dsa fsdf sdar热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题'+
-            '热门问题热门问题热门问题热门问aaa题热门问题热门问题热门问题热门问题热门问题热门问题热门g 问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题'+
-            '</p></a>'+
-            '</div>'+
-            '<!--用户信息-->'+
-            '<div class="content-hot-info pointer">'+
-            '<div class="content-hot-img"><img src="img/img_1.png"></div>'+
-            '<div class="content-hot-username">Mary McCormick</div>'+
-            '<div class="content-hot-level">Lv1</div>'+
-            '</div>'+
-            '<!--回答-->'+
-            '<div class="content-hot-answer pointer"><a href="wendadetail.html?id=1">'+
-            '<p class="p-answer pointer">'+
-            '这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，'+
-            '这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，'+
-            '这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，'+
-            '这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，'+
-            '这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，'+
-            '这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，'+
-            '</p></a>'+
-            '<!--点赞-->'+
-            '<div class="content-hot-praise pointer">'+
-            '<div class="content-hot-praiseimg"><img src="img/zan.png"></div>'+
-            '<div class="content-hot-praisenum">356</div>'+
-            '</div>'+
-            '<div class="content-hot-about">'+
-            '<!--回复-->'+
-            '<div class="content-hot-replyimg"><img src="img/reply.png"></div>'+
-            '<div class="content-hot-reply">共<span>xxxx</span>条回复</div>'+
-            '<!--收藏-->'+
-            '<div class="pointer collect" style="float: left;">'+
-            '<div class="content-hot-collectionimg"><img src="img/uncollection.png"></div>'+
-            '<div class="content-hot-collection">收藏</div>'+
-            '</div>'+
-            '</div>'+
-            '</div>';
-        var more = '<div class="content-bottom-more pointer">查看更多</div>';
-        outerone.append(inner);
-        outer.append(inner);
-        outer.append(more);
-        $("#content-list").append(outerone);
-        $("#content-list").append(outer);
+    function showQuestionKuai(data, state) {
+        if (state){
+            $("#content-list").empty();
+        }else {
+            $(".lookMore").addClass("hidden");
+        }
+        if (data.length <= 0 || data == undefined){
+            return;
+        }
+        for (var i=0; i<data.length; i++){
+            var outerone = $('<div class="content-hot content-hot-first"></div>');
+            var outer = $('<div class="content-hot"></div>');
+            var inner = '<!--题目-->'+
+                '<div class="content-hot-title pointer"><a href="wendadetail.html?id='+data[i].id+'" target="_blank">'+
+                '<p class="p-title pointer">'+ data[i].title +
+                '</p></a>'+
+                '</div>'+
+                '<!--用户信息-->'+
+                '<div class="content-hot-info pointer">'+
+                '<div class="content-hot-img"><img src="'+ data[i].usericon +'" width="26px"></div>'+
+                '<div class="content-hot-username">'+ data[i].username +'</div>'+
+                '<div class="content-hot-level">Lv '+data[i].userlevel+'</div>'+
+                '</div>'+
+                '<!--回答-->'+
+                '<div class="content-hot-answer pointer"><a href="wendadetail.html?id=1">'+
+                '<p class="p-answer pointer">'+ data[i].content+
+                '</p></a>'+
+                '<!--点赞-->'+
+                '<div class="content-hot-praise pointer" questionid="'+ data[i].id +'" prisestate="0">'+
+                '<div class="content-hot-praiseimg"><img src="img/zan.png"></div>'+
+                '<div class="content-hot-praisenum">'+data[i].prisecount+'</div>'+
+                '</div>'+
+                '<div class="content-hot-about">'+
+                '<!--回复-->'+
+                '<div class="content-hot-replyimg"><img src="img/reply.png"></div>'+
+                '<div class="content-hot-reply">共<span>'+data[i].totalReplycount+'</span>条回复</div>'+
+                '<!--收藏-->'+
+                '<div class="pointer collect" style="float: left;" questionid="'+ data[i].id +'">'+
+                '<div class="content-hot-collectionimg"><img src="img/uncollection.png"></div>'+
+                '<div class="content-hot-collection">收藏</div>'+
+                '</div>'+
+                '</div>'+
+                '</div>';
+            var more = '<div class="content-bottom-more pointer lookMore">查看更多</div>';
+            if (i==0){
+                outerone.append(inner);
+                $("#content-list").append(outerone);
+            }else if (i == 5){
+                outer.append(inner);
+                outer.append(more);
+                $("#content-list").append(outer);
+            }else {
+                outer.append(inner);
+                $("#content-list").append(outer);
+            }
+        }
+        clamp();
     }
 
     // 展示我的提问或我的回答
-    function showQuestionTiao() {
-        var outerone = $('<div class="content-search-list content-search-listfirst"></div>');
-        var outer = $('<div class="content-search-list"></div>');
-        var inner = '<div>'+
-            '<div class="content-list-point"></div>'+
-            '<div class="content-list-title"><a href="wendadetail.html?id=1">'+
-            '<p class="p-title pointer">'+
-            '这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？'+
-            '这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？'+
-            '</p></a>'+
-            '</div>'+
-            '</div>'+
-            '<div class="content-list-bottom">'+
-            '<div class="content-list-focus"><span class="content-list-focusnum">15</span>个关注</div>'+
-            '<div class="content-list-answer"><span class="content-list-answernum">13</span>个回答</div>'+
-            '<div class="content-list-time">2018-06-05</div>'+
-            '</div>';
-        outerone.append(inner);
-        outer.append(inner);
-        $("#content-list").append(outerone);
-        $("#content-list").append(outer);
+    function showQuestionTiao(data,question) {
+        $("#content-list").empty();
+        if (data.length <= 0 || data == undefined){
+            if (question){
+                var content = '<div class="div-no-question">还没有提问，<span class="askquestions pointer">提问</span>第一个问题吧！</div>';
+                $("#content-list").append(content);
+            }else {
+                var content = '<div class="div-no-question">还没有回答，看看<span class="to-hot-question pointer">为你推荐的问题</span></div>';
+                $("#content-list").append(content);
+            }
+            return;
+        }
+        for (var i=0; i<data.length; i++){
+            var outerone = $('<div class="content-search-list content-search-listfirst"></div>');
+            var outer = $('<div class="content-search-list"></div>');
+            var inner = '<div>'+
+                '<div class="content-list-point"></div>'+
+                '<div class="content-list-title"><a href="wendadetail.html?id='+data[i].id+'" target="_blank">'+
+                '<p class="p-title pointer">'+ (question==true?data[i].title:data[i].content)+
+                '</p></a>'+
+                '</div>'+
+                '</div>'+
+                '<div class="content-list-bottom">'+
+                '<div class="content-list-focus"><span class="content-list-focusnum">'+data[i].prisecount+'</span>个关注</div>'+
+                '<div class="content-list-answer"><span class="content-list-answernum">'+(question==true?data[i].totalReplycount:data[i].sharecount)+'</span>'+(question==true?"个回答":"个分享")+'</div>'+
+                '<div class="content-list-time" style="width: 130px;">'+data[i].createTime+'</div>'+
+                '</div>';
+            if (i == 0){
+                outerone.append(inner);
+                $("#content-list").append(outerone);
+            } else {
+                outer.append(inner);
+                $("#content-list").append(outer);
+            }
+        }
+        clamp();
     }
 
     // 热门问题
-    function showHotQuestion() {
-        $("#content-list").empty();
-        showQuestionKuai();
+    function showHotQuestion(offset, limit) {
+        $.ajax({
+            type: "get",
+            url: CFG.interfaceurl + "/wd/question/list?sortBy=totalreplycount&offset="+ offset +"&limit=" + limit,
+            dateType: "json",
+            success: function (data) {
+                if (data.totalCount > 0) {
+                    if (limit == 10000){
+                        showQuestionKuai(data.items, false);
+                    }else {
+                        showQuestionKuai(data.items, true);
+                    }
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: true
+        });
     }
 
     // 最新问题
-    function showNewQuestion() {
-        $("#content-list").empty();
-        showQuestionKuai();
+    function showNewQuestion(offset, limit) {
+        $.ajax({
+            type: "get",
+            url: CFG.interfaceurl + "/wd/question/list?sortBy=createtime&offset="+ offset +"&limit=" + limit,
+            dateType: "json",
+            success: function (data) {
+                if (data.totalCount > 0) {
+                    if (limit == 10000){
+                        showQuestionKuai(data.items, false);
+                    }else {
+                        showQuestionKuai(data.items, true);
+                    }
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: true
+        });
     }
 
     // 我的提问
     function showMyQuestion() {
-        $("#content-list").empty();
-        if (false){
-            var content = '<div class="div-no-question">还没有提问，<span class="askquestions pointer">提问</span>第一个问题吧！</div>';
-            $("#content-list").append(content);
-        }else {
-            showQuestionTiao();
-        }
+        $.ajax({
+            type: "get",
+            url: CFG.interfaceurl + "/wd/myquestion/list?offset=0&limit=10000",
+            dateType: "json",
+            success: function (data) {
+                if (data.totalCount > 0) {
+                    showQuestionTiao(data.items, true);
+                }else {
+                    var content = '<div class="div-no-question">还没有提问，<span class="askquestions pointer">提问</span>第一个问题吧！</div>';
+                    $("#content-list").append(content);
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: true
+        });
     }
 
     // 我的回答
     function showMyAnswer() {
-        $("#content-list").empty();
-        if (true){
-            var content = '<div class="div-no-question">还没有回答，看看<span class="to-hot-question pointer">为你推荐的问题</span></div>';
-            $("#content-list").append(content);
-        }else {
-            showQuestionTiao();
-        }
+        $.ajax({
+            type: "get",
+            url: CFG.interfaceurl + "/wd/myanswer/list?offset=0&limit=10000",
+            dateType: "json",
+            success: function (data) {
+                if (data.totalCount > 0) {
+                    showQuestionTiao(data.items, false);
+                }else {
+                    var content = '<div class="div-no-question">还没有回答，看看<span class="to-hot-question pointer">为你推荐的问题</span></div>';
+                    $("#content-list").append(content);
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: true
+        });
     }
 
     // 点击推荐问题
@@ -235,18 +312,96 @@ $(function () {
         $(".content-question-outer").css("display", "none");
     });
 
+    // 点击回答
+    $("body").on('click', '.answer',function(){
+        $("#answer").click();
+    });
+
+    // 点击查看更多
+    $("body").on('click', '.lookMore',function(){
+        if (num == 0){
+            showHotQuestion(6, 10000);
+        }else if (num == 1){
+            showNewQuestion(6, 10000);
+        }
+    });
+
     // 搜索
     $(".content-top-search").click(function () {
-        $(".content-question-show").css("display", "none");
-        $(".content-question-search").css("display", "block");
+        var url;
+        if (num == 0){
+            url = "/wd/question/list?title="+$("#searchStr").val()+"&sortBy=prisecount&prisecount&offset=0&limit=10000";
+        }else if (num == 1){
+            url = "/wd/question/list?title="+$("#searchStr").val()+"&sortBy=createtime&prisecount&offset=0&limit=10000";
+        }else if (num == 2){
+            url = "/wd/myquestion/list?title="+$("#searchStr").val()+"&offset=0&limit=10000";
+        }else if (num ==3){
+            url = "/wd/myanswer/list?content="+$("#searchStr").val()+"&offset=0&limit=10000";
+        }
+        $.ajax({
+            type: "get",
+            url: CFG.interfaceurl + url,
+            dateType: "json",
+            success: function (data) {
+                if (num == 0){
+                        showQuestionTiao(data.items, true);
+                }else if (num == 1){
+                        showQuestionTiao(data.items, true);
+                }else if (num == 2){
+                        showQuestionTiao(data.items, true);
+                }else if (num ==3){
+                        showQuestionTiao(data.items, false);
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: true
+        });
+        // $(".content-question-show").css("display", "none");
+        // $(".content-question-search").css("display", "block");
     });
 
     // 收藏
-    $(".collect").click(function () {
+    $("body").on('click', '.collect',function(){
+        // 取消
         if ($(this).hasClass("active")){
+            $.ajax({
+                type: "post",
+                url: CFG.interfaceurl + "/wd/question/collect/cancel",
+                dateType: "json",
+                data: {
+                    id:$(this).attr("questionid")
+                },
+                success: function (data) {
+                    if (data.code == "success") {
+                    }
+                },
+                error: function () {
+                    return;
+                },
+                async: true
+            });
             $(this).find("img").attr("src","img/uncollection.png");
             $(this).removeClass("active");
         }else {
+        // 收藏
+            $.ajax({
+                type: "post",
+                url: CFG.interfaceurl + "/wd/question/collect",
+                dateType: "json",
+                data: {
+                    id:$(this).attr("questionid")
+                },
+                success: function (data) {
+                    if (data.code == "success") {
+                    }
+                },
+                error: function () {
+                    return;
+                },
+                async: true
+            });
             $(this).find("img").attr("src","img/collection.png");
             $(this).addClass("active");
         }
@@ -254,7 +409,52 @@ $(function () {
 
     // 点赞
     $("body").on('click', '.content-hot-praise',function(){
-        $(this).children(".content-hot-praisenum").text(357);
+        var num = $(this).children(".content-hot-praisenum").text();
+        var state = $(this).attr("prisestate");
+        if (state == 0){
+            $.ajax({
+                type: "post",
+                url: CFG.interfaceurl + "/wd/question/prise",
+                dateType: "json",
+                data: {
+                    id:$(this).attr("questionid")
+                },
+                success: function (data) {
+                    if (data.code == "success") {
+
+                    }
+                },
+                error: function () {
+                    return;
+                },
+                async: true
+            });
+            $(this).children(".content-hot-praisenum").text(parseInt(num)+1);
+            $(this).attr("prisestate","1");
+        }else if (state == 1){
+            Toast("一天只能点赞一次话题回答！",1000);
+            return;
+            // $.ajax({
+            //     type: "post",
+            //     url: CFG.interfaceurl + "/wd/question/prise/cancel",
+            //     dateType: "json",
+            //     data: {
+            //         id:$(this).attr("questionid")
+            //     },
+            //     success: function (data) {
+            //         if (data.code == "success") {
+            //
+            //         }
+            //     },
+            //     error: function () {
+            //         return;
+            //     },
+            //     async: true
+            // });
+            // $(this).children(".content-hot-praisenum").text(parseInt(num)-1);
+            // $(this).attr("prisestate","0");
+        }
+
     });
 
     // 提交提问
@@ -271,9 +471,29 @@ $(function () {
             Toast("请添加问题描述！",1000);
             return;
         }
-        $(location).attr('href', 'wendadetail.html?id=1');
+        $.ajax({
+            type: "post",
+            url: CFG.interfaceurl + "/wd/question/create",
+            dateType: "json",
+            data: {
+                title:$(".content-question-title").val(),
+                content: $('#mul_input').val()
+            },
+            success: function (data) {
+                if (data.code == "success") {
+                    $(".content-question-cancel").click();
+                    window.open('wendadetail.html?id='+data.id);
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: false
+        });
+        // $(location).attr('href', 'wendadetail.html?id=1');
 
     });
+
 
     //自定义弹框
     function Toast(msg,duration){

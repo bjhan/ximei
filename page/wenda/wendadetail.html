@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>详情</title>
+    <title>问答详情</title>
     <link rel="stylesheet" href="css/wendadetail.css">
     <link href="kindeditor-4.1.10/themes/default/default.css" rel="stylesheet" />
     <script src="js/jquery.min.2.1.4.js"></script>
     <script src="js/wendadetail.js"></script>
+    <script src="js/config.js"></script>
     <script src="kindeditor-4.1.10/kindeditor-min.js"></script>
     <script src="kindeditor-4.1.10/lang/zh_CN.js"></script>
 </head>
@@ -19,9 +20,10 @@
             <div class="content-question-top">
                 <!--题目-->
                 <div class="content-question-title">热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题</div>
+                <div class="content-question-content" style="display: none">热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题</div>
                 <!--用户信息-->
                 <div class="content-question-info">
-                    <div class="content-info-img"><img src="img/img_1.png"></div>
+                    <div class="content-info-img"><img src="img/img_1.png" width="26px"></div>
                     <div class="content-info-name">Mary McCormick</div>
                     <div class="content-info-level">Lv1</div>
                     <div class="content-change pointer" id="change-question">
@@ -29,7 +31,7 @@
                         <div class="content-change-text">修改</div>
                     </div>
                     <div class="content-info-data">2018-06-05</div>
-                    <div class="content-info-time">18：00</div>
+                    <!--<div class="content-info-time">18：00</div>-->
                 </div>
             </div>
             <div class="content-question-bottom">
@@ -46,7 +48,7 @@
             <div class="content-question-written">写下你的问题</div>
             <input class="question-title" type="text" placeholder="写下你的问题标题" name="title">
             <div class="question-answer">
-                <textarea id="mul_input1" name="content1" style="width:1091px;height:313px;visibility:hidden;display: block;resize: none;"><span style="color: #9B9B9B;">写回答……</span></textarea>
+                <textarea id="mul_input1" name="content1" style="width:1091px;height:313px;visibility:hidden;display: block;resize: none;"></textarea>
             </div>
             <div class="content-question-submit pointer">提交答案</div>
             <div class="content-question-cancel pointer">取消</div>

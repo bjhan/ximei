@@ -1,22 +1,23 @@
 var baseUrl = "http://47.98.119.215:80/web/api/v1/";
+var pagenumber = 1; 
 $(function () {
 	gettoplevels();
 	gettopvotes();
 	gettoplikecounts();
-	initPageNation();
+	initPageNation(5,20);
 	getposts();
 	getRecommendforum();
 	myactivecounts();
 	getmyactivecounts();
 })
 
-var initPageNation = function () {
+var initPageNation = function (numberOfPages,totalnumber) {
 	$('#example').bootstrapPaginator({
 		currentPage: 1, //当前的请求页面。
-		totalPages: 20, //一共多少页。
+		totalPages: Math.ceil(totalnumber/numberOfPages), //一共多少页。
 		size: "normal", //应该是页眉的大小。
 		alignment: "right",
-		numberOfPages: 5, //一页列出多少数据。
+		numberOfPages: numberOfPages, //一页列出多少数据。
 		itemTexts: function (type, page, current) { //如下的代码是将页眉显示的中文显示我们自定义的中文。
 			switch (type) {
 				case "first":
@@ -28,9 +29,14 @@ var initPageNation = function () {
 				case "last":
 					return "末页";
 				case "page":
-					return page;
+				
+				 return page;
 			}
-		}
+		},
+		 onPageClicked: function (event,originalEvent,type,page) {
+               pagenumber =page;
+               getposts();
+            }
 	});
 }
 
@@ -88,8 +94,11 @@ var getposts = function () {
 		'<div class="c"> <p class="hottitle"><a href="./topic.html?id={5}">{0}</a></p> <div class="a"> <img class="hotimg" src="{1}" height="405" width="640"/> <div class="b"> <p class="bp">{2}</p> <div class="bf"><p>来自<a href="./circle.html?id={6}">{3}</a>圈子</p>&nbsp;&nbsp;&nbsp; <p>{4}</p></div> </div> </div> <hr/> </div>'
 	$.ajax({
 		type: "GET",
-		url: baseUrl + "/xyq/posts?pageNo=0&pageSize=30",
+		url: baseUrl + "/xyq/posts?pageNo={0}&pageSize=5".format(pagenumber),
 		success: function (msg) {
+		$("#arrcontent").empty();
+		var i  = Math.ceil(msg.totalCount/5);
+		$('#example').bootstrapPaginator('setOptions',{totalPages:i})
 			$.each(msg.posts, function (i, n) {
 				id = n.id;
 				title = n.title;

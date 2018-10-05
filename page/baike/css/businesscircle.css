@@ -2,6 +2,8 @@ html, body {
     width: 100%;
     min-height: 720px;
     overflow-y: inherit;
+	margin: 0;
+	padding: 0;
 }
 
 .content {

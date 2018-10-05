@@ -6,42 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE">
     <meta charset="UTF-8">
     <title>百科</title>
-    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
-    <link rel="stylesheet" href="../../common/swiper.css">
-    <link rel="stylesheet" href="../../common/index.css">
     <link rel="stylesheet" href="css/baike.css">
-    <link rel="stylesheet" href="css/pageSwitch.min.css">
     <script src="../../common/jquery-1.8.1.min.js"></script>
     <script src="../../common/jquery.xdomainrequest.min.js"></script>
-    <script src="../../common/swiper.js"></script>
-    <script src="../../common/DD_roundies.js"></script>
-    <script src="../../common/base.js"></script>
-    <script src="js/html5media.min.js"></script>
-    <!--[if lte IE 9]>
-    <script src="js/jquery.placeholder.js"></script>
-    <script>
-        $(function () {
-            $('input[placeholder]').placeholder();
-        });
-    </script>
-    <![endif]-->
 </head>
 <body>
 <div class="content">
     <div class="title"><b>热门百科</b></div>
     <div class="showtype">
-        <span>赴美生子</span>
+        <span class="headmenu headmenuactive" data-id="fmsz">赴美生子</span>
         <span>|</span>
-        <span>签证/入关</span>
+        <span class="headmenu" data-id="qzrg">签证/入关</span>
         <span>|</span>
-        <span>美国就医/保险</span>
+        <span class="headmenu" data-id="mgjy">美国就医/保险</span>
         <span>|</span>
-        <span>美宝回国</span>
+        <span class="headmenu" data-id="mbhg">美宝回国</span>
         <span>|</span>
-        <span>美国生活</span>
+        <span class="headmenu" data-id="mgsh">美国生活</span>
     </div>
-    <div style="width: 100%">
-        <div id="fmsz" class="showtype_item" style="display: none">
+    <div style="width: 100%" class="headtabcontent">
+        <div id="fmsz" class="showtype_item" style="">
             <table>
                 <tr>
                     <td>赴美常识</td>
@@ -151,7 +135,7 @@
             </table>
         </div>
 
-        <div id="mghg" class="showtype_item">
+        <div id="mbhg" class="showtype_item" style="display: none;">
             <table>
                 <tr>
                     <td>证件办理</td>
@@ -185,19 +169,19 @@
         <span class="hot-text">-- 热门城市 --</span>
         <hr style="border: 1px solid #000000"/>
         <div class="places-items">
-            <p>芝加哥 Chicago</p>
-            <p>尔湾 Irvine</p>
-            <p>旧金山 San Francsco</p>
-            <p>西雅图 Seattle</p>
-            <p>塞班岛 Saipan</p>
-            <p>圣迭戈 San Diego</p>
+            <p onclick="cityClick('芝加哥','Chicago')">芝加哥 Chicago</p>
+            <p onclick="cityClick('尔湾','Irvine')">尔湾 Irvine</p>
+            <p onclick="cityClick('旧金山','San Francsco')">旧金山 San Francsco</p>
+            <p onclick="cityClick('西雅图','Seattle')">西雅图 Seattle</p>
+            <p onclick="cityClick('塞班岛','Saipan')">塞班岛 Saipan</p>
+            <p onclick="cityClick('圣迭戈','San Diego')">圣迭戈 San Diego</p>
         </div>
         <div class="places-items">
-            <p>亚特兰大 Atlanta</p>
-            <p>纽约 New York</p>
-            <p>新泽西 State of New Jersey</p>
-            <p>丹佛 Denver</p>
-            <p>洛杉矶 Los Angeles</p>
+            <p onclick="cityClick('亚特兰大','Atlanta')">亚特兰大 Atlanta</p>
+            <p onclick="cityClick('纽约','New York')">纽约 New York</p>
+            <p onclick="cityClick('新泽西','State of New Jersey')">新泽西 State of New Jersey</p>
+            <p onclick="cityClick('丹佛','Denver')">丹佛 Denver</p>
+            <p onclick="cityClick('洛杉矶','Los Angeles')">洛杉矶 Los Angeles</p>
         </div>
     </div>
 
@@ -822,7 +806,7 @@
 
 
 </div>
-
+	<iframe src="../../foot.html" style="width: 100%;height: 475px;overflow: hidden; border: 0;"></iframe>
 
 </body>
 <script src="js/baike.js"></script>

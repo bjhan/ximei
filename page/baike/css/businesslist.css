@@ -1,0 +1,46 @@
+html,
+body {
+	width: 100%;
+	min-height: 720px;
+	overflow-y: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.content {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#links {
+	margin-top: 20px;
+	font-size: 14px;
+	color: #9B9B9B;
+	cursor: pointer;
+}
+
+#links span:hover {
+	color: #A978D6;
+}
+
+.title {
+	font-size: 30px;
+	color: #000000;
+}
+
+.item{
+	width: 33%;
+	display: inline-block;
+}
+#itemlist{
+	margin-top: 30px;
+}
+
+.imgback {
+	width: 380px;
+	height: 263px;
+}
+
+.businessname{
+	text-align: center;
+}

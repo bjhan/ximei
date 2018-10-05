@@ -1,44 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>城市</title>
-    <meta name="viewport"
-          content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE">
-    <meta charset="UTF-8">
-    <title>百科</title>
-    <!--<meta http-equiv="Access-Control-Allow-Origin" content="*">-->
-    <link rel="stylesheet" href="../../common/swiper.css">
-    <link rel="stylesheet" href="../../common/index.css">
-    <link rel="stylesheet" href="css/city.css">
-    <link rel="stylesheet" href="css/pageSwitch.min.css">
-    <script src="../../common/jquery-1.8.1.min.js"></script>
-    <script src="../../common/jquery.xdomainrequest.min.js"></script>
-    <script src="../../common/swiper.js"></script>
-    <script src="../../common/DD_roundies.js"></script>
-    <script src="../../common/base.js"></script>
-    <script src="js/html5media.min.js"></script>
-    <!--[if lte IE 9]>
-    <script src="js/jquery.placeholder.js"></script>
-    <script>
-        $(function () {
-            $('input[placeholder]').placeholder();
-        });
-    </script>
-    <![endif]-->
-</head>
-<body>
-<div class="content">
-    <div id="links"><span id="link1">百科</span>-<span id="link2"><a href="./state.html" target="_self">美国加州</a></span>-<span id="link3">洛杉矶</span></div>
-    <div id="cityChName">洛杉矶</div>
-    <div id="cityName">Los Angeles</div>
-    <div style="width: 100%;margin-top: 50px;text-align: center">
-        <div class="city-features">
-            <span>购物攻略</span>
-            <span>-</span>
-            <div id="shopping">
-                <div class="item">
+	<head>
+		<meta charset="UTF-8">
+		<title>城市</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+		<meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;IE=EDGE">
+		<meta charset="UTF-8">
+		<title>百科</title>
+		<link rel="stylesheet" href="css/city.css">
+		<script src="../../common/jquery-1.8.1.min.js"></script>
+		<script src="../../common/jquery.xdomainrequest.min.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<div id="links"><span id="link1">百科</span>-<span id="link2">美国加州</span>-<span id="link3">洛杉矶</span></div>
+			<div id="cityChName">洛杉矶</div>
+			<div id="cityName">Los Angeles</div>
+			<div style="width: 100%;margin-top: 50px;text-align: center">
+				<div class="city-features">
+					<span>购物攻略</span>
+					<span>-</span>
+					<div id="shopping">
+						<!--  <div class="item">
                     <p class="Business_circle_name">XX商圈</p>
                     <img src="../../img/46.jpg" class="city-features-img">
                     <p class="baike-descrption" align="left">
@@ -52,104 +35,124 @@
                     <p class="baike-descrption" align="left">
                         这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍，这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍
                     </p>
-                </div>
-            </div>
-        </div>
-        <div class="city-features">
-            <span>必游景点</span>
-            <span>-</span>
-            <div id="attractions">
-                <div class="item">
-                    <p class="Business_circle_name">XX商圈</p>
-                    <img src="../../img/46.jpg" class="city-features-img">
-                    <p class="baike-descrption" align="left">
-                        这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍，这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍
-                    </p>
-                </div>
-                <div class="item">
-                    <p class="Business_circle_name">XX商圈</p>
-                    <img src="../../img/46.jpg" class="city-features-img">
-                    <p class="baike-descrption" align="left">
-                        这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍，这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍
-                    </p>
-                </div>
+                </div> -->
+					</div>
+					<div class="lookall" onclick="lookallbusiness('shopping')">查看更多</div>
+				</div>
+				<div class="city-features">
+					<span>必游景点</span>
+					<span>-</span>
+					<div id="attractions">
+						<!-- 	<div class="item">
+							<p class="Business_circle_name">XX商圈</p>
+							<img src="../../img/46.jpg" class="city-features-img">
+							<p class="baike-descrption" align="left">
+								这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍，这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍
+							</p>
+						</div>
+						<div class="item">
+							<p class="Business_circle_name">XX商圈</p>
+							<img src="../../img/46.jpg" class="city-features-img">
+							<p class="baike-descrption" align="left">
+								这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍，这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍
+							</p>
+						</div> -->
 
-            </div>
-        </div>
-        <div class="city-features">
-            <span>必吃美食</span>
-            <span>-</span>
-            <div id="food">
-                <div class="item">
-                    <p class="Business_circle_name">XX商圈</p>
-                    <img src="../../img/46.jpg" class="city-features-img">
-                    <p class="baike-descrption" align="left">
-                        这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍，这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍
-                    </p>
-                </div>
+					</div>
+					<div class="lookall" onclick="lookallbusiness('traveling')">查看更多</div>
+				</div>
+				<div class="city-features">
+					<span>必吃美食</span>
+					<span>-</span>
+					<div id="food">
+						<!-- 	<div class="item">
+							<p class="Business_circle_name">XX商圈</p>
+							<img src="../../img/46.jpg" class="city-features-img">
+							<p class="baike-descrption" align="left">
+								这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍，这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍
+							</p>
+						</div>
 
-                <div class="item">
-                    <p class="Business_circle_name">XX商圈</p>
-                    <img src="../../img/46.jpg" class="city-features-img">
-                    <p class="baike-descrption" align="left">
-                        这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍，这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍
-                    </p>
-                </div>
-
-
-            </div>
-        </div>
-
-    </div>
+						<div class="item">
+							<p class="Business_circle_name">XX商圈</p>
+							<img src="../../img/46.jpg" class="city-features-img">
+							<p class="baike-descrption" align="left">
+								这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍，这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍这里是文字介绍，这里是文字介绍文字介绍，这里是文字介绍
+							</p>
+						</div> -->
 
 
-    <div class="confinement-center">
-        <p class="confinement-title">洛杉矶月子中心</p>
-        <div id="confinement-items">
-            <div class="confinement-item">
-                <img src="../../img/46.jpg" class="city-features-img">
-                <p>月子中心名称</p>
-                <span>
-                    <img src="./img/dingwei.png" class="dingwei">
-                     <div>5711 West Century Boulevard, 洛杉矶, CA</div>
-                </span>
+					</div>
+					<div class="lookall" onclick="lookallbusiness('cate')">查看更多</div>
+				</div>
 
-            </div>
-            <div class="confinement-item">
-                <img src="../../img/46.jpg" class="city-features-img">
-                <p>月子中心名称</p>
-                <span>
-                    <img src="./img/dingwei.png" class="dingwei">
-                     <div>5711 West Century Boulevard, 洛杉矶, CA</div>
-                </span>
-
-            </div>
-            <div class="confinement-item">
-                <img src="../../img/46.jpg" class="city-features-img">
-                <p>月子中心名称</p>
-                <span>
-                    <img src="./img/dingwei.png" class="dingwei">
-                    <div>5711 West Century Boulevard, 洛杉矶, CA</div>
-                </span>
-
-            </div>
-            <div class="confinement-item">
-                <img src="../../img/46.jpg" class="city-features-img">
-                <p>月子中心名称</p>
-                <span>
-                    <img src="./img/dingwei.png" class="dingwei">
-                    <div>5711 West Century Boulevard, 洛杉矶, CA</div>
-                </span>
-
-            </div>
-        </div>
-
-    </div>
-
-</div>
+			</div>
 
 
-</body>
-<script src="js/city.js"></script>
-<script src="js/navbar.js"></script>
+			<div class="confinement-center">
+				<p class="confinement-title"></p>
+				<div id="confinement-items">
+					<!-- <div class="confinement-item">
+						<img src="../../img/46.jpg" class="city-features-img">
+						<p>月子中心名称</p>
+						<span>
+							<img src="./img/dingwei.png" class="dingwei">
+							<div>5711 West Century Boulevard, 洛杉矶, CA</div>
+						</span>
+
+					</div>
+					<div class="confinement-item">
+						<img src="../../img/46.jpg" class="city-features-img">
+						<p>月子中心名称</p>
+						<span>
+							<img src="./img/dingwei.png" class="dingwei">
+							<div>5711 West Century Boulevard, 洛杉矶, CA</div>
+						</span>
+
+					</div>
+					<div class="confinement-item">
+						<img src="../../img/46.jpg" class="city-features-img">
+						<p>月子中心名称</p>
+						<span>
+							<img src="./img/dingwei.png" class="dingwei">
+							<div>5711 West Century Boulevard, 洛杉矶, CA</div>
+						</span>
+
+					</div>
+					<div class="confinement-item">
+						<img src="../../img/46.jpg" class="city-features-img">
+						<p>月子中心名称</p>
+						<span>
+							<img src="./img/dingwei.png" class="dingwei">
+							<div>5711 West Century Boulevard, 洛杉矶, CA</div>
+						</span>
+					</div> -->
+				</div>
+				
+			</div>
+
+		</div>
+
+
+		<div style="display: none;">
+			<div id="model-1">
+				<div class="item" onclick="getDetail({3},'{4}')">
+					<p class="Business_circle_name">{0}</p>
+					<img src="{1}" class="city-features-img">
+					<div class="baike-descrption" align="left">{2}</div>
+				</div>
+			</div>
+
+
+			<div id="model-2">
+				<div class="confinement-item">
+					<img src="{0}" class="city-features-img">
+					<p>{1}</p>
+				</div>
+			</div>
+		</div>
+		<iframe src="../../foot.html" style="width: 100%;height: 475px;overflow: hidden; border: 0;"></iframe>
+	</body>
+	<script src="js/city.js"></script>
+	<script src="js/navbar.js"></script>
 </html>

@@ -1,99 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>成员管理</title>
-    <link rel="stylesheet" href="css/management.css">
-    <script src="../../common/jquery-1.8.1.min.js"></script>
-    <script src="../../common/jquery-ui-1.11.4.min.js"></script>
-    <script src="../../common/jquery.xdomainrequest.min.js"></script>
-    <script src="./js/management.js"></script>
-</head>
-<body>
-<div class="content">
-    <div class="title"><b>圈子成员管理</b></div>
+	<head>
+		<meta charset="UTF-8">
+		<title>成员管理</title>
+		<link rel="stylesheet" href="css/management.css">
+		<script src="../../common/jquery-1.8.1.min.js"></script>
+		<script src="../../common/jquery-ui-1.11.4.min.js"></script>
+		<script src="../../common/jquery.xdomainrequest.min.js"></script>
+		<script src="./js/management.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="title"><b>圈子成员管理</b></div>
 
-    <div class="shuomin">
-        <p>管理员任免：提拔成员为管理员，点击成员名旁边的A; 免去当权管理员的权责，点击名号旁边的R。管理员可以管理成员发言，一个圈子最多两个管理员。</p>
-        <p>踢人：把成员踢出小组，点击头像旁边K。 踢出去的用户以后可以再加入。</p>
-    </div>
-
-
-    <div class="quanziuser-row">
-        <label>圈主：</label>
-        <div>
-            <img src="img/test.jpg">
-            <span class="firstspan">R</span>
-            <span class="secondspan">k</span>
-            <P>123</P>
-
-        </div>
+			<div class="shuomin">
+				<p>管理员任免：提拔成员为管理员，点击成员名旁边的A; 免去当权管理员的权责，点击名号旁边的R。管理员可以管理成员发言，一个圈子最多两个管理员。</p>
+				<p>踢人：把成员踢出小组，点击头像旁边K。 踢出去的用户以后可以再加入。</p>
+			</div>
 
 
-    </div>
+			<div class="quanziuser-row"  id="adminview">
+				<label>圈主：</label>
 
 
-    <div class="quanziuser-row">
-        <label>管理员：</label>
-        <div>
-            <img src="img/test.jpg">
-            <span class="firstspan">R</span>
-            <span class="secondspan">k</span>
-            <P>123</P>
-
-        </div>
-        <div>
-            <img src="img/test.jpg">
-            <span class="firstspan">R</span>
-            <span class="secondspan">k</span>
-            <P>123</P>
-        </div>
-
-    </div>
-
-    <div class="quanziuser-row">
-        <label>成员：</label>
-        <div>
-            <img src="img/test.jpg">
-            <span class="firstspan">R</span>
-            <span class="secondspan">k</span>
-            <P>123</P>
-
-        </div>
-        <div>
-            <img src="img/test.jpg">
-            <span class="firstspan">R</span>
-            <span class="secondspan">k</span>
-            <P>123</P>
-        </div>
-        <div>
-            <img src="img/test.jpg">
-            <span class="firstspan">R</span>
-            <span class="secondspan">k</span>
-            <P>123</P>
-        </div>
-        <div>
-            <img src="img/test.jpg">
-            <span class="firstspan">R</span>
-            <span class="secondspan">k</span>
-            <P>123</P>
-        </div>
-        <div>
-            <img src="img/test.jpg">
-            <span class="firstspan">R</span>
-            <span class="secondspan">k</span>
-            <P>123</P>
-        </div>
-        <div>
-            <img src="img/test.jpg">
-            <span class="firstspan">R</span>
-            <span class="secondspan">k</span>
-            <P>123</P>
-        </div>
-
-    </div>
+			</div>
 
 
-</div>
-</body>
+			<div class="quanziuser-row" id="ownerview">
+				<label>管理员：</label>
+				
+
+			</div>
+
+			<div class="quanziuser-row" id="membersview">
+				<label>成员：</label>
+				
+			</div>
+		</div>
+
+
+		<div style="display: none;">
+			<div id="1">
+				<div>
+					<img src="{0}">
+					<span class="firstspan"  cyid="{1}">{2}</span>
+					<span class="secondspan" cyid="{1}">{3}</span>
+					<P>{4}</P>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>

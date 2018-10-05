@@ -57,19 +57,9 @@ var initUploadClick = function () {
     $("#file").change(function () {
         console.log("change");
         client.multipartUpload(uuid, this.files[0]).then(function (result) {
-            console.log(result);
-            if (tupiandizhijihe == '') {
-                tupiandizhijihe = tupiandizhijihe + result.name;
-                alert(tupiandizhijihe);
-            } else {
-
-                tupiandizhijihe = tupiandizhijihe + '@' + result.name;
-                alert(tupiandizhijihe);
-
-            }
+			$("#imgUrl").val(result.url);
         }).catch(function (err) {
             console.log(err);
-
         });
     });
 
@@ -173,6 +163,7 @@ var checkparmet = function () {
     var circleName = $("#circleName").val();
     var circleintroduce = $("#circleintroduce").val();
     var tags = [];
+	var imgurl = $("#imgUrl").val();
     $.each($(".tag"), function (i, n) {
         var value = $(n).val();
         if (value) {
@@ -194,5 +185,6 @@ var checkparmet = function () {
     obj.name = circleName;
     obj.abstrat = circleintroduce;
     obj.tags = tags.join(",");
+	obj.imageUrl = imgurl;
     return obj;
 }

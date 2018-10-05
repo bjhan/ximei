@@ -1,0 +1,94 @@
+html,
+body {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+
+.topimg {
+	width: 100%;
+	padding-top: 31%;
+	background: url(../img/head.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+
+#menu-bottom {
+	width: 100%;
+	height: 73px;
+	line-height: 69px;
+	background: #F5F5F5;
+}
+
+.menu-table {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.menu-table table {
+	width: 100%;
+	text-align: center;
+}
+
+.menu-table table td:hover {
+	background: #A978D6;
+}
+
+.menu-table table td {
+	border-left: 1px solid #D6D6D6;
+}
+
+.menu-table table td:last-child {
+	border-right: 1px solid #D6D6D6;
+}
+
+.content {
+	width: 1200px;
+	min-height: 200px;
+	margin: 0 auto;
+}
+
+.hide {
+	display: none;
+}
+
+.mycircle {
+	border: 1px solid #EAEAEA;
+	border-radius: 6px;
+	widows: 100%;
+	min-height: 400px;
+	margin-top: 30px;
+}
+
+.circle-menu {
+	font-size: 18px;
+	color: #4A4A4A;
+	height: 70px;
+	width: 100%;
+}
+.circle-menu{
+	border-bottom:  1px solid #EAEAEA;
+}
+
+.circle-menu>div {
+	float: left;
+	width: 140px;
+	height: 100%;
+	line-height: 70px;
+	text-align: center;
+	cursor: pointer;
+}
+.circle-menu>div:hover{
+	color: #A978D6;
+}
+
+.circleActive{
+	border-bottom: 2px solid #A978D6;
+	
+}
+.circle-content{
+	margin-top: 20px;
+}
+.circle-content >div{
+	width: 100%;
+}

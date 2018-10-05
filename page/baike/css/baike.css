@@ -116,3 +116,12 @@ html, body {
     color: #A978D6;
 }
 
+.headmenuactive{
+	border-bottom: 2px solid #A978D6;
+	color: #A978D6 !important;
+}
+
+.headmenu{
+	cursor: pointer;
+}
+

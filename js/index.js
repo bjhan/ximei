@@ -12,29 +12,31 @@
     function dianjitiaozhuan() {
         $("#shouye").click(function () {
             $(".chooseline").hide();
-            $(this).find("chooseline").show();
+            $(this).find(".chooseline").show();
             $("#iframecont").attr("src","page/index/index.html");
         });
         $("#xiyouquan").click(function () {
             $(".chooseline").hide();
-            $(this).find("chooseline").show();
+            $(this).find(".chooseline").show();
             $("#iframecont").attr("src","page/xiyou/xiyou.html");
         });
         $("#gonglue").click(function () {
             $(".chooseline").hide();
-            $(this).find("chooseline").show();
+            $(this).find(".chooseline").show();
         });
         $("#wenda").click(function () {
             $(".chooseline").hide();
-            $(this).find("chooseline").show();
+            $(this).find(".chooseline").show();
         });
         $("#baike").click(function () {
             $(".chooseline").hide();
-            $(this).find("chooseline").show();
+            $(this).find(".chooseline").show();
+			$("#iframecont").attr("src","page/baike/baike.html");
+
         });
         $("#ximeijie").click(function () {
             $(".chooseline").hide();
-            $(this).find("chooseline").show();
+            $(this).find(".chooseline").show();
             $("#iframecont").attr("src","page/ximeijie/ximeijie.html");
         });
     }

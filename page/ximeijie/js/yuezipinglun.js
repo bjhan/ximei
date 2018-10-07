@@ -105,12 +105,11 @@
     }
     var uuid = "cms"+guid();
     $("#file").change(function(){
-        console.log("change");
         client.multipartUpload(uuid, this.files[0]).then(function (result) {
             if(tupiandizhijihe == ''){
-                tupiandizhijihe = tupiandizhijihe + result.name;
+                tupiandizhijihe = tupiandizhijihe + result.url;
             }else {
-                tupiandizhijihe = tupiandizhijihe + '@' + result.name;
+                tupiandizhijihe = tupiandizhijihe + '@' + result.url;
 
             }
         }).catch(function (err) {

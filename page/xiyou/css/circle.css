@@ -144,12 +144,27 @@ hr {
 	cursor: pointer;
 }
 
-#toplist tr{
+#toplist tr {
 	height: 48px;
 }
 
 
-#toplist td{
+#toplist td {
 	border-bottom: 1px solid #EEEEEE;
 }
 
+.circleinfoview {
+	width: 100%;
+	height: 85px;
+	background: rgba(169, 120, 214, 0.12);
+	border-radius: 6px;
+	padding-left: 20px;
+	font-size: 14px;
+	color: #4A4A4A;
+
+}
+
+.bluefont{
+	color: #8A80D9;
+	cursor: pointer;
+}

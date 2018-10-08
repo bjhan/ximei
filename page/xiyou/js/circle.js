@@ -66,12 +66,19 @@ var initDialog = function () {
 	})
 }
 
+
+var managementinfo = function(){
+	localStorage.circleId = id;
+	location.href="./management.html"
+}
+
 var id;
 var getCircleDetail = function () {
 	$.ajax({
 		type: "GET",
 		url: baseUrl + "/xyq/forum/detail?id=" + id,
 		success: function (msg) {
+			$("#chengyuannumber").text(msg.memberCount)
 			$("#cirleName").text(msg.title)
 			$("#cirleIntroduction").text(msg.abstract || "")
 			$("#headimg").css("background-image", "url('" + msg.icon + "')")

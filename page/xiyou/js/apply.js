@@ -127,6 +127,7 @@ var clickImg = function (obj) {
 
 var submit = function () {
     var obj = checkparmet();
+	console.log(obj)
     if (obj) {
         $.ajax({
             type: "POST",
@@ -134,7 +135,7 @@ var submit = function () {
             url: baseUrl + "/xyq/forum/request",
             data: obj,
             success: function (msg) {
-				console.log(msg);
+			    console.log(msg);
                 location.href = "./circle.html?id=" + msg.id
             },
             error: function (data) {
@@ -177,7 +178,7 @@ var checkparmet = function () {
         return null;
     }
 
-    if (!(circleName && circleintroduce)) {
+    if (!(circleName && circleintroduce&&imgurl)) {
         $("#dialog").dialog('open');
         return null;
     }

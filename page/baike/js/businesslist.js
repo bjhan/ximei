@@ -21,7 +21,7 @@ var initClick = function(){
 function initview() {
 	$("#link3").text(localStorage.city);
 	$("#link2").text(localStorage.statename);
-	$(".title").text(localStorage.city+"全部商圈")
+	$(".title").text(localStorage.city)
 }
 var getdata = function() {
 	var type = localStorage.businesslistType;

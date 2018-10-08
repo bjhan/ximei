@@ -91,10 +91,10 @@ var gettopvotes = function () {
 //热门话题
 var getposts = function () {
 	var ss =
-		'<div class="c"> <p class="hottitle"><a href="./topic.html?id={5}">{0}</a></p> <div class="a"> <img class="hotimg" src="{1}" height="405" width="640"/> <div class="b"> <p class="bp">{2}</p> <div class="bf"><p>来自<a href="./circle.html?id={6}">{3}</a>圈子</p>&nbsp;&nbsp;&nbsp; <p>{4}</p></div> </div> </div> <hr/> </div>'
+		'<div class="c"> <p class="hottitle"><a href="./topic.html?id={5}&circleId={6}">{0}</a></p> <div class="a"> <img class="hotimg" src="{1}" height="405" width="640"/> <div class="b"> <p class="bp">{2}</p> <div class="bf"><p>来自<a href="./circle.html?id={6}">{3}</a>圈子</p>&nbsp;&nbsp;&nbsp; <p>{4}</p></div> </div> </div> <hr/> </div>'
 	$.ajax({
 		type: "GET",
-		url: baseUrl + "/xyq/posts?pageNo={0}&pageSize=5".format(pagenumber),
+		url: baseUrl + "/xyq/posts?pageNo={0}&pageSize=5".format(pagenumber*5-5),
 		success: function (msg) {
 		$("#arrcontent").empty();
 		var i  = Math.ceil(msg.totalCount/5);

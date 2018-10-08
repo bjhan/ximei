@@ -10,7 +10,7 @@ var getCyList = function() {
 	var ss   = $("#1").html();
 	$.ajax({
 		type: "GET",
-		url: baseUrl + "/xyq/forum/member/list?forumId=100002",
+		url: baseUrl + "/xyq/forum/member/list?forumId="+localStorage.circleId,
 		success: function(msg) {
 			console.log(msg);
 			$("#adminview").append(ss.format(msg.admin.userIcon,msg.admin.id,'','',msg.admin.userName))

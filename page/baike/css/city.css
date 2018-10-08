@@ -1,113 +1,131 @@
-html, body {
-    width: 100%;
-    min-height: 720px;
-    overflow-y: inherit;
+html,
+body {
+	width: 100%;
+	min-height: 720px;
+	overflow-y: inherit;
+	margin: 0;
+	padding: 0;
 }
 
 .content {
-    width: 1200px;
-    margin: 0 auto;
+	width: 1200px;
+	margin: 0 auto;
 }
 
 #links {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #9B9B9B;
-    cursor: pointer;
+	margin-top: 20px;
+	font-size: 14px;
+	color: #9B9B9B;
+	cursor: pointer;
 }
 
 #links span:hover {
-    color: #A978D6;
+	color: #A978D6;
 }
 
 #cityChName {
-    margin-top: 15px;
-    font-size: 30px;
-    color: #000000;
+	margin-top: 15px;
+	font-size: 30px;
+	color: #000000;
 }
 
 #cityName {
-    font-size: 12px;
-    color: #979797;
-    display: block;
+	font-size: 12px;
+	color: #979797;
+	display: block;
 }
 
 .city-features {
-    width: 30%;
-    border-right: 1px dashed #979797;
-    min-height: 300px;
-    display: inline-block;
-    vertical-align: top;
+	width: 30%;
+	border-right: 1px dashed #979797;
+	min-height: 300px;
+	display: inline-block;
+	vertical-align: top;
 }
 
-.city-features > span {
-    font-size: 36px;
-    color: #000000;
-    display: block;
-    text-align: center;
+.city-features>span {
+	font-size: 36px;
+	color: #000000;
+	display: block;
+	text-align: center;
 }
 
 .city-features:last-child {
-    border-right: 0;
+	border-right: 0;
 }
 
 .city-features .city-features-img {
-    width: 361px;
-    height: 197px;
+	width: 361px;
+	height: 197px;
 }
 
 .Business_circle_name {
-    opacity: 0.5;
-    color: #F5A623;
-    float: left;
+	opacity: 0.5;
+	color: #F5A623;
+	float: left;
 }
 
-.item > p {
-    margin: 5px 0;
+.item>p {
+	margin: 5px 0;
 }
 
 .baike-descrption {
-    font-size: 14px;
-    color: #4A4A4A;
+	font-size: 14px;
+	color: #4A4A4A;
 }
 
 .item {
-    margin-bottom: 70px;
+	margin-bottom: 70px;
+	height: 300px;
 }
 
 .confinement-center {
-    width: 100%;
-    margin-top: 80px;
+	width: 100%;
+	margin-top: 80px;
 }
 
 .confinement-center .confinement-title {
-    font-size: 30px;
-    color: #000000;
+	font-size: 30px;
+	color: #000000;
 }
 
 .dingwei {
-    width: 13px;
-    height: 14px;
+	width: 13px;
+	height: 14px;
 
 }
 
 .city-features-img {
-    width: 380px;
-    height: 263px;
+	width: 380px;
+	height: 263px;
 }
 
 .confinement-item {
-    display: inline-block;
-    margin: 0 7px;
-    padding-bottom: 80px;
+	display: inline-block;
+	margin: 0 7px;
+	padding-bottom: 80px;
 }
 
-.confinement-item p{
-    margin-bottom: 5px;
+.confinement-item p {
+	margin-bottom: 5px;
 }
-.confinement-item > span > * {
-    display: inline-block;
-    font-size: 12px;
-    color: #BBBBBB;
-    vertical-align: top;
+
+.confinement-item>span>* {
+	display: inline-block;
+	font-size: 12px;
+	color: #BBBBBB;
+	vertical-align: top;
+}
+
+
+.lookall {
+	border: 1px solid #A978D6;
+	border-radius: 6px;
+	color: #A978D6;
+	width: 139px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin: 0 auto;
+	cursor: pointer;
 }

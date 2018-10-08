@@ -113,29 +113,58 @@ hr {
 
 .dialog-title-lable {
 	font-size: 20px;
+	margin-left: 20px;
 }
 
 #topicTitle {
 	width: 95%;
 	height: 30px;
 	font-size: 20px;
+	margin-left: 2.5%;
+	margin-top: 20px;
 }
 
 #toplist>table {
 	width: 100%;
 }
 
-#toplist>table>  tbody>tr >td:first-child {
+#toplist>table>tbody>tr>td:first-child {
 	width: 50%;
 	cursor: pointer;
 }
 
-#toplist > table > tbody> tr > td:last-child {
+#toplist>table>tbody>tr>td:last-child {
 	width: 20%;
 	text-align: right;
 }
 
 
-#information span p:last-child,#information span p:first-child{
+#information span p:last-child,
+#information span p:first-child {
+	cursor: pointer;
+}
+
+#toplist tr {
+	height: 48px;
+}
+
+
+#toplist td {
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.circleinfoview {
+	width: 100%;
+	height: 85px;
+	background: rgba(169, 120, 214, 0.12);
+	border-radius: 6px;
+	padding-left: 20px;
+	font-size: 14px;
+	color: #4A4A4A;
+
+}
+
+.bluefont{
+	color: #8A80D9;
 	cursor: pointer;
 }

@@ -2,6 +2,8 @@ html, body {
     width: 100%;
     min-height: 720px;
     overflow-y: inherit;
+	margin: 0;
+	padding: 0;
 }
 
 .content {
@@ -114,5 +116,14 @@ html, body {
 
 #baikeTable tr td:hover{
     color: #A978D6;
+}
+
+.headmenuactive{
+	border-bottom: 2px solid #A978D6;
+	color: #A978D6 !important;
+}
+
+.headmenu{
+	cursor: pointer;
 }
 

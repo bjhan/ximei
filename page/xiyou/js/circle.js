@@ -54,6 +54,9 @@ var initDialog = function () {
 
 		},
 		buttons: {
+			"保存": function () {
+				createTopic();
+			},
 			"关闭": function () {
 				$(this).dialog("close");
 			}
@@ -63,12 +66,19 @@ var initDialog = function () {
 	})
 }
 
+
+var managementinfo = function(){
+	localStorage.circleId = id;
+	location.href="./management.html"
+}
+
 var id;
 var getCircleDetail = function () {
 	$.ajax({
 		type: "GET",
 		url: baseUrl + "/xyq/forum/detail?id=" + id,
 		success: function (msg) {
+			$("#chengyuannumber").text(msg.memberCount)
 			$("#cirleName").text(msg.title)
 			$("#cirleIntroduction").text(msg.abstract || "")
 			$("#headimg").css("background-image", "url('" + msg.icon + "')")
@@ -83,13 +93,12 @@ var getCircleDetail = function () {
 var getnewposts = function () {
 	$.ajax({
 		type: "GET",
-		url: baseUrl + "/xyq/forum/newposts?pageNo=0&pageSize=10000&forumId=" + 1000201,
+		url: baseUrl + "/xyq/forum/newposts?pageNo=0&pageSize=10000&forumId=" + id,
 		success: function (msg) {
 			$.each(msg.posts, function (i, n) {
 				var posts = $("#toplist table");
-				posts.append("<tr><td>{0}</td><td>{1}</td><td>{2}回复</td><td>{3}</td></tr>".format(n.title, n.author, n.replyCount,
-					n.createTime))
-
+				posts.append("<tr><td onclick='navgetto({4})'>{0}</td><td>{1}</td><td>{2}回复</td><td>{3}</td></tr>".format(n.title, n.author, n.replyCount,
+					n.createTime,n.id))
 			})
 		}
 	});
@@ -98,7 +107,7 @@ var getnewposts = function () {
 var gethotposts = function () {
 	$.ajax({
 		type: "GET",
-		url: baseUrl + "/xyq/forum/hotposts?pageNo=0&pageSize=10000&forumId=" + 1000201,
+		url: baseUrl + "/xyq/forum/hotposts?pageNo=0&pageSize=10000&forumId=" + id,
 		success: function (msg) {
 			$.each(msg.posts, function (i, n) {
 				var posts = $("#toplist table");
@@ -110,7 +119,33 @@ var gethotposts = function () {
 	});
 }
 
-var showType = function (type,event) {
+var navgetto = function(topid){
+	location.href = './topic.html?id='+topid+"&circleId="+id
+}
+
+
+
+var createTopic = function () {
+	var title = $("#topicTitle").val();
+	var content = $("textarea[name='content']").val();
+	$.ajax({
+		type: "POST",
+		contentType: "application/x-www-form-urlencoded; charset=utf-8",
+		url: baseUrl + "/xyq/post/create",
+		data:{
+			forumId:id,
+			title:title,
+			content:content
+		},
+		success: function (msg) {
+			var e = $("#information span p").eq(0);
+			showType(0,e);
+			$("#fwbDialog").dialog('close');
+		}
+	});
+}
+
+var showType = function (type, event) {
 	$("#toplist table tbody").empty();
 	$("#information span p").removeClass("active");
 	$(event).addClass("active");

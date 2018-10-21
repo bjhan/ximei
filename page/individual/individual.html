@@ -6,7 +6,6 @@
 		<meta charset="UTF-8">
 		<title>个人中心</title>
 		<link rel="stylesheet" href="css/individual.css" />
-		<link rel="stylesheet" href="css/index.css">
 		<script src="../../common/jquery-1.8.1.min.js"></script>
 		<script src="../../common/jquery.xdomainrequest.min.js"></script>
 	</head>
@@ -15,20 +14,20 @@
 		</div>
 		<div id="menu-bottom">
 			<div class="menu-table">
-				<table>
+				<table id="menutable">
 					<tr>
-						<td>我的窝</td>
-						<td>我的攻略</td>
-						<td>我的问答</td>
-						<td>我的收藏</td>
+						<td onclick="show('myhome-wo')" class="active">我的窝</td>
+						<td onclick="show('myhome-gonglue')">我的攻略</td>
+						<td onclick="show('myhome-wenda')">我的问答</td>
+						<td onclick="show('myshouchang')">我的收藏</td>
 						<td>我的好友</td>
-						<td>我的圈子</td>
+						<td onclick="show('mycircle')">我的圈子</td>
 					</tr>
 				</table>
 			</div>
 		</div>
 		<div class="content">
-			<div class="mycircle">
+			<div class="mycircle" id="mycircle">
 				<div class="circle-menu">
 					<div class="circle-menu-item circleActive" data-id="qztz">圈子帖子</div>
 					<div class="circle-menu-item" data-id="wfqd">我发起的</div>
@@ -37,26 +36,551 @@
 				</div>
 				<div style="width: 100%;" class="circle-content">
 					<div id="qztz">
-						<div class="row">
+						<div class="qztz-titles">
+							<div style="width: 54%;text-align: left;"><span style="margin-left: 80px;">话题</span></div>
+							<div style="width: 13%;">作者</div>
+							<div style="width: 13%;">回应</div>
+							<div style="width: 13%;">最后响应</div>
+						</div>
+						<div class="qztz-item">
+							<div class="qztz-title">这里是话题的title，则立是话题的title</div>
+							<div class="qztz-autor">Antonio Bridges</div>
+							<div class="qztz-reply">7回应</div>
+							<div class="qztz-time">2018-05-06</div>
+						</div>
+						<div class="qztz-item">
+							<div class="qztz-title">这里是话题的title，则立是话题的title</div>
+							<div class="qztz-autor">Antonio Bridges</div>
+							<div class="qztz-reply">7回应</div>
+							<div class="qztz-time">2018-05-06</div>
+						</div>
+						<div class="qztz-item">
+							<div class="qztz-title">这里是话题的title，则立是话题的title</div>
+							<div class="qztz-autor">Antonio Bridges</div>
+							<div class="qztz-reply">7回应</div>
+							<div class="qztz-time">2018-05-06</div>
+						</div>
+					</div>
+					<div id="wfqd" class="hide">
+						<div class="wfqd-item">
+							<div class="wfqd-title">这里是话题的title，则立是话题的title</div>
+							<div class="wfqd-reply">7回应</div>
+							<div class="wfqd-time">2018-05-06</div>
+							<div class="wfqd-circlename">圈子名称</div>
+						</div>
+						<div class="wfqd-item">
+							<div class="wfqd-title">这里是话题的title，则立是话题的title</div>
+							<div class="wfqd-reply">7回应</div>
+							<div class="wfqd-time">2018-05-06</div>
+							<div class="wfqd-circlename">圈子名称</div>
+						</div>
+						<div class="wfqd-item">
+							<div class="wfqd-title">这里是话题的title，则立是话题的title</div>
+							<div class="wfqd-reply">7回应</div>
+							<div class="wfqd-time">2018-05-06</div>
+							<div class="wfqd-circlename">圈子名称</div>
+						</div>
+					</div>
+					<div id="whyd" class="hide">
+						<div class="wfqd-item">
+							<div class="wfqd-title">这里是话题的title，则立是话题的title</div>
+							<div class="wfqd-reply">7回应</div>
+							<div class="wfqd-time">2018-05-06</div>
+							<div class="wfqd-circlename">圈子名称</div>
+						</div>
+						<div class="wfqd-item">
+							<div class="wfqd-title">这里是话题的title，则立是话题的title</div>
+							<div class="wfqd-reply">7回应</div>
+							<div class="wfqd-time">2018-05-06</div>
+							<div class="wfqd-circlename">圈子名称</div>
+						</div>
+						<div class="wfqd-item">
+							<div class="wfqd-title">这里是话题的title，则立是话题的title</div>
+							<div class="wfqd-reply">7回应</div>
+							<div class="wfqd-time">2018-05-06</div>
+							<div class="wfqd-circlename">圈子名称</div>
+						</div>
+						<div class="wfqd-item">
+							<div class="wfqd-title">这里是话题的title，则立是话题的title</div>
+							<div class="wfqd-reply">7回应</div>
+							<div class="wfqd-time">2018-05-06</div>
+							<div class="wfqd-circlename">圈子名称</div>
+						</div>
+
+					</div>
+					<div id="wjrdqz" class="hide">
+						<div class="wjrdqz-item">
+							<img src="../../img/kefu.png" class="circle-img" />
+							<span class="circlename">圈子名称</span>
+							<span class="membernumber">52378成员</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="myshouchang" id="myshouchang">
+				<div class="circle-menu">
+					<div class="shouchang-menu-item circleActive" data-id="ddsc">地点收藏</div>
+					<div class="shouchang-menu-item" data-id="glsc">攻略收藏</div>
+					<div class="shouchang-menu-item" data-id="hdsc">回答收藏</div>
+					<div class="shouchang-menu-item" data-id="yzzxsc">月子中心收藏</div>
+				</div>
+				<div style="width: 100%;" class="shouchang-content">
+					<div id="ddsc">
+						<div class="adderssNumber">共10个地点</div>
+						<div class="ddsc-item">
+							<img src="../../img/46.jpg" class="ddsc-img" />
+							<p class="ddsc-adderssname">洛杉矶</p>
+						</div>
+						<div class="ddsc-item">
+							<img src="../../img/46.jpg" class="ddsc-img" />
+							<p class="ddsc-adderssname">洛杉矶</p>
+						</div>
+						<div class="ddsc-item">
+							<img src="../../img/46.jpg" class="ddsc-img" />
+							<p class="ddsc-adderssname">洛杉矶</p>
+						</div>
+						<div class="ddsc-item">
+							<img src="../../img/46.jpg" class="ddsc-img" />
+							<p class="ddsc-adderssname">洛杉矶</p>
+						</div>
+						<div class="ddsc-item">
+							<img src="../../img/46.jpg" class="ddsc-img" />
+							<p class="ddsc-adderssname">洛杉矶</p>
+						</div>
+						<div class="ddsc-item">
+							<img src="../../img/46.jpg" class="ddsc-img" />
+							<p class="ddsc-adderssname">洛杉矶</p>
+						</div>
+					</div>
+					<div id="glsc" class="hide">
+						<div class="glsc-item">
+							<img src="../../img/46.jpg" class="glsc-img" />
+							<div class="glsc-content">
+								<p class="glsc-title">关于赴美生子，你想知道的都在这里了</p>
+								<div class="glsc-autorinfo">
+									<img src="../ximeijie/img/jigou.png" class="glsc-headimg" />
+									<span class="glsc-autorname"> Mary McCormick</span>
+									<span class="glsc-replycount">30条评论</span>
+									<span class="glsc-time">2018-06-14 00:12</span>
+									<span class="glsc-cancel">取消收藏</span>
+								</div>
+
+								<div class="glsc-descrption">赴美生子合法么？美宝身份会被取消么？美宝回国能上户口么？未来上学该怎么办？.....这些都是很多想赴美生子家庭最关心的问题？今天小编就把整个赴美生子流程中最热门的问题作出全面解答，帮助大家快速入门。</div>
+							</div>
+						</div>
+
+						<div class="glsc-item">
+							<img src="../../img/46.jpg" class="glsc-img" />
+							<div class="glsc-content">
+								<p class="glsc-title">关于赴美生子，你想知道的都在这里了</p>
+								<div class="glsc-autorinfo">
+									<img src="../ximeijie/img/jigou.png" class="glsc-headimg" />
+									<span class="glsc-autorname"> Mary McCormick</span>
+									<span class="glsc-replycount">30条评论</span>
+									<span class="glsc-time">2018-06-14 00:12</span>
+									<span class="glsc-cancel">取消收藏</span>
+								</div>
+
+								<div class="glsc-descrption">赴美生子合法么？美宝身份会被取消么？美宝回国能上户口么？未来上学该怎么办？.....这些都是很多想赴美生子家庭最关心的问题？今天小编就把整个赴美生子流程中最热门的问题作出全面解答，帮助大家快速入门。</div>
+
+
+							</div>
+						</div>
+
+
+						<div class="glsc-item">
+							<img src="../../img/46.jpg" class="glsc-img" />
+							<div class="glsc-content">
+								<p class="glsc-title">关于赴美生子，你想知道的都在这里了</p>
+								<div class="glsc-autorinfo">
+									<img src="../ximeijie/img/jigou.png" class="glsc-headimg" />
+									<span class="glsc-autorname"> Mary McCormick</span>
+									<span class="glsc-replycount">30条评论</span>
+									<span class="glsc-time">2018-06-14 00:12</span>
+									<span class="glsc-cancel">取消收藏</span>
+								</div>
+
+								<div class="glsc-descrption">赴美生子合法么？美宝身份会被取消么？美宝回国能上户口么？未来上学该怎么办？.....这些都是很多想赴美生子家庭最关心的问题？今天小编就把整个赴美生子流程中最热门的问题作出全面解答，帮助大家快速入门。</div>
+
+
+							</div>
+						</div>
+
+
+						<div class="glsc-item">
+							<img src="../../img/46.jpg" class="glsc-img" />
+							<div class="glsc-content">
+								<p class="glsc-title">关于赴美生子，你想知道的都在这里了</p>
+								<div class="glsc-autorinfo">
+									<img src="../ximeijie/img/jigou.png" class="glsc-headimg" />
+									<span class="glsc-autorname"> Mary McCormick</span>
+									<span class="glsc-replycount">30条评论</span>
+									<span class="glsc-time">2018-06-14 00:12</span>
+									<span class="glsc-cancel">取消收藏</span>
+								</div>
+
+								<div class="glsc-descrption">赴美生子合法么？美宝身份会被取消么？美宝回国能上户口么？未来上学该怎么办？.....这些都是很多想赴美生子家庭最关心的问题？今天小编就把整个赴美生子流程中最热门的问题作出全面解答，帮助大家快速入门。</div>
+
+
+							</div>
+						</div>
+					</div>
+					<div id="hdsc" class="hide">
+						<div class="hdsc-item">
+							<p class="hdsc-title">问题标题，这里是提问的问题标题，这了是提问的问题标题</p>
+							<div class="hdsc-descrption">这里是回答内容Hella narwhal Cosby sweater McSweeney's, salvia kitsch before they sold out
+								High Life. Umami tattooed sriracha meggings pickled Marfa Blue Bottle High Life next level four loko PBR.
+								Keytar pickled next level keffiyeh drinking vinegar street art. Art party vinyl Austin, retro whatever keytar
+								mixtape. Pickled ethnic farm-to-table distillery ugh chia. Ethical Odd Future narwhal, mlkshk fap asymmetrical
+								next level High Life literally cred blog. Banh mi swag art party, fashion axe you probably haven't heard of
+								them stumptown tousled food truck post-ironic quinoa bicycle rights aesthetic keytar Pitchfork.</div>
+							<div class="hdsc-autorinfo">
+								<img src="../ximeijie/img/jigou.png" class="hdsc-headimg" />
+								<span class="hdsc-autorname"> Mary McCormick</span>
+								<span class="hdsc-replycount">30条评论</span>
+								<span class="hdsc-time">2018-06-14 00:12</span>
+								<span class="hdsc-cancel">取消收藏</span>
+							</div>
+						</div>
+						<div class="hdsc-item">
+							<p class="hdsc-title">问题标题，这里是提问的问题标题，这了是提问的问题标题</p>
+							<div class="hdsc-descrption">这里是回答内容Hella narwhal Cosby sweater McSweeney's, salvia kitsch before they sold out
+								High Life. Umami tattooed sriracha meggings pickled Marfa Blue Bottle High Life next level four loko PBR.
+								Keytar pickled next level keffiyeh drinking vinegar street art. Art party vinyl Austin, retro whatever keytar
+								mixtape. Pickled ethnic farm-to-table distillery ugh chia. Ethical Odd Future narwhal, mlkshk fap asymmetrical
+								next level High Life literally cred blog. Banh mi swag art party, fashion axe you probably haven't heard of
+								them stumptown tousled food truck post-ironic quinoa bicycle rights aesthetic keytar Pitchfork.</div>
+							<div class="hdsc-autorinfo">
+								<img src="../ximeijie/img/jigou.png" class="hdsc-headimg" />
+								<span class="hdsc-autorname"> Mary McCormick</span>
+								<span class="hdsc-replycount">30条评论</span>
+								<span class="hdsc-time">2018-06-14 00:12</span>
+								<span class="hdsc-cancel">取消收藏</span>
+							</div>
+						</div>
+						<div class="hdsc-item">
+							<p class="hdsc-title">问题标题，这里是提问的问题标题，这了是提问的问题标题</p>
+							<div class="hdsc-descrption">这里是回答内容Hella narwhal Cosby sweater McSweeney's, salvia kitsch before they sold out
+								High Life. Umami tattooed sriracha meggings pickled Marfa Blue Bottle High Life next level four loko PBR.
+								Keytar pickled next level keffiyeh drinking vinegar street art. Art party vinyl Austin, retro whatever keytar
+								mixtape. Pickled ethnic farm-to-table distillery ugh chia. Ethical Odd Future narwhal, mlkshk fap asymmetrical
+								next level High Life literally cred blog. Banh mi swag art party, fashion axe you probably haven't heard of
+								them stumptown tousled food truck post-ironic quinoa bicycle rights aesthetic keytar Pitchfork.</div>
+							<div class="hdsc-autorinfo">
+								<img src="../ximeijie/img/jigou.png" class="hdsc-headimg" />
+								<span class="hdsc-autorname"> Mary McCormick</span>
+								<span class="hdsc-replycount">30条评论</span>
+								<span class="hdsc-time">2018-06-14 00:12</span>
+								<span class="hdsc-cancel">取消收藏</span>
+							</div>
+						</div>
+						<div class="hdsc-item">
+							<p class="hdsc-title">问题标题，这里是提问的问题标题，这了是提问的问题标题</p>
+							<div class="hdsc-descrption">这里是回答内容Hella narwhal Cosby sweater McSweeney's, salvia kitsch before they sold out
+								High Life. Umami tattooed sriracha meggings pickled Marfa Blue Bottle High Life next level four loko PBR.
+								Keytar pickled next level keffiyeh drinking vinegar street art. Art party vinyl Austin, retro whatever keytar
+								mixtape. Pickled ethnic farm-to-table distillery ugh chia. Ethical Odd Future narwhal, mlkshk fap asymmetrical
+								next level High Life literally cred blog. Banh mi swag art party, fashion axe you probably haven't heard of
+								them stumptown tousled food truck post-ironic quinoa bicycle rights aesthetic keytar Pitchfork.</div>
+							<div class="hdsc-autorinfo">
+								<img src="../ximeijie/img/jigou.png" class="hdsc-headimg" />
+								<span class="hdsc-autorname"> Mary McCormick</span>
+								<span class="hdsc-replycount">30条评论</span>
+								<span class="hdsc-time">2018-06-14 00:12</span>
+								<span class="hdsc-cancel">取消收藏</span>
+							</div>
+						</div>
+					</div>
+					<div id="yzzxsc" class="hide">
+						<div class="yzzxsc-item">
+							<img src="../../img/46.jpg" class="yzzxsc-img" />
+							<p class="yzzxsc-adderssname">洛杉矶</p>
+						</div>
+						<div class="yzzxsc-item">
+							<img src="../../img/46.jpg" class="yzzxsc-img" />
+							<p class="yzzxsc-adderssname">洛杉矶</p>
+						</div>
+						<div class="yzzxsc-item">
+							<img src="../../img/46.jpg" class="yzzxsc-img" />
+							<p class="yzzxsc-adderssname">洛杉矶</p>
+						</div>
+						<div class="yzzxsc-item">
+							<img src="../../img/46.jpg" class="yzzxsc-img" />
+							<p class="yzzxsc-adderssname">洛杉矶</p>
+						</div>
+						<div class="yzzxsc-item">
+							<img src="../../img/46.jpg" class="yzzxsc-img" />
+							<p class="yzzxsc-adderssname">洛杉矶</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="myhome" id="myhome">
+				<div class="myhome-content">
+					<div class="myhome-left">
+						<img src="../gonglue/img/33.png" class="myhome-headimg" />
+						<p class="myhome-nikename">周星星</p>
+						<div style="font-size: 14px;color: #9B9B9B;margin: 20px 0;">
+							<span class="myhome-level">等级:&nbsp;&nbsp;&nbsp;Lv12</span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+							<span class="myhome-address">现居:&nbsp;&nbsp;&nbsp;上海</span>
+						</div>
+						<div class="myhome-selfintroduction">这里是自我介绍In the tumultuous business of cutting-in and attending to a whale,
+							there is much running backwards and forwards among the crew. djfasdjfjejrqjeeqrqerqer.</div>
+						<div class="guanzhuandfensi">
+							<div class="guanzhu">
+								<span id="guanzhuandfensi-number">235</span>
+								<span id="guanzhuandfensi-text">关注</span>
+							</div>
+							<div class="fensi">
+								<span id="guanzhuandfensi-number">235</span>
+								<span id="guanzhuandfensi-text">粉丝</span>
+							</div>
+						</div>
+						<div id="myguanzhu-view">
+							<p style="font-size:18px;color: #4A4A4A;text-align: center;">我的关注</p>
+							<div id="myguanzhu-items">
+								<div class="circle-item">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+								<div class="circle-item">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+								<div class="circle-item">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+								<div class="circle-item">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+								<div class="circle-item">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+							</div>
+							<div style="text-align: center;">
+								<span>左</span>
+								<span>右</span>
+							</div>
+						</div>
+						<div id="fangke-view">
+							<p style="font-size:18px;color: #4A4A4A;text-align: center;">最近访客</p>
+							<div id="fangke-items">
+								<div class="circle-item">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+
+								<div class="circle-item">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+
+								<div class="circle-item">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+
+								<div class="circle-item">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+
+								<div class="circle-item">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+							</div>
+
+							<div style="text-align: center;font-size: 12px;color: #9B9B9B;">
+								<span>累计访问<span id="fangwentotal">123</span></span>
+								<span>今日<span id="todaynumber">234</span></span>
+							</div>
+
+						</div>
+						<div id="mycircle-view">
+							<p style="font-size:18px;color: #4A4A4A;text-align: center;">我的圈子</p>
+							<div id="mycircle-items">
+								<div class="circle-item square">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+
+								<div class="circle-item square">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+
+								<div class="circle-item square">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+
+								<div class="circle-item square">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+
+								<div class="circle-item square">
+									<img src="../../img/kefu.png" />
+									<p>Howard </p>
+								</div>
+							</div>
+							<div style="text-align: center;">
+								<span>左</span>
+								<span>右</span>
+							</div>
+						</div>
+					</div>
+					<div class="myhome-right">
+						<div id="right-wo" class="myhome-right-item show">
+							<div class="urlimgs">
+								<div style="width: 100%;">
+									<div class="circle-img">
+										<img src="img/pgmyzone_icon_write.png" />
+									</div>
+									<div class="circle-img">
+										<img src="img/pgmyzone_icon_ask.png" />
+									</div>
+
+									<div class="circle-img">
+										<img src="img/pgmyzone_icon_find.png" />
+									</div>
+
+									<div class="circle-img">
+										<img src="img/pgmyzone_icon_watch.png" />
+									</div>
+								</div>
+
+							</div>
+
+							<div class="myhome-gonglueview">
+								<div class="gonglueview-title">
+									<span>我的攻略</span>
+									<div class="writebtn">写攻略</div>
+								</div>
+							</div>
+
+							<div class="myhome-huida">
+								<div class="huida-title">
+									<span>我的回答</span>
+								</div>
+							</div>
+						</div>
+
+						<div id="right-gonglue"  class="myhome-right-item">
+							<div class="gonglue-head">
+								<div class="gonglue-head-items">
+									<div>
+										<div class="number" id="gongluecount">
+											235
+										</div>
+										<span>攻略</span>
+									</div>
+									
+									<div>
+										<div class="number" id="gongluecount">
+											235
+										</div>
+										<span>回复</span>
+									</div>
+									
+									<div>
+										<div class="number" id="gongluecount">
+											235
+										</div>
+										<span>阅读</span>
+									</div>
+								</div>
+							</div>
+							<div class="count-items">
+								<div class="count-item">
+									
+									
+									
+								</div>
+							</div>
+						</div>
+					
+					    <div id="right-wenda" class="myhome-right-item" >
+							<div class="wenda-head">
+								<div>
+									<div id="wendacount">325</div>
+									<span>问答数</span>
+								</div>
+								
+								<div>
+									
+									<div id="wenda-btn">
+										我要提问
+									</div>
+									
+								</div>
+							</div>
 							
+							<div class="wenda-content">
+								<div class="wenda-content-head">
+									<div class="wenda-content-head-item wenda-active" wendatype="1">
+										我的回答
+									</div>
+									
+									<div class="wenda-content-head-item" wendatype="1">
+										我的提问
+									</div>
+									
+									<div class="wenda-content-head-item" wendatype="1">
+										关注问题
+									</div>
+									
+									<div class="wenda-content-head-item" wendatype="1">
+										收藏回答
+									</div>
+								</div>
+								
+								<div class="wenda-number-row">共10条回答</div>
+								
+								<div class="wenda-count-descrption">
+									
+									
+									
+								</div>
+								
+								
+							</div>
 							
 						</div>
 					</div>
-					<div id="wfqd" class="hide">我发起的</div>
-					<div id="whyd" class="hide">我回应的</div>
-					<div id="wjrdqz" class="hide">我加入的圈子</div>
 				</div>
 			</div>
-		</div>
-		<div class="hide">
-			<div id="model-1">
-				<div class="circleview">
 
-
-				</div>
-			</div>
 		</div>
 		<iframe src="../../foot.html" style="width: 100%;height: 475px;overflow: hidden; border: 0;"></iframe>
+
+		<div style="display: none;">
+			<div id="model-1">
+				<!-- 我加入的圈子 -->
+				<div class="wjrdqz-item">
+					<img src="{0}" class="circle-img" />
+					<span class="circlename">{1}</span>
+					<span class="membernumber">{2}成员</span>
+				</div>
+			</div>
+
+			<div id="model-2">
+				<div class="wfqd-item">
+					<div class="wfqd-title">{0}</div>
+					<div class="wfqd-reply">{1}回应</div>
+					<div class="wfqd-time">{2}</div>
+					<div class="wfqd-circlename" onclick="javascript:location.href='../xiyou/circle.html?id={4}'">{3}</div>
+				</div>
+			</div>
+
+
+
+		</div>
 	</body>
 	<script src="js/individual.js"></script>
 	<script src="../../js/loadfoot.js"></script>

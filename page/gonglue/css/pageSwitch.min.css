@@ -22,13 +22,15 @@
 }
 
 .pages.horizontal {
-    left: 340px;
-    /*left: 50%;*/
-    /*transform: translateX(-50%);*/
-    width: 500px;
+
+    /*left: 340px;*/
+    left: 50%;
+    transform: translateX(-50%);
+    /*width: 500px;*/
     height: 100px;
     bottom: 5px;
     behavior: url(../../../common/ie-css3.htc);
+    margin: 0 auto;
 }
 
 .pages.horizontal li {

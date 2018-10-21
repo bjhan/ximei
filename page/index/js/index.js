@@ -376,7 +376,7 @@
             + '<div class="hotcompositioncontzhegnwen">' + data.content + '</div>'
             + '<div class="hotusermessage">'
             + '<div class="hotuserheadicon">'
-            + '<div class="hotuserheadiconimg" style="background-image: ' + data.icon + '"></div>'
+            + '<div class="hotuserheadiconimg" style="background-image: url(' + data.icon + ')"></div>'
             + '</div>'
             + '<div class="hotusername">' + data.author + '</div>'
             + '<div class="hotuserhearticon">'

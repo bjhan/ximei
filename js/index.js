@@ -27,6 +27,7 @@
         $("#wenda").click(function () {
             $(".chooseline").hide();
             $(this).find(".chooseline").show();
+            $("#iframecont").attr("src","page/wenda/wenda.html");
         });
         $("#baike").click(function () {
             $(".chooseline").hide();

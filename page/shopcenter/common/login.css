@@ -34,6 +34,7 @@ body, html {
 }
 .registercont{
     position: relative;
+    display: none;
     width: 554px;
     min-height: 350px;
     height: auto;
@@ -44,8 +45,22 @@ body, html {
     border-radius: 6px;
     filter: progid:DXImageTransform.Microsoft.Shadow(color='#DCDCDC', Direction=55, Strength=3);
 }
-.findpowcont,.resetpowcont{
+.findpowcont{
     position: relative;
+    display: none;
+    width: 554px;
+    min-height: 350px;
+    height: auto;
+    margin: auto;
+    margin-top: 40px;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.50);
+    border-radius: 6px;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#DCDCDC', Direction=55, Strength=3);
+}
+.resetpowcont{
+    position: relative;
+    display: none;
     width: 554px;
     min-height: 350px;
     height: auto;
@@ -98,6 +113,23 @@ body, html {
     width: 141px;
     height: 46px;
 }
+.loginicon2{
+    position: absolute;
+    top:28px;
+    left: 159px;
+    width: 141px;
+    height: 46px;
+}
+.miao{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 24px;
+    color: #000000;
+    margin-top: 15px;
+    margin-bottom: -10px;
+}
 .logintitle{
     position: absolute;
     top:36px;
@@ -119,7 +151,7 @@ body, html {
     position: relative;
     /*display: none;*/
     width: 100%;
-    height: 415px;
+    height: 315px;
 }
 .register{
     position: relative;
@@ -271,6 +303,7 @@ body, html {
 }
 .fasongchenggcont{
     position: absolute;
+    display: none;
     top:0;
     width: 100%;
     height: 100%;
@@ -404,7 +437,7 @@ body, html {
 #loginbtn{
     position: absolute;
     top:180px;
-    left: 70px;
+    left: 90px;
     width: 324px;
     height: 43px;
     background-color: #A978D6;
@@ -428,6 +461,15 @@ body, html {
     font-family: MicrosoftYaHeiUI;
     font-size: 14px;
     color: #9B9B9B;
+    cursor: pointer;
+}
+.mashanggetpow{
+    position: absolute;
+    top:237px;
+    left: 70px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #A978D6;
     cursor: pointer;
 }
 .logimzhanghaoinput{

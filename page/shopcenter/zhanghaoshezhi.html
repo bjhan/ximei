@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>西梅</title>
     <link rel="stylesheet" href="common/index.css">
-    <link rel="stylesheet" href="css/yueziguanli.css">
+    <link rel="stylesheet" href="css/zhanghaoshezhi.css">
+    <script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-4.4.4.min.js"></script>
     <script src="common/jquery-1.8.1.min.js"></script>
     <script src="common/jquery.xdomainrequest.min.js"></script>
     <script src="common/swiper.js"></script>
@@ -44,7 +45,7 @@
             <div class="maioshu">发布信息管理</div>
         </div>
         <div class="shouye">
-            <div class="maioshu" style="color: #A978D6;">月子中心管理</div>
+            <div class="maioshu">月子中心管理</div>
         </div>
         <div class="shouye">
             <div class="maioshu">月子中心发布</div>
@@ -61,12 +62,15 @@
             <div class="maioshu">社区互动</div>
         </div>
         <div class="shouye">
+            <div class="maioshu">评论管理</div>
+        </div>
+        <div class="shouye">
             <div class="maioshu">互动消息</div>
             <div class="shouyeline"></div>
         </div>
         <div class="shouye">
             <img src="img/shezhi.png" class="shouyetu">
-            <div class="maioshu">账号设置</div>
+            <div class="maioshu" style="color: #A978D6;">账号设置</div>
         </div>
         <div class="shouye">
             <div class="maioshu">账号审核</div>
@@ -74,58 +78,64 @@
     </div>
     <div class="subpagecont">
 
-        <div class="shouyegongao">月子中心管理</div>
+        <div class="shouyegongao">账号设置</div>
         <div class="shouyehuodongcont">
             <div class="yueziguanlihead">
-                <div class="quanbu activityguan">全部</div>
-                <div class="quanbu">下架月子中逆袭呢</div>
-                <div class="fabubtn">发布月子中心</div>
+                <div class="quanbu activityguan" id="xinxi">基本信息</div>
+                <div class="quanbu" id="touxiang">更换头像</div>
+                <div class="quanbu" id="chongzhi">重置密码</div>
             </div>
-            <div class="yuezizhognxincont">
-                <div class="yuezizhognxincontdetail">
-                    <img class="yuezizhognxinpic" src="img/ximei.png">
-                    <div class="yueziguanlidesccont">
-                        <div class="yuezimingcheng">安婴宝之家</div>
-                        <div class="yuezimingchengmiaoshu">安婴宝之家</div>
-                        <div class="yuezimingchengmiaoshu"><span class="yueziicon"></span>安婴宝之家</div>
-                    </div>
-                    <div class="yuezigouxuankuang">
-                        <input type="checkbox" value="" name="" checked="" class="yuezizhognixnxuan"/>
+            <div class="yuezizhognxincont" id="jibenxinxi">
+                <div class="xinxicont2">
+                    <div class="xinxiname">账号简介：</div>
+                    <div class="shurukuangcont">
+                        <textarea type="text" class="shrukuang" placeholder="" maxlength="90"  style="resize:none"></textarea>
                     </div>
                 </div>
-                <div class="yuezizhognxincontdetail">
-                    <img class="yuezizhognxinpic" src="img/ximei.png">
-                    <div class="yueziguanlidesccont">
-                        <div class="yuezimingcheng">安婴宝之家</div>
-                        <div class="yuezimingchengmiaoshu">安婴宝之家</div>
-                        <div class="yuezimingchengmiaoshu"><span class="yueziicon"></span>安婴宝之家</div>
+                <div class="xinxicont">
+                    <div class="xinxiname">电话：</div>
+                    <div class="shurukuangcont">
+                        <input type="text" class="shrukuang" placeholder="美国电话请加“ 美国电话: ”前缀" maxlength="30">
                     </div>
-                    <div class="yuezigouxuankuang">
-                        <input type="checkbox" value="" name="" checked="" class="yuezizhognixnxuan"/>
-                    </div>
+                    <div class="jiahao"></div>
                 </div>
-                <div class="yuezizhognxincontdetail">
-                    <img class="yuezizhognxinpic" src="img/ximei.png">
-                    <div class="yueziguanlidesccont">
-                        <div class="yuezimingcheng">安婴宝之家</div>
-                        <div class="yuezimingchengmiaoshu">安婴宝之家</div>
-                        <div class="yuezimingchengmiaoshu"><span class="yueziicon"></span>安婴宝之家</div>
+                <div class="xinxicont">
+                    <div class="xinxiname">微信：</div>
+                    <div class="shurukuangcont">
+                        <input type="text" class="shrukuang" placeholder="填写微信号" maxlength="30">
                     </div>
-                    <div class="yuezigouxuankuang">
-                        <input type="checkbox" value="" name="" checked="" class="yuezizhognixnxuan"/>
+                    <div class="jiahao"></div>
+                </div>
+                <div class="xinxicont">
+                    <div class="xinxiname">QQ：</div>
+                    <div class="shurukuangcont">
+                        <input type="text" class="shrukuang" placeholder="填写QQ号" maxlength="30">
                     </div>
+                    <div class="jiahao"></div>
+                </div>
+                <div class="guanlibtnt">
+                    <div class="guanlibtnwenzi" style="color: #FFFFFF;">管理</div>
                 </div>
             </div>
-            <div class="yuezibtncont">
-                <div class="guanlibtncont">
-                    <div class="guanlibtn">
-                        <div class="guanlibtnwenzi" style="color: #FFFFFF;">管理</div>
+            <div class="yuezizhognxincont2" id="genghuantouxiang">
+                <div class="desctou">头像</div>
+                <div class="touxiangcont">
+                    <img src="https://ximeiimg.oss-cn-beijing.aliyuncs.com/defeultUserIcon.png" class="touxiang">
+                    <div class="touxiangdesc">能代表个人、机构的形象，请勿使用低俗图片、二维码、其它机构或个人标识等涉嫌侵权或误导用户的头像，尺寸不小于200*200px，大小不小于5M</div>
+
+                    <div class="shagnchuantouxiang">
+                        <div class="guanlibtnwenzi">上传头像</div>
                     </div>
-                    <div class="guanlibtn2">
-                        <div class="guanlibtnwenzi" style="color: #FFFFFF;">退出管理</div>
-                    </div>
-                    <div class="guanlibtn3">
-                        <div class="guanlibtnwenzi" style="color: #8A80D9;">退出管理</div>
+                    <input name="url" type="file" id="file" class="upload_input" />
+
+                </div>
+            </div>
+            <div class="yuezizhognxincont2" id="genggaimima">
+                <div class="chongzhikuang">
+                    <input type="text" class="chongzhishrukuang" placeholder="输入登录用的手机号码" maxlength="30">
+
+                    <div class="chongzhianniu">
+                        <div class="guanlibtnwenzi">发送验证码</div>
                     </div>
                 </div>
             </div>
@@ -159,6 +169,7 @@
 </script>
 
 <!--<iframe src="page/index/index.html" class="iframecont" id="iframecont"></iframe>-->
+<script src="js/zhanghaoshezhi.js"></script>
 <script src="../../js/loadfoot.js"></script>
 </body>
 </html>

@@ -111,3 +111,148 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+.zhaopiandesc{
+    position: absolute;
+    top:80px;
+    left: 0px;
+    width: 60px;
+    height: 100px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #BABABA;
+}
+.piccont{
+    position: relative;
+    top:30px;
+    left: 50px;
+    width: 700px;
+    height: 100px;
+}
+.article {
+    float: left;
+    margin-right: 20px;
+    padding: 0px;
+    min-height: 100px;
+}
+.item {
+    width: 58px;
+    height: 58px;
+    float: left;
+    position: relative;
+    margin: 0px;
+}
+.addImg {
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+.preview,.preBlock{
+    position: absolute;
+    display: block;
+    width: 58px;
+    height: 58px;
+    left: 0;
+    top: 0;
+}
+.delete {
+    width: 20px;
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    cursor: pointer;
+    display: none;
+}
+.preBlock img {
+    display: block;
+    width: 58px;
+    height: 58px;
+}
+.upload_input{
+    display: block;
+    width: 0;
+    height: 0;
+    -webkit-opacity: 0.0;
+    /* Netscape and Older than Firefox 0.9 */
+    -moz-opacity: 0.0;
+    /* Safari 1.x (pre WebKit!) 老式khtml内核的Safari浏览器*/
+    -khtml-opacity: 0.0;
+    /* IE9 + etc...modern browsers */
+    opacity: .0;
+    /* IE 4-9 */
+    filter:alpha(opacity=0);
+    /*This works in IE 8 & 9 too*/
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    /*IE4-IE9*/
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+.xiangmutianjia2{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.zimingcheng{
+    float: left;
+    width: 80px;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 14px;
+    color: #000000;
+    text-align: right;
+}
+.clearxian{
+    clear: both;
+}
+.zixuanxiangcont{
+    float: left;
+    width: 675px;
+    height: auto;
+}
+.guanlibtn{
+    position: relative;
+    width: 128px;
+    height: 37px;
+    background: #A978D6;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+.guanlibtn2{
+    position: absolute;
+    /*display: none;*/
+    width: 128px;
+    height: 37px;
+    background: #A978D6;
+    border-radius: 6px;
+}
+.guanlibtn3{
+    position: absolute;
+    /*display: none;*/
+    right: 0;
+    width: 128px;
+    height: 37px;
+    border: 1px solid #8A80D9;
+    border-radius: 6px;
+}
+.guanlibtnwenzi{
+    width: 100%;
+    text-align: center;
+    font-family: MicrosoftYaHeiUI;
+    font-size: 16px;
+    padding-top: 7px;
+}
+.yuezibtncont{
+    position: relative;
+    width: 100%;
+    height: auto;
+
+}
+.guanlibtncont{
+    position: relative;
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+}

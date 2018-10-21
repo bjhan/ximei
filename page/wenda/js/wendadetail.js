@@ -1,70 +1,138 @@
 $(function () {
-    havaAnswer();
+
+    // havaAnswer();
 
     // 判断本问题是否是本人所提 加关注 添加修改
 
     // 判断回答中是否有本人回答
 
     // 判断是否有问答
-    function havaAnswer() {
-        if ($("#reply-num").html() == 0){
-            hideAnswerList();
-            showNoAnswer();
-        }else {
-            showAnswerList();
-            hideNoAnswer();
+    // function havaAnswer() {
+    //     if ($("#reply-num").html() == 0){
+    //         hideAnswerList();
+    //         showNoAnswer();
+    //     }else {
+    //         showAnswerList();
+    //         hideNoAnswer();
+    //     }
+    // }
+    var id = getQueryString("id");
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+
+        if (r != null) {
+            return unescape(r[2]);
         }
+        return null;
     }
-    
+    questionDetail(id);
+    answerDetail(id);
+    // 问题详情
+    function questionDetail(id) {
+        $.ajax({
+            type: "get",
+            url: CFG.interfaceurl + "/wd/question/Detail?id=" + id,
+            dateType: "json",
+            success: function (data) {
+                if (data != null && data != undefined) {
+                    $(".content-question-title").html(data.title);
+                    $(".content-question-content").html(data.content);
+                    $(".top-title").html(data.title);
+                    $(".content-info-img img").attr("src", data.usericon);
+                    $(".content-info-name").html(data.username);
+                    $(".content-info-level").html("Lv " + data.userlevel);
+                    $(".content-info-data").html(data.createTime);
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: true
+        });
+    }
+
+    // 回答详情
+    function answerDetail(id) {
+        $.ajax({
+            type: "get",
+            url: CFG.interfaceurl + "/wd/answer/list?questionId=" + id + "&offset=0&limit=10000",
+            dateType: "json",
+            success: function (data) {
+                if (data != null && data != undefined) {
+                    if (data.totalCount > 0){
+                        hideNoAnswer();
+                        $("#reply-num").html(data.totalCount);
+                        showAnswerList(data.items);
+                    }else {
+                        hideAnswerList();
+                        $(".content-list").empty();
+                        showNoAnswer();
+                    }
+                }
+                $('#mul_input1').html($(".content-question-content").html());
+            },
+            error: function () {
+                return;
+            },
+            async: false
+        });
+    }
+
+    // 隐藏回答
     function hideAnswerList() {
         $(".content-reply-num").css("display", "none");
         $(".content-list").css("display", "none");
     }
 
+    // 显示没有回答
     function showNoAnswer() {
         $(".content-no-answer").css("display", "block");
     }
 
-    function showAnswerList() {
+    // 显示回答
+    function showAnswerList(data) {
         $(".content-reply-num").css("display", "block");
         $(".content-list").css("display", "block");
-        // $(".content-list").empty();
-        var outerOne = $('<div class="content-answer content-answer-one"></div>');
-        var outer = $('<div class="content-answer"></div>');
-        var inner = '<!--回答的头部信息-->'+
-            '<div class="content-answer-top">'+
-            '<div class="content-answer-img"><img src="img/img_1.png"></div>'+
-            '<div class="content-answer-name">Mary McCormick</div>'+
-            '<div class="content-answer-level">Lv1</div>'+
-            '<div class="content-answer-praise pointer">'+
-            '<div class="content-praise-img"><img src="img/zan.png"></div>'+
-            '<div class="content-praise-num">356</div>'+
-            '</div>'+
-            '</div>'+
-            '<div class="content-answer-hr"></div>'+
-            '<!--回答内容-->'+
-            '<div class="content-answer-text">'+
-            '这里是回复So strongly and metaphysically did I conceive of my situation then, '+
-            'that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two;'+
-            'that my free will had received a mortal wound; and that another mistake or misfortune might plunge innocent me into unmerited disaster and death.'+
-            'Therefore, I saw that here was a sort of interregnum in Providence; for its even-handed equity never could have so gross an injustice. ' +
-            'And yet still further pondering—while I jerked him now and then from between the whale and ship, which would threaten to jam him—still further pondering'+
-            '</div>'+
-            '<!--回答相关信息-->'+
-            '<div class="content-answer-bottom">'+
-            '<div class="content-answer-collect pointer">'+
-            '<div class="content-collect-img"><img src="img/meishoucang.png"></div>'+
-            '<div class="content-collect-text">收藏</div>'+
-            '</div>'+
-            '<div class="content-answer-share"><span>125</span>分享</div>'+
-            '<div class="content-answer-time">发布于2018-06-05  12:30</div>'+
-            '</div>';
-        outerOne.append(inner);
-        outer.append(inner);
-        // $(".content-list").append(outerOne);
-        // $(".content-list").append(outer);
+        $(".content-list").empty();
+
+        for (var i=0; i<data.length; i++){
+            var outerOne = $('<div class="content-answer content-answer-one"></div>');
+            var outer = $('<div class="content-answer"></div>');
+            var inner = '<!--回答的头部信息-->'+
+                '<div class="content-answer-top">'+
+                '<div class="content-answer-img"><img src="'+ data[i].usericon +'" width="26px"></div>'+
+                '<div class="content-answer-name">'+ data[i].username +'</div>'+
+                '<div class="content-answer-level">Lv '+ data[i].userlevel +'</div>'+
+                '<div class="content-answer-praise pointer" answerid="'+ data[i].id +'" prisestate="0">'+
+                '<div class="content-praise-img"><img src="img/zan.png"></div>'+
+                '<div class="content-praise-num">'+ data[i].prisecount +'</div>'+
+                '</div>'+
+                '</div>'+
+                '<div class="content-answer-hr"></div>'+
+                '<!--回答内容-->'+
+                '<div class="content-answer-text">'+ data[i].content +
+                '</div>'+
+                '<!--回答相关信息-->'+
+                '<div class="content-answer-bottom">'+
+                '<div class="content-answer-collect pointer" answerid="'+ data[i].id +'">'+
+                '<div class="content-collect-img"><img src="img/meishoucang.png"></div>'+
+                '<div class="content-collect-text">收藏</div>'+
+                '</div>'+
+                '<div class="content-answer-share"><span>'+ data[i].sharecount +'</span> 分享</div>'+
+                '<div class="content-answer-time">发布于'+ data[i].createTime +'</div>'+
+                '</div>';
+            if (i == 0){
+                outerOne.append(inner);
+                $(".content-list").append(outerOne);
+            }else {
+                outer.append(inner);
+                $(".content-list").append(outer);
+            }
+        }
     }
 
+    // 隐藏没有回答
     function hideNoAnswer() {
         $(".content-no-answer").css("display", "none");
     }
@@ -100,11 +168,37 @@ $(function () {
     // 切换关注问题
     $("#concern").click(function () {
         if ($("#concern").hasClass("active")){
-            $("#concern img").attr("src","img/guanzhuwenti.png");
-            $("#concern").removeClass("active");
+            $.ajax({
+                type: "post",
+                url: CFG.interfaceurl + "/wd/question/concern/cancel?id=" + id,
+                dateType: "json",
+                success: function (data) {
+                    if (data.code == "success") {
+                        $("#concern img").attr("src","img/guanzhuwenti.png");
+                        $("#concern").removeClass("active");
+                    }
+                },
+                error: function () {
+                    return;
+                },
+                async: false
+            });
         }else {
-            $("#concern img").attr("src","img/yiguanzhu.png");
-            $("#concern").addClass("active");
+            $.ajax({
+                type: "post",
+                url: CFG.interfaceurl + "/wd/question/concern?id=" + id,
+                dateType: "json",
+                success: function (data) {
+                    if (data.code == "success") {
+                        $("#concern img").attr("src","img/yiguanzhu.png");
+                        $("#concern").addClass("active");
+                    }
+                },
+                error: function () {
+                    return;
+                },
+                async: false
+            });
         }
     });
 
@@ -123,15 +217,46 @@ $(function () {
     // 取消回答
     $("#cancel").click(function () {
         $(".content-write").css("display","none");
-        havaAnswer();
     });
 
     // 收藏
-    $(".content-answer-collect").click(function () {
+    $("body").on('click', '.content-answer-collect',function(){
         if ($(this).hasClass("active")){
+            $.ajax({
+                type: "post",
+                url: CFG.interfaceurl + "/wd/answer/collect/cancel",
+                dateType: "json",
+                data: {
+                    id:$(this).attr("answerid")
+                },
+                success: function (data) {
+                    if (data.code == "success") {
+                    }
+                },
+                error: function () {
+                    return;
+                },
+                async: true
+            });
             $(this).find("img").attr("src","img/uncollection.png");
             $(this).removeClass("active");
         }else {
+            $.ajax({
+                type: "post",
+                url: CFG.interfaceurl + "/wd/answer/collect/cancel",
+                dateType: "json",
+                data: {
+                    id:$(this).attr("answerid")
+                },
+                success: function (data) {
+                    if (data.code == "success") {
+                    }
+                },
+                error: function () {
+                    return;
+                },
+                async: true
+            });
             $(this).find("img").attr("src","img/collection.png");
             $(this).addClass("active");
         }
@@ -169,19 +294,20 @@ $(function () {
             allowImageUpload : false,
             cssData: 'body{font-family: 微软雅黑;font-size: 14px;padding:30px;}',
             afterFocus : function(){//获得焦点 删除默认文字信息
-                if(editor1.html() == '<span style="color:#9B9B9B;">写回答……</span>'){
-                    editor1.html('');
-                }
+                // if(editor1.html() == '<span style="color:#9B9B9B;">写回答……</span>'){
+                //     editor1.html('');
+                // }
             },
             afterBlur: function(e){
                 this.sync();
-                if(editor1.html() == '<br/>' || editor1.html() == ''){
-                    editor1.html('<span style="color:#9B9B9B;">写回答……</span>');
-                }
+                // if(editor1.html() == '<br/>' || editor1.html() == ''){
+                //     editor1.html('<span style="color:#9B9B9B;">写回答……</span>');
+                // }
             },//失去焦点，同步信息数据
             items : [
                 'bold', 'italic', 'insertunorderedlist', 'image', 'media', 'link', 'emoticons']
         });
+        // editor.sync();editor1.sync();
     });
 
     // 修改提问
@@ -191,6 +317,7 @@ $(function () {
         $(".content-question-inner").css("left", left);
         $(".content-question-outer").css("display", "block");
         $(".question-title").focus();
+        $(".question-title").val($(".content-question-title").html());
     });
 
     // 取消提问
@@ -213,6 +340,27 @@ $(function () {
             Toast("请添加问题描述！",1000);
             return;
         }
+
+        $.ajax({
+            type: "post",
+            url: CFG.interfaceurl + "/wd/question/update",
+            dateType: "json",
+            data: {
+                id:id,
+                title: $(".question-title").val(),
+                content: $('#mul_input1').val()
+            },
+            success: function (data) {
+                if (data.code == "success") {
+                    questionDetail(id);
+                    $(".content-question-cancel").click();
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: true
+        });
     });
 
     // 提交回答
@@ -222,38 +370,56 @@ $(function () {
         if (words.length < 10 || $('#mul_input').val() == text){
             Toast("回答不得少于10个字！",1000);
             return;
-        }else {
-            Toast("回答成功，积分+10！",1000);
         }
 
-        var answer = '<div class="content-answer content-answer-one">'+
-            '<!--回答的头部信息-->'+
-            '<div class="content-answer-top">'+
-            '<div class="content-answer-img"><img src="img/img_1.png"></div>'+
-            '<div class="content-answer-name">Mary McCormick</div>'+
-            '<div class="content-answer-level">Lv1</div>'+
-            '<div class="content-answer-praise pointer">'+
-            '<div class="content-praise-img"><img src="img/zan.png"></div>'+
-            '<div class="content-praise-num">356</div>'+
-            '</div>'+
-            '</div>'+
-            '<div class="content-answer-hr"></div>'+
-            '<!--回答内容-->'+
-            '<div class="content-answer-text">'+
-            $('#mul_input').val()+
-            '</div>'+
-            '<!--回答相关信息-->'+
-            '<div class="content-answer-bottom">'+
-            '<div class="content-answer-collect pointer">'+
-            '<div class="content-collect-img"><img src="img/meishoucang.png"></div>'+
-            '<div class="content-collect-text">收藏</div>'+
-            '</div>'+
-            '<div class="content-answer-share"><span>125</span>分享</div>'+
-            '<div class="content-answer-time">发布于2018-06-05  12:30</div>'+
-            '</div>'+
-            '</div>';
-        $(".content-list").prepend(answer);
-        $(".content-reply-num span").text(3);
+        var content = $('#mul_input').val();
+
+        $.ajax({
+            type: "post",
+            url: CFG.interfaceurl + "/wd/answer/create",
+            dateType: "json",
+            data: {
+                questionId:id,
+                content: content
+            },
+            success: function (data) {
+                if (data.code == "success") {
+                    var outer = $('<div class="content-answer"></div>');
+                    var inner = '<!--回答的头部信息-->'+
+                        '<div class="content-answer-top">'+
+                        '<div class="content-answer-img"><img src="" width="26px"></div>'+
+                        '<div class="content-answer-name"></div>'+
+                        '<div class="content-answer-level">Lv </div>'+
+                        '<div class="content-answer-praise pointer" answerid="'+ data.id +'" prisestate="0">'+
+                        '<div class="content-praise-img"><img src="img/zan.png"></div>'+
+                        '<div class="content-praise-num">0</div>'+
+                        '</div>'+
+                        '</div>'+
+                        '<div class="content-answer-hr"></div>'+
+                        '<!--回答内容-->'+
+                        '<div class="content-answer-text">'+ content +
+                        '</div>'+
+                        '<!--回答相关信息-->'+
+                        '<div class="content-answer-bottom">'+
+                        '<div class="content-answer-collect pointer" answerid="'+ data.id +'">'+
+                        '<div class="content-collect-img"><img src="img/meishoucang.png"></div>'+
+                        '<div class="content-collect-text">收藏</div>'+
+                        '</div>'+
+                        '<div class="content-answer-share"><span>0</span> 分享</div>'+
+                        '<div class="content-answer-time">发布于</div>'+
+                        '</div>';
+                    outer.append(inner);
+                    $(".content-answer-one").before(outer);
+                    Toast("回答成功，积分+10！",1000);
+                }else {
+                    Toast(data.message, 1000);
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: true
+        });
         $("#cancel").click();
     });
 
@@ -275,7 +441,33 @@ $(function () {
     // 点赞
     $("body").on('click', '.content-answer-praise',function(){
         // 数字+1 刷新页面
-        $(this).children(".content-praise-num").text(357);
+        var num = $(this).children(".content-praise-num").text();
+        var state = $(this).attr("prisestate");
+        if (state == 0){
+            $.ajax({
+                type: "post",
+                url: CFG.interfaceurl + "/wd/answer/prise",
+                dateType: "json",
+                data: {
+                    id:$(this).attr("answerid")
+                },
+                success: function (data) {
+                    if (data.code == "success") {
+                        answerDetail(id);
+                    }
+                },
+                error: function () {
+                    return;
+                },
+                async: true
+            });
+            $(this).children(".content-praise-num").text(parseInt(num)+1);
+            $(this).attr("prisestate","1");
+        }else if (state == 1){
+            Toast("一天只能点赞一次话题回答！",1000);
+            return;
+        }
+
     });
 
 })

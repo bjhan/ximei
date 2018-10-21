@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>问答</title>
+    <title>西梅问答</title>
     <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/wenda.css">
     <link href="kindeditor-4.1.10/themes/default/default.css" rel="stylesheet" />
-    <script src="js/jquery.min.2.1.4.js"></script>
+    <script src="../../common/jquery-1.8.1.min.js"></script>
+    <script src="../../common/jquery.xdomainrequest.min.js"></script>
+    <!--<script src="js/jquery.min.2.1.4.js"></script>-->
     <!--<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
     <script src="js/wenda.js"></script>
+    <script src="js/config.js"></script>
     <script src="js/clamp.js"></script>
     <script src="kindeditor-4.1.10/kindeditor-min.js"></script>
     <script src="kindeditor-4.1.10/lang/zh_CN.js"></script>
@@ -23,10 +26,10 @@
                 <div class="content-top-qa pointer askquestions">提问</div>
                 <div class="content-top-vertical"></div>
                 <div class="content-top-img"><img src="img/answer.png"></div>
-                <div class="content-top-qa pointer">回答</div>
+                <div class="content-top-qa pointer answer">回答</div>
             </div>
             <div class="content-top-bottom">
-                <input type="text" class="content-top-input">
+                <input type="text" class="content-top-input" id="searchStr">
                 <div class="content-top-search pointer">搜索</div>
             </div>
         </div>
@@ -59,10 +62,7 @@
                 <div class="content-hot content-hot-first">
                     <!--题目-->
                     <div class="content-hot-title"><a href="wendadetail.html?id=1">
-                        <p class="p-title">
-                            adsfafasdf asdf dsa fsdf sdar热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题
-                            热门问题热门问题热门问题热门问aaa题热门问题热门问题热门问题热门问题热门问题热门问题热门g 问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题
-                        </p>
+                        <p class="p-title"></p>
                     </a>
                     </div>
                     <!--用户信息-->
@@ -73,18 +73,11 @@
                     </div>
                     <!--回答-->
                     <div class="content-hot-answer">
-                        <p class="p-answer">
-                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
-                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
-                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
-                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
-                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
-                            这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，
-                        </p>
+                        <p class="p-answer"></p>
                         <!--点赞-->
                         <div class="content-hot-praise pointer">
                             <div class="content-hot-praiseimg"><img src="img/zan.png"></div>
-                            <div class="content-hot-praisenum">356</div>
+                            <div class="content-hot-praisenum">0</div>
                         </div>
                         <div class="content-hot-about">
                             <!--回复-->
@@ -101,9 +94,7 @@
                 <!--问答2-->
                 <div class="content-hot">
                     <!--题目-->
-                    <div class="content-hot-title">
-                        热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题热门问题
-                    </div>
+                    <div class="content-hot-title"></div>
                     <!--用户信息-->
                     <div class="content-hot-info">
                         <div class="content-hot-img"><img src="img/img_1.png"></div>
@@ -112,11 +103,11 @@
                     </div>
                     <!--回答-->
                     <div class="content-hot-answer">
-                        <span>这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，这里是回答，</span>
+                        <span></span>
                         <!--点赞-->
                         <div class="content-hot-praise pointer">
                             <div class="content-hot-praiseimg"><img src="img/zan.png"></div>
-                            <div class="content-hot-praisenum">356</div>
+                            <div class="content-hot-praisenum">3</div>
                         </div>
                         <div class="content-hot-about">
                             <!--回复-->
@@ -141,11 +132,11 @@
             <div class="content-search-list content-search-listfirst">
                 <div>
                     <div class="content-list-point"></div>
-                    <div class="content-list-title">这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？</div>
+                    <div class="content-list-title"></div>
                 </div>
                 <div class="content-list-bottom">
-                    <div class="content-list-focus"><span class="content-list-focusnum">15</span>个关注</div>
-                    <div class="content-list-answer"><span class="content-list-answernum">13</span>个回答</div>
+                    <div class="content-list-focus"><span class="content-list-focusnum">0</span>个关注</div>
+                    <div class="content-list-answer"><span class="content-list-answernum">0</span>个回答</div>
                     <div class="content-list-time">2018-06-05</div>
                 </div>
             </div>
@@ -154,16 +145,14 @@
             <div class="content-search-list">
                 <div>
                     <div class="content-list-point"></div>
-                    <div class="content-list-title">这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？这里是热门问题的问题，这里是人们问题的问题？</div>
+                    <div class="content-list-title"></div>
                 </div>
                 <div class="content-list-bottom">
-                    <div class="content-list-focus"><span class="content-list-focusnum">15</span>个关注</div>
-                    <div class="content-list-answer"><span class="content-list-answernum">13</span>个回答</div>
+                    <div class="content-list-focus"><span class="content-list-focusnum">0</span>个关注</div>
+                    <div class="content-list-answer"><span class="content-list-answernum">0</span>个回答</div>
                     <div class="content-list-time">2018-06-05</div>
                 </div>
             </div>
-
-            <div class="content-bottom-more pointer">查看更多</div>
         </div>
 
     </div>

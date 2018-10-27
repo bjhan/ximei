@@ -1084,7 +1084,7 @@ p{
 }
 .huifupinglunduv{
     position: relative;
-    /*display: none;*/
+    display: none;
     width: 100%;
     height: auto;
 }
@@ -1105,6 +1105,7 @@ p{
     font-size: 16px;
     color: #FFFFFF;
     padding-top: 7px;
+    cursor: pointer;
 }
 .huifupinglunkuang{
     position: relative;
@@ -1132,7 +1133,11 @@ p{
     height: auto;
 }
 
-
+#neirongqu{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
 
 
 

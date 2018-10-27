@@ -145,6 +145,14 @@
         });
     }
 
+    function dianjihanshu() {
+        $(".hotcompositioncont").unbind().click(function () {
+            var pathname = window.location.href;
+            var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);
+            var tempid = $(this).attr("tempid");
+            window.location.href = path+'gongluexiangqing.html?id='+tempid;
+        });
+    }
     $("#tianjiaxian").unbind().click(function () {
         pagenumquanju++;
         huoqugonglueliebiao(pagenumquanju,10);
@@ -172,6 +180,7 @@
             + '</div>'
             + '</div>';
         $("#tianjiaxian").before(str);
+        dianjihanshu();
     }
 
     //定义百度统计按钮点击次数的函数

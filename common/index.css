@@ -93,7 +93,7 @@ body, html {
   background-image: url(../img/pgindex_btn_register_hover.png); }
 
 #ximeijie {
-  right: 30.88%; }
+  right: 30.2%; }
 
 #huodong {
   right: 30.88%; }
@@ -108,10 +108,10 @@ body, html {
   right: 44.17%; }
 
 #xiyouquan {
-  right: 48.59%; }
+  right: 49.3%; }
 
 #shouye {
-  right: 54.11%; }
+  right: 54.41%; }
 
 .mainchoose {
   position: absolute;
@@ -132,6 +132,7 @@ body, html {
   position: absolute;
   bottom: 36px;
   font-size: 18px;
+  font-family: MicrosoftYaHeiUI;
   width: 100%;
   text-align: center; }
 

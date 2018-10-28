@@ -41,26 +41,7 @@
 
     });
     iebanben = IEVersion();
-    getBanners();//banner
 
-    function getBanners() {
-        // jQuery.support.cors = true;
-        $.ajax({
-            url: CFG.interfaceurl+'/homepage/banners'+'?fresh=' + Math.random(),
-            type: "get",
-            timeout: 5000,
-            success: function (data) {
-                if(data.length>0){
-                    console.log(data);
-                    initswiper(data);
-                }
-            },
-            error: function (a,b,c) {
-                alert(c);
-                console.log(data);
-            }
-        });
-    }
 
     function IEVersion() {
         var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
@@ -90,22 +71,200 @@
             return -1;//不是ie浏览器
         }
     }
-
-    function initswiper(bannerarry) {//首页滑动
-        bannernum = bannerarry.length;
-        for(var i=0;i<bannerarry.length;i++){
-            $("#sections").append("<div class=\"section\" id=\"section"+bannerarry[i].id+"\" style=\"filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='"+bannerarry[i].imageUrl+"',sizingMethod='scale');background-image:url("+bannerarry[i].imageUrl+");background-repeat: no-repeat;background-size: 100% 100%;\"></div>")
-        }
-
-        $("#container").PageSwitch({
-            direction:'horizontal',
-            easing:'ease-in',
-            duration:1000,
-            autoPlay:true,
-            loop:'false'
+    //获取url中的参数
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+    getgonglue();
+    function getgonglue() {
+        var id = getUrlParam('id');
+        $.ajax({
+            url: CFG.interfaceurl + '/gl/detail?id=' + id,
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                console.log(data);
+                $("#container").attr("src",data.imageUrl);
+                $(".wenzhangtitle").html(data.title);
+                $("#wenzhangtitlewenzi").html(data.userName);
+                $(".userLevel").html(data.userLevel);
+                $("#viewCount").html(data.viewCount);
+                $("#replyCount").html(data.replyCount);
+                $("#userIcon").attr("src",data.userIcon);
+                $("#neirongqu").html(data.content);
+            },
+            error: function (a, b, c) {
+            }
         });
     }
 
+    jiazaipinglun(0, 5);
+    function jiazaipinglun(pagenum, pageSize) {
+        var id = getUrlParam('id');
+        $.ajax({
+            url: CFG.interfaceurl + '/gl/reply/list?glid=' + id + '&offset=' + pagenum + '&limit=' + pageSize,
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+                $(".taocanyonghupingluncont .taocanpingluncont").remove();
+                $("#taocanyonghushuliang").html(data.totalCount);
+                shangxiayefun(Math.ceil(data.totalCount/pageSize));
+                if (data.totalCount >= 4) {
+                    $("#fenye1").show();
+                    $("#fenye2").show();
+                    $("#fenye3").show();
+                    $("#fenye4").show();
+                } else {
+                    for (var j = 0; j < data.totalCount; j++) {
+                        $("#fenye" + (j + 1)).show();
+                    }
+                }
+                fenye(pagenum,data.totalCount,pageSize);
+                for (var j = 0; j < (data.items).length; j++) {
+                    tianjiapinglun(data.items[j], (pageSize*pagenum)+j + 1);
+                }
+                tianjiauifu();//评论函数
+                $(".huifuanniu").click(function () {//回复
+                    if ($(this).parent().next().css('display') == 'none') {
+                        $(this).parent().next().show();
+                    } else {
+                        $(this).parent().next().hide();
+                    }
+                });
+            },
+            error: function (data) {
+                //alert("请求错误");
+            }
+        });
+    }
+    function tianjiapinglun(data, i) {//添加评论
+        var str = '<div class="taocanpingluncont">'
+            + '<div class="taocanyonghutouxiag">'
+            + '<div class="taocanyonghutouxiagpic" style="background-image: url(' + data.userIcon + ');"></div>'
+            + '</div>'
+            + '<div class="taocanyonghupinglunneitong">'
+            + '<div class="taocanyonghumingchengcont">'
+            + '<span class="taocanyonghumingzi">' + data.userName + '</span>&nbsp;&nbsp;&nbsp;'
+            + '<span class="taocanyonghujibie">LV' + data.userLevel + '</span>'
+            + '<div class="taocanyonghulouceng">' + i + 'F</div>'
+            + '</div>'
+            + '<div class="taocanyonghupinglunneirong">' + data.content + '</div>'
+            + '<div class="taocanpinglunshijian"><span>' + data.createTime + '</span><div class="huifuanniu">回复</div></div>'
+            + ' <div class="huifupinglunduv">'
+            + '<textarea class="huifupinglunkuang"></textarea>'
+            + '<div class="fabiaopinglunbtndetail" subid="' + data.id + '">'
+            + '<div class="fabiaopinglunbtnwenzidetail">发表评论</div>'
+            + '</div>'
+            + '</div>'
+            + '</div>'
+            + '<div class="clear"></div>'
+            + '</div>';
+        $("#pinglunkongbai").before(str);
+    }
+    function tianjiauifu() {
+        $(".fabiaopinglunbtndetail").click(function () {
+            var id= $(this).attr("subid");
+            var content = $(this).prev().val();
+            submitzi(content,id);
+        });
+
+        $(".fabiaopinglunbtn").click(function () {
+            var id = getUrlParam('id');
+            var content = $("#zibuping").val();
+            if(content.length>1){
+                submit(content);
+            }
+        });
+    }
+    function fenye(nowNum,total,pagesize) {
+        nowNum = nowNum/pagesize;
+        nowNum =parseInt(nowNum);
+        total=Math.ceil(total/pagesize);
+        $("#fenye").html(total);
+        $("#fenyecont").empty();
+
+        for(var i=0;i<total;i++){
+            if(nowNum === i){
+                $("#fenyecont").append(zhengchangnum2(i+1));
+            }else {
+                $("#fenyecont").append(zhengchangnum(i+1));
+            }
+        }
+        $(".numchooseno").click(function () {
+            var num = $(this).find("div").html();
+            jiazaipinglun((num-1)*5,5);
+        })
+    }
+    function zhengchangnum(num) {
+        var pagestr =' <div class="numchooseno">'
+            +'<div class="numchoosenum">'+num+'</div>'
+            +'</div>';
+        return pagestr;
+    }
+    function zhengchangnum2(num) {
+        var pagestr =' <div class="numchooseno numchoose">'
+            +'<div class="numchoosenum">'+num+'</div>'
+            +'</div>';
+        return pagestr;
+    }
+    function shangxiayefun(total) {
+        $(".lastpagebtn").click(function () {
+            var num = $(".numchoose").find("div").html();
+            if(num>1){
+                jiazaipinglun((num-2)*5,5);
+            }
+
+        });
+        $(".nestpagebtn").click(function () {
+            var num = $(".numchoose").find("div").html();
+            if(num<total){
+                jiazaipinglun(num*5,5);
+            }
+
+        });
+    }
+    function submitzi(content,id) {
+        $.ajax({
+            type: "POST",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            url: CFG.interfaceurl + "/gl/reply/create",
+            data: {
+                replyId: id,
+                content: content
+            },
+            success: function (msg) {
+                console.log(msg);
+                $(".huifupinglunduv").hide();
+                $("#zibuping").val('');
+                jiazaipinglun(0, 5);
+            },
+            error: function (data) {
+            }
+        });
+    }
+    function submit(content) {
+        var id = getUrlParam('id');
+        $.ajax({
+            type: "POST",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            url: CFG.interfaceurl + "/gl/reply/create",
+            data: {
+                glId: id,
+                content: content
+            },
+            success: function (msg) {
+                console.log(msg);
+                $(".huifupinglunduv").hide();
+                $("#zibuping").val('');
+                jiazaipinglun(0, 5);
+            },
+            error: function (data) {
+            }
+        });
+    }
     //定义百度统计按钮点击次数的函数
     function Baidu(category, evnet) {
         !evnet && (evnet = '点击');

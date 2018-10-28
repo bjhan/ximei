@@ -31,6 +31,7 @@
     bottom: 5px;
     behavior: url(../../../common/ie-css3.htc);
     margin: 0 auto;
+    padding: 0;
 }
 
 .pages.horizontal li {

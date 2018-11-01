@@ -17,6 +17,7 @@ a:hover {text-decoration:none;}
     /*height: 1000px;*/
     /*border: 1px solid black;*/
     margin: auto;
+    margin-bottom: 100px;
 }
 
 .to-top {
@@ -484,3 +485,4 @@ a:hover {text-decoration:none;}
     top: 12px;
     left: 15px;
 }
+

@@ -4,6 +4,7 @@ $(function () {
 
     // 判断本问题是否是本人所提 加关注 添加修改
 
+
     // 判断回答中是否有本人回答
 
     // 判断是否有问答
@@ -43,6 +44,9 @@ $(function () {
                     $(".content-info-name").html(data.username);
                     $(".content-info-level").html("Lv " + data.userlevel);
                     $(".content-info-data").html(data.createTime);
+                    if (data.isMyQuestion != true){
+                        $("#change-question").addClass("hidden");
+                    }
                 }
             },
             error: function () {
@@ -51,6 +55,8 @@ $(function () {
             async: true
         });
     }
+
+    isconcern();
 
     // 回答详情
     function answerDetail(id) {
@@ -70,7 +76,7 @@ $(function () {
                         showNoAnswer();
                     }
                 }
-                $('#mul_input1').html($(".content-question-content").html());
+                // $('#mul_input1').html($(".content-question-content").html());
             },
             error: function () {
                 return;
@@ -115,11 +121,15 @@ $(function () {
                 '</div>'+
                 '<!--回答相关信息-->'+
                 '<div class="content-answer-bottom">'+
-                '<div class="content-answer-collect pointer" answerid="'+ data[i].id +'">'+
-                '<div class="content-collect-img"><img src="img/meishoucang.png"></div>'+
+                '<div class="content-answer-collect pointer '+ (data[i].isCollect ? "active" : "") +'" answerid="'+ data[i].id +'">'+
+                '<div class="content-collect-img"><img src="'+ (data[i].isCollect ? "img/collection.png" : "img/uncollection.png") +'"></div>'+
                 '<div class="content-collect-text">收藏</div>'+
                 '</div>'+
                 '<div class="content-answer-share"><span>'+ data[i].sharecount +'</span> 分享</div>'+
+                '<div class="content-change pointer '+ (data[i].isMyAnswer ? "" : "hidden") +'" id="change-answer">' +
+                '<div class="content-change-text">修改</div>' +
+                '<div class="content-change-img"><img src="img/xiugai.png"></div>' +
+                '</div>'+
                 '<div class="content-answer-time">发布于'+ data[i].createTime +'</div>'+
                 '</div>';
             if (i == 0){
@@ -165,6 +175,28 @@ $(function () {
 
     });
 
+    // 判断问题是否关注
+    function isconcern(){
+        $.ajax({
+            type: "get",
+            url: CFG.interfaceurl + "/wd/question/isconcern?questionId=" + id,
+            dateType: "json",
+            success: function (data) {
+                if (data.code == "success" && data.isConcern == true) {
+                    $("#concern img").attr("src","img/yiguanzhu.png");
+                    $("#concern").addClass("active");
+                }else{
+                    $("#concern img").attr("src","img/guanzhuwenti.png");
+                    $("#concern").removeClass("active");
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: false
+        });
+    }
+
     // 切换关注问题
     $("#concern").click(function () {
         if ($("#concern").hasClass("active")){
@@ -205,13 +237,18 @@ $(function () {
     // 回答问题
     $("body").on('click', '.writte',function(){
         $(".content-write").css("display","block");
+        $(".content-write").attr("state","0");
         hideNoAnswer();
+        editor.html('<span style="color: #9B9B9B;">写回答……</span>');
     });
 
-    // 修改问题
+    // 修改回答
     $("body").on('click', '#change-answer',function(){
         $(".content-write").css("display","block");
+        $(".content-write").attr("state","1");
         hideNoAnswer();
+        var text = $(this).parent().prev().html();
+        editor.html(text);
     });
 
     // 取消回答
@@ -243,7 +280,7 @@ $(function () {
         }else {
             $.ajax({
                 type: "post",
-                url: CFG.interfaceurl + "/wd/answer/collect/cancel",
+                url: CFG.interfaceurl + "/wd/answer/collect",
                 dateType: "json",
                 data: {
                     id:$(this).attr("answerid")
@@ -273,15 +310,15 @@ $(function () {
             allowImageUpload : false,
             cssData: 'body{font-family: 微软雅黑;font-size: 14px;padding:30px;}',
             afterFocus : function(){//获得焦点 删除默认文字信息
-                if(editor.html() == '<span style="color:#9B9B9B;">写回答……</span>'){
-                    editor.html('');
-                }
+                // if(editor.html() == '<span style="color:#9B9B9B;">写回答……</span>'){
+                //     editor.html('');
+                // }
             },
             afterBlur: function(e){
                 this.sync();
-                if(editor.html() == '<br/>' || editor.html() == ''){
-                    editor.html('<span style="color:#9B9B9B;">写回答……</span>');
-                }
+                // if(editor.html() == '<br/>' || editor.html() == ''){
+                //     editor.html('<span style="color:#9B9B9B;">写回答……</span>');
+                // }
             },//失去焦点，同步信息数据
             items : [
                 'bold', 'italic', 'insertunorderedlist', 'image', 'media', 'link', 'emoticons']
@@ -318,6 +355,7 @@ $(function () {
         $(".content-question-outer").css("display", "block");
         $(".question-title").focus();
         $(".question-title").val($(".content-question-title").html());
+        editor1.html($(".content-question-content").html());
     });
 
     // 取消提问
@@ -363,6 +401,7 @@ $(function () {
         });
     });
 
+
     // 提交回答
     $("body").on('click', '.content-write-submit',function(){
         var text = '<span style="color: #9B9B9B;">写回答……</span>';
@@ -374,53 +413,82 @@ $(function () {
 
         var content = $('#mul_input').val();
 
-        $.ajax({
-            type: "post",
-            url: CFG.interfaceurl + "/wd/answer/create",
-            dateType: "json",
-            data: {
-                questionId:id,
-                content: content
-            },
-            success: function (data) {
-                if (data.code == "success") {
-                    var outer = $('<div class="content-answer"></div>');
-                    var inner = '<!--回答的头部信息-->'+
-                        '<div class="content-answer-top">'+
-                        '<div class="content-answer-img"><img src="" width="26px"></div>'+
-                        '<div class="content-answer-name"></div>'+
-                        '<div class="content-answer-level">Lv </div>'+
-                        '<div class="content-answer-praise pointer" answerid="'+ data.id +'" prisestate="0">'+
-                        '<div class="content-praise-img"><img src="img/zan.png"></div>'+
-                        '<div class="content-praise-num">0</div>'+
-                        '</div>'+
-                        '</div>'+
-                        '<div class="content-answer-hr"></div>'+
-                        '<!--回答内容-->'+
-                        '<div class="content-answer-text">'+ content +
-                        '</div>'+
-                        '<!--回答相关信息-->'+
-                        '<div class="content-answer-bottom">'+
-                        '<div class="content-answer-collect pointer" answerid="'+ data.id +'">'+
-                        '<div class="content-collect-img"><img src="img/meishoucang.png"></div>'+
-                        '<div class="content-collect-text">收藏</div>'+
-                        '</div>'+
-                        '<div class="content-answer-share"><span>0</span> 分享</div>'+
-                        '<div class="content-answer-time">发布于</div>'+
-                        '</div>';
-                    outer.append(inner);
-                    $(".content-answer-one").before(outer);
-                    Toast("回答成功，积分+10！",1000);
-                }else {
-                    Toast(data.message, 1000);
-                }
-            },
-            error: function () {
-                return;
-            },
-            async: true
-        });
-        $("#cancel").click();
+        if ($(".content-write").attr('state') == 0){
+            $.ajax({
+                type: "post",
+                url: CFG.interfaceurl + "/wd/answer/create",
+                dateType: "json",
+                data: {
+                    questionId:id,
+                    content: content
+                },
+                success: function (data) {
+                    if (data.code == "success") {
+                        var outer = $('<div class="content-answer"></div>');
+                        var inner = '<!--回答的头部信息-->'+
+                            '<div class="content-answer-top">'+
+                            '<div class="content-answer-img"><img src="" width="26px"></div>'+
+                            '<div class="content-answer-name"></div>'+
+                            '<div class="content-answer-level">Lv </div>'+
+                            '<div class="content-answer-praise pointer" answerid="'+ data.id +'" prisestate="0">'+
+                            '<div class="content-praise-img"><img src="img/zan.png"></div>'+
+                            '<div class="content-praise-num">0</div>'+
+                            '</div>'+
+                            '</div>'+
+                            '<div class="content-answer-hr"></div>'+
+                            '<!--回答内容-->'+
+                            '<div class="content-answer-text">'+ content +
+                            '</div>'+
+                            '<!--回答相关信息-->'+
+                            '<div class="content-answer-bottom">'+
+                            '<div class="content-answer-collect pointer" answerid="'+ data.id +'">'+
+                            '<div class="content-collect-img"><img src="img/meishoucang.png"></div>'+
+                            '<div class="content-collect-text">收藏</div>'+
+                            '</div>'+
+                            '<div class="content-answer-share"><span>0</span> 分享</div>'+
+                            '<div class="content-change pointer" id="change-answer">' +
+                            '<div class="content-change-text">修改</div>' +
+                            '<div class="content-change-img"><img src="img/xiugai.png"></div>' +
+                            '</div>'+
+                            '<div class="content-answer-time">发布于</div>'+
+                            '</div>';
+                        outer.append(inner);
+                        $(".content-answer-one").before(outer);
+                        Toast("回答成功，积分+10！",1000);
+                        $("#cancel").click();
+                    }else {
+                        Toast(data.message, 1000);
+                    }
+                },
+                error: function () {
+                    return;
+                },
+                async: true
+            });
+        }else{
+            // 修改回答
+            $.ajax({
+                type: "post",
+                url: CFG.interfaceurl + "/wd/answer/create",
+                dateType: "json",
+                data: {
+                    questionId:id,
+                    content: content
+                },
+                success: function (data) {
+                    if (data.code == "success") {
+                        Toast("修改成功！",1000);
+                        $("#cancel").click();
+                    }else {
+                        Toast(data.message, 1000);
+                    }
+                },
+                error: function () {
+                    return;
+                },
+                async: true
+            });
+        }
     });
 
     //自定义弹框

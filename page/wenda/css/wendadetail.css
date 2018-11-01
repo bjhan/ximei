@@ -4,7 +4,7 @@
 
 .content {
     width: 1200px;
-    height: 1000px;
+    height: 100%;
     margin: auto;
     font-family: 微软雅黑;
     /*border: 1px solid black;*/
@@ -362,6 +362,10 @@
     margin-left: 49px;
     height: 18px;
     /*display: none;*/
+}
+
+.hidden {
+    display: none;
 }
 
 .content-change-img {

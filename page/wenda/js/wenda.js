@@ -1,6 +1,6 @@
 $(function () {
 
-
+    haveNewQuestion();
 
     var num = 0;
     showHotQuestion(0, 6);
@@ -88,6 +88,8 @@ $(function () {
         $(this).css("background", "#A978D6");
         $("#" + id + " a").css("color", "#fff");
 
+        haveNewQuestion();
+
         // 切换内容
         num = $(this).attr("num");
         // 热门问题
@@ -145,8 +147,8 @@ $(function () {
                 '<div class="content-hot-replyimg"><img src="img/reply.png"></div>'+
                 '<div class="content-hot-reply">共<span>'+data[i].totalReplycount+'</span>条回复</div>'+
                 '<!--收藏-->'+
-                '<div class="pointer collect" style="float: left;" questionid="'+ data[i].id +'">'+
-                '<div class="content-hot-collectionimg"><img src="img/uncollection.png"></div>'+
+                '<div class="pointer collect '+ (data[i].isCollect ? "active" : "") +'" style="float: left;" questionid="'+ data[i].id +'">'+
+                '<div class="content-hot-collectionimg"><img src="'+ (data[i].isCollect ? "img/collection.png" : "img/uncollection.png") +'"></div>'+
                 '<div class="content-hot-collection">收藏</div>'+
                 '</div>'+
                 '</div>'+
@@ -410,50 +412,48 @@ $(function () {
     // 点赞
     $("body").on('click', '.content-hot-praise',function(){
         var num = $(this).children(".content-hot-praisenum").text();
-        var state = $(this).attr("prisestate");
-        if (state == 0){
-            $.ajax({
-                type: "post",
-                url: CFG.interfaceurl + "/wd/question/prise",
-                dateType: "json",
-                data: {
-                    id:$(this).attr("questionid")
-                },
-                success: function (data) {
-                    if (data.code == "success") {
-
-                    }
-                },
-                error: function () {
+        var questionId = $(this).attr("questionid");
+        $.ajax({
+            type: "get",
+            url: CFG.interfaceurl + "/wd/question/ispraisedtoday",
+            dateType: "json",
+            data: {
+                'questionId':questionId
+            },
+            success: function (data) {
+                if (data.code == "success" && data.isPraisedToday == false) {
+                    $.ajax({
+                        type: "post",
+                        url: CFG.interfaceurl + "/wd/question/prise",
+                        dateType: "json",
+                        data: {
+                            'id':questionId
+                        },
+                        success: function (data) {
+                            if (data.code == "success") {
+                                $(this).children(".content-hot-praisenum").text(parseInt(num)+1);
+                                $(this).attr("prisestate","1");
+                            }
+                        },
+                        error: function () {
+                            return;
+                        },
+                        async: false
+                    });
+                }else{
+                    Toast("一天只能点赞一次话题回答！",1000);
                     return;
-                },
-                async: true
-            });
-            $(this).children(".content-hot-praisenum").text(parseInt(num)+1);
-            $(this).attr("prisestate","1");
-        }else if (state == 1){
-            Toast("一天只能点赞一次话题回答！",1000);
-            return;
-            // $.ajax({
-            //     type: "post",
-            //     url: CFG.interfaceurl + "/wd/question/prise/cancel",
-            //     dateType: "json",
-            //     data: {
-            //         id:$(this).attr("questionid")
-            //     },
-            //     success: function (data) {
-            //         if (data.code == "success") {
-            //
-            //         }
-            //     },
-            //     error: function () {
-            //         return;
-            //     },
-            //     async: true
-            // });
-            // $(this).children(".content-hot-praisenum").text(parseInt(num)-1);
-            // $(this).attr("prisestate","0");
-        }
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: false
+        });
+        // var state = $(this).attr("prisestate");
+        // if (state == 0){
+        // }else if (state == 1){
+        // }
 
     });
 
@@ -482,7 +482,8 @@ $(function () {
             success: function (data) {
                 if (data.code == "success") {
                     $(".content-question-cancel").click();
-                    window.open('wendadetail.html?id='+data.id);
+                    // 自动关注
+                    concern(data.id);
                 }
             },
             error: function () {
@@ -493,6 +494,43 @@ $(function () {
         // $(location).attr('href', 'wendadetail.html?id=1');
 
     });
+
+    function concern(id){
+        $.ajax({
+            type: "post",
+            url: CFG.interfaceurl + "/wd/question/concern?id=" + id,
+            dateType: "json",
+            success: function (data) {
+                if (data.code == "success") {
+                    // 打开二级页面
+                    window.open('wendadetail.html?id='+id);
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: false
+        });
+    }
+
+    // 查询是否有新回答
+    function haveNewQuestion(){
+        $.ajax({
+            type: "get",
+            url: CFG.interfaceurl + "/wd/myquestion/newreply",
+            dateType: "json",
+            // data: {},
+            success: function (data) {
+                if (data.code == "success" && data.hasNewReply == true) {
+                    $(".red-point").removeClass("hidden");
+                }
+            },
+            error: function () {
+                return;
+            },
+            async: false
+        });
+    }
 
 
     //自定义弹框

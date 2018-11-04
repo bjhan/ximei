@@ -291,6 +291,11 @@
     }
 
     function tianjiapinglun(data, i) {//添加评论
+        console.log(data);
+        var pic = '';
+        for(var i=0;i<data.imageUrls.length;i++){
+            pic= pic +'<img src="'+data.imageUrls[i]+'" class="picchoose">'
+        }
         var str = '<div class="taocanpingluncont">'
             + '<div class="taocanyonghutouxiag">'
             + '<div class="taocanyonghutouxiagpic" style="background-image: url(' + data.userIcon + ');"></div>'
@@ -309,10 +314,27 @@
             + '<div class="fabiaopinglunbtnwenzidetail">发表评论</div>'
             + '</div>'
             + '</div>'
-            + '</div>'
+            + '</div><div class="piccontdetail">'
+            +pic
+            +'</div><div class="piccontdetailshow">'
+            +'<img src="" class="tupianxianshi">'
+            +'</div>'
             + '<div class="clear"></div>'
+            + '</div>'
             + '</div>';
         $("#pinglunkongbai").before(str);
+        $(".picchoose").unbind().click(function () {
+            $(".picchoose").removeClass("picborder");
+            $(".tupianxianshi").hide();
+            var pic = $(this).attr("src");
+            $(this).addClass("picborder");
+            $(this).parent().next().children(".tupianxianshi").attr("src",pic);
+            $(this).parent().next().children(".tupianxianshi").show();
+        });
+        $(".tupianxianshi").click(function () {
+            $(".picchoose").removeClass("picborder");
+            $(".tupianxianshi").hide();
+        });
     }
 
     jiazaipinglun(0, 5);

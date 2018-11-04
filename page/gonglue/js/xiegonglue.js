@@ -75,7 +75,7 @@
             allowFileManager : true,//允许上传文件和图片
             cssData: 'body{font-family: 微软雅黑;font-size: 14px;padding:30px;}',
             afterFocus : function(){//获得焦点 删除默认文字信息
-                if(editor.html() == '<span style="color:#9B9B9B;">写回答……</span>'){
+                if(editor.html() == '<span style="color:#9B9B9B;">写攻略……</span>'){
                     editor.html('');
                 }
             },
@@ -90,6 +90,100 @@
         });
     });
 
+    function yincang(text) {
+        $("#shanchutixing").show();
+        $(".shanchuchengong").show();
+        $("#wenzixianshi").html(text);
+        setTimeout(function () {
+            $("#shanchutixing").fadeOut(500);
+        },500);
+    }
+
+    getgongluecaogao();
+    function getgongluecaogao() {
+        $.ajax({
+            url: CFG.interfaceurl + '/gl/drafts',
+            type: "get",
+            timeout: 5000,
+            success: function (data) {
+               console.log(data);
+               $("#caogaojuti").empty();
+               $("#caogaoshu").html(data.length);
+               for(var i=0;i<data.length;i++){
+                   addcaogao(data[i]);
+               }
+            },
+            error: function (a, b, c) {
+            }
+        });
+    }
+    function addcaogao(data) {
+        var str = ' <div class="caogaoditail">'
+            +'<div class="caogaoname">'+data.title+'</div>'
+            +'<div class="caogaoshijian">'+data.lastModifyTime+'</div>'
+        +'<div class="jixuxie">'
+            +'<div class="jixuxiewenzi">继续写</div>'
+            +'</div>'
+            +'</div>';
+        $("#caogaojuti").append(str);
+    }
+    function savegongluecaogao(title,content,imageUrl) {
+        $.ajax({
+            type: "POST",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            url: CFG.interfaceurl + "/gl/drafts/create",
+            data: {
+                title: title,
+                content: content,
+                imageUrl: imageUrl
+            },
+            success: function (msg) {
+                console.log(msg);
+                $(".huifupinglunduv").hide();
+                $("#zibuping").val('');
+                jiazaipinglun(0, 5);
+            },
+            error: function (data) {
+            }
+        });
+    }
+$("#baocun").click(function () {
+    var content = editor.html();
+    var title = $("#titleshuru").val();
+    savegongluecaogao(title,content,imageUrl);
+});
+$("#fabiaoanniu").click(function () {
+    var isChecked = $("#xieyikuang").get(0).checked;
+    console.log(isChecked);
+    if(isChecked == false){
+        yincang('请选择西梅妈妈攻略协议');
+    }else {
+        var content = editor.html();
+        var title = $("#titleshuru").val();
+        submitzi(title,content,imageUrl);
+    }
+
+});
+    function submitzi(title,content,imageUrl) {
+        $.ajax({
+            type: "POST",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            url: CFG.interfaceurl + "/gl/reply/create",
+            data: {
+                title: title,
+                content: content,
+                imageUrl: imageUrl
+            },
+            success: function (msg) {
+                console.log(msg);
+                $(".huifupinglunduv").hide();
+                $("#zibuping").val('');
+                jiazaipinglun(0, 5);
+            },
+            error: function (data) {
+            }
+        });
+    }
     //定义百度统计按钮点击次数的函数
     function Baidu(category, evnet) {
         !evnet && (evnet = '点击');

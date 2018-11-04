@@ -1477,3 +1477,41 @@ p{
     width: 100%;
     height: auto;
 }
+
+
+
+.piccontdetail{
+    float: left;
+    margin-left: 60px;
+    width: 90%;
+    height: auto;
+    margin-top: 10px;
+}
+.piccontdetail>img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.picborder{
+    border: 2px solid #C782B4;
+}
+.picchoose{
+    margin-right: 10px;
+}
+.piccontdetailshow{
+    float: left;
+    margin-left: 60px;
+    width: 90%;
+    height: auto;
+    margin-top: 10px;
+}
+.tupianxianshi{
+    display: none;
+    border: 1px solid #D6D6D6;
+    width: 311px;
+    height: auto;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 7px;
+    padding-right: 7px;
+}

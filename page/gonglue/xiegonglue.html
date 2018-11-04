@@ -37,12 +37,13 @@
     <![endif]-->
 </head>
 <body>
+
 <div class="mostcont2">
     <div class="btnncont">
         <div class="xiegongluezi">
             <div class="xiegongluezidesc">新攻略</div>
         </div>
-        <div class="fabiaoanniu">
+        <div class="fabiaoanniu" id="fabiaoanniu">
             <div class="fabiaowenzi">发表在攻略中</div>
         </div>
         <div class="fabiaoanniusimi">
@@ -50,18 +51,23 @@
         </div>
     </div>
 </div>
+<div class="shanchutixing" id="shanchutixing">
+    <div class="shanchuchengong">
+        <div class="pinglunwenzi" id="wenzixianshi">删除成功</div>
+    </div>
+</div>
 <!--评论区-->
 <div class="mostcont3">
     <div class="bianjiqu">
         <div class="caogaotitle">
-            <input type="text" class="caogaotitleinput" placeholder="请输入标题">
+            <input type="text" class="caogaotitleinput" placeholder="请输入标题" id="titleshuru">
         </div>
         <form>
             <textarea id="mul_input" name="content" style="width:100%;height:613px;visibility:hidden;display: block;resize: none;"><span style="color: #9B9B9B;">写攻略……</span></textarea>
 
             </textarea>
         </form>
-        <div class="baocun" title="保存"></div>
+        <div class="baocun" title="保存" id="baocun"></div>
         <div class="fabu" title="发布"></div>
 
         <div class="xieyicont">
@@ -71,10 +77,17 @@
     </div>
     <div class="caogaocont">
         <div class="caogaoxiangtou">
-            <div class="caogaogeshu">草稿箱（<span>5</span>）</div>
+            <div class="caogaogeshu">草稿箱（<span id="caogaoshu">0</span>）</div>
             <div class="caogaoxinjian">新建草稿箱+</div>
         </div>
-        <div class="caogaojuti">
+        <div class="caogaojuti" id="caogaojuti">
+            <div class="caogaoditail">
+                <div class="caogaoname">未命名草稿</div>
+                <div class="caogaoshijian">2018-03-03  12:00</div>
+                <div class="jixuxie">
+                    <div class="jixuxiewenzi">继续写</div>
+                </div>
+            </div>
             <div class="caogaoditail">
                 <div class="caogaoname">未命名草稿</div>
                 <div class="caogaoshijian">2018-03-03  12:00</div>

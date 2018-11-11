@@ -23,7 +23,7 @@ p{
     position: relative;
     margin-top: 56px;
     width: 100%;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 24px;
     color: #808080;
 }
@@ -44,7 +44,7 @@ p{
 }
 .searchkuang{
     outline: none;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #3c3c3c;
     position: relative;
@@ -75,7 +75,7 @@ p{
 .searchwen{
     float: left;
     margin-right: 40px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #9B9B9B;
     cursor: pointer;
@@ -83,7 +83,7 @@ p{
 .anniuwenzi{
     position: absolute;
     width: 100%;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 26px;
     color: #FFFFFF;
     text-align: center;
@@ -135,7 +135,7 @@ p{
     position: relative;
     top:36px;
     left: 10px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 24px;
     color: #A978D6;
 }
@@ -159,7 +159,7 @@ p{
     left: 0;
     width: 30%;
     height: 100%;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 24px;
     color: #000000;
 }
@@ -168,7 +168,7 @@ p{
     bottom: 0;
     width: 50%;
     right: 0;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000000;
 }
@@ -233,7 +233,7 @@ p{
     bottom: 17px;
     width: 100%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #000000;
 }

@@ -48,7 +48,7 @@ body, html {
   top:0;
   left: 0;
   width: auto;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 24px;
   color: #4A4A4A;
 }
@@ -57,7 +57,7 @@ body, html {
   bottom:0;
   left: 0;
   width: auto;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 24px;
   color: #4A4A4A;
 }
@@ -74,7 +74,7 @@ body, html {
   width: 100%;
   text-align: center;
   opacity: 0.5;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #9E9E9E; }
 
@@ -197,7 +197,7 @@ a {
   position: relative;
   margin-bottom: 10px;
   text-align: center;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #9E9E9E;
   height: 30px; }
 
@@ -205,7 +205,7 @@ a {
   position: relative;
   margin-bottom: 7px;
   text-align: center;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #9E9E9E;
   height: 20px; }
 
@@ -250,7 +250,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #9E9E9E;
   text-align: center; }
@@ -296,7 +296,7 @@ a {
   top: 108px;
   width: 100%;
   text-align: center;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #9E9E9E; }
 
@@ -310,7 +310,7 @@ a {
 
 .linkfriend {
   /*float: left;*/
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #9E9E9E;
   margin-right: 6px; }
@@ -367,7 +367,7 @@ a {
   position: absolute;
   bottom: 12px;
   left: 34px;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #9B9B9B;
 }
@@ -409,7 +409,7 @@ a {
   width: 100%;
   height: auto;
   text-align: left;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 24px;
   color: #000000;
   margin-top: 30px;
@@ -446,7 +446,7 @@ a {
   position: absolute;
   top:24px;
   left: 70px;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #4A4A4A;
 }
@@ -454,7 +454,7 @@ a {
   position: absolute;
   top:24px;
   right: 6px;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #9B9B9B;
 }

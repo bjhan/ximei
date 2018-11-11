@@ -84,7 +84,7 @@ p{
   left: 41px;
   width: 255px;
   height: 18px;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #9B9B9B;
   border: 0px;
@@ -223,7 +223,7 @@ p{
   position: absolute;
   top:142px;
   width: 100%;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size:5px;
   color: #FFFFFF;
   text-align: center;
@@ -286,14 +286,14 @@ p{
 }
 .bigdesctitle{
   float: left;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 21px;
   color: #070707;
 }
 .moreMesg{
   float: right;
   bottom: 0;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #070707;
   cursor: pointer;
@@ -314,7 +314,7 @@ p{
 .newproictitle{
   position: relative;
   width: 100%;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 18px;
   color: #070707;
   margin-top: 12px;
@@ -323,7 +323,7 @@ p{
   position: relative;
   width: 100%;
   height: auto;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #666666;
   line-height: 26px;
@@ -389,7 +389,7 @@ p{
   width: 482px;
   height: 23px;
   margin-top: 28px;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 21px;
   color: #070707;
 }
@@ -404,7 +404,7 @@ p{
   position: relative;
   width: 100%;
   height: 51px;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #666666;
   line-height:26px;
@@ -434,7 +434,7 @@ p{
 }
 .hotusername{
   float: left;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   margin-left: 10px;
   margin-top: 3px;
@@ -474,7 +474,7 @@ p{
 }
 .hotuserheartnum{
   float: left;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   margin-left: 10px;
   margin-top: 3px;
@@ -499,7 +499,7 @@ p{
 }
 .hotusertalknum{
   float: left;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   margin-left: 10px;
   margin-top: 3px;
@@ -521,7 +521,7 @@ p{
 }
 .totalpagenum{
   float: left;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #A1A1A1;
   margin-right: 20px;
@@ -555,7 +555,7 @@ p{
   width: auto;
   height: 100%;
   text-align: center;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
 
 }
@@ -612,7 +612,7 @@ p{
   height: 22px;
 
   border-radius: 50%;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   text-align: center;
 }
@@ -642,7 +642,7 @@ p{
   left: 30px;
   width: 380px;
   height: auto;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #666666;
 }
@@ -711,14 +711,14 @@ p{
 .mustpicconttage>div{
   position: absolute;
   top:8px;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #FFFFFF;
 }
 .mustknowledgedesc{
   position: relative;
   width: 100%;
-  font-family: MicrosoftYaHeiUI;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust:none;
   margin-top: 20px;
   font-size: 14px;
@@ -831,7 +831,7 @@ p{
   width: 100%;
   left: 12px;
   text-align: left;
-  font-family: MicrosoftYaHeiUI-Bold;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif-Bold;
   font-size: 14px;
   color: #A978D6;
 }
@@ -841,7 +841,7 @@ p{
   width: 100%;
   left: 12px;
   text-align: left;
-  font-family: MicrosoftYaHeiUI-Bold;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif-Bold;
   font-size: 14px;
   color: #A978D6;
 }
@@ -851,7 +851,7 @@ p{
   width: 100%;
   left: 12px;
   text-align: left;
-  font-family: MicrosoftYaHeiUI-Bold;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif-Bold;
   font-size: 14px;
   color: #A978D6;
 }

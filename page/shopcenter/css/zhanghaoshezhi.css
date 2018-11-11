@@ -7,7 +7,7 @@
 }
 .quanbu{
     float: left;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #4A4A4A;
     margin-right: 30px;
@@ -18,7 +18,7 @@
     float: right;
     background: #A978D6;
     border-radius: 6px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #FFFFFF;
     padding: 3px;
@@ -65,7 +65,7 @@
 .yuezimingcheng{
     position: relative;
     width: 100%;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     margin-top: 15px;
     color: #000000;
@@ -73,7 +73,7 @@
 .yuezimingchengmiaoshu{
     position: relative;
     width: 100%;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 12px;
     color: #BBBBBB;
     margin-top: 3px;
@@ -138,7 +138,7 @@
 .guanlibtnwenzi{
     width: 100%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
     padding-top: 7px;
 }
@@ -162,7 +162,7 @@
     top:37px;
     width: 100%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 30px;
     color: #4A4A4A;
 }
@@ -171,7 +171,7 @@
     top:126px;
     width: 100%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #4A4A4A;
 }
@@ -197,7 +197,7 @@
     position: relative;
     width: 100%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI-Bold;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif-Bold;
     font-size: 18px;
     color: #FFFFFF;
     padding-top: 15px;
@@ -221,7 +221,7 @@
     top:10px;
     left: 0;
     text-align: right;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000000;
     text-align: right;
@@ -253,7 +253,7 @@
     top:10px;
     left: 0;
     text-align: right;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000000;
     text-align: right;
@@ -294,7 +294,7 @@
 .guanlibtnwenzi{
     width: 100%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
     padding-top: 7px;
 }
@@ -311,7 +311,7 @@
     float: left;
     width: 50px;
     height: auto;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #BABABA;
 }
@@ -328,7 +328,7 @@
 .touxiangdesc{
     position: relative;
     width: 260px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 12px;
     color: #C5C5C5;
 }
@@ -344,7 +344,7 @@
 .guanlibtnwenzi{
     width: 100%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
     padding-top: 7px;
     color: #FFFFFF;

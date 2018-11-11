@@ -25,7 +25,7 @@ p{
     position: relative;
     width: 50%;
     left: 0;
-    font-family: MicrosoftYaHeiUI-Bold;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif-Bold;
     font-size: 30px;
     color: #000000;
     font-weight: bold;
@@ -92,7 +92,7 @@ p{
     left: 10px;
     width: 90%;
     height: 40%;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #9B9B9B;
     letter-spacing: 1px;
@@ -104,7 +104,7 @@ p{
     left: 10px;
     width: 90%;
     height: 40%;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #9B9B9B;
     letter-spacing: 1px;
@@ -116,7 +116,7 @@ p{
     left: 10px;
     width: 90%;
     height: 40%;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #9B9B9B;
     letter-spacing: 1px;
@@ -128,7 +128,7 @@ p{
     left: 10px;
     width: 90%;
     height: 40%;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #9B9B9B;
     letter-spacing: 1px;
@@ -197,7 +197,7 @@ p{
     top:0%;
     height: 80%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #888888;
     margin-top: 2px;
@@ -212,7 +212,7 @@ p{
     top:0%;
     height: 80%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #888888;
     margin-top: 2px;
@@ -234,7 +234,7 @@ p{
     top:0%;
     height: 80%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #FFFFFF;
     margin-top: 2px;
@@ -251,7 +251,7 @@ p{
     top:0%;
     height: 80%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #FFFFFF;
     margin-top: 2px;
@@ -297,7 +297,7 @@ p{
     position: absolute;
     top:0px;
     left: 10px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #000000;
 }
@@ -315,7 +315,7 @@ p{
     width: 100%;
     margin-top: 30px;
     height: 30px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #9B9B9B;
 }
@@ -324,7 +324,7 @@ p{
     width: auto;
     height: 100%;
     margin-right: 20px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     cursor: pointer;
 }
@@ -333,7 +333,7 @@ p{
     width: 50px;
     height: 100%;
     margin-right: 20px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     background: url(../img/sort_both.png) no-repeat scroll right center transparent;
     cursor: pointer;
@@ -412,7 +412,7 @@ p{
     width: 80%;
     top:20px;
     left: 10px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #000000;
 }
@@ -420,7 +420,7 @@ p{
     position: relative;
     top:23px;
     left: 10px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 12px;
     color: #BBBBBB;
 }
@@ -428,7 +428,7 @@ p{
     position: relative;
     top:28px;
     left: 10px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 12px;
     color: #BBBBBB;
 }
@@ -472,7 +472,7 @@ p{
     position: relative;
     top:36px;
     left: 10px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #9B9B9B;
 }
@@ -480,7 +480,7 @@ p{
     position: relative;
     top:56px;
     left: 10px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     width: 100%;
     height: 14px;
 }
@@ -505,7 +505,7 @@ p{
 .gongduoshaoye{
     position: relative;
     margin: 0 auto;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #A1A1A1;
 }
@@ -525,7 +525,7 @@ p{
 }
 .totalpagenum{
     float: left;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #A1A1A1;
     margin-right: 20px;
@@ -560,7 +560,7 @@ p{
     width: auto;
     height: 100%;
     text-align: center;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     padding-left: 5px;
     padding-right: 5px;

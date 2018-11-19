@@ -4,6 +4,7 @@ body {
   margin: 0 auto;
   background-size: cover;
   overflow-y: scroll;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 p{
   margin: 0;
@@ -743,6 +744,8 @@ p{
   height: 151px;
   margin-top: 26px;
   cursor: pointer;
+  font-size: 14px;
+  color: #808080;
 }
 .citycont>img{
   position: relative;

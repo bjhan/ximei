@@ -143,6 +143,8 @@ p{
     background: #FFF;
     border: 1px solid #EAEAEA;
     border-radius: 6px;
+    font-size: 14px;
+    color: #666666;
 }
 
 
@@ -157,6 +159,8 @@ p{
     border-radius: 6px;
     background-color: #FFFFFF;
     z-index: 111;
+    font-size: 14px;
+    color: #808080;
 }
 
 

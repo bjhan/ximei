@@ -1055,6 +1055,8 @@ p{
     height: 151px;
     margin-top: 26px;
     cursor: pointer;
+    font-size: 14px;
+    color: #666666;
 }
 .citycont>img{
     position: relative;

@@ -120,7 +120,8 @@ p{
 }
 .mostcont{
     position: relative;
-    width: 1186px;
+    width: 1200px;
+    width: 1200px;
     height: auto;
     margin: auto;
     margin-top: 68px;
@@ -909,6 +910,7 @@ p{
 }
 .xiangguantuijian{
     float: left;
+    margin-left: 40px;
     width: 200px;
     height: auto;
 }

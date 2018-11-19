@@ -80,7 +80,11 @@
             return -1;//不是ie浏览器
         }
     }
-
+    $(".xiegonglue").click(function () {
+        var pathname = window.location.href;
+        var path = pathname.substr(0, pathname.lastIndexOf('/') + 1);
+        window.location.href = path+'xiegonglue.html'
+    });
     function initswiper(bannerarry) {//首页滑动
         bannernum = bannerarry.length;
         for (var i = 0; i < bannerarry.length; i++) {

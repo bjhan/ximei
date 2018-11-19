@@ -17,6 +17,7 @@ p{
   position: relative;
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 .swiper-container {
@@ -120,11 +121,22 @@ p{
 }
 .mostcont{
   position: relative;
-  width: 1186px;
+  width: 1200px;
   height: auto;
   margin: auto;
-  margin-top: 68px;
+  margin-top: 34px;
   overflow: hidden;
+}
+.xiegongls{
+  position: absolute;
+  top:12px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  color: #FFFFFF;
+
+  font-weight: bold;
 }
 .knowledgecont{
   position: relative;
@@ -263,13 +275,14 @@ p{
 }
 .mostcontleft{
   float: left;
-  width: 395px;
+  width: 235px;
   height: auto;
   margin-right: 15px;
+  margin-top: 20px;
 }
 .mostcontright{
   float: left;
-  width: 703px;
+  width: 940px;
   height: auto;
   overflow: hidden;
 }
@@ -293,15 +306,20 @@ p{
   color: #666666;
   text-align: center;
 }
+.biaoqian:hover{
+  border: 1px solid #A978D6;
+  color: #A978D6;
+}
 .moretitle{
   position: relative;
   width: 100%;
   height: 28px;
+  margin-top: 20px;
 }
 .bigdesctitle{
   float: left;
   font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 21px;
+  font-size: 24px;
   color: #070707;
 }
 .bigdesctitle2{
@@ -309,6 +327,18 @@ p{
   font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000000;
+}
+.xiegonglue{
+  position: absolute;
+  right: 0;
+  font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
+  width: 160px;
+  height: 50px;
+  color: #000000;
+  background: #A978D6;
+  border-radius: 4px;
+  z-index: 111;
+  cursor: pointer;
 }
 .moreMesg{
   float: right;
@@ -396,6 +426,7 @@ p{
 }
 #container,.sections {
   position: relative;
+  margin: 0;
 }
 .section {
   background-color: #000;

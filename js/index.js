@@ -23,6 +23,7 @@
         $("#gonglue").click(function () {
             $(".chooseline").hide();
             $(this).find(".chooseline").show();
+            $("#iframecont").attr("src","page/gonglue/gonglue.html");
         });
         $("#wenda").click(function () {
             $(".chooseline").hide();

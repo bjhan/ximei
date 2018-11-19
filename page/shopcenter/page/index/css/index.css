@@ -525,6 +525,7 @@ p{
   font-size: 14px;
   color: #A1A1A1;
   margin-right: 20px;
+  margin-top: 3px;
 }
 .pagenum{
   float: left;
@@ -649,8 +650,8 @@ p{
 .uomustknowledgecont{
   position: relative;
   margin-left: 10px;
-  width: 120%;
-  height: 250px;
+  width: 823px;
+  height: 225px;
   margin-top: 30px;
 }
 .uomustknowledgecont>div{

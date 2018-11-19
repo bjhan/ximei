@@ -408,6 +408,8 @@
                         addchangjianwenti2(i + 1, data[i]);
                     }
                 }
+
+
             },
             error: function (data) {
                 //alert("请求错误");

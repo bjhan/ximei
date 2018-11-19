@@ -111,9 +111,9 @@ p{
 .videocontent{
   position: relative;
   /*left: 367px;*/
-  width: 1186px;
+  width: 1200px;
   height: 205px;
-  padding-left: 30px;
+  /*padding-left: 30px;*/
   overflow: hidden;
   margin: auto;
   margin-top: 18px;
@@ -166,18 +166,18 @@ p{
   float: left;
   top:0;
   left: 0;
-  width: 33.3%;
+  width: 395px;
   height: 100%;
-  margin-right: 23px;
+  margin-right: 43px;
   cursor: pointer;
 }
 .secondvideo{
   float: left;
   top:0;
   left: 0;
-  width: 18.718%;
+  width: 222px;
   height: 100%;
-  margin-right: 23px;
+  margin-right: 47px;
 }
 .bigvideo{
   position: relative;
@@ -199,7 +199,7 @@ p{
   top:0;
   left: 0;
   height: 100%;
-  width: 100%;
+  width: 130%;
 }
 .videos{
   position: absolute;
@@ -368,8 +368,12 @@ p{
   position: relative;
   width: 763px;
   height: 176px;
-  margin-top: 20px;
+  margin-top: 15px;
   cursor: pointer;
+}
+.hotcompositioncont:hover{
+  opacity: 0.8;
+  background: #F1F1F1;
 }
 .hotpic{
   position: absolute;
@@ -552,6 +556,7 @@ p{
   font-size: 14px;
   color: #A1A1A1;
   margin-right: 20px;
+  margin-top: 3px;
 }
 .pagenum{
   float: left;
@@ -682,8 +687,14 @@ p{
   position: relative;
   margin-left: 10px;
   width: 823px;
-  height: 250px;
-  margin-top: 30px;
+  height: 225px;
+  margin-top: 28px;
+}
+.moretitlemoretitle{
+  padding-bottom: 16px;
+}
+.moretitlemoretitle2{
+  padding-bottom: 26px;
 }
 /*.uomustknowledgecont>div{*/
   /*position: absolute;*/
@@ -694,8 +705,8 @@ p{
   position: relative;
   margin-left: 10px;
   width: 823px;
-  height: 250px;
-  margin-top: 30px;
+  height: 225px;
+  margin-top: 28px;
 }
 .topichotcont>div{
   position: absolute;
@@ -752,7 +763,7 @@ p{
   width: 222px;
   font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust:none;
-  margin-top: 20px;
+  margin-top: 11px;
   font-size: 14px;
   color: #030303;
   line-height: 26px;
@@ -772,7 +783,7 @@ p{
   position: relative;
   width: 100%;
   height: 151px;
-  margin-top: 26px;
+  margin-top: 2px;
   cursor: pointer;
 }
 .citycont>img{

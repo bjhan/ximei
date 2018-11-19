@@ -6,7 +6,7 @@
     width: 1200px;
     height: 100%;
     margin: auto;
-    font-family: 微软雅黑;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     /*border: 1px solid black;*/
 }
 
@@ -43,7 +43,7 @@
     margin-bottom: 25px;
     text-align: left;
     line-height: 23px;
-    font-family: 微软雅黑-Bold;
+    font-family: 'MicrosoftYaHeiUI-Bold','Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #4A4A4A;
 }
@@ -412,7 +412,7 @@
 
 .content-question-written {
     height: 48px;
-    font-family: MicrosoftYaHeiUI-Bold;
+    font-family: 'MicrosoftYaHeiUI-Bold','Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 48px;
     color: #4A4A4A;
     text-align: center;
@@ -427,7 +427,7 @@
     margin-left: 45px;
     margin-bottom: 40px;
     border: 1px solid #979797;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 24px;
     color: #4A4A4A;
     padding-left: 29px;
@@ -446,7 +446,7 @@
     height: 52px;
     background: #A978D6;
     border-radius: 6px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #fff;
     text-align: center;
@@ -461,7 +461,7 @@
     height: 52px;
     border: 1px solid #979797;
     border-radius: 6px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #888888;
     text-align: center;

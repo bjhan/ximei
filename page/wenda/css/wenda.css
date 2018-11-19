@@ -52,7 +52,8 @@ a:hover {text-decoration:none;}
 
 .content-top-qa {
     float: left;
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 24px;
     color: #000000;
     text-align: right;
@@ -100,7 +101,7 @@ a:hover {text-decoration:none;}
     color: #fff;
     float: left;
     margin-left: 13px;
-    font-family: MicrosoftYaHeiUI;
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 36px;
     text-align: center;
     line-height: 74px;
@@ -134,7 +135,8 @@ a:hover {text-decoration:none;}
 }
 
 .content-column-title a {
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #000;
     text-align: right;
@@ -151,7 +153,8 @@ a:hover {text-decoration:none;}
     width: 1130px;
     height: 46px;
     margin: 35px;
-    font-family: MicrosoftYaHeiUI-Bold;
+    /*font-family: MicrosoftYaHeiUI-Bold;*/
+    font-family: 'MicrosoftYaHeiUI-Bold','Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #4A4A4A;
 }
@@ -165,7 +168,8 @@ a:hover {text-decoration:none;}
 }
 
 .content-hot-username {
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #A978D6;
     margin-left: 10px;
@@ -174,7 +178,8 @@ a:hover {text-decoration:none;}
 }
 
 .content-hot-level {
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 12px;
     color: #DE75C4;
     float: left;
@@ -197,7 +202,8 @@ a:hover {text-decoration:none;}
 }
 
 .content-hot-answer span {
-    font-family: 微软雅黑;
+    /*font-family: 微软雅黑;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #4A4A4A;
 }
@@ -233,14 +239,16 @@ a:hover {text-decoration:none;}
 .content-hot-reply {
     float: left;
     margin-left: 10px;
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #9B9B9B;
     line-height: 18px;
 }
 
 .content-hot-reply span {
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #A978D6;
     line-height: 18px;
@@ -260,7 +268,8 @@ a:hover {text-decoration:none;}
     float: left;
     margin-left: 10px;
     line-height: 18px;
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     color: #9B9B9B;
 }
@@ -279,7 +288,8 @@ a:hover {text-decoration:none;}
 
 .content-hot-praisenum {
     float: left;
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #A978D6;
     line-height: 36px;
@@ -289,7 +299,8 @@ a:hover {text-decoration:none;}
     width: 1200px;
     height: 85px;
     background: #F4F4F4;
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #A978D6;
     text-align: center;
@@ -314,7 +325,7 @@ a:hover {text-decoration:none;}
 
 .content-question-written {
     height: 48px;
-    font-family: MicrosoftYaHeiUI-Bold;
+    font-family: 'MicrosoftYaHeiUI-Bold','Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 48px;
     color: #4A4A4A;
     text-align: center;
@@ -329,7 +340,8 @@ a:hover {text-decoration:none;}
     margin-left: 45px;
     margin-bottom: 40px;
     border: 1px solid #979797;
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 24px;
     color: #4A4A4A;
     padding-left: 29px;
@@ -348,7 +360,8 @@ a:hover {text-decoration:none;}
     height: 52px;
     background: #A978D6;
     border-radius: 6px;
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #fff;
     text-align: center;
@@ -363,7 +376,8 @@ a:hover {text-decoration:none;}
     height: 52px;
     border: 1px solid #979797;
     border-radius: 6px;
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #888888;
     text-align: center;
@@ -417,7 +431,8 @@ a:hover {text-decoration:none;}
 .content-list-title {
     width: 1139px;
     margin-left: 56px;
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 18px;
     color: #4A4A4A;
     float: left;
@@ -432,7 +447,8 @@ a:hover {text-decoration:none;}
 .content-list-bottom div {
     /*width: 78px;*/
     height: 18px;
-    font-family: MicrosoftYaHeiUI;
+    /*font-family: MicrosoftYaHeiUI;*/
+    font-family: 'Microsoft YaHei', Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 14px;
     float: right;
     text-align: right;
